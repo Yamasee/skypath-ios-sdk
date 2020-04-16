@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>YamaseeCore Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/YamaseeCore" class="dashAnchor"></a>
+    <a title="YamaseeCore Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (36% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        YamaseeCore Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/YamaseeCore.html">YamaseeCore</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/LoginError.html">LoginError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TurbulenceSeverity.html">TurbulenceSeverity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/YamaseeCoreNotifications.html">YamaseeCoreNotifications</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/YamaseeCoreDelegate.html">YamaseeCoreDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Traffic.html">Traffic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TurbulenceItem.html">TurbulenceItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/YamaseeAircraftType.html">YamaseeAircraftType</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>YamaseeCore</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">YamaseeCore</span> <span class="p">:</span> <span class="kt">AccelerometerManagerObserver</span></code></pre>
+
+                </div>
+              </div>
+            <p>A wrapper class handling all communications between host app and internal Yamasee logic</p>
+<h1 id='overview' class='heading'>Overview</h1>
+
+<p>YamaseeCore instantiates as a singleton object.
+Get the shared instance by calling <code><a href="../Classes/YamaseeCore.html#/s:7Yamasee0A4CoreC6sharedACvpZ">YamaseeCore.shared</a></code></p>
+
+<p>Assign a custom object to the delegate property, conforming to the YamaseeCoreDelegate protocol. Assign the delegate before starting any YamaseeCore services. All turbulence, Traffic and weather reports updates events are delivered to that delegate.
+Events only notify the delegate that a new data arrived from the server. It is the host app responsibility to fetch the updated data by calling the relevant function <strong>when the host app needs to redraw the information</strong> as YamaseeLib doesn&rsquo;t hold the state of the UI i.e. min/max altitude of the display, timespan for turbulence age etc.</p>
+
+<p>YamaseeCore handles all communications with Yamasee servers. The host app should provide a baseURL that act as a proxy and forward all communication to Yamasee servers.</p>
+
+<p>The host app needs to initiate Yamasee server communications by calling the login method with userId and aircraft parameters. After a successful login the needed token is saved for future app operations until logout is called or the user license is removed in the server.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC6sharedACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/shared" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC6sharedACvpZ">shared</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">shared</span><span class="p">:</span> <span class="kt">YamaseeCore</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC8delegateAA0aB8Delegate_pSgvp"></a>
+                    <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC8delegateAA0aB8Delegate_pSgvp">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/YamaseeCoreDelegate.html">YamaseeCoreDelegate</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/START%20&amp;%20LOGIN"></a>
+                <a name="//apple_ref/swift/Section/START &amp; LOGIN" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/START%20&amp;%20LOGIN"></a>
+                  <h3 class="section-name"><p>START &amp; LOGIN</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC5start6apiKey7baseUrlySS_SStF"></a>
+                    <a name="//apple_ref/swift/Method/start(apiKey:baseUrl:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC5start6apiKey7baseUrlySS_SStF">start(apiKey:baseUrl:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>start - starts the framework operation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">start</span><span class="p">(</span><span class="nv">apiKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">baseUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>apiKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>baseUrl</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String - the proxy url for yamasee server calls</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC12partnerLogin6userId07companyF017completionHandlerySS_SSySb_AA0D5ErrorOSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/partnerLogin(userId:companyId:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC12partnerLogin6userId07companyF017completionHandlerySS_SSySb_AA0D5ErrorOSgtctF">partnerLogin(userId:companyId:completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Partnet Login to Yamasee server</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">partnerLogin</span><span class="p">(</span><span class="nv">userId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">companyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Enums/LoginError.html">LoginError</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>userId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>companyId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC9userLogin0C2Id8password17completionHandlerySS_SSySb_AA0D5ErrorOSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/userLogin(userId:password:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC9userLogin0C2Id8password17completionHandlerySS_SSySb_AA0D5ErrorOSgtctF">userLogin(userId:password:completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>UserLogin to Yamasee server</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">userLogin</span><span class="p">(</span><span class="nv">userId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Enums/LoginError.html">LoginError</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>userId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>password</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC10isLoggedInSbyF"></a>
+                    <a name="//apple_ref/swift/Method/isLoggedIn()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC10isLoggedInSbyF">isLoggedIn()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>isLoggedIn
+   returns the login status of the framework</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isLoggedIn</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Bool.  true if loggedin</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC6logoutyyF"></a>
+                    <a name="//apple_ref/swift/Method/logout()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC6logoutyyF">logout()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">logout</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/TURBULENCE%20&amp;%20TRAFFIC"></a>
+                <a name="//apple_ref/swift/Section/TURBULENCE &amp; TRAFFIC" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/TURBULENCE%20&amp;%20TRAFFIC"></a>
+                  <h3 class="section-name"><p>TURBULENCE &amp; TRAFFIC</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC20getTurbulenceGeoJson8altRange8timeSpan9zoomLevelSSSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_S2itF"></a>
+                    <a name="//apple_ref/swift/Method/getTurbulenceGeoJson(altRange:timeSpan:zoomLevel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC20getTurbulenceGeoJson8altRange8timeSpan9zoomLevelSSSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_S2itF">getTurbulenceGeoJson(altRange:timeSpan:zoomLevel:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get turbuenceGeoJson</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getTurbulenceGeoJson</span><span class="p">(</span><span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;&gt;</span><span class="p">,</span> <span class="nv">timeSpan</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">zoomLevel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>altRange</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>altitude range ClosedRange<Measurement<UnitLength>&gt;</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timeSpan</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>number of minutes before current time for turbulence query (example 120)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>zoomLevel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>display map zoom level. Rounded down i.e 3.8 -&gt; 3</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>GeoJson</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC13getTurbulence8altRange8timeSpan9zoomLevelSayAA0D4ItemVGSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_S2itF"></a>
+                    <a name="//apple_ref/swift/Method/getTurbulence(altRange:timeSpan:zoomLevel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC13getTurbulence8altRange8timeSpan9zoomLevelSayAA0D4ItemVGSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_S2itF">getTurbulence(altRange:timeSpan:zoomLevel:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get turbuence</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getTurbulence</span><span class="p">(</span><span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;&gt;</span><span class="p">,</span> <span class="nv">timeSpan</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">zoomLevel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/TurbulenceItem.html">TurbulenceItem</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>altRange</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>altitude range ClosedRange<Measurement<UnitLength>&gt;</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timeSpan</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>number of minutes before current time for turbulence query (example 120)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>zoomLevel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>display map zoom level. Rounded down i.e 3.8 -&gt; 3</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>TurbulenceItem array</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC14getTrafficJson8altRangeSSSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_tF"></a>
+                    <a name="//apple_ref/swift/Method/getTrafficJson(altRange:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC14getTrafficJson8altRangeSSSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_tF">getTrafficJson(altRange:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get traffic JSON</p>
+
+<p>GeoJson Example:
+{&ldquo;type&rdquo;: &ldquo;FeatureCollection&rdquo;,&ldquo;features&rdquo;:[{&ldquo;type&rdquo;:&ldquo;Feature&rdquo;,&ldquo;geometry&rdquo;:
+{&ldquo;type&rdquo;: &ldquo;Point&rdquo;,&ldquo;coordinates&rdquo;: [-1.0683691967288669,51.50575152603118]},
+&ldquo;properties&rdquo;: {&ldquo;alt&rdquo;:11486.46542868454, &ldquo;hdg&rdquo;:285.8203125}}]}</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getTrafficJson</span><span class="p">(</span><span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>altRange</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>altitude range ClosedRange<Measurement<UnitLength>&gt;</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>GeoJson with properties: alt - altitude in feet, hdg - heading in degrees</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC10getTraffic8altRangeSayAA0D0VGSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_tF"></a>
+                    <a name="//apple_ref/swift/Method/getTraffic(altRange:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC10getTraffic8altRangeSayAA0D0VGSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_tF">getTraffic(altRange:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get traffic</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getTraffic</span><span class="p">(</span><span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Array</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Traffic.html">Traffic</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>altRange</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>altitude range ClosedRange<Measurement<UnitLength>&gt;</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Array of Traffic struct</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/ALERT"></a>
+                <a name="//apple_ref/swift/Section/ALERT" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/ALERT"></a>
+                  <h3 class="section-name"><p>ALERT</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC8getAlert3lat4long8altitude7heading8timeSpan8distance05angleJ0AA18TurbulenceSeverityO16maxTurboSevAtAlt_AM0opQ5BelowAM0opQ5AbovetSd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGASySo0X5AngleCGSiAvYtF"></a>
+                    <a name="//apple_ref/swift/Method/getAlert(lat:long:altitude:heading:timeSpan:distance:angleSpan:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC8getAlert3lat4long8altitude7heading8timeSpan8distance05angleJ0AA18TurbulenceSeverityO16maxTurboSevAtAlt_AM0opQ5BelowAM0opQ5AbovetSd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGASySo0X5AngleCGSiAvYtF">getAlert(lat:long:altitude:heading:timeSpan:distance:angleSpan:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get Alert</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getAlert</span><span class="p">(</span><span class="nv">lat</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">long</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">altitude</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;</span><span class="p">,</span>
+                     <span class="nv">heading</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitAngle</span><span class="o">&gt;</span><span class="p">,</span><span class="nv">timeSpan</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">distance</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;</span> <span class="o">=</span> <span class="kt">Measurement</span><span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">unit</span><span class="p">:</span> <span class="kt">UnitLength</span><span class="o">.</span><span class="n">nauticalMiles</span><span class="p">),</span> <span class="nv">angleSpan</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitAngle</span><span class="o">&gt;</span> <span class="o">=</span> <span class="kt">Measurement</span><span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="nv">unit</span><span class="p">:</span> <span class="kt">UnitAngle</span><span class="o">.</span><span class="n">degrees</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="nv">maxTurboSevAtAlt</span><span class="p">:</span> <span class="kt"><a href="../Enums/TurbulenceSeverity.html">TurbulenceSeverity</a></span><span class="p">,</span> <span class="nv">maxTurboSevBelow</span><span class="p">:</span> <span class="kt"><a href="../Enums/TurbulenceSeverity.html">TurbulenceSeverity</a></span><span class="p">,</span> <span class="nv">maxTurboSevAbove</span><span class="p">:</span> <span class="kt"><a href="../Enums/TurbulenceSeverity.html">TurbulenceSeverity</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lat</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>latitude</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>long</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>longitude</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>altitude</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>altitude in Measurement<UnitLength></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>heading</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>heading in Measurement<UnitAngle></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timeSpan</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>number of minutes before current time for turbulence query (example 120)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>distance</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>distance in Measurement<UnitLength> Default = 100 nouticle miles.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>angelSpan</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>angle in Measurement<UnitAngle> Default = 15 degrees from velocity vector (i.e. 30 degrees)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Tuple (maxTurboSevAtAlt: TurbulenceSeverity, maxTurboSevBelow: TurbulenceSeverity, maxTurboSevAbove: TurbulenceSeverity)</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC13getAlertTiles3lat4long8altitude7heading8timeSpan8distance05angleK0SayAA14TurbulenceItemVG05alertE5AtAlt_AN0pE5BelowAN0pE5AbovetSd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGATySo0W5AngleCGSiAwZtF"></a>
+                    <a name="//apple_ref/swift/Method/getAlertTiles(lat:long:altitude:heading:timeSpan:distance:angleSpan:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC13getAlertTiles3lat4long8altitude7heading8timeSpan8distance05angleK0SayAA14TurbulenceItemVG05alertE5AtAlt_AN0pE5BelowAN0pE5AbovetSd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGATySo0W5AngleCGSiAwZtF">getAlertTiles(lat:long:altitude:heading:timeSpan:distance:angleSpan:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get Alert Tiles</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getAlertTiles</span><span class="p">(</span><span class="nv">lat</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">long</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">altitude</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;</span><span class="p">,</span>
+                     <span class="nv">heading</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitAngle</span><span class="o">&gt;</span><span class="p">,</span><span class="nv">timeSpan</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">distance</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;</span> <span class="o">=</span> <span class="kt">Measurement</span><span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">unit</span><span class="p">:</span> <span class="kt">UnitLength</span><span class="o">.</span><span class="n">nauticalMiles</span><span class="p">),</span> <span class="nv">angleSpan</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitAngle</span><span class="o">&gt;</span> <span class="o">=</span> <span class="kt">Measurement</span><span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="nv">unit</span><span class="p">:</span> <span class="kt">UnitAngle</span><span class="o">.</span><span class="n">degrees</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="nv">alertTilesAtAlt</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/TurbulenceItem.html">TurbulenceItem</a></span><span class="p">],</span> <span class="nv">alertTilesBelow</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/TurbulenceItem.html">TurbulenceItem</a></span><span class="p">],</span> <span class="nv">alertTilesAbove</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/TurbulenceItem.html">TurbulenceItem</a></span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lat</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>latitude</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>long</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>longitude</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>altitude</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>altitude in Measurement<UnitLength></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>heading</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>heading in Measurement<UnitAngle></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timeSpan</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>number of minutes before current time for turbulence query (example 120)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>distance</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>distance in Measurement<UnitLength> Default = 100 nouticle miles.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>angelSpan</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>angle in Measurement<UnitAngle> Default = 15 degrees from velocity vector (i.e. 30 degrees)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Tuple (alertTilesAtAlt: [TurbulenceItem], alertTilesBelow: [TurbulenceItem], alertTilesAbove: [TurbulenceItem])</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/MISC"></a>
+                <a name="//apple_ref/swift/Section/MISC" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/MISC"></a>
+                  <h3 class="section-name"><p>MISC</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC11setAircraft8aircraftySS_tF"></a>
+                    <a name="//apple_ref/swift/Method/setAircraft(aircraft:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC11setAircraft8aircraftySS_tF">setAircraft(aircraft:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets a new aircraft type.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setAircraft</span><span class="p">(</span><span class="nv">aircraft</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>aircraft</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>an aircraft type. &ldquo;737&rdquo;, &ldquo;787&rdquo; etc.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC15setFlightNumber06flightE0ySS_tF"></a>
+                    <a name="//apple_ref/swift/Method/setFlightNumber(flightNumber:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC15setFlightNumber06flightE0ySS_tF">setFlightNumber(flightNumber:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets a new flight number.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setFlightNumber</span><span class="p">(</span><span class="nv">flightNumber</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>flightNumber</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC19setConnectionStatus11isConnectedySb_tF"></a>
+                    <a name="//apple_ref/swift/Method/setConnectionStatus(isConnected:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC19setConnectionStatus11isConnectedySb_tF">setConnectionStatus(isConnected:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set current internet connection status
+The framework uses this parameter to conserve energy and avoid server calls when there is no internet connection to host app server</p>
+
+<p>NOT IMPLEMENTED YET  schduled v1.1</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setConnectionStatus</span><span class="p">(</span><span class="nv">isConnected</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>isConnected</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>- true if there is Internet connection to host app server. false otherwise.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC22setAppForegroundStatus02inE0ySb_tF"></a>
+                    <a name="//apple_ref/swift/Method/setAppForegroundStatus(inForeground:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC22setAppForegroundStatus02inE0ySb_tF">setAppForegroundStatus(inForeground:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set App Forground Status.
+The framework uses this parameter to conserve energy while app is in the background (taking into account the airplane ground/air status)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setAppForegroundStatus</span><span class="p">(</span><span class="nv">inForeground</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inForground</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>- true if the app is in the foreground. false otherwise.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC8setAngleyyF"></a>
+                    <a name="//apple_ref/swift/Method/setAngle()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC8setAngleyyF">setAngle()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set angle of device in cradle</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setAngle</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC13screenTouchedyyF"></a>
+                    <a name="//apple_ref/swift/Method/screenTouched()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC13screenTouchedyyF">screenTouched()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Report a screen touch</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Touches are now tracked automatically. Method will be removed in future versions"</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">screenTouched</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC16getAircraftTypesSayAA0aD4TypeVGyF"></a>
+                    <a name="//apple_ref/swift/Method/getAircraftTypes()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC16getAircraftTypesSayAA0aD4TypeVGyF">getAircraftTypes()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getAircraftTypes</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/YamaseeAircraftType.html">YamaseeAircraftType</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/LOCATION%20SIMULATOR"></a>
+                <a name="//apple_ref/swift/Section/LOCATION SIMULATOR" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/LOCATION%20SIMULATOR"></a>
+                  <h3 class="section-name"><p>LOCATION SIMULATOR</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC16setSimulatorMode010isLocationD2OnySb_tF"></a>
+                    <a name="//apple_ref/swift/Method/setSimulatorMode(isLocationSimulatorOn:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC16setSimulatorMode010isLocationD2OnySb_tF">setSimulatorMode(isLocationSimulatorOn:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Allows client to suply degug location for the framework</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setSimulatorMode</span><span class="p">(</span><span class="nv">isLocationSimulatorOn</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>isLocationSimulatorOn</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>- true for simulated location. false for  framework internal location</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC17simulatedLocation8locationySo10CLLocationC_tF"></a>
+                    <a name="//apple_ref/swift/Method/simulatedLocation(location:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC17simulatedLocation8locationySo10CLLocationC_tF">simulatedLocation(location:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Provides simulated location for the framework.
+Relevant only when LocationSimulatorOn is set to true.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">simulatedLocation</span><span class="p">(</span><span class="nv">location</span><span class="p">:</span> <span class="kt">CLLocation</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>location</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>CLLocation object containing:
+coordinates,
+speed (should be &gt; 0),
+course (should be &gt;= 0)
+altitude,
+horizontalAccuracy (should be &gt;=0),
+verticalAccuracy (should be above 0 and below 2000),
+timestamp (should not be &ldquo;older&rdquo; than 2 seconds ago)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/LOGGER"></a>
+                <a name="//apple_ref/swift/Section/LOGGER" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/LOGGER"></a>
+                  <h3 class="section-name"><p>LOGGER</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC9setLogger4isOn0E6Symbol05errorF004infoF007warningF007networkF0ySb_S5btF"></a>
+                    <a name="//apple_ref/swift/Method/setLogger(isOn:isSymbol:errorOn:infoOn:warningOn:networkOn:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC9setLogger4isOn0E6Symbol05errorF004infoF007warningF007networkF0ySb_S5btF">setLogger(isOn:isSymbol:errorOn:infoOn:warningOn:networkOn:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Allows client to get looged information. By default looging is off.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setLogger</span><span class="p">(</span><span class="nv">isOn</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">isSymbol</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">errorOn</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">infoOn</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">warningOn</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">networkOn</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>isOn</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>- true for to enable logging</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>isSymbol</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>- true for a symbol in the begining of the logged line indicating the type of logged info (🔴 : Error, 🟢: Info, 🟡: Warning, 🌐: network.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>errorOn</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>- true  to enable error logs</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>infoOn</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>- true  to enable info logs</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>warningOn</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>- true  to enable warning logs</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>networkOn</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>- true  to enable network logs</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-04-16)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

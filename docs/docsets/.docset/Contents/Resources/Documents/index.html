@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> Docs</a> (36% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+          Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/YamaseeCore.html">YamaseeCore</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/LoginError.html">LoginError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/TurbulenceSeverity.html">TurbulenceSeverity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/YamaseeCoreNotifications.html">YamaseeCoreNotifications</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/YamaseeCoreDelegate.html">YamaseeCoreDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/Traffic.html">Traffic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/TurbulenceItem.html">TurbulenceItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/YamaseeAircraftType.html">YamaseeAircraftType</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='yamaseeframework' class='heading'>YamaseeFramework</h1>
+<h2 id='installation' class='heading'>Installation</h2>
+<h3 id='cocoapods' class='heading'>CocoaPods</h3>
+
+<p>// TODO: Add binary framework to the CocoaPods </p>
+<h3 id='manually' class='heading'>Manually</h3>
+
+<p>You can integrate Yamasee into your project manually.</p>
+<h5 id='xcframework' class='heading'>XCFramework</h5>
+
+<p>Use bash script to generate a universal (iOS Simulator and iOS device supported) Yamasee.xcframework.<br>
+In a project root folder run in Terminal</p>
+<pre class="highlight plaintext"><code>bash ./build.sh
+</code></pre>
+
+<p>Find framework at <code>./build/Yamasee.xcframework</code>.</p>
+
+<p>Copy <code>Yamasee.xcframework</code> file to the target project folder.
+Drag xcframewok file into <code>Framework, Libraries, and Embedded Content</code> section in <code>Project -&gt; General -&gt; Target</code> tab. It should be set as <code>Embed &amp; Sign</code>.</p>
+
+<p><code>import Yamasee</code> in code where needed.</p>
+
+<p>Done.</p>
+<h2 id='structure' class='heading'>Structure</h2>
+<h3 id='auth-manager' class='heading'>Auth Manager</h3>
+
+<ul>
+<li>Login and save tokens / refresh</li>
+<li>manage Delivery tokens</li>
+<li>logout</li>
+</ul>
+<h3 id='data-manager' class='heading'>Data Manager</h3>
+
+<ul>
+<li>timer for 
+
+<ul>
+<li>poll server initial / update</li>
+<li>get delivery token from Auth Manager</li>
+<li>publish turb / traffic new data</li>
+<li>save locally in local storage</li>
+<li>on init if logged in / on login serve locally saved data</li>
+</ul></li>
+</ul>
+<h3 id='turb-manager' class='heading'>Turb Manager</h3>
+
+<ul>
+<li>Store new turb data in memory</li>
+<li>return turb data by alt</li>
+<li>publish new turb data</li>
+</ul>
+<h3 id='traffic-manager' class='heading'>Traffic Manager</h3>
+
+<ul>
+<li>store traffic data in memory</li>
+<li>return traffic data</li>
+<li>publish new traffic data</li>
+</ul>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-04-16)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,0 +1,117 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.2.2 (swiftlang-1103.0.32.6 clang-1103.0.32.51)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Yamasee
+import CoreLocation
+import CoreMotion
+import Foundation
+import Swift
+import UIKit
+@_exported import Yamasee
+public enum TurbulenceSeverity : Swift.Int, Swift.Comparable, Swift.Equatable, Swift.Codable {
+  case None
+  case Light
+  case LightModarate
+  case Moderate
+  case ModerateSevere
+  case Severe
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension TurbulenceSeverity {
+  public static func < (lhs: Yamasee.TurbulenceSeverity, rhs: Yamasee.TurbulenceSeverity) -> Swift.Bool
+}
+public struct TurbulenceItem {
+  public let sev: Yamasee.TurbulenceSeverity
+  public let bbox: [CoreLocation.CLLocationCoordinate2D]
+}
+public enum YamaseeCoreNotifications : Swift.Error {
+  case generalNotification
+  public static func == (a: Yamasee.YamaseeCoreNotifications, b: Yamasee.YamaseeCoreNotifications) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public enum LoginError : Swift.Error {
+  case timeOut
+  case userIdParamError
+  case copmanyIdError
+  case userNotFound
+  case apiKeyNotValid
+  case passwordNotValid
+  case userIdOrPasswordNotFound
+  case unableToLogin
+  public static func == (a: Yamasee.LoginError, b: Yamasee.LoginError) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public protocol YamaseeCoreDelegate : AnyObject {
+  func newTurbulenceData(serverUpdateTime: Swift.Int)
+  func newTrafficData(serverUpdateTime: Swift.Int)
+  func deviceAngleStatusChanged(isInAngle: Swift.Bool)
+  func turbulenceDetected(newTurbulence: Yamasee.TurbulenceItem)
+  func loginStatus(isLoggedIn: Swift.Bool)
+  func airborneStatus(isAirborne: Swift.Bool)
+  func yamaseeCoreNotification(notification: Yamasee.YamaseeCoreNotifications)
+}
+@_hasMissingDesignatedInitializers public class YamaseeCore {
+  public static let shared: Yamasee.YamaseeCore
+  weak public var delegate: Yamasee.YamaseeCoreDelegate?
+  public func start(apiKey: Swift.String, baseUrl: Swift.String)
+  public func partnerLogin(userId: Swift.String, companyId: Swift.String, completionHandler: @escaping (Swift.Bool, Yamasee.LoginError?) -> Swift.Void)
+  public func userLogin(userId: Swift.String, password: Swift.String, completionHandler: @escaping (Swift.Bool, Yamasee.LoginError?) -> Swift.Void)
+  public func isLoggedIn() -> Swift.Bool
+  public func logout()
+  public func getTurbulenceGeoJson(altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> Swift.String
+  public func getTurbulence(altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> [Yamasee.TurbulenceItem]
+  public func getTrafficJson(altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>) -> Swift.String
+  public func getTraffic(altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>) -> Swift.Array<Yamasee.Traffic>
+  public func getAlert(lat: Swift.Double, long: Swift.Double, altitude: Foundation.Measurement<Foundation.UnitLength>, heading: Foundation.Measurement<Foundation.UnitAngle>, timeSpan: Swift.Int, distance: Foundation.Measurement<Foundation.UnitLength> = Measurement.init(value: 100, unit: UnitLength.nauticalMiles), angleSpan: Foundation.Measurement<Foundation.UnitAngle> = Measurement.init(value: 15, unit: UnitAngle.degrees)) -> (maxTurboSevAtAlt: Yamasee.TurbulenceSeverity, maxTurboSevBelow: Yamasee.TurbulenceSeverity, maxTurboSevAbove: Yamasee.TurbulenceSeverity)
+  public func getAlertTiles(lat: Swift.Double, long: Swift.Double, altitude: Foundation.Measurement<Foundation.UnitLength>, heading: Foundation.Measurement<Foundation.UnitAngle>, timeSpan: Swift.Int, distance: Foundation.Measurement<Foundation.UnitLength> = Measurement.init(value: 100, unit: UnitLength.nauticalMiles), angleSpan: Foundation.Measurement<Foundation.UnitAngle> = Measurement.init(value: 15, unit: UnitAngle.degrees)) -> (alertTilesAtAlt: [Yamasee.TurbulenceItem], alertTilesBelow: [Yamasee.TurbulenceItem], alertTilesAbove: [Yamasee.TurbulenceItem])
+  public func setAircraft(aircraft: Swift.String)
+  public func setFlightNumber(flightNumber: Swift.String)
+  public func setConnectionStatus(isConnected: Swift.Bool)
+  public func setAppForegroundStatus(inForeground: Swift.Bool)
+  public func setAngle()
+  @available(*, deprecated, message: "Touches are now tracked automatically. Method will be removed in future versions")
+  public func screenTouched()
+  public func getAircraftTypes() -> [Yamasee.YamaseeAircraftType]
+  @objc deinit
+}
+extension YamaseeCoreDelegate {
+  public func turbulenceDetected(newTurbulence: Yamasee.TurbulenceItem)
+  public func loginStatus(isLoggedIn: Swift.Bool)
+  public func airborneStatus(isAirborne: Swift.Bool)
+}
+extension YamaseeCore {
+  public func setSimulatorMode(isLocationSimulatorOn: Swift.Bool)
+  public func simulatedLocation(location: CoreLocation.CLLocation)
+}
+extension YamaseeCore {
+  public func setLogger(isOn: Swift.Bool, isSymbol: Swift.Bool = false, errorOn: Swift.Bool = false, infoOn: Swift.Bool = false, warningOn: Swift.Bool = false, networkOn: Swift.Bool = false)
+}
+public struct YamaseeAircraftType {
+  public var aircraft: Swift.String
+  public var description: Swift.String
+}
+public struct Traffic : Swift.Codable {
+  public var lat: Swift.Double
+  public var lng: Swift.Double
+  public var alt: Swift.Double
+  public var hdg: Swift.Double
+  public var ts: Swift.Int
+  public var uuid: Swift.String
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension Yamasee.TurbulenceSeverity : Swift.Hashable {}
+extension Yamasee.TurbulenceSeverity : Swift.RawRepresentable {}
+extension Yamasee.YamaseeCoreNotifications : Swift.Equatable {}
+extension Yamasee.YamaseeCoreNotifications : Swift.Hashable {}
+extension Yamasee.LoginError : Swift.Equatable {}
+extension Yamasee.LoginError : Swift.Hashable {}

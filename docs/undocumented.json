@@ -1,0 +1,824 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/AccelerometerManager.swift",
+      "line": 142,
+      "symbol": "AccelerometerManager.notifyPosition(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/AccelerometerManager.swift",
+      "line": 154,
+      "symbol": "AccelerometerManager.notifyAccelerometerEvent(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/AccelerometerManager.swift",
+      "line": 166,
+      "symbol": "AccelerometerManager.notifyDeviceInMotion(isInMotion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/AccelerometerManager.swift",
+      "line": 184,
+      "symbol": "AccelerometerManager.Observation",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/AccelerometerManager.swift",
+      "line": 188,
+      "symbol": "AccelerometerManager.addObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/AccelerometerManager.swift",
+      "line": 193,
+      "symbol": "AccelerometerManager.removeObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/AccelerometerManager.swift",
+      "line": 204,
+      "symbol": "AccelerometerManagerObserver.accelerometerEvent(event:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/AccelerometerManager.swift",
+      "line": 206,
+      "symbol": "AccelerometerManagerObserver.positionChanged(isInPosition:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/AccelerometerManager.swift",
+      "line": 207,
+      "symbol": "AccelerometerManagerObserver.deviceInMotion(isInMotion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/AlertManager.swift",
+      "line": 144,
+      "symbol": "AlertManager.Observation",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/AlertManager.swift",
+      "line": 148,
+      "symbol": "AlertManager.addObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/AlertManager.swift",
+      "line": 153,
+      "symbol": "AlertManager.removeObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/AuthManager.swift",
+      "line": 323,
+      "symbol": "AuthManager.partnerLoginServer(userId:companyId:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/AuthManager.swift",
+      "line": 356,
+      "symbol": "AuthManager.userLoginServer(userId:password:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/AuthManager.swift",
+      "line": 386,
+      "symbol": "AuthManager.refreshTokenServer(completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/AuthManager.swift",
+      "line": 425,
+      "symbol": "AuthManager.PartnetLoginResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/AuthManager.swift",
+      "line": 431,
+      "symbol": "AuthManager.RefreshTokenResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/AuthManager.swift",
+      "line": 440,
+      "symbol": "AuthManager.deliveryTokenServer(completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/AuthManager.swift",
+      "line": 472,
+      "symbol": "AuthManager.DeliveryTokenReponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/AuthManager.swift",
+      "line": 517,
+      "symbol": "AuthManager.Observation",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/AuthManager.swift",
+      "line": 521,
+      "symbol": "AuthManager.addObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/AuthManager.swift",
+      "line": 526,
+      "symbol": "AuthManager.removeObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/DataManager.swift",
+      "line": 83,
+      "symbol": "DataManagerObserver.newTurbulence(arrTurbulence:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/DataManager.swift",
+      "line": 84,
+      "symbol": "DataManagerObserver.newTraffic(arrTraffic:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/DataManager.swift",
+      "line": 95,
+      "symbol": "DataManager.Observation",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/DataManager.swift",
+      "line": 99,
+      "symbol": "DataManager.addObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/DataManager.swift",
+      "line": 104,
+      "symbol": "DataManager.removeObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/DataManager.swift",
+      "line": 165,
+      "symbol": "DataManager.saveTurbulenceToStorage(data:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/DataManager.swift",
+      "line": 169,
+      "symbol": "DataManager.readTurbulenceFromStorage()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/DataManager.swift",
+      "line": 182,
+      "symbol": "DataManager.fetchTurbulenceAndTraffic()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/DataManager.swift",
+      "line": 213,
+      "symbol": "DataManager.initial(deliveryToken:tokenExpired:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/DataManager.swift",
+      "line": 241,
+      "symbol": "DataManager.updates(deliveryToken:tokenExpired:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/DataManager.swift",
+      "line": 269,
+      "symbol": "DataManager.InitialData",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/DataManager.swift",
+      "line": 276,
+      "symbol": "DataManager.InitialDataTemp",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/DataManager.swift",
+      "line": 282,
+      "symbol": "DataManager.InitialDataTurbulences",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/DataManager.swift",
+      "line": 289,
+      "symbol": "DataManager.InitialDataPositions",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/EventManager.swift",
+      "line": 43,
+      "symbol": "EventManager.Observation",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/EventManager.swift",
+      "line": 47,
+      "symbol": "EventManager.addObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/EventManager.swift",
+      "line": 52,
+      "symbol": "EventManager.removeObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/LocationManager.swift",
+      "line": 193,
+      "symbol": "LocationManager.isGoodLocation(location:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/LocationManager.swift",
+      "line": 244,
+      "symbol": "LocationManager.locationManager(_:didUpdateLocations:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/LocationManager.swift",
+      "line": 253,
+      "symbol": "LocationManager.locationManagerShouldDisplayHeadingCalibration(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/LocationManager.swift",
+      "line": 260,
+      "symbol": "LocationManager.findInAir()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/LocationManager.swift",
+      "line": 274,
+      "symbol": "LocationManager.setAppForegroundStatus(inForeground:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/LocationManager.swift",
+      "line": 279,
+      "symbol": "LocationManager.inAirBackgroundStateChanged()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/LocationManager.swift",
+      "line": 291,
+      "symbol": "LocationManager.backgroundCheckGPS()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/LocationManager.swift",
+      "line": 296,
+      "symbol": "LocationManager.backgroundEndCheckGPS()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/LocationManager.swift",
+      "line": 304,
+      "symbol": "LocationManager.notifyNewLocation(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/LocationManager.swift",
+      "line": 321,
+      "symbol": "LocationManager.notifyInAirStatus()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/LocationManager.swift",
+      "line": 337,
+      "symbol": "LocationManager.Observation",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/LocationManager.swift",
+      "line": 341,
+      "symbol": "LocationManager.addObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/LocationManager.swift",
+      "line": 347,
+      "symbol": "LocationManager.removeObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/LocationManager.swift",
+      "line": 356,
+      "symbol": "LocationManager.setSimulatorMode(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/LocationManager.swift",
+      "line": 359,
+      "symbol": "LocationManager.newSimulatedLocation(location:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/LocationManager.swift",
+      "line": 369,
+      "symbol": "LocationManagerObserver.newLocartion(location:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/LocationManager.swift",
+      "line": 370,
+      "symbol": "LocationManagerObserver.newInAirBackgroundState(state:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/LocationManager.swift",
+      "line": 371,
+      "symbol": "LocationManagerObserver.newInAirStatus(isInAir:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/RecorderManager.swift",
+      "line": 155,
+      "symbol": "RecorderManager.sendData()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/RecorderManager.swift",
+      "line": 161,
+      "symbol": "RecorderManager.json(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/RecorderManager.swift",
+      "line": 168,
+      "symbol": "RecorderManager.sendDataServer(completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/RecorderManager.swift",
+      "line": 215,
+      "symbol": "RecorderManager.encodeGeoJson(turbulenceArr:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/RecorderManager.swift",
+      "line": 238,
+      "symbol": "RecorderManager.PositionToSend",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/RecorderManager.swift",
+      "line": 249,
+      "symbol": "RecorderManager.updateResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/RecorderManager.swift",
+      "line": 257,
+      "symbol": "RecorderManager.newLocartion(location:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/RecorderManager.swift",
+      "line": 268,
+      "symbol": "RecorderManager.newRawTurbulence(rawTurbulence:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/RecorderManager.swift",
+      "line": 275,
+      "symbol": "RecorderManager.isLoggedIn(loggedIn:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/RecorderManager.swift",
+      "line": 303,
+      "symbol": "RecorderManager.positionChanged(isInPosition:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/RecorderManager.swift",
+      "line": 307,
+      "symbol": "RecorderManager.deviceInMotion(isInMotion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/RecorderManager.swift",
+      "line": 313,
+      "symbol": "RecorderManager.observeScreenTouches()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/RecorderManager.swift",
+      "line": 320,
+      "symbol": "RecorderManager.screenTouched()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/RecorderManager.swift",
+      "line": 325,
+      "symbol": "RecorderManager.noiseAction()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/RecorderManager.swift",
+      "line": 341,
+      "symbol": "RecorderManager.Observation",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/RecorderManager.swift",
+      "line": 345,
+      "symbol": "RecorderManager.addObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/RecorderManager.swift",
+      "line": 350,
+      "symbol": "RecorderManager.removeObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/SettingsManager.swift",
+      "line": 207,
+      "symbol": "SettingsManager.updateAccelerometer(storedX:storedY:storedZ:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/TrafficManager.swift",
+      "line": 48,
+      "symbol": "TrafficManager.Observation",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/TrafficManager.swift",
+      "line": 52,
+      "symbol": "TrafficManager.addObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/TrafficManager.swift",
+      "line": 57,
+      "symbol": "TrafficManager.removeObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/TrafficManager.swift",
+      "line": 62,
+      "symbol": "TrafficManager.getTraffic(altRange:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/TrafficManager.swift",
+      "line": 74,
+      "symbol": "TrafficManager.getTrafficJson(altRange:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/TrafficManager.swift",
+      "line": 91,
+      "symbol": "TrafficManager.newTraffic(arrTraffic:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/TrafficManager.swift",
+      "line": 106,
+      "symbol": "TrafficManager.encodeGeoJson(trafficArr:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/TurbulenceManager.swift",
+      "line": 119,
+      "symbol": "TurbulenceManager.Observation",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/TurbulenceManager.swift",
+      "line": 123,
+      "symbol": "TurbulenceManager.addObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/TurbulenceManager.swift",
+      "line": 128,
+      "symbol": "TurbulenceManager.removeObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/TurbulenceManager.swift",
+      "line": 142,
+      "symbol": "TurbulenceManager.newTurbulence(arrTurbulence:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/TurbulenceManager.swift",
+      "line": 171,
+      "symbol": "TurbulenceManager.encodeGeoJson(turbulenceArr:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Managers/TurbulenceManager.swift",
+      "line": 206,
+      "symbol": "TurbulenceManager.getTurbulenceAtTile(tile:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Model/AircraftTypeModel.swift",
+      "line": 15,
+      "symbol": "YamaseeAircraftType.aircraft",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Model/AircraftTypeModel.swift",
+      "line": 16,
+      "symbol": "YamaseeAircraftType.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Model/Traffic/TrafficModel.swift",
+      "line": 28,
+      "symbol": "Traffic.uuid",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Model/Turbulence/TurbulenceItem.swift",
+      "line": 12,
+      "symbol": "TurbulenceItem",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Model/Turbulence/TurbulenceItem.swift",
+      "line": 14,
+      "symbol": "TurbulenceItem.sev",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Model/Turbulence/TurbulenceItem.swift",
+      "line": 15,
+      "symbol": "TurbulenceItem.bbox",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Model/Turbulence/TurbulenceSeverity.swift",
+      "line": 12,
+      "symbol": "TurbulenceSeverity.None",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Model/Turbulence/TurbulenceSeverity.swift",
+      "line": 13,
+      "symbol": "TurbulenceSeverity.Light",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Model/Turbulence/TurbulenceSeverity.swift",
+      "line": 14,
+      "symbol": "TurbulenceSeverity.LightModarate",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Model/Turbulence/TurbulenceSeverity.swift",
+      "line": 15,
+      "symbol": "TurbulenceSeverity.Moderate",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Model/Turbulence/TurbulenceSeverity.swift",
+      "line": 16,
+      "symbol": "TurbulenceSeverity.ModerateSevere",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Model/Turbulence/TurbulenceSeverity.swift",
+      "line": 17,
+      "symbol": "TurbulenceSeverity.Severe",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Network/AsyncOperation.swift",
+      "line": 41,
+      "symbol": "AsyncOperation.isReady",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Network/AsyncOperation.swift",
+      "line": 45,
+      "symbol": "AsyncOperation.isExecuting",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Network/AsyncOperation.swift",
+      "line": 49,
+      "symbol": "AsyncOperation.isFinished",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Network/AsyncOperation.swift",
+      "line": 53,
+      "symbol": "AsyncOperation.isAsynchronous",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Network/AsyncOperation.swift",
+      "line": 57,
+      "symbol": "AsyncOperation.start()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Network/AsyncOperation.swift",
+      "line": 77,
+      "symbol": "AsyncOperation.cancel()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/TurbuFilter/TurbrFilter.swift",
+      "line": 211,
+      "symbol": "TurbuFilter.accelerometerEvent(event:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/TurbuFilter/TurbrFilter.swift",
+      "line": 220,
+      "symbol": "TurbuFilter.notifyNewTurbulenceEvent(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/TurbuFilter/TurbrFilter.swift",
+      "line": 241,
+      "symbol": "TurbuFilter.Observation",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/TurbuFilter/TurbrFilter.swift",
+      "line": 245,
+      "symbol": "TurbuFilter.addObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/TurbuFilter/TurbrFilter.swift",
+      "line": 250,
+      "symbol": "TurbuFilter.removeObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Yamasee.swift",
+      "line": 16,
+      "symbol": "YamaseeCoreNotifications.generalNotification",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Yamasee.swift",
+      "line": 49,
+      "symbol": "LoginError.userIdOrPasswordNotFound",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Yamasee.swift",
+      "line": 113,
+      "symbol": "YamaseeCore.shared",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Yamasee.swift",
+      "line": 114,
+      "symbol": "YamaseeCore.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Yamasee.swift",
+      "line": 181,
+      "symbol": "YamaseeCore.logout()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zivlevy/Documents/dev/SkyPath-Framework/Yamasee/Yamasee.swift",
+      "line": 363,
+      "symbol": "YamaseeCore.getAircraftTypes()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/zivlevy/Documents/dev/SkyPath-Framework"
+}
