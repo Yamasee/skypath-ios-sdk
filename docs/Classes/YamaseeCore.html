@@ -14,7 +14,7 @@
     <a title="YamaseeCore Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (37% documented)</p>
+        <p><a href="../index.html"> Docs</a> (38% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -359,6 +359,33 @@ Events only notify the delegate that a new data arrived from the server. It is t
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:7Yamasee0A4CoreC7aaLogin4from11onDisappear10completionySo16UIViewControllerC_yycySb_AA0D5ErrorOSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/aaLogin(from:onDisappear:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC7aaLogin4from11onDisappear10completionySo16UIViewControllerC_yycySb_AA0D5ErrorOSgtctF">aaLogin(from:onDisappear:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Login with American Airlines account</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">aaLogin</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="nv">onDisappear</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Enums/LoginError.html">LoginError</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:7Yamasee0A4CoreC10isLoggedInSbyF"></a>
                     <a name="//apple_ref/swift/Method/isLoggedIn()" class="dashAnchor"></a>
                     <a class="token" href="#/s:7Yamasee0A4CoreC10isLoggedInSbyF">isLoggedIn()</a>
@@ -401,7 +428,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Logout from Yamasee server. Stops all communication with Yamasee server. Turbulence collection stop. Cached turbulence data is deleted.</p>
 
                       </div>
                       <div class="declaration">
@@ -457,6 +484,100 @@ Events only notify the delegate that a new data arrived from the server. It is t
                             </tr>
                           </tbody>
                         </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC9isNewUser13userIdOrEmail17completionHandlerySS_ySbSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/isNewUser(userIdOrEmail:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC9isNewUser13userIdOrEmail17completionHandlerySS_ySbSg_s5Error_pSgtctF">isNewUser(userIdOrEmail:completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>isNewUser
+   returns the status of user on the server</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isNewUser</span><span class="p">(</span><span class="nv">userIdOrEmail</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Bool?.  true if the user is new</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC14setUserProfile13userIdOrEmail8password17completionHandlerySS_SSySb_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/setUserProfile(userIdOrEmail:password:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC14setUserProfile13userIdOrEmail8password17completionHandlerySS_SSySb_s5Error_pSgtctF">setUserProfile(userIdOrEmail:password:completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set User Profile call</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setUserProfile</span><span class="p">(</span><span class="nv">userIdOrEmail</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>userIdOrEmail</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>password</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Bool. true the call was succesful</p>
                       </div>
                     </section>
                   </div>
@@ -2476,6 +2597,33 @@ The framework uses this parameter to conserve energy while app is in the backgro
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:7Yamasee0A4CoreC12isInPositionSbyF"></a>
+                    <a name="//apple_ref/swift/Method/isInPosition()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC12isInPositionSbyF">isInPosition()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Checks if device is in proper positioned in cradle</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isInPosition</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:7Yamasee0A4CoreC13screenTouchedyyF"></a>
                     <a name="//apple_ref/swift/Method/screenTouched()" class="dashAnchor"></a>
                     <a class="token" href="#/s:7Yamasee0A4CoreC13screenTouchedyyF">screenTouched()</a>
@@ -2798,7 +2946,7 @@ timestamp (should not be &ldquo;older&rdquo; than 2 seconds ago)</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-06-28)</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-07-19)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
