@@ -8,13 +8,21 @@
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a name="//apple_ref/swift/Class/YamaseeCore" class="dashAnchor"></a>
     <a title="YamaseeCore Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (38% documented)</p>
+        <p><a href="../index.html"> Docs</a> (73% documented)</p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -70,6 +78,9 @@
             <a href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Structs/SessionTimeouts.html">SessionTimeouts</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/Traffic.html">Traffic</a>
               </li>
               <li class="nav-group-task">
@@ -94,6 +105,7 @@
             <h1>YamaseeCore</h1>
               <div class="declaration">
                 <div class="language">
+                  
                   <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">YamaseeCore</span> <span class="p">:</span> <span class="kt">AccelerometerManagerObserver</span></code></pre>
 
                 </div>
@@ -173,10 +185,10 @@ Events only notify the delegate that a new data arrived from the server. It is t
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/START%20&amp;%20LOGIN"></a>
+                <a name="/START%20%26%20LOGIN"></a>
                 <a name="//apple_ref/swift/Section/START &amp; LOGIN" class="dashAnchor"></a>
                 <div class="section-name-container">
-                  <a class="section-name-link" href="#/START%20&amp;%20LOGIN"></a>
+                  <a class="section-name-link" href="#/START%20%26%20LOGIN"></a>
                   <h3 class="section-name"><p>START &amp; LOGIN</p>
 </h3>
                 </div>
@@ -187,7 +199,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC5start6apiKey7baseUrlySS_SStF"></a>
                     <a name="//apple_ref/swift/Method/start(apiKey:baseUrl:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC5start6apiKey7baseUrlySS_SStF">start(apiKey:baseUrl:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC5start6apiKey7baseUrlySS_SStF">start(apiKey:<wbr>baseUrl:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -245,7 +257,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC12partnerLogin6userId07companyF017completionHandlerySS_SSySb_AA0D5ErrorOSgtctF"></a>
                     <a name="//apple_ref/swift/Method/partnerLogin(userId:companyId:completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC12partnerLogin6userId07companyF017completionHandlerySS_SSySb_AA0D5ErrorOSgtctF">partnerLogin(userId:companyId:completionHandler:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC12partnerLogin6userId07companyF017completionHandlerySS_SSySb_AA0D5ErrorOSgtctF">partnerLogin(userId:<wbr>companyId:<wbr>completionHandler:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -303,7 +315,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC9userLogin0C2Id8password17completionHandlerySS_SSySb_AA0D5ErrorOSgtctF"></a>
                     <a name="//apple_ref/swift/Method/userLogin(userId:password:completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC9userLogin0C2Id8password17completionHandlerySS_SSySb_AA0D5ErrorOSgtctF">userLogin(userId:password:completionHandler:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC9userLogin0C2Id8password17completionHandlerySS_SSySb_AA0D5ErrorOSgtctF">userLogin(userId:<wbr>password:<wbr>completionHandler:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -359,9 +371,9 @@ Events only notify the delegate that a new data arrived from the server. It is t
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Yamasee0A4CoreC7aaLogin4from11onDisappear10completionySo16UIViewControllerC_yycySb_AA0D5ErrorOSgtctF"></a>
-                    <a name="//apple_ref/swift/Method/aaLogin(from:onDisappear:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC7aaLogin4from11onDisappear10completionySo16UIViewControllerC_yycySb_AA0D5ErrorOSgtctF">aaLogin(from:onDisappear:completion:)</a>
+                    <a name="/s:7Yamasee0A4CoreC8ssoLogin4from12airlinesCode6userId11onDisappear10completionySo16UIViewControllerC_SSSgALyycySb_AA0D5ErrorOSgAA15SessionTimeoutsVSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/ssoLogin(from:airlinesCode:userId:onDisappear:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC8ssoLogin4from12airlinesCode6userId11onDisappear10completionySo16UIViewControllerC_SSSgALyycySb_AA0D5ErrorOSgAA15SessionTimeoutsVSgtctF">ssoLogin(from:<wbr>airlinesCode:<wbr>userId:<wbr>onDisappear:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -369,16 +381,39 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Login with American Airlines account</p>
+                        <p>Login with an airlines account if supported</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">aaLogin</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="nv">onDisappear</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Enums/LoginError.html">LoginError</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">ssoLogin</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span>
+                     <span class="nv">airlinesCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                     <span class="nv">userId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                     <span class="nv">onDisappear</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span>
+                     <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Enums/LoginError.html">LoginError</a></span><span class="p">?,</span> <span class="n">_</span> <span class="nv">timeouts</span><span class="p">:</span> <span class="kt"><a href="../Structs/SessionTimeouts.html">SessionTimeouts</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>userId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -447,7 +482,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC14forgotPassword6userId17completionHandlerySS_ySb_AA06ForgotD5ErrorOSgtctF"></a>
                     <a name="//apple_ref/swift/Method/forgotPassword(userId:completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC14forgotPassword6userId17completionHandlerySS_ySb_AA06ForgotD5ErrorOSgtctF">forgotPassword(userId:completionHandler:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC14forgotPassword6userId17completionHandlerySS_ySb_AA06ForgotD5ErrorOSgtctF">forgotPassword(userId:<wbr>completionHandler:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -493,7 +528,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC9isNewUser13userIdOrEmail17completionHandlerySS_ySbSg_s5Error_pSgtctF"></a>
                     <a name="//apple_ref/swift/Method/isNewUser(userIdOrEmail:completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC9isNewUser13userIdOrEmail17completionHandlerySS_ySbSg_s5Error_pSgtctF">isNewUser(userIdOrEmail:completionHandler:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC9isNewUser13userIdOrEmail17completionHandlerySS_ySbSg_s5Error_pSgtctF">isNewUser(userIdOrEmail:<wbr>completionHandler:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -523,9 +558,9 @@ Events only notify the delegate that a new data arrived from the server. It is t
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Yamasee0A4CoreC14setUserProfile13userIdOrEmail8password17completionHandlerySS_SSySb_s5Error_pSgtctF"></a>
+                    <a name="/s:7Yamasee0A4CoreC14setUserProfile13userIdOrEmail8password17completionHandlerySS_SSySb_AA10LoginErrorOSgtctF"></a>
                     <a name="//apple_ref/swift/Method/setUserProfile(userIdOrEmail:password:completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC14setUserProfile13userIdOrEmail8password17completionHandlerySS_SSySb_s5Error_pSgtctF">setUserProfile(userIdOrEmail:password:completionHandler:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC14setUserProfile13userIdOrEmail8password17completionHandlerySS_SSySb_AA10LoginErrorOSgtctF">setUserProfile(userIdOrEmail:<wbr>password:<wbr>completionHandler:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -540,7 +575,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setUserProfile</span><span class="p">(</span><span class="nv">userIdOrEmail</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setUserProfile</span><span class="p">(</span><span class="nv">userIdOrEmail</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Enums/LoginError.html">LoginError</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -586,10 +621,10 @@ Events only notify the delegate that a new data arrived from the server. It is t
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/TURBULENCE%20&amp;%20TRAFFIC"></a>
+                <a name="/TURBULENCE%20%26%20TRAFFIC"></a>
                 <a name="//apple_ref/swift/Section/TURBULENCE &amp; TRAFFIC" class="dashAnchor"></a>
                 <div class="section-name-container">
-                  <a class="section-name-link" href="#/TURBULENCE%20&amp;%20TRAFFIC"></a>
+                  <a class="section-name-link" href="#/TURBULENCE%20%26%20TRAFFIC"></a>
                   <h3 class="section-name"><p>TURBULENCE &amp; TRAFFIC</p>
 </h3>
                 </div>
@@ -600,7 +635,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC20getTurbulenceGeoJson8altRange8timeSpan9zoomLevelSSSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_S2itF"></a>
                     <a name="//apple_ref/swift/Method/getTurbulenceGeoJson(altRange:timeSpan:zoomLevel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC20getTurbulenceGeoJson8altRange8timeSpan9zoomLevelSSSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_S2itF">getTurbulenceGeoJson(altRange:timeSpan:zoomLevel:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC20getTurbulenceGeoJson8altRange8timeSpan9zoomLevelSSSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_S2itF">getTurbulenceGeoJson(altRange:<wbr>timeSpan:<wbr>zoomLevel:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -674,7 +709,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC13getTurbulence8altRange8timeSpan9zoomLevelSayAA0D4ItemVGSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_S2itF"></a>
                     <a name="//apple_ref/swift/Method/getTurbulence(altRange:timeSpan:zoomLevel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC13getTurbulence8altRange8timeSpan9zoomLevelSayAA0D4ItemVGSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_S2itF">getTurbulence(altRange:timeSpan:zoomLevel:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC13getTurbulence8altRange8timeSpan9zoomLevelSayAA0D4ItemVGSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_S2itF">getTurbulence(altRange:<wbr>timeSpan:<wbr>zoomLevel:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -748,7 +783,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC14getTrafficJson8altRangeSSSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_tF"></a>
                     <a name="//apple_ref/swift/Method/getTrafficJson(altRange:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC14getTrafficJson8altRangeSSSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_tF">getTrafficJson(altRange:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC14getTrafficJson8altRangeSSSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_tF">getTrafficJson(altRange:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -803,7 +838,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC10getTraffic8altRangeSayAA0D0VGSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_tF"></a>
                     <a name="//apple_ref/swift/Method/getTraffic(altRange:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC10getTraffic8altRangeSayAA0D0VGSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_tF">getTraffic(altRange:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC10getTraffic8altRangeSayAA0D0VGSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_tF">getTraffic(altRange:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -866,7 +901,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC8reportCB3lat3lng3altySd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGtF"></a>
                     <a name="//apple_ref/swift/Method/reportCB(lat:lng:alt:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC8reportCB3lat3lng3altySd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGtF">reportCB(lat:lng:alt:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC8reportCB3lat3lng3altySd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGtF">reportCB(lat:<wbr>lng:<wbr>alt:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -936,7 +971,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC15reportLightning3lat3lng3altySd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGtF"></a>
                     <a name="//apple_ref/swift/Method/reportLightning(lat:lng:alt:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC15reportLightning3lat3lng3altySd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGtF">reportLightning(lat:lng:alt:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC15reportLightning3lat3lng3altySd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGtF">reportLightning(lat:<wbr>lng:<wbr>alt:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1006,7 +1041,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC11reportShear3lat3lng3altySd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGtF"></a>
                     <a name="//apple_ref/swift/Method/reportShear(lat:lng:alt:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC11reportShear3lat3lng3altySd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGtF">reportShear(lat:lng:alt:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC11reportShear3lat3lng3altySd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGtF">reportShear(lat:<wbr>lng:<wbr>alt:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1076,7 +1111,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC11reportIcing3lat3lng3altySd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGtF"></a>
                     <a name="//apple_ref/swift/Method/reportIcing(lat:lng:alt:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC11reportIcing3lat3lng3altySd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGtF">reportIcing(lat:lng:alt:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC11reportIcing3lat3lng3altySd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGtF">reportIcing(lat:<wbr>lng:<wbr>alt:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1146,7 +1181,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC16getWeatherByType07weatherF08altRange8timeSpan9zoomLevelSSAA6WXTypeO_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF"></a>
                     <a name="//apple_ref/swift/Method/getWeatherByType(weatherType:altRange:timeSpan:zoomLevel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC16getWeatherByType07weatherF08altRange8timeSpan9zoomLevelSSAA6WXTypeO_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getWeatherByType(weatherType:altRange:timeSpan:zoomLevel:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC16getWeatherByType07weatherF08altRange8timeSpan9zoomLevelSSAA6WXTypeO_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getWeatherByType(weatherType:<wbr>altRange:<wbr>timeSpan:<wbr>zoomLevel:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1232,7 +1267,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC16getWeatherByType07weatherF08altRange8timeSpan9zoomLevelSayAA0D4ItemVGAA6WXTypeO_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF"></a>
                     <a name="//apple_ref/swift/Method/getWeatherByType(weatherType:altRange:timeSpan:zoomLevel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC16getWeatherByType07weatherF08altRange8timeSpan9zoomLevelSayAA0D4ItemVGAA6WXTypeO_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getWeatherByType(weatherType:altRange:timeSpan:zoomLevel:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC16getWeatherByType07weatherF08altRange8timeSpan9zoomLevelSayAA0D4ItemVGAA6WXTypeO_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getWeatherByType(weatherType:<wbr>altRange:<wbr>timeSpan:<wbr>zoomLevel:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1318,7 +1353,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC17getWeatherByTypes07weatherF08altRange8timeSpan9zoomLevelSayAA0D4ItemVGSayAA6WXTypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF"></a>
                     <a name="//apple_ref/swift/Method/getWeatherByTypes(weatherTypes:altRange:timeSpan:zoomLevel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC17getWeatherByTypes07weatherF08altRange8timeSpan9zoomLevelSayAA0D4ItemVGSayAA6WXTypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getWeatherByTypes(weatherTypes:altRange:timeSpan:zoomLevel:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC17getWeatherByTypes07weatherF08altRange8timeSpan9zoomLevelSayAA0D4ItemVGSayAA6WXTypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getWeatherByTypes(weatherTypes:<wbr>altRange:<wbr>timeSpan:<wbr>zoomLevel:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1404,7 +1439,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC17getWeatherByTypes07weatherF08altRange8timeSpan9zoomLevelSSSayAA6WXTypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF"></a>
                     <a name="//apple_ref/swift/Method/getWeatherByTypes(weatherTypes:altRange:timeSpan:zoomLevel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC17getWeatherByTypes07weatherF08altRange8timeSpan9zoomLevelSSSayAA6WXTypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getWeatherByTypes(weatherTypes:altRange:timeSpan:zoomLevel:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC17getWeatherByTypes07weatherF08altRange8timeSpan9zoomLevelSSSayAA6WXTypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getWeatherByTypes(weatherTypes:<wbr>altRange:<wbr>timeSpan:<wbr>zoomLevel:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1490,7 +1525,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC19getOwnWeatherByType07weatherG08altRange8timeSpan9zoomLevelSSAA6WXTypeO_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF"></a>
                     <a name="//apple_ref/swift/Method/getOwnWeatherByType(weatherType:altRange:timeSpan:zoomLevel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC19getOwnWeatherByType07weatherG08altRange8timeSpan9zoomLevelSSAA6WXTypeO_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getOwnWeatherByType(weatherType:altRange:timeSpan:zoomLevel:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC19getOwnWeatherByType07weatherG08altRange8timeSpan9zoomLevelSSAA6WXTypeO_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getOwnWeatherByType(weatherType:<wbr>altRange:<wbr>timeSpan:<wbr>zoomLevel:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1576,7 +1611,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC19getOwnWeatherByType07weatherG08altRange8timeSpan9zoomLevelSayAA0E4ItemVGAA6WXTypeO_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF"></a>
                     <a name="//apple_ref/swift/Method/getOwnWeatherByType(weatherType:altRange:timeSpan:zoomLevel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC19getOwnWeatherByType07weatherG08altRange8timeSpan9zoomLevelSayAA0E4ItemVGAA6WXTypeO_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getOwnWeatherByType(weatherType:altRange:timeSpan:zoomLevel:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC19getOwnWeatherByType07weatherG08altRange8timeSpan9zoomLevelSayAA0E4ItemVGAA6WXTypeO_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getOwnWeatherByType(weatherType:<wbr>altRange:<wbr>timeSpan:<wbr>zoomLevel:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1662,7 +1697,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC20getOwnWeatherByTypes07weatherG08altRange8timeSpan9zoomLevelSayAA0E4ItemVGSayAA6WXTypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF"></a>
                     <a name="//apple_ref/swift/Method/getOwnWeatherByTypes(weatherTypes:altRange:timeSpan:zoomLevel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC20getOwnWeatherByTypes07weatherG08altRange8timeSpan9zoomLevelSayAA0E4ItemVGSayAA6WXTypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getOwnWeatherByTypes(weatherTypes:altRange:timeSpan:zoomLevel:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC20getOwnWeatherByTypes07weatherG08altRange8timeSpan9zoomLevelSayAA0E4ItemVGSayAA6WXTypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getOwnWeatherByTypes(weatherTypes:<wbr>altRange:<wbr>timeSpan:<wbr>zoomLevel:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1748,7 +1783,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC20getOwnWeatherByTypes07weatherG08altRange8timeSpan9zoomLevelSSSayAA6WXTypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF"></a>
                     <a name="//apple_ref/swift/Method/getOwnWeatherByTypes(weatherTypes:altRange:timeSpan:zoomLevel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC20getOwnWeatherByTypes07weatherG08altRange8timeSpan9zoomLevelSSSayAA6WXTypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getOwnWeatherByTypes(weatherTypes:altRange:timeSpan:zoomLevel:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC20getOwnWeatherByTypes07weatherG08altRange8timeSpan9zoomLevelSSSayAA6WXTypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getOwnWeatherByTypes(weatherTypes:<wbr>altRange:<wbr>timeSpan:<wbr>zoomLevel:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1847,7 +1882,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC23getOwnTurbulenceGeoJson8altRange8timeSpan9zoomLevelSSSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_S2itF"></a>
                     <a name="//apple_ref/swift/Method/getOwnTurbulenceGeoJson(altRange:timeSpan:zoomLevel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC23getOwnTurbulenceGeoJson8altRange8timeSpan9zoomLevelSSSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_S2itF">getOwnTurbulenceGeoJson(altRange:timeSpan:zoomLevel:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC23getOwnTurbulenceGeoJson8altRange8timeSpan9zoomLevelSSSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_S2itF">getOwnTurbulenceGeoJson(altRange:<wbr>timeSpan:<wbr>zoomLevel:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1921,7 +1956,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC16getOwnTurbulence8altRange8timeSpan9zoomLevelSayAA0E4ItemVGSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_S2itF"></a>
                     <a name="//apple_ref/swift/Method/getOwnTurbulence(altRange:timeSpan:zoomLevel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC16getOwnTurbulence8altRange8timeSpan9zoomLevelSayAA0E4ItemVGSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_S2itF">getOwnTurbulence(altRange:timeSpan:zoomLevel:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC16getOwnTurbulence8altRange8timeSpan9zoomLevelSayAA0E4ItemVGSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_S2itF">getOwnTurbulence(altRange:<wbr>timeSpan:<wbr>zoomLevel:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2008,7 +2043,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC8getAlert3lat4long8altitude7heading8timeSpan8distance05angleJ0AA18TurbulenceSeverityO16maxTurboSevAtAlt_AM0opQ5BelowAM0opQ5AbovetSd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGASySo0X5AngleCGSiAvYtF"></a>
                     <a name="//apple_ref/swift/Method/getAlert(lat:long:altitude:heading:timeSpan:distance:angleSpan:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC8getAlert3lat4long8altitude7heading8timeSpan8distance05angleJ0AA18TurbulenceSeverityO16maxTurboSevAtAlt_AM0opQ5BelowAM0opQ5AbovetSd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGASySo0X5AngleCGSiAvYtF">getAlert(lat:long:altitude:heading:timeSpan:distance:angleSpan:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC8getAlert3lat4long8altitude7heading8timeSpan8distance05angleJ0AA18TurbulenceSeverityO16maxTurboSevAtAlt_AM0opQ5BelowAM0opQ5AbovetSd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGASySo0X5AngleCGSiAvYtF">getAlert(lat:<wbr>long:<wbr>altitude:<wbr>heading:<wbr>timeSpan:<wbr>distance:<wbr>angleSpan:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2131,7 +2166,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC13getAlertTiles3lat4long8altitude7heading8timeSpan8distance05angleK0SayAA14TurbulenceItemVG05alertE5AtAlt_AN0pE5BelowAN0pE5AbovetSd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGATySo0W5AngleCGSiAwZtF"></a>
                     <a name="//apple_ref/swift/Method/getAlertTiles(lat:long:altitude:heading:timeSpan:distance:angleSpan:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC13getAlertTiles3lat4long8altitude7heading8timeSpan8distance05angleK0SayAA14TurbulenceItemVG05alertE5AtAlt_AN0pE5BelowAN0pE5AbovetSd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGATySo0W5AngleCGSiAwZtF">getAlertTiles(lat:long:altitude:heading:timeSpan:distance:angleSpan:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC13getAlertTiles3lat4long8altitude7heading8timeSpan8distance05angleK0SayAA14TurbulenceItemVG05alertE5AtAlt_AN0pE5BelowAN0pE5AbovetSd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGATySo0W5AngleCGSiAwZtF">getAlertTiles(lat:<wbr>long:<wbr>altitude:<wbr>heading:<wbr>timeSpan:<wbr>distance:<wbr>angleSpan:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2254,7 +2289,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC14getRouteAlerts5route11widthAround8altitude8timeSpanSayAA14TurbulenceItemVG15alertTilesAtAlt_AK0nO5BelowAK0nO5AbovetSaySo10CLLocationCG_10Foundation11MeasurementVySo12NSUnitLengthCGAWSitF"></a>
                     <a name="//apple_ref/swift/Method/getRouteAlerts(route:widthAround:altitude:timeSpan:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC14getRouteAlerts5route11widthAround8altitude8timeSpanSayAA14TurbulenceItemVG15alertTilesAtAlt_AK0nO5BelowAK0nO5AbovetSaySo10CLLocationCG_10Foundation11MeasurementVySo12NSUnitLengthCGAWSitF">getRouteAlerts(route:widthAround:altitude:timeSpan:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC14getRouteAlerts5route11widthAround8altitude8timeSpanSayAA14TurbulenceItemVG15alertTilesAtAlt_AK0nO5BelowAK0nO5AbovetSaySo10CLLocationCG_10Foundation11MeasurementVySo12NSUnitLengthCGAWSitF">getRouteAlerts(route:<wbr>widthAround:<wbr>altitude:<wbr>timeSpan:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2353,7 +2388,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC11setAircraft8aircraftySS_tF"></a>
                     <a name="//apple_ref/swift/Method/setAircraft(aircraft:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC11setAircraft8aircraftySS_tF">setAircraft(aircraft:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC11setAircraft8aircraftySS_tF">setAircraft(aircraft:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2430,7 +2465,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC15setFlightNumber06flightE0ySS_tF"></a>
                     <a name="//apple_ref/swift/Method/setFlightNumber(flightNumber:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC15setFlightNumber06flightE0ySS_tF">setFlightNumber(flightNumber:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC15setFlightNumber06flightE0ySS_tF">setFlightNumber(flightNumber:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2476,7 +2511,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <code>
                     <a name="/s:7Yamasee0A4CoreC19setConnectionStatus11isConnectedySb_tF"></a>
                     <a name="//apple_ref/swift/Method/setConnectionStatus(isConnected:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC19setConnectionStatus11isConnectedySb_tF">setConnectionStatus(isConnected:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC19setConnectionStatus11isConnectedySb_tF">setConnectionStatus(isConnected:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2525,7 +2560,7 @@ The framework uses this parameter to conserve energy and avoid server calls when
                     <code>
                     <a name="/s:7Yamasee0A4CoreC22setAppForegroundStatus02inE0ySb_tF"></a>
                     <a name="//apple_ref/swift/Method/setAppForegroundStatus(inForeground:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC22setAppForegroundStatus02inE0ySb_tF">setAppForegroundStatus(inForeground:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC22setAppForegroundStatus02inE0ySb_tF">setAppForegroundStatus(inForeground:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2694,7 +2729,7 @@ The framework uses this parameter to conserve energy while app is in the backgro
                     <code>
                     <a name="/s:7Yamasee0A4CoreC16setSimulatorMode010isLocationD2OnySb_tF"></a>
                     <a name="//apple_ref/swift/Method/setSimulatorMode(isLocationSimulatorOn:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC16setSimulatorMode010isLocationD2OnySb_tF">setSimulatorMode(isLocationSimulatorOn:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC16setSimulatorMode010isLocationD2OnySb_tF">setSimulatorMode(isLocationSimulatorOn:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2767,7 +2802,7 @@ The framework uses this parameter to conserve energy while app is in the backgro
                     <code>
                     <a name="/s:7Yamasee0A4CoreC17simulatedLocation8locationySo10CLLocationC_tF"></a>
                     <a name="//apple_ref/swift/Method/simulatedLocation(location:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC17simulatedLocation8locationySo10CLLocationC_tF">simulatedLocation(location:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC17simulatedLocation8locationySo10CLLocationC_tF">simulatedLocation(location:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2816,6 +2851,52 @@ timestamp (should not be &ldquo;older&rdquo; than 2 seconds ago)</p>
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC23setPushSimulatedEnabledyySbF"></a>
+                    <a name="//apple_ref/swift/Method/setPushSimulatedEnabled(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC23setPushSimulatedEnabledyySbF">setPushSimulatedEnabled(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Restrict sending on the server tracked turbulence and reported weather</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setPushSimulatedEnabled</span><span class="p">(</span><span class="n">_</span> <span class="nv">enabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>enabled</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If true the tracked events will be pushed to the server. Default is false</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
             <div class="task-group">
@@ -2834,7 +2915,7 @@ timestamp (should not be &ldquo;older&rdquo; than 2 seconds ago)</p>
                     <code>
                     <a name="/s:7Yamasee0A4CoreC9setLogger4isOn0E6Symbol05errorF004infoF007warningF007networkF05onLogySb_S5bySScSgtF"></a>
                     <a name="//apple_ref/swift/Method/setLogger(isOn:isSymbol:errorOn:infoOn:warningOn:networkOn:onLog:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC9setLogger4isOn0E6Symbol05errorF004infoF007warningF007networkF05onLogySb_S5bySScSgtF">setLogger(isOn:isSymbol:errorOn:infoOn:warningOn:networkOn:onLog:)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC9setLogger4isOn0E6Symbol05errorF004infoF007warningF007networkF05onLogySb_S5bySScSgtF">setLogger(isOn:<wbr>isSymbol:<wbr>errorOn:<wbr>infoOn:<wbr>warningOn:<wbr>networkOn:<wbr>onLog:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2946,8 +3027,8 @@ timestamp (should not be &ldquo;older&rdquo; than 2 seconds ago)</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-07-19)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://skypath.app" target="_blank" rel="external">Yamasee LTD</a>. All rights reserved. (Last updated: 2020-08-14)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

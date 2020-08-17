@@ -1,13 +1,27 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Yamasee
+import CFNetwork
 import CoreLocation
 import CoreMotion
 import Foundation
 import MapKit
 import Swift
 import UIKit
+import WebKit
 @_exported import Yamasee
+public enum ForgotPasswordError : Swift.Error {
+  case timeOut
+  case userIdParamError
+  case userIdNotFound
+  case internetConnectionAppearsOffline
+  case unableToCompleteAction
+  public static func == (a: Yamasee.ForgotPasswordError, b: Yamasee.ForgotPasswordError) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
 public enum TurbulenceSeverity : Swift.Int, Swift.Comparable, Swift.Equatable, Swift.Codable {
   case None
   case Light
@@ -28,6 +42,18 @@ public struct TurbulenceItem {
   public let sev: Yamasee.TurbulenceSeverity
   public let bbox: [CoreLocation.CLLocationCoordinate2D]
 }
+public enum LoginError : Swift.Error {
+  case timeOut
+  case userIdParamError
+  case copmanyIdError
+  case apiKeyNotValid
+  case passwordNotValid
+  case userIdNotFound
+  case userIdOrPasswordNotFound
+  case internetConnectionAppearsOffline
+  case unableToLogin(error: Swift.Error?)
+  case ssoNotValid
+}
 public enum YamaseeLocationState {
   case good
   case dr
@@ -42,37 +68,15 @@ public struct YamaseeLocation {
   public var location: CoreLocation.CLLocation?
   public var state: Yamasee.YamaseeLocationState
 }
+public struct SessionTimeouts : Swift.Codable {
+  public var session: Swift.Int
+  public var idle: Swift.Int
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
 public enum YamaseeCoreNotifications : Swift.Error {
   case generalNotification
   public static func == (a: Yamasee.YamaseeCoreNotifications, b: Yamasee.YamaseeCoreNotifications) -> Swift.Bool
-  public var hashValue: Swift.Int {
-    get
-  }
-  public func hash(into hasher: inout Swift.Hasher)
-}
-public enum LoginError : Swift.Error {
-  case timeOut
-  case userIdParamError
-  case copmanyIdError
-  case apiKeyNotValid
-  case passwordNotValid
-  case userIdNotFound
-  case userIdOrPasswordNotFound
-  case internetConnectionAppearsOffline
-  case unableToLogin
-  public static func == (a: Yamasee.LoginError, b: Yamasee.LoginError) -> Swift.Bool
-  public var hashValue: Swift.Int {
-    get
-  }
-  public func hash(into hasher: inout Swift.Hasher)
-}
-public enum ForgotPasswordError : Swift.Error {
-  case timeOut
-  case userIdParamError
-  case userIdNotFound
-  case internetConnectionAppearsOffline
-  case unableToCompleteAction
-  public static func == (a: Yamasee.ForgotPasswordError, b: Yamasee.ForgotPasswordError) -> Swift.Bool
   public var hashValue: Swift.Int {
     get
   }
@@ -97,9 +101,12 @@ public protocol YamaseeCoreDelegate : AnyObject {
   public func start(apiKey: Swift.String, baseUrl: Swift.String)
   public func partnerLogin(userId: Swift.String, companyId: Swift.String, completionHandler: @escaping (Swift.Bool, Yamasee.LoginError?) -> Swift.Void)
   public func userLogin(userId: Swift.String, password: Swift.String, completionHandler: @escaping (Swift.Bool, Yamasee.LoginError?) -> Swift.Void)
+  public func ssoLogin(from: UIKit.UIViewController, airlinesCode: Swift.String? = nil, userId: Swift.String? = nil, onDisappear: @escaping () -> Swift.Void, completion: @escaping (Swift.Bool, Yamasee.LoginError?, Yamasee.SessionTimeouts?) -> Swift.Void)
   public func isLoggedIn() -> Swift.Bool
   public func logout()
   public func forgotPassword(userId: Swift.String, completionHandler: @escaping (Swift.Bool, Yamasee.ForgotPasswordError?) -> Swift.Void)
+  public func isNewUser(userIdOrEmail: Swift.String, completionHandler: @escaping (Swift.Bool?, Swift.Error?) -> Swift.Void)
+  public func setUserProfile(userIdOrEmail: Swift.String, password: Swift.String, completionHandler: @escaping (Swift.Bool, Yamasee.LoginError?) -> Swift.Void)
   public func getTurbulenceGeoJson(altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> Swift.String
   public func getTurbulence(altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> [Yamasee.TurbulenceItem]
   public func getTrafficJson(altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>) -> Swift.String
@@ -127,6 +134,7 @@ public protocol YamaseeCoreDelegate : AnyObject {
   public func setConnectionStatus(isConnected: Swift.Bool)
   public func setAppForegroundStatus(inForeground: Swift.Bool)
   public func setAngle()
+  public func isInPosition() -> Swift.Bool
   @available(*, deprecated, message: "Touches are now tracked automatically. Method will be removed in future versions")
   public func screenTouched()
   public func getAircraftTypes() -> [Yamasee.YamaseeAircraftType]
@@ -145,6 +153,7 @@ extension YamaseeCore {
   public func setSimulatorMode(isLocationSimulatorOn: Swift.Bool)
   public func stopSimulationNoDR()
   public func simulatedLocation(location: CoreLocation.CLLocation)
+  public func setPushSimulatedEnabled(_ enabled: Swift.Bool)
 }
 extension YamaseeCore {
   public func setLogger(isOn: Swift.Bool, isSymbol: Swift.Bool = false, errorOn: Swift.Bool = false, infoOn: Swift.Bool = false, warningOn: Swift.Bool = false, networkOn: Swift.Bool = false, onLog: ((Swift.String) -> Swift.Void)?)
@@ -182,16 +191,14 @@ public struct Traffic : Swift.Encodable {
 extension Traffic : Swift.Decodable {
   public init(from decoder: Swift.Decoder) throws
 }
+extension Yamasee.ForgotPasswordError : Swift.Equatable {}
+extension Yamasee.ForgotPasswordError : Swift.Hashable {}
 extension Yamasee.TurbulenceSeverity : Swift.Hashable {}
 extension Yamasee.TurbulenceSeverity : Swift.RawRepresentable {}
 extension Yamasee.YamaseeLocationState : Swift.Equatable {}
 extension Yamasee.YamaseeLocationState : Swift.Hashable {}
 extension Yamasee.YamaseeCoreNotifications : Swift.Equatable {}
 extension Yamasee.YamaseeCoreNotifications : Swift.Hashable {}
-extension Yamasee.LoginError : Swift.Equatable {}
-extension Yamasee.LoginError : Swift.Hashable {}
-extension Yamasee.ForgotPasswordError : Swift.Equatable {}
-extension Yamasee.ForgotPasswordError : Swift.Hashable {}
 extension Yamasee.WXType : Swift.Equatable {}
 extension Yamasee.WXType : Swift.Hashable {}
 extension Yamasee.WXType : Swift.RawRepresentable {}

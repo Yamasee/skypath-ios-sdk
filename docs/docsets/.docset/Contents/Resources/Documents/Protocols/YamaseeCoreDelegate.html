@@ -8,13 +8,21 @@
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a name="//apple_ref/swift/Protocol/YamaseeCoreDelegate" class="dashAnchor"></a>
     <a title="YamaseeCoreDelegate Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (38% documented)</p>
+        <p><a href="../index.html"> Docs</a> (73% documented)</p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -70,6 +78,9 @@
             <a href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Structs/SessionTimeouts.html">SessionTimeouts</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/Traffic.html">Traffic</a>
               </li>
               <li class="nav-group-task">
@@ -94,6 +105,7 @@
             <h1>YamaseeCoreDelegate</h1>
               <div class="declaration">
                 <div class="language">
+                  
                   <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">YamaseeCoreDelegate</span> <span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
 
                 </div>
@@ -109,7 +121,7 @@
                     <code>
                     <a name="/s:7Yamasee0A12CoreDelegateP17newTurbulenceData16serverUpdateTimeySi_tF"></a>
                     <a name="//apple_ref/swift/Method/newTurbulenceData(serverUpdateTime:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A12CoreDelegateP17newTurbulenceData16serverUpdateTimeySi_tF">newTurbulenceData(serverUpdateTime:)</a>
+                    <a class="token" href="#/s:7Yamasee0A12CoreDelegateP17newTurbulenceData16serverUpdateTimeySi_tF">newTurbulenceData(serverUpdateTime:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -136,7 +148,7 @@
                     <code>
                     <a name="/s:7Yamasee0A12CoreDelegateP14newTrafficData16serverUpdateTimeySi_tF"></a>
                     <a name="//apple_ref/swift/Method/newTrafficData(serverUpdateTime:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A12CoreDelegateP14newTrafficData16serverUpdateTimeySi_tF">newTrafficData(serverUpdateTime:)</a>
+                    <a class="token" href="#/s:7Yamasee0A12CoreDelegateP14newTrafficData16serverUpdateTimeySi_tF">newTrafficData(serverUpdateTime:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -163,7 +175,7 @@
                     <code>
                     <a name="/s:7Yamasee0A12CoreDelegateP24deviceAngleStatusChanged04isInE0ySb_tF"></a>
                     <a name="//apple_ref/swift/Method/deviceAngleStatusChanged(isInAngle:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A12CoreDelegateP24deviceAngleStatusChanged04isInE0ySb_tF">deviceAngleStatusChanged(isInAngle:)</a>
+                    <a class="token" href="#/s:7Yamasee0A12CoreDelegateP24deviceAngleStatusChanged04isInE0ySb_tF">deviceAngleStatusChanged(isInAngle:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -190,7 +202,7 @@
                     <code>
                     <a name="/s:7Yamasee0A12CoreDelegateP18turbulenceDetected13newTurbulenceyAA0G4ItemV_tF"></a>
                     <a name="//apple_ref/swift/Method/turbulenceDetected(newTurbulence:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A12CoreDelegateP18turbulenceDetected13newTurbulenceyAA0G4ItemV_tF">turbulenceDetected(newTurbulence:)</a>
+                    <a class="token" href="#/s:7Yamasee0A12CoreDelegateP18turbulenceDetected13newTurbulenceyAA0G4ItemV_tF">turbulenceDetected(newTurbulence:<wbr>)</a>
                     </code>
                       <span class="declaration-note">
                         Default implementation
@@ -224,7 +236,7 @@
                     <code>
                     <a name="/s:7Yamasee0A12CoreDelegateP11loginStatus10isLoggedInySb_tF"></a>
                     <a name="//apple_ref/swift/Method/loginStatus(isLoggedIn:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A12CoreDelegateP11loginStatus10isLoggedInySb_tF">loginStatus(isLoggedIn:)</a>
+                    <a class="token" href="#/s:7Yamasee0A12CoreDelegateP11loginStatus10isLoggedInySb_tF">loginStatus(isLoggedIn:<wbr>)</a>
                     </code>
                       <span class="declaration-note">
                         Default implementation
@@ -258,7 +270,7 @@
                     <code>
                     <a name="/s:7Yamasee0A12CoreDelegateP14airborneStatus10isAirborneySb_tF"></a>
                     <a name="//apple_ref/swift/Method/airborneStatus(isAirborne:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A12CoreDelegateP14airborneStatus10isAirborneySb_tF">airborneStatus(isAirborne:)</a>
+                    <a class="token" href="#/s:7Yamasee0A12CoreDelegateP14airborneStatus10isAirborneySb_tF">airborneStatus(isAirborne:<wbr>)</a>
                     </code>
                       <span class="declaration-note">
                         Default implementation
@@ -292,7 +304,7 @@
                     <code>
                     <a name="/s:7Yamasee0A12CoreDelegateP07yamaseeB12Notification12notificationyAA0aB13NotificationsO_tF"></a>
                     <a name="//apple_ref/swift/Method/yamaseeCoreNotification(notification:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A12CoreDelegateP07yamaseeB12Notification12notificationyAA0aB13NotificationsO_tF">yamaseeCoreNotification(notification:)</a>
+                    <a class="token" href="#/s:7Yamasee0A12CoreDelegateP07yamaseeB12Notification12notificationyAA0aB13NotificationsO_tF">yamaseeCoreNotification(notification:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -319,7 +331,7 @@
                     <code>
                     <a name="/s:7Yamasee0A12CoreDelegateP24yamaseeNewLocationUpdate8locationyAA0aF0V_tF"></a>
                     <a name="//apple_ref/swift/Method/yamaseeNewLocationUpdate(location:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A12CoreDelegateP24yamaseeNewLocationUpdate8locationyAA0aF0V_tF">yamaseeNewLocationUpdate(location:)</a>
+                    <a class="token" href="#/s:7Yamasee0A12CoreDelegateP24yamaseeNewLocationUpdate8locationyAA0aF0V_tF">yamaseeNewLocationUpdate(location:<wbr>)</a>
                     </code>
                       <span class="declaration-note">
                         Default implementation
@@ -387,7 +399,7 @@
                     <code>
                     <a name="/s:7Yamasee0A12CoreDelegateP14newWeatherData16serverUpdateTimeySi_tF"></a>
                     <a name="//apple_ref/swift/Method/newWeatherData(serverUpdateTime:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A12CoreDelegateP14newWeatherData16serverUpdateTimeySi_tF">newWeatherData(serverUpdateTime:)</a>
+                    <a class="token" href="#/s:7Yamasee0A12CoreDelegateP14newWeatherData16serverUpdateTimeySi_tF">newWeatherData(serverUpdateTime:<wbr>)</a>
                     </code>
                       <span class="declaration-note">
                         Default implementation
@@ -455,8 +467,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-07-19)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://skypath.app" target="_blank" rel="external">Yamasee LTD</a>. All rights reserved. (Last updated: 2020-08-14)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
