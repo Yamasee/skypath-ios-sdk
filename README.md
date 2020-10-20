@@ -9,7 +9,7 @@ SkyPath's goal is delivery of accurate real-time turbulence data, based on crowd
 
 Yamasee supplies its partners who wish to integrate SkyPath technology, an iOS SDK as a binary iOS Swift framework that enables rapid and seamless integration into existing iOS apps. The SDK doesn’t assume anything regarding the app UI, and supplies needed abstraction for SkyPath push and pull server REST API communication, turbulence measurements, and turbulence alerts.
 
-SDK API [documentation](https://yamasee.github.io/SkyPath-Framework)
+SDK API [documentation](https://yamasee.github.io/skypath-ios-sdk)
 
 ## Requirements
 
@@ -45,9 +45,10 @@ You can [contact us] (https://skypath.app/contact/) and request a demo. <br>
 The SDK has an entry point class `YamaseeCore`, start the SDK early on app launch (for example in application did finish delegate method) before making other API calls.
 
 ```swift
-YamaseeCore.shared.start(apiKey: "YAMASEE_API_KEY",
-						 baseUrl: "YAMASEE_BASE_URL",
-						 dataUrl: "YAMASEE_DATA_URL")
+YamaseeCore.shared.start(
+	apiKey: "YAMASEE_API_KEY",
+	baseUrl: "YAMASEE_BASE_URL",
+	dataUrl: "YAMASEE_DATA_URL")
 ```
 
 #### Login
