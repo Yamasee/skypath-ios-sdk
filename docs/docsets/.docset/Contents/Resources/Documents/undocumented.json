@@ -15,37 +15,65 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Login/ForgotPasswordError.swift",
-      "line": 22,
-      "symbol": "ForgotPasswordError.userIdNotFound",
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Airport/Airport.swift",
+      "line": 12,
+      "symbol": "Airport",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Airport/Airport.swift",
+      "line": 13,
+      "symbol": "Airport.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Airport/Airport.swift",
+      "line": 14,
+      "symbol": "Airport.icao",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Airport/Airport.swift",
+      "line": 15,
+      "symbol": "Airport.lat",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Airport/Airport.swift",
+      "line": 16,
+      "symbol": "Airport.lng",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Airport/Airport.swift",
+      "line": 17,
+      "symbol": "Airport.iata",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Airport/Airport.swift",
+      "line": 18,
+      "symbol": "Airport.size",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Error/GeneralError.swift",
+      "line": 17,
+      "symbol": "GeneralError.internetConnectionAppearsOffline",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Login/ForgotPasswordError.swift",
-      "line": 25,
-      "symbol": "ForgotPasswordError.internetConnectionAppearsOffline",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Login/LoginError.swift",
-      "line": 31,
-      "symbol": "LoginError.userIdNotFound",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Login/LoginError.swift",
-      "line": 34,
-      "symbol": "LoginError.userIdOrPasswordNotFound",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Login/LoginError.swift",
-      "line": 37,
-      "symbol": "LoginError.internetConnectionAppearsOffline",
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Error/LoginError.swift",
+      "line": 17,
+      "symbol": "LoginError.userIdOrPasswordInvalid",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
@@ -233,30 +261,23 @@
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
-      "line": 25,
-      "symbol": "YamaseeCoreNotifications.generalNotification",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "line": 94,
+      "symbol": "YamaseeCore.RawAPIResponseDataBlock",
+      "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
-      "line": 104,
+      "line": 96,
       "symbol": "YamaseeCore.shared",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
-      "line": 105,
+      "line": 97,
       "symbol": "YamaseeCore.delegate",
       "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
-      "line": 622,
-      "symbol": "YamaseeCore.getAircraftTypes()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],

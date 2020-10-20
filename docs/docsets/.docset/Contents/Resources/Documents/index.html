@@ -16,7 +16,7 @@
     <a title="  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html"> Docs</a> (73% documented)</p>
+        <p><a href="index.html"> Docs</a> (74% documented)</p>
         <p class="header-right">
           <form role="search" action="search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -49,16 +49,19 @@
                 <a href="Enums/ForgotPasswordError.html">ForgotPasswordError</a>
               </li>
               <li class="nav-group-task">
+                <a href="Enums/GeneralError.html">GeneralError</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Enums/LoginError.html">LoginError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/PartnerLoginError.html">PartnerLoginError</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/TurbulenceSeverity.html">TurbulenceSeverity</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/WXType.html">WXType</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/YamaseeCoreNotifications.html">YamaseeCoreNotifications</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/YamaseeLocationState.html">YamaseeLocationState</a>
@@ -76,6 +79,9 @@
           <li class="nav-group-name">
             <a href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/Airport.html">Airport</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Structs/SessionTimeouts.html">SessionTimeouts</a>
               </li>
@@ -102,19 +108,175 @@
         <section>
           <section class="section">
             
-            <h1 id='yamasee-ios-framework' class='heading'>Yamasee iOS Framework</h1>
+            <p><img src="./docs-logo.jpg" alt="SkyPath: Turbulence alert system">
+<a href=""><img src="https://img.shields.io/github/v/release/Yamasee/skypath-ios-sdk" alt="Version"></a></p>
+<h1 id='skypath-by-yamasee-ios-sdk' class='heading'>SkyPath by Yamasee iOS SDK</h1>
+
+<p>SkyPath&rsquo;s goal is delivery of accurate real-time turbulence data, based on crowdsourcing <a href="https://skypath.app/">https://skypath.app</a></p>
+<h2 id='description' class='heading'>Description</h2>
+
+<p>Yamasee supplies its partners who wish to integrate SkyPath technology, an iOS SDK as a binary iOS Swift framework that enables rapid and seamless integration into existing iOS apps. The SDK doesn’t assume anything regarding the app UI, and supplies needed abstraction for SkyPath push and pull server REST API communication, turbulence measurements, and turbulence alerts.</p>
+
+<p>SDK API <a href="https://yamasee.github.io/SkyPath-Framework">documentation</a></p>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<ul>
+<li>iOS 11.0+</li>
+<li>Xcode 11+</li>
+<li>Swift 5.0+</li>
+</ul>
 <h2 id='installation' class='heading'>Installation</h2>
 <h3 id='cocoapods' class='heading'>CocoaPods</h3>
 
-<p>// TODO: will be available via CocoaPods later</p>
+<p><a href="https://cocoapods.org">CocoaPods</a> is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. </p>
+
+<p>SkyPath by Yamasee SDK will be available via CocoaPods later this year.</p>
 <h3 id='manually' class='heading'>Manually</h3>
 
-<p>You can integrate Yamasee into project manually via .xcframework</p>
+<p>You can integrate SkyPath into your project manually. </p>
+
+<ul>
+<li>Download .xcframework or .framework (each one contains both device and simulator architectures inside)</li>
+<li>Copy framework file to project directory</li>
+<li>Add framework to <code>Link Binary With Libraries</code> section in <code>Build Phases</code> of the Xcode target</li>
+<li><code>import Yamasee</code> where needed</li>
+</ul>
+<h2 id='usage' class='heading'>Usage</h2>
+<h4 id='setup' class='heading'>Setup</h4>
+
+<p>You need to get an API key, base main and data servers URLs from Yamasee to use the SDK. <br>
+You can <a href="https://skypath.app/contact/">contact us</a> and request a demo. <br></p>
+
+<p>The SDK has an entry point class <code><a href="Classes/YamaseeCore.html">YamaseeCore</a></code>, start the SDK early on app launch (for example in application did finish delegate method) before making other API calls.</p>
+<pre class="highlight swift"><code><span class="kt">YamaseeCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">start</span><span class="p">(</span><span class="nv">apiKey</span><span class="p">:</span> <span class="s">"YAMASEE_API_KEY"</span><span class="p">,</span>
+                         <span class="nv">baseUrl</span><span class="p">:</span> <span class="s">"YAMASEE_BASE_URL"</span><span class="p">,</span>
+                         <span class="nv">dataUrl</span><span class="p">:</span> <span class="s">"YAMASEE_DATA_URL"</span><span class="p">)</span>
+</code></pre>
+<h4 id='login' class='heading'>Login</h4>
+
+<p>You need to identify the user in the system by login as a partner, where <code>userId</code> is a pilot identifier, and <code>companyId</code> is provided to you by Yamasee.</p>
+<pre class="highlight swift"><code><span class="k">guard</span> <span class="o">!</span><span class="kt">YamaseeCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">isLoggedIn</span><span class="p">()</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">return</span>
+<span class="p">}</span>
+<span class="kt">YamaseeCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">partnerLogin</span><span class="p">(</span>
+    <span class="nv">userId</span><span class="p">:</span> <span class="n">userId</span><span class="p">,</span> 
+    <span class="nv">companyId</span><span class="p">:</span> <span class="n">companyId</span><span class="p">)</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">success</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span>
+
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">error</span> <span class="o">=</span> <span class="n">error</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="o">.</span><span class="n">localizedDescription</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="n">success</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"logged in successfully"</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"failed to login"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// logout when needed</span>
+<span class="kt">YamaseeCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">logout</span><span class="p">()</span>
+</code></pre>
+<h4 id='turbulence' class='heading'>Turbulence</h4>
+
+<p>SDK provides turbulence data in a GeoJSON format and as an array of models.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">json</span> <span class="o">=</span> <span class="kt">YamaseeCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">getTurbulenceGeoJson</span><span class="p">(</span>
+    <span class="nv">altRange</span><span class="p">:</span> <span class="n">altRange</span><span class="p">,</span>
+    <span class="nv">timeSpan</span><span class="p">:</span> <span class="n">timeSpan</span><span class="p">,</span>
+    <span class="nv">zoomLevel</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">turbItems</span> <span class="o">=</span> <span class="kt">YamaseeCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">getTurbulence</span><span class="p">(</span>
+    <span class="nv">altRange</span><span class="p">:</span> <span class="n">altRange</span><span class="p">,</span>
+    <span class="nv">timeSpan</span><span class="p">:</span> <span class="n">timeSpan</span><span class="p">,</span>
+    <span class="nv">zoomLevel</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>                     
+</code></pre>
+<h4 id='turbulence-alerts' class='heading'>Turbulence Alerts</h4>
+
+<p>Get turbulence alerts ahead.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">altitude</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;</span> <span class="o">=</span> <span class="kt">Measurement</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="n">location</span><span class="o">.</span><span class="n">altitude</span><span class="p">,</span> <span class="nv">unit</span><span class="p">:</span> <span class="o">.</span><span class="n">meters</span><span class="p">)</span>
+
+<span class="k">let</span> <span class="nv">tiles</span> <span class="o">=</span> <span class="kt">YamaseeCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">getAlertTiles</span><span class="p">(</span>
+    <span class="nv">lat</span><span class="p">:</span> <span class="n">location</span><span class="o">.</span><span class="n">coordinate</span><span class="o">.</span><span class="n">latitude</span><span class="p">,</span>
+    <span class="nv">long</span><span class="p">:</span> <span class="n">location</span><span class="o">.</span><span class="n">coordinate</span><span class="o">.</span><span class="n">longitude</span><span class="p">,</span>
+    <span class="nv">altitude</span><span class="p">:</span> <span class="n">altitude</span><span class="p">,</span>
+    <span class="nv">heading</span><span class="p">:</span> <span class="kt">Measurement</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="n">location</span><span class="o">.</span><span class="n">course</span><span class="p">,</span> <span class="nv">unit</span><span class="p">:</span> <span class="o">.</span><span class="n">degrees</span><span class="p">),</span>
+    <span class="nv">timeSpan</span><span class="p">:</span> <span class="n">timeSpan</span><span class="p">)</span>
+
+<span class="k">let</span> <span class="nv">turbulences</span><span class="p">:</span> <span class="p">[</span><span class="kt">TurbulenceItem</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">tiles</span><span class="o">.</span><span class="n">alertTilesAbove</span><span class="p">,</span> 
+    <span class="n">tiles</span><span class="o">.</span><span class="n">alertTilesAtAlt</span><span class="p">,</span> 
+    <span class="n">tiles</span><span class="o">.</span><span class="n">alertTilesBelow</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">flatMap</span> <span class="p">{</span> <span class="nv">$0</span> <span class="p">}</span>
+</code></pre>
+<h4 id='weather' class='heading'>Weather</h4>
+
+<p>The following weather data types are supported: clouds, lightning, wind-shear.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">weatherItems</span><span class="p">:</span> <span class="p">[</span><span class="kt">WeatherItem</span><span class="p">]</span> <span class="o">=</span> <span class="kt">YamaseeCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">getWeatherByTypes</span><span class="p">(</span>
+    <span class="nv">weatherTypes</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">cb</span><span class="p">,</span> <span class="o">.</span><span class="n">lightning</span><span class="p">,</span> <span class="o">.</span><span class="n">shear</span><span class="p">],</span>
+    <span class="nv">altRange</span><span class="p">:</span> <span class="kt">Constants</span><span class="o">.</span><span class="kt">Altitude</span><span class="o">.</span><span class="n">maxRangeFeet</span><span class="p">,</span>
+    <span class="nv">timeSpan</span><span class="p">:</span> <span class="n">timeSpan</span><span class="p">,</span>
+    <span class="nv">zoomLevel</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre>
+
+<p>Report wheather example</p>
+<pre class="highlight swift"><code><span class="kt">YamaseeCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">reportCB</span><span class="p">(</span>
+    <span class="nv">lat</span><span class="p">:</span> <span class="n">coordinate</span><span class="o">.</span><span class="n">latitude</span><span class="p">,</span>
+    <span class="nv">lng</span><span class="p">:</span> <span class="n">coordinate</span><span class="o">.</span><span class="n">longitude</span><span class="p">,</span>
+    <span class="nv">alt</span><span class="p">:</span> <span class="kt">Measurement</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="n">altitude</span><span class="p">,</span> <span class="nv">unit</span><span class="p">:</span> <span class="o">.</span><span class="n">meters</span><span class="p">))</span>
+</code></pre>
+<h4 id='aircraft' class='heading'>Aircraft</h4>
+
+<p>To identify aircraft in the system set it from predefined in the SDK.</p>
+<pre class="highlight swift"><code><span class="c1">// get all available aircraft types</span>
+<span class="k">let</span> <span class="nv">aircrafts</span> <span class="o">=</span> <span class="kt">YamaseeCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">getAircraftTypes</span><span class="p">()</span>
+
+<span class="c1">// choose appropriate and set an aircraft id</span>
+<span class="kt">YamaseeCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">setAircraft</span><span class="p">(</span><span class="nv">aircraft</span><span class="p">:</span> <span class="n">aircraft</span><span class="p">)</span>
+</code></pre>
+<h4 id='angle-position' class='heading'>Angle Position</h4>
+
+<p>To properly track the current tubulence the device should be correctly position in the cradle.<br>
+You also will be notified by <code><a href="Protocols/YamaseeCoreDelegate.html">YamaseeCoreDelegate</a></code> calls that angle position changed and should be set again.</p>
+<pre class="highlight swift"><code><span class="k">if</span> <span class="o">!</span><span class="kt">YamaseeCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">isInPosition</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">showAngleCalibrationNotification</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="c1">// when pilot tap "Set" button call</span>
+<span class="kt">YamaseeCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">setAngle</span><span class="p">()</span>
+</code></pre>
+<h4 id='simulation' class='heading'>Simulation</h4>
+
+<p>Use simulation mode functions to test</p>
+<pre class="highlight swift"><code><span class="c1">// enter simulation mode</span>
+<span class="kt">YamaseeCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">setSimulatorMode</span><span class="p">(</span><span class="nv">isLocationSimulatorOn</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+<span class="kt">YamaseeCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">setPushSimulatedEnabled</span><span class="p">(</span><span class="n">env</span> <span class="o">!=</span> <span class="o">.</span><span class="n">production</span><span class="p">)</span>
+
+<span class="c1">// set custom location for simulation</span>
+<span class="kt">YamaseeCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">simulatedLocation</span><span class="p">(</span><span class="nv">location</span><span class="p">:</span> <span class="n">location</span><span class="p">)</span>
+
+<span class="c1">// exit simulation mode</span>
+<span class="kt">YamaseeCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">setSimulatorMode</span><span class="p">(</span><span class="nv">isLocationSimulatorOn</span><span class="p">:</span> <span class="kc">false</span><span class="p">)</span>
+<span class="kt">YamaseeCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">stopSimulationNoDR</span><span class="p">()</span>
+</code></pre>
+<h4 id='logger' class='heading'>Logger</h4>
+
+<p>You can use logger to get more debug logs in a console.</p>
+<pre class="highlight swift"><code><span class="kt">YamaseeCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">setLogger</span><span class="p">(</span>
+    <span class="nv">isOn</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> 
+    <span class="nv">isSymbol</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> 
+    <span class="nv">errorOn</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> 
+    <span class="nv">infoOn</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> 
+    <span class="nv">warningOn</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> 
+    <span class="nv">networkOn</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span> <span class="n">message</span> <span class="k">in</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='license' class='heading'>License</h2>
+
+<p>Copyright © Yamasee LTD 2020. All rights reserved. 
+See <a href="https://skypath.app/terms/">Terms &amp; Conditions</a>.</p>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://skypath.app" target="_blank" rel="external">Yamasee LTD</a>. All rights reserved. (Last updated: 2020-08-14)</p>
+          <p>&copy; 2020 <a class="link" href="https://skypath.app" target="_blank" rel="external">Yamasee LTD</a>. All rights reserved. (Last updated: 2020-10-20)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

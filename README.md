@@ -39,15 +39,15 @@ You can integrate SkyPath into your project manually.
 
 #### Setup
 
-You need to get an API key and base URL from Yamasee to use the SDK. You can [contact us] (https://skypath.app/contact/) and request a demo. <br>
+You need to get an API key, base main and data servers URLs from Yamasee to use the SDK. <br>
+You can [contact us] (https://skypath.app/contact/) and request a demo. <br>
 
 The SDK has an entry point class `YamaseeCore`, start the SDK early on app launch (for example in application did finish delegate method) before making other API calls.
 
-```
-let apiKey = "YAMASEE_API_KEY"
-let baseUrl = "YAMASEE_BASE_URL"
-
-YamaseeCore.shared.start(apiKey: apiKey, baseUrl: baseUrl)
+```swift
+YamaseeCore.shared.start(apiKey: "YAMASEE_API_KEY",
+						 baseUrl: "YAMASEE_BASE_URL",
+						 dataUrl: "YAMASEE_DATA_URL")
 ```
 
 #### Login
