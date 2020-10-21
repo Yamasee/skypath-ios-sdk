@@ -69,10 +69,10 @@ extension YamaseeViewController {
     
     func setupYamasee() {
         
-        let apiKey = "YAMASEE_API_KEY"
-        let baseUrl = "YAMASEE_BASE_URL"
-        let dataUrl = "YAMASEE_DATA_URL"
-        
+        let apiKey = "YAMASEE_API_KEY" // provided by Yamasee
+        let baseUrl = "YAMASEE_BASE_URL" // provided by Yamasee
+        let dataUrl = "YAMASEE_DATA_URL" // provided by Yamasee
+
         YamaseeCore.shared.start(apiKey: apiKey, baseUrl: baseUrl, dataUrl: dataUrl)
         YamaseeCore.shared.setLogger(isOn: true, isSymbol: true, errorOn: true, infoOn: true, warningOn: true, networkOn: true) { message in
             print(message)
@@ -90,7 +90,10 @@ extension YamaseeViewController {
         
         Loader.show()
         
-        YamaseeCore.shared.partnerLogin(userId: "Demo", companyId: "Yamasee") { success, error in
+        let userId = "" // your any user id
+        let companyId = "" // provided by Yamasee
+        
+        YamaseeCore.shared.partnerLogin(userId: userId, companyId: companyId) { success, error in
             
             Loader.hide()
             
