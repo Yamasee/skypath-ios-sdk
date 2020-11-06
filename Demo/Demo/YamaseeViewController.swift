@@ -296,12 +296,12 @@ extension YamaseeViewController {
         
         YamaseeCore.shared.setFlightNumber(flightNumber: "")
         
-        guard YamaseeCore.shared.isRoutingEnabled() else {
+        guard YamaseeCore.shared.user?.routingEnabled == true else {
             return
         }
         
-        let from = Int(Date().timeIntervalSince1970)
-        let to = Int((Date() + 3 * 86_400).timeIntervalSince1970)
+        let from = Date()
+        let to = Date() + 3 * 86_400
         
         YamaseeCore.shared.getFlights(from: from, to: to) { data, _, error in
             
