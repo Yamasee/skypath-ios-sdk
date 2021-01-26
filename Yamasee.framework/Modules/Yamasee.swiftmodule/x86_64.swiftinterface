@@ -147,6 +147,8 @@ public protocol YamaseeCoreDelegate : AnyObject {
   public typealias RawAPIResponseDataBlock = (Foundation.Data?, Foundation.URLResponse?, Swift.Error?) -> Swift.Void
   public static let shared: Yamasee.YamaseeCore
   weak public var delegate: Yamasee.YamaseeCoreDelegate?
+  @available(*, deprecated, message: "Use start(apiKey:baseUrl:env:) instead")
+  public func start(apiKey: Swift.String, baseUrl: Swift.String, dataUrl: Swift.String? = nil)
   public func start(apiKey: Swift.String, baseUrl: Swift.String, env: Yamasee.Environment? = nil)
   public func partnerLogin(userId: Swift.String, companyId: Swift.String, completionHandler: @escaping (Swift.Bool, Yamasee.PartnerLoginError?) -> Swift.Void)
   public func userLogin(userId: Swift.String, password: Swift.String, completionHandler: @escaping (Swift.Bool, Yamasee.LoginError?) -> Swift.Void)
@@ -177,6 +179,26 @@ public protocol YamaseeCoreDelegate : AnyObject {
   public func getWeather(types: [Yamasee.WeatherType], altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> Swift.String
   public func getOwnWeather(types: [Yamasee.WeatherType], altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> [Yamasee.Weather]
   public func getOwnWeather(types: [Yamasee.WeatherType], altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> Swift.String
+  @available(*, deprecated, message: "Use reportWeather(type:at:) instead")
+  public func reportLightning(lat: Swift.Double, lng: Swift.Double, alt: Foundation.Measurement<Foundation.UnitLength>)
+  @available(*, deprecated, message: "Use reportWeather(type:at:) instead")
+  public func reportShear(lat: Swift.Double, lng: Swift.Double, alt: Foundation.Measurement<Foundation.UnitLength>)
+  @available(*, deprecated, message: "Use reportWeather(type:at:) instead")
+  public func reportIcing(lat: Swift.Double, lng: Swift.Double, alt: Foundation.Measurement<Foundation.UnitLength>)
+  @available(*, deprecated, message: "Use getWeather(types:altRange:timeSpan:zoomLevel:) instead")
+  public func getWeatherByType(weatherType: Yamasee.WXType, altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> Swift.String
+  @available(*, deprecated, message: "Use getWeather(types:altRange:timeSpan:zoomLevel:) instead")
+  public func getWeatherByType(weatherType: Yamasee.WXType, altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> [Yamasee.WeatherItem]
+  @available(*, deprecated, message: "Use getWeather(types:altRange:timeSpan:zoomLevel:) instead")
+  public func getWeatherByTypes(weatherTypes: [Yamasee.WXType], altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> [Yamasee.WeatherItem]
+  @available(*, deprecated, message: "Use getWeather(types:altRange:timeSpan:zoomLevel:) instead")
+  public func getWeatherByTypes(weatherTypes: [Yamasee.WXType], altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> Swift.String
+  @available(*, deprecated, message: "Use getOwnWeather(types:altRange:timeSpan:zoomLevel:) instead")
+  public func getOwnWeatherByType(weatherType: Yamasee.WXType, altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> [Yamasee.WeatherItem]
+  @available(*, deprecated, message: "Use getOwnWeather(types:altRange:timeSpan:zoomLevel:) instead")
+  public func getOwnWeatherByTypes(weatherTypes: [Yamasee.WXType], altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> [Yamasee.WeatherItem]
+  @available(*, deprecated, message: "Use getOwnWeather(types:altRange:timeSpan:zoomLevel:) instead")
+  public func getOwnWeatherByTypes(weatherTypes: [Yamasee.WXType], altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> Swift.String
   public func getOwnTurbulenceGeoJson(altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> Swift.String
   public func getOwnTurbulence(altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> [Yamasee.TurbulenceItem]
   public func delete(_ weather: [Yamasee.Weather])
@@ -263,6 +285,8 @@ public enum GeneralError : Yamasee.YSError {
   case upgradeRequired(message: Swift.String?)
   case other(error: Swift.Error?)
 }
+public typealias WXType = Yamasee.WeatherType
+public typealias WeatherItem = Yamasee.Weather
 public enum WeatherType : Swift.String, Swift.Codable {
   case cb
   case lightning

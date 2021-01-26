@@ -478,112 +478,126 @@
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Weather.swift",
-      "line": 12,
+      "line": 13,
+      "symbol": "WXType",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Weather.swift",
+      "line": 14,
+      "symbol": "WeatherItem",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Weather.swift",
+      "line": 16,
       "symbol": "WeatherType",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Weather.swift",
-      "line": 14,
+      "line": 18,
       "symbol": "WeatherType.cb",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Weather.swift",
-      "line": 15,
+      "line": 19,
       "symbol": "WeatherType.lightning",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Weather.swift",
-      "line": 16,
+      "line": 20,
       "symbol": "WeatherType.icing",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Weather.swift",
-      "line": 17,
+      "line": 21,
       "symbol": "WeatherType.shear",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Weather.swift",
-      "line": 20,
+      "line": 24,
       "symbol": "Weather",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Weather.swift",
-      "line": 22,
+      "line": 26,
       "symbol": "Weather.id",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Weather.swift",
-      "line": 23,
+      "line": 27,
       "symbol": "Weather.ts",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Weather.swift",
-      "line": 24,
+      "line": 28,
       "symbol": "Weather.type",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Weather.swift",
-      "line": 25,
+      "line": 29,
       "symbol": "Weather.tileX",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Weather.swift",
-      "line": 26,
+      "line": 30,
       "symbol": "Weather.tileY",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Weather.swift",
-      "line": 27,
+      "line": 31,
       "symbol": "Weather.alt",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Weather.swift",
-      "line": 28,
+      "line": 32,
       "symbol": "Weather.repId",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Weather.swift",
-      "line": 64,
+      "line": 68,
       "symbol": "Weather.init(type:lat:lng:alt:simulated:repId:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Weather.swift",
-      "line": 84,
+      "line": 88,
       "symbol": "Weather",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Weather.swift",
-      "line": 102,
+      "line": 106,
       "symbol": "Weather.center",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
@@ -649,6 +663,83 @@
       "line": 116,
       "symbol": "YamaseeCore.delegate",
       "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
+      "line": 127,
+      "symbol": "YamaseeCore.start(apiKey:baseUrl:dataUrl:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
+      "line": 545,
+      "symbol": "YamaseeCore.reportLightning(lat:lng:alt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
+      "line": 555,
+      "symbol": "YamaseeCore.reportShear(lat:lng:alt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
+      "line": 565,
+      "symbol": "YamaseeCore.reportIcing(lat:lng:alt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
+      "line": 575,
+      "symbol": "YamaseeCore.getWeatherByType(weatherType:altRange:timeSpan:zoomLevel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
+      "line": 587,
+      "symbol": "YamaseeCore.getWeatherByType(weatherType:altRange:timeSpan:zoomLevel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
+      "line": 599,
+      "symbol": "YamaseeCore.getWeatherByTypes(weatherTypes:altRange:timeSpan:zoomLevel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
+      "line": 611,
+      "symbol": "YamaseeCore.getWeatherByTypes(weatherTypes:altRange:timeSpan:zoomLevel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
+      "line": 623,
+      "symbol": "YamaseeCore.getOwnWeatherByType(weatherType:altRange:timeSpan:zoomLevel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
+      "line": 635,
+      "symbol": "YamaseeCore.getOwnWeatherByTypes(weatherTypes:altRange:timeSpan:zoomLevel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
+      "line": 647,
+      "symbol": "YamaseeCore.getOwnWeatherByTypes(weatherTypes:altRange:timeSpan:zoomLevel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],

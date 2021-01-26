@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Classes  Reference</title>
+    <title>Type Aliases  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset='utf-8'>
@@ -13,8 +13,8 @@
     <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/swift/Section/Classes" class="dashAnchor"></a>
-    <a title="Classes  Reference"></a>
+    <a name="//apple_ref/swift/Section/Type Aliases" class="dashAnchor"></a>
+    <a title="Type Aliases  Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="index.html"> Docs</a> (55% documented)</p>
@@ -29,7 +29,7 @@
       <p id="breadcrumbs">
         <a href="index.html"> Reference</a>
         <img id="carat" src="img/carat.png" />
-        Classes  Reference
+        Type Aliases  Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -151,8 +151,8 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Classes</h1>
-            <p>The following classes are available globally.</p>
+            <h1>Type Aliases</h1>
+            <p>The following type aliases are available globally.</p>
 
           </section>
           <section class="section task-group-section">
@@ -161,9 +161,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Yamasee0A4CoreC"></a>
-                    <a name="//apple_ref/swift/Class/YamaseeCore" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC">YamaseeCore</a>
+                    <a name="/s:7Yamasee6WXTypea"></a>
+                    <a name="//apple_ref/swift/Alias/WXType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee6WXTypea">WXType</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -171,26 +171,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A wrapper class handling all communications between host app and internal Yamasee logic</p>
-<h1 id='overview' class='heading'>Overview</h1>
+                        <p>Undocumented</p>
 
-<p>YamaseeCore instantiates as a singleton object.
-Get the shared instance by calling <code><a href="Classes/YamaseeCore.html#/s:7Yamasee0A4CoreC6sharedACvpZ">YamaseeCore.shared</a></code></p>
-
-<p>Assign a custom object to the delegate property, conforming to the YamaseeCoreDelegate protocol. Assign the delegate before starting any YamaseeCore services. All turbulence, Traffic and weather reports updates events are delivered to that delegate.
-Events only notify the delegate that a new data arrived from the server. It is the host app responsibility to fetch the updated data by calling the relevant function <strong>when the host app needs to redraw the information</strong> as YamaseeLib doesn&rsquo;t hold the state of the UI i.e. min/max altitude of the display, timespan for turbulence age etc.</p>
-
-<p>YamaseeCore handles all communications with Yamasee servers. The host app should provide a baseURL that act as a proxy and forward all communication to Yamasee servers.</p>
-
-<p>The host app needs to initiate Yamasee server communications by calling the login method with userId and aircraft parameters. After a successful login the needed token is saved for future app operations until logout is called or the user license is removed in the server.</p>
-
-                        <a href="Classes/YamaseeCore.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">YamaseeCore</span> <span class="p">:</span> <span class="kt">AccelerometerManagerObserver</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">WXType</span> <span class="o">=</span> <span class="kt"><a href="Enums/WeatherType.html">WeatherType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee11WeatherItema"></a>
+                    <a name="//apple_ref/swift/Alias/WeatherItem" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee11WeatherItema">WeatherItem</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">WeatherItem</span> <span class="o">=</span> <span class="kt"><a href="Structs/Weather.html">Weather</a></span></code></pre>
 
                         </div>
                       </div>
