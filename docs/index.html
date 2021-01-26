@@ -186,7 +186,8 @@ You can <a href="https://skypath.app/contact/">contact us</a> and request a demo
 <p>The SDK has an entry point class <code><a href="Classes/YamaseeCore.html">YamaseeCore</a></code>, start the SDK early on app launch (for example in application did finish delegate method) before making other API calls.</p>
 <pre class="highlight swift"><code><span class="kt">YamaseeCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">start</span><span class="p">(</span>
     <span class="nv">apiKey</span><span class="p">:</span> <span class="s">"YAMASEE_API_KEY"</span><span class="p">,</span>
-    <span class="nv">baseUrl</span><span class="p">:</span> <span class="s">"YAMASEE_BASE_URL"</span><span class="p">)</span>
+    <span class="nv">baseUrl</span><span class="p">:</span> <span class="s">"YAMASEE_BASE_URL"</span><span class="p">,</span>
+    <span class="nv">env</span><span class="p">:</span> <span class="o">.</span><span class="n">development</span> <span class="o">|</span> <span class="o">.</span><span class="n">production</span><span class="p">)</span>
 </code></pre>
 <h4 id='login' class='heading'>Login</h4>
 
@@ -244,18 +245,17 @@ You can <a href="https://skypath.app/contact/">contact us</a> and request a demo
 <h4 id='weather' class='heading'>Weather</h4>
 
 <p>The following weather data types are supported: clouds, lightning, wind-shear.</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">weatherItems</span><span class="p">:</span> <span class="p">[</span><span class="kt">WeatherItem</span><span class="p">]</span> <span class="o">=</span> <span class="kt">YamaseeCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">getWeatherByTypes</span><span class="p">(</span>
-    <span class="nv">weatherTypes</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">cb</span><span class="p">,</span> <span class="o">.</span><span class="n">lightning</span><span class="p">,</span> <span class="o">.</span><span class="n">shear</span><span class="p">],</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">weather</span><span class="p">:</span> <span class="p">[</span><span class="kt">Weather</span><span class="p">]</span> <span class="o">=</span> <span class="kt">YamaseeCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">getWeather</span><span class="p">(</span>
+    <span class="nv">types</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">cb</span><span class="p">,</span> <span class="o">.</span><span class="n">lightning</span><span class="p">,</span> <span class="o">.</span><span class="n">shear</span><span class="p">],</span>
     <span class="nv">altRange</span><span class="p">:</span> <span class="kt">Constants</span><span class="o">.</span><span class="kt">Altitude</span><span class="o">.</span><span class="n">maxRangeFeet</span><span class="p">,</span>
     <span class="nv">timeSpan</span><span class="p">:</span> <span class="n">timeSpan</span><span class="p">,</span>
     <span class="nv">zoomLevel</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
 </code></pre>
 
 <p>Report wheather example</p>
-<pre class="highlight swift"><code><span class="kt">YamaseeCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">reportCB</span><span class="p">(</span>
-    <span class="nv">lat</span><span class="p">:</span> <span class="n">coordinate</span><span class="o">.</span><span class="n">latitude</span><span class="p">,</span>
-    <span class="nv">lng</span><span class="p">:</span> <span class="n">coordinate</span><span class="o">.</span><span class="n">longitude</span><span class="p">,</span>
-    <span class="nv">alt</span><span class="p">:</span> <span class="kt">Measurement</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="n">altitude</span><span class="p">,</span> <span class="nv">unit</span><span class="p">:</span> <span class="o">.</span><span class="n">meters</span><span class="p">))</span>
+<pre class="highlight swift"><code><span class="kt">YamaseeCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">reportWeather</span><span class="p">(</span>
+    <span class="nv">type</span><span class="p">:</span> <span class="o">.</span><span class="n">cb</span><span class="p">,</span>
+    <span class="nv">location</span><span class="p">:</span> <span class="n">location</span><span class="p">)</span>
 </code></pre>
 <h4 id='aircraft' class='heading'>Aircraft</h4>
 
@@ -289,7 +289,6 @@ You also will be notified by <code><a href="Protocols/YamaseeCoreDelegate.html">
 
 <span class="c1">// exit simulation mode</span>
 <span class="kt">YamaseeCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">setSimulatorMode</span><span class="p">(</span><span class="nv">isLocationSimulatorOn</span><span class="p">:</span> <span class="kc">false</span><span class="p">)</span>
-<span class="kt">YamaseeCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">stopSimulationNoDR</span><span class="p">()</span>
 </code></pre>
 <h4 id='logger' class='heading'>Logger</h4>
 
@@ -306,7 +305,7 @@ You also will be notified by <code><a href="Protocols/YamaseeCoreDelegate.html">
 </code></pre>
 <h2 id='license' class='heading'>License</h2>
 
-<p>Copyright © Yamasee LTD 2020. All rights reserved. 
+<p>Copyright © Yamasee LTD 2021. All rights reserved. 
 See <a href="https://skypath.app/terms/">Terms &amp; Conditions</a>.</p>
 
           </section>
