@@ -71,9 +71,8 @@ extension YamaseeViewController {
         
         let apiKey = "YAMASEE_API_KEY" // provided by Yamasee
         let baseUrl = "YAMASEE_BASE_URL" // provided by Yamasee
-        let dataUrl = "YAMASEE_DATA_URL" // provided by Yamasee
 
-        YamaseeCore.shared.start(apiKey: apiKey, baseUrl: baseUrl, dataUrl: dataUrl)
+        YamaseeCore.shared.start(apiKey: apiKey, baseUrl: baseUrl, env: .development)
         YamaseeCore.shared.setLogger(isOn: true, isSymbol: true, errorOn: true, infoOn: true, warningOn: true, networkOn: true) { message in
             print(message)
         }
@@ -126,7 +125,6 @@ extension YamaseeViewController {
     func stopSimulation() {
         
         YamaseeCore.shared.setSimulatorMode(isLocationSimulatorOn: false)
-        YamaseeCore.shared.stopSimulationNoDR()
     }
     
     func simulateLocation() {
@@ -248,23 +246,23 @@ extension YamaseeViewController {
     
     func getWeather() {
         
-        var weatherItems: [WeatherItem] = YamaseeCore.shared.getWeatherByTypes(
-            weatherTypes: [.cb, .lightning],
+        var weatherItems: [Weather] = YamaseeCore.shared.getWeather(
+            types: [.cb, .lightning],
             altRange: altRange,
             timeSpan: timeSpan,
             zoomLevel: 1)
-        weatherItems += YamaseeCore.shared.getWeatherByTypes(
-            weatherTypes: [.shear],
+        weatherItems += YamaseeCore.shared.getWeather(
+            types: [.shear],
             altRange: altRange,
             timeSpan: timeSpan,
             zoomLevel: 1)
-        weatherItems += YamaseeCore.shared.getOwnWeatherByTypes(
-            weatherTypes: [.cb, .lightning],
+        weatherItems += YamaseeCore.shared.getOwnWeather(
+            types: [.cb, .lightning],
             altRange: altRange,
             timeSpan: timeSpan,
             zoomLevel: 1)
-        weatherItems += YamaseeCore.shared.getOwnWeatherByTypes(
-            weatherTypes: [.shear],
+        weatherItems += YamaseeCore.shared.getOwnWeather(
+            types: [.shear],
             altRange: altRange,
             timeSpan: timeSpan,
             zoomLevel: 1)
@@ -274,22 +272,13 @@ extension YamaseeViewController {
     
     func submitWeatherReport() {
         
-        guard let coordinate = LocationManager.shared.location?.coordinate,
-              let altitude = LocationManager.shared.location?.altitude else {
+        guard let location = LocationManager.shared.location else {
             return
         }
         
-        YamaseeCore.shared.reportShear(lat: coordinate.latitude,
-                                       lng: coordinate.longitude,
-                                       alt: Measurement(value: altitude, unit: .meters))
-        
-        YamaseeCore.shared.reportCB(lat: coordinate.latitude,
-                                    lng: coordinate.longitude,
-                                    alt: Measurement(value: altitude, unit: .meters))
-        
-        YamaseeCore.shared.reportLightning(lat: coordinate.latitude,
-                                           lng: coordinate.longitude,
-                                           alt: Measurement(value: altitude, unit: .meters))
+        YamaseeCore.shared.reportWeather(type: .shear, at: location)
+        YamaseeCore.shared.reportWeather(type: .cb, at: location)
+        YamaseeCore.shared.reportWeather(type: .lightning, at: location)
     }
     
     func getFlights() {

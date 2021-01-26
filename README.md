@@ -31,15 +31,22 @@ SkyPath by Yamasee SDK will be available via CocoaPods later this year.
 You can integrate SkyPath into your project manually. 
 
 - Download .xcframework or .framework (each one contains both device and simulator architectures inside)
-- Copy framework file to project directory
-- Add framework to `Link Binary With Libraries` section in `Build Phases` of the Xcode target
+- Copy framework file to a project directory
+- In Xcode project target in `General` tab, in `Frameworks, Libraries, and Embedded Content` tap "Add items", choose a Yamasee framework file. Make sure the added framework "Embed" value is set to `Embed & Sign`
 - `import Yamasee` where needed
+
+
+#### Background Modes
+
+The location can be used while the app is in background to keep tracking and alert turbulence. The `Location updates` background mode is needed.<br>
+Make sure the corresponding `Privacy - Location Always and When In Use Usage Description` and/or `Privacy - Location When In Use Usage Description` descriptions are provided in the Info.plist of the project. 
+
 
 ## Usage
 
 #### Setup
 
-You need to get an API key, base main and data servers URLs from Yamasee to use the SDK. <br>
+You need to get an API key and server URL from Yamasee to use the SDK. <br>
 You can [contact us] (https://skypath.app/contact/) and request a demo. <br>
 
 The SDK has an entry point class `YamaseeCore`, start the SDK early on app launch (for example in application did finish delegate method) before making other API calls.
@@ -48,7 +55,7 @@ The SDK has an entry point class `YamaseeCore`, start the SDK early on app launc
 YamaseeCore.shared.start(
 	apiKey: "YAMASEE_API_KEY",
 	baseUrl: "YAMASEE_BASE_URL",
-	dataUrl: "YAMASEE_DATA_URL")
+	env: .development | .production)
 ```
 
 #### Login
@@ -119,8 +126,8 @@ let turbulences: [TurbulenceItem] = [
 The following weather data types are supported: clouds, lightning, wind-shear.
 
 ```swift
-let weatherItems: [WeatherItem] = YamaseeCore.shared.getWeatherByTypes(
-	weatherTypes: [.cb, .lightning, .shear],
+let weather: [Weather] = YamaseeCore.shared.getWeather(
+	types: [.cb, .lightning, .shear],
 	altRange: Constants.Altitude.maxRangeFeet,
 	timeSpan: timeSpan,
 	zoomLevel: 1)
@@ -129,10 +136,9 @@ let weatherItems: [WeatherItem] = YamaseeCore.shared.getWeatherByTypes(
 Report wheather example
 
 ```swift
-YamaseeCore.shared.reportCB(
-	lat: coordinate.latitude,
-	lng: coordinate.longitude,
-	alt: Measurement(value: altitude, unit: .meters))
+YamaseeCore.shared.reportWeather(
+	type: .cb,
+	location: location)
 ```
 
 #### Aircraft
@@ -175,7 +181,6 @@ YamaseeCore.shared.simulatedLocation(location: location)
 
 // exit simulation mode
 YamaseeCore.shared.setSimulatorMode(isLocationSimulatorOn: false)
-YamaseeCore.shared.stopSimulationNoDR()
 ```
 
 #### Logger
@@ -197,5 +202,5 @@ YamaseeCore.shared.setLogger(
 
 ## License
 
-Copyright © Yamasee LTD 2020. All rights reserved. 
+Copyright © Yamasee LTD 2021. All rights reserved. 
 See [Terms & Conditions](https://skypath.app/terms/).

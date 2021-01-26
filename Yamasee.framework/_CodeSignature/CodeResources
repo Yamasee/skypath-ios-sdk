@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/Yamasee-Swift.h</key>
 		<data>
-		BtDFtxfz0e8Q7rxkvi3crevR2hQ=
+		sQeuFpozU5fbl+w4zIL7FbuGIHE=
 		</data>
 		<key>Headers/Yamasee.h</key>
 		<data>
@@ -14,39 +14,39 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		C/7zynyCiCn4eSuj2oEQXB8gIE0=
+		AgBiYtVIDFdmGztao6v6tfC2ssg=
 		</data>
 		<key>Modules/Yamasee.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		NdZgNxRn9K91v0pwkOvU0HDR/48=
+		qga/vskKLrD0Za66OC9Bv2vF06g=
 		</data>
 		<key>Modules/Yamasee.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<data>
-		NdZgNxRn9K91v0pwkOvU0HDR/48=
+		qga/vskKLrD0Za66OC9Bv2vF06g=
 		</data>
 		<key>Modules/Yamasee.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		vmouXutAvml2vomI8MoFEl+xZpE=
+		bqLlS5nol2BFMsI+jGWAnMAlzIY=
 		</data>
 		<key>Modules/Yamasee.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		Z+KhzsymjhkC6SC9bXnUfU77Mxg=
+		Y0XpntSuftTbTPLeq9jrxAHXXas=
 		</data>
 		<key>Modules/Yamasee.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		ltxDkWwvDOmv1G+AE6KVziqGu9c=
+		dokY1OOER5NL8qRvOIpTS+xfKMU=
 		</data>
 		<key>Modules/Yamasee.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		vmouXutAvml2vomI8MoFEl+xZpE=
+		bqLlS5nol2BFMsI+jGWAnMAlzIY=
 		</data>
 		<key>Modules/Yamasee.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		Z+KhzsymjhkC6SC9bXnUfU77Mxg=
+		Y0XpntSuftTbTPLeq9jrxAHXXas=
 		</data>
 		<key>Modules/Yamasee.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		ltxDkWwvDOmv1G+AE6KVziqGu9c=
+		dokY1OOER5NL8qRvOIpTS+xfKMU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -63,7 +63,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JDSxiMfJ6Pj7r4f4GNWNHLGKnTohwd9wZBEl3cw2x0c=
+			kJC/bz5ke4WEOQl4Lwqf9XuWwwvxO2JKx838bJlfldA=
 			</data>
 		</dict>
 		<key>Headers/Yamasee.h</key>
@@ -77,56 +77,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6hO0NFnbLNm4dd60n8AjVH8rb/34oUKeQXhhCKZppZA=
+			VdsaxDSjYyMO8u6DmIQFJk2MMbQvVgJjfD/Tv1kstgY=
 			</data>
 		</dict>
 		<key>Modules/Yamasee.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6hO0NFnbLNm4dd60n8AjVH8rb/34oUKeQXhhCKZppZA=
+			VdsaxDSjYyMO8u6DmIQFJk2MMbQvVgJjfD/Tv1kstgY=
 			</data>
 		</dict>
 		<key>Modules/Yamasee.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WvvR/FtBrDFwGMO7VLA0q73TYwOM1XyngpNHDZzFzD8=
+			jboG9ak1ax6zezuBWqPSY5Yxp+t19egvbm7RfuHxqU0=
 			</data>
 		</dict>
 		<key>Modules/Yamasee.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VlBTqOQLI+uKt5Y6tdfxhEjdNbrXIb8jC2TxlwV/Mwk=
+			5wMH8uavyavwjR8pyB7x5ECCkxOGjeU/2uM6NikRAHs=
 			</data>
 		</dict>
 		<key>Modules/Yamasee.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NwHIbRAqrw3GhBdiSCIubx+pfoyaSveG+2Isu6z34e8=
+			Liac5PAC8nHj2TRypSnZZnDX+XyXFmyx8qmLXcDwlvk=
 			</data>
 		</dict>
 		<key>Modules/Yamasee.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WvvR/FtBrDFwGMO7VLA0q73TYwOM1XyngpNHDZzFzD8=
+			jboG9ak1ax6zezuBWqPSY5Yxp+t19egvbm7RfuHxqU0=
 			</data>
 		</dict>
 		<key>Modules/Yamasee.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VlBTqOQLI+uKt5Y6tdfxhEjdNbrXIb8jC2TxlwV/Mwk=
+			5wMH8uavyavwjR8pyB7x5ECCkxOGjeU/2uM6NikRAHs=
 			</data>
 		</dict>
 		<key>Modules/Yamasee.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NwHIbRAqrw3GhBdiSCIubx+pfoyaSveG+2Isu6z34e8=
+			Liac5PAC8nHj2TRypSnZZnDX+XyXFmyx8qmLXcDwlvk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

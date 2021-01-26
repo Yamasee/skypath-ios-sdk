@@ -17,7 +17,7 @@
     <a title="YamaseeCore Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (70% documented)</p>
+        <p><a href="../index.html"> Docs</a> (59% documented)</p>
         <p class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -47,6 +47,9 @@
             <a href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Enums/Environment.html">Environment</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/ForgotPasswordError.html">ForgotPasswordError</a>
               </li>
               <li class="nav-group-task">
@@ -59,10 +62,13 @@
                 <a href="../Enums/PartnerLoginError.html">PartnerLoginError</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/RawDataTriggerType.html">RawDataTriggerType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/TurbulenceSeverity.html">TurbulenceSeverity</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/WXType.html">WXType</a>
+                <a href="../Enums/WeatherType.html">WeatherType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/YamaseeLocationState.html">YamaseeLocationState</a>
@@ -70,8 +76,25 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/CLLocationCoordinate2D.html">CLLocationCoordinate2D</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Encodable.html">Encodable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSError.html">NSError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:7Yamasee7YSErrorP">YSError</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Protocols/YamaseeCoreDelegate.html">YamaseeCoreDelegate</a>
               </li>
@@ -82,6 +105,12 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Structs/Airport.html">Airport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/RawDataResponseRequest.html">RawDataResponseRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/RawDataUserResponse.html">RawDataUserResponse</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/SessionTimeouts.html">SessionTimeouts</a>
@@ -96,7 +125,7 @@
                 <a href="../Structs/User.html">User</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/WeatherItem.html">WeatherItem</a>
+                <a href="../Structs/Weather.html">Weather</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/YamaseeAircraftType.html">YamaseeAircraftType</a>
@@ -210,7 +239,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/YamaseeCoreDelegate.html">YamaseeCoreDelegate</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/YamaseeCoreDelegate.html">YamaseeCoreDelegate</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -233,9 +262,9 @@ Events only notify the delegate that a new data arrived from the server. It is t
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Yamasee0A4CoreC5start6apiKey7baseUrl04dataG0ySS_S2StF"></a>
-                    <a name="//apple_ref/swift/Method/start(apiKey:baseUrl:dataUrl:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC5start6apiKey7baseUrl04dataG0ySS_S2StF">start(apiKey:<wbr>baseUrl:<wbr>dataUrl:<wbr>)</a>
+                    <a name="/s:7Yamasee0A4CoreC5start6apiKey7baseUrl3envySS_SSAA11EnvironmentOSgtF"></a>
+                    <a name="//apple_ref/swift/Method/start(apiKey:baseUrl:env:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC5start6apiKey7baseUrl3envySS_SSAA11EnvironmentOSgtF">start(apiKey:<wbr>baseUrl:<wbr>env:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -252,7 +281,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">start</span><span class="p">(</span><span class="nv">apiKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
                   <span class="nv">baseUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                  <span class="nv">dataUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                  <span class="nv">env</span><span class="p">:</span> <span class="kt"><a href="../Enums/Environment.html">Environment</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -284,18 +313,6 @@ Events only notify the delegate that a new data arrived from the server. It is t
                                 </div>
                               </td>
                             </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>dataUrl</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>String Data server URL. Provided by Yamasee</p>
-                                </div>
-                              </td>
-                            </tr>
                           </tbody>
                         </table>
                       </div>
@@ -324,7 +341,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">partnerLogin</span><span class="p">(</span><span class="nv">userId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
                          <span class="nv">companyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                         <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span>  <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Enums/PartnerLoginError.html">PartnerLoginError</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                         <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Enums/PartnerLoginError.html">PartnerLoginError</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -384,7 +401,7 @@ Events only notify the delegate that a new data arrived from the server. It is t
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">userLogin</span><span class="p">(</span><span class="nv">userId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
                       <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                      <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span>  <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Enums/LoginError.html">LoginError</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                      <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Enums/LoginError.html">LoginError</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -700,9 +717,9 @@ returns the login status of the framework</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Yamasee0A4CoreC9isNewUser13userIdOrEmail17completionHandlerySS_ySbSg_s5Error_pSgtctF"></a>
+                    <a name="/s:7Yamasee0A4CoreC9isNewUser13userIdOrEmail17completionHandlerySS_ySbSg_AA10LoginErrorOSgtctF"></a>
                     <a name="//apple_ref/swift/Method/isNewUser(userIdOrEmail:completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC9isNewUser13userIdOrEmail17completionHandlerySS_ySbSg_s5Error_pSgtctF">isNewUser(userIdOrEmail:<wbr>completionHandler:<wbr>)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC9isNewUser13userIdOrEmail17completionHandlerySS_ySbSg_AA10LoginErrorOSgtctF">isNewUser(userIdOrEmail:<wbr>completionHandler:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -719,7 +736,7 @@ returns the status of user on the server</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isNewUser</span><span class="p">(</span><span class="nv">userIdOrEmail</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                      <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                      <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Enums/LoginError.html">LoginError</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -797,9 +814,9 @@ returns the status of user on the server</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Yamasee0A4CoreC11isFreshUser13userIdOrEmail17completionHandlerySS_ySbSg_s5Error_pSgtctF"></a>
+                    <a name="/s:7Yamasee0A4CoreC11isFreshUser13userIdOrEmail17completionHandlerySS_ySbSg_AA10LoginErrorOSgtctF"></a>
                     <a name="//apple_ref/swift/Method/isFreshUser(userIdOrEmail:completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC11isFreshUser13userIdOrEmail17completionHandlerySS_ySbSg_s5Error_pSgtctF">isFreshUser(userIdOrEmail:<wbr>completionHandler:<wbr>)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC11isFreshUser13userIdOrEmail17completionHandlerySS_ySbSg_AA10LoginErrorOSgtctF">isFreshUser(userIdOrEmail:<wbr>completionHandler:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -815,7 +832,7 @@ returns the status of user on the server</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isFreshUser</span><span class="p">(</span><span class="nv">userIdOrEmail</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                        <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                        <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Enums/LoginError.html">LoginError</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -829,9 +846,9 @@ returns the status of user on the server</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Yamasee0A4CoreC10otpRequest17completionHandleryySbSg_s5Error_pSgtc_tF"></a>
+                    <a name="/s:7Yamasee0A4CoreC10otpRequest17completionHandleryySbSg_AA10LoginErrorOSgtc_tF"></a>
                     <a name="//apple_ref/swift/Method/otpRequest(completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC10otpRequest17completionHandleryySbSg_s5Error_pSgtc_tF">otpRequest(completionHandler:<wbr>)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC10otpRequest17completionHandleryySbSg_AA10LoginErrorOSgtc_tF">otpRequest(completionHandler:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -846,7 +863,7 @@ returns the status of user on the server</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">otpRequest</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">otpRequest</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Enums/LoginError.html">LoginError</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -860,9 +877,9 @@ returns the status of user on the server</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Yamasee0A4CoreC11otpValidate0C017completionHandlerySS_ySbSg_s5Error_pSgtctF"></a>
+                    <a name="/s:7Yamasee0A4CoreC11otpValidate0C017completionHandlerySS_ySbSg_AA10LoginErrorOSgtctF"></a>
                     <a name="//apple_ref/swift/Method/otpValidate(otp:completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC11otpValidate0C017completionHandlerySS_ySbSg_s5Error_pSgtctF">otpValidate(otp:<wbr>completionHandler:<wbr>)</a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC11otpValidate0C017completionHandlerySS_ySbSg_AA10LoginErrorOSgtctF">otpValidate(otp:<wbr>completionHandler:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -878,7 +895,7 @@ returns the status of user on the server</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">otpValidate</span><span class="p">(</span><span class="nv">otp</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                        <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                        <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Enums/LoginError.html">LoginError</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -975,9 +992,9 @@ returns the status of user on the server</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Yamasee0A4CoreC20getTurbulenceGeoJson8altRange8timeSpan9zoomLevelSSSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_S2itF"></a>
-                    <a name="//apple_ref/swift/Method/getTurbulenceGeoJson(altRange:timeSpan:zoomLevel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC20getTurbulenceGeoJson8altRange8timeSpan9zoomLevelSSSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_S2itF">getTurbulenceGeoJson(altRange:<wbr>timeSpan:<wbr>zoomLevel:<wbr>)</a>
+                    <a name="/s:7Yamasee0A4CoreC20getTurbulenceGeoJson8altRange8timeSpan9zoomLevel12excludeTilesSSSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_S2iSaySSGtF"></a>
+                    <a name="//apple_ref/swift/Method/getTurbulenceGeoJson(altRange:timeSpan:zoomLevel:excludeTiles:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC20getTurbulenceGeoJson8altRange8timeSpan9zoomLevel12excludeTilesSSSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_S2iSaySSGtF">getTurbulenceGeoJson(altRange:<wbr>timeSpan:<wbr>zoomLevel:<wbr>excludeTiles:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -994,7 +1011,8 @@ returns the status of user on the server</p>
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getTurbulenceGeoJson</span><span class="p">(</span><span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;&gt;</span><span class="p">,</span>
                                  <span class="nv">timeSpan</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
-                                 <span class="nv">zoomLevel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+                                 <span class="nv">zoomLevel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+                                 <span class="nv">excludeTiles</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[])</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -1035,6 +1053,18 @@ returns the status of user on the server</p>
                               <td>
                                 <div>
                                   <p>display map zoom level. Rounded down i.e 3.8 -&gt; 3</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>excludeTiles</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>allows to filter out tiles by tile ids, for example to exclude own turbulence tiles from those received from the server</p>
                                 </div>
                               </td>
                             </tr>
@@ -1051,9 +1081,9 @@ returns the status of user on the server</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Yamasee0A4CoreC13getTurbulence8altRange8timeSpan9zoomLevelSayAA0D4ItemVGSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_S2itF"></a>
-                    <a name="//apple_ref/swift/Method/getTurbulence(altRange:timeSpan:zoomLevel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC13getTurbulence8altRange8timeSpan9zoomLevelSayAA0D4ItemVGSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_S2itF">getTurbulence(altRange:<wbr>timeSpan:<wbr>zoomLevel:<wbr>)</a>
+                    <a name="/s:7Yamasee0A4CoreC13getTurbulence8altRange8timeSpan9zoomLevel12excludeTilesSayAA0D4ItemVGSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_S2iSaySSGtF"></a>
+                    <a name="//apple_ref/swift/Method/getTurbulence(altRange:timeSpan:zoomLevel:excludeTiles:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC13getTurbulence8altRange8timeSpan9zoomLevel12excludeTilesSayAA0D4ItemVGSNy10Foundation11MeasurementVySo12NSUnitLengthCGG_S2iSaySSGtF">getTurbulence(altRange:<wbr>timeSpan:<wbr>zoomLevel:<wbr>excludeTiles:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1070,7 +1100,8 @@ returns the status of user on the server</p>
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getTurbulence</span><span class="p">(</span><span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;&gt;</span><span class="p">,</span>
                           <span class="nv">timeSpan</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
-                          <span class="nv">zoomLevel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/TurbulenceItem.html">TurbulenceItem</a></span><span class="p">]</span></code></pre>
+                          <span class="nv">zoomLevel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+                          <span class="nv">excludeTiles</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[])</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/TurbulenceItem.html">TurbulenceItem</a></span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -1111,6 +1142,18 @@ returns the status of user on the server</p>
                               <td>
                                 <div>
                                   <p>display map zoom level. Rounded down i.e 3.8 -&gt; 3</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>excludeTiles</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>allows to filter out tiles by tile ids, for example to exclude own turbulence tiles from those received from the server</p>
                                 </div>
                               </td>
                             </tr>
@@ -1229,6 +1272,33 @@ returns the status of user on the server</p>
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC13dataUpdatedAt10Foundation4DateVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dataUpdatedAt" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC13dataUpdatedAt10Foundation4DateVSgvp">dataUpdatedAt</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Last date when successfully received new data</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">dataUpdatedAt</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
             <div class="task-group">
@@ -1245,9 +1315,9 @@ returns the status of user on the server</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Yamasee0A4CoreC8reportCB3lat3lng3altySd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGtF"></a>
-                    <a name="//apple_ref/swift/Method/reportCB(lat:lng:alt:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC8reportCB3lat3lng3altySd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGtF">reportCB(lat:<wbr>lng:<wbr>alt:<wbr>)</a>
+                    <a name="/s:7Yamasee0A4CoreC13reportWeather4type2atyAA0D4TypeO_So10CLLocationCtF"></a>
+                    <a name="//apple_ref/swift/Method/reportWeather(type:at:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC13reportWeather4type2atyAA0D4TypeO_So10CLLocationCtF">reportWeather(type:<wbr>at:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1255,14 +1325,14 @@ returns the status of user on the server</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>pilot report on new cb</p>
+                        <p>Add a new pilot weather report</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reportCB</span><span class="p">(</span><span class="nv">lat</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">lng</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">alt</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reportWeather</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums/WeatherType.html">WeatherType</a></span><span class="p">,</span> <span class="n">at</span> <span class="nv">location</span><span class="p">:</span> <span class="kt">CLLocation</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1273,36 +1343,24 @@ returns the status of user on the server</p>
                             <tr>
                               <td>
                                 <code>
-                                <em>lat</em>
+                                <em>type</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>the latutide of the reported cloud</p>
+                                  <p>Weather type</p>
                                 </div>
                               </td>
                             </tr>
                             <tr>
                               <td>
                                 <code>
-                                <em>lng</em>
+                                <em>location</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>the longitue of the reported cloud</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>top</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>the altitude of the top of the reported cloud</p>
+                                  <p>Location of weather report</p>
                                 </div>
                               </td>
                             </tr>
@@ -1315,397 +1373,9 @@ returns the status of user on the server</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Yamasee0A4CoreC15reportLightning3lat3lng3altySd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGtF"></a>
-                    <a name="//apple_ref/swift/Method/reportLightning(lat:lng:alt:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC15reportLightning3lat3lng3altySd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGtF">reportLightning(lat:<wbr>lng:<wbr>alt:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>pilot report on new lightning</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reportLightning</span><span class="p">(</span><span class="nv">lat</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">lng</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">alt</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>lat</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>the latutide of the reported lightning</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>lng</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>the longitue of the reported lightning</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>alt</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>the altitude  of the reported airplane</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC11reportShear3lat3lng3altySd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGtF"></a>
-                    <a name="//apple_ref/swift/Method/reportShear(lat:lng:alt:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC11reportShear3lat3lng3altySd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGtF">reportShear(lat:<wbr>lng:<wbr>alt:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>pilot report on new wind shear</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reportShear</span><span class="p">(</span><span class="nv">lat</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">lng</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">alt</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>lat</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>the latutide of the reported wind shear</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>lng</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>the longitue of the reported wind shear</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>alt</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>the altitude of the top of the reported wind shear</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC11reportIcing3lat3lng3altySd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGtF"></a>
-                    <a name="//apple_ref/swift/Method/reportIcing(lat:lng:alt:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC11reportIcing3lat3lng3altySd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGtF">reportIcing(lat:<wbr>lng:<wbr>alt:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>pilot report on new icing</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reportIcing</span><span class="p">(</span><span class="nv">lat</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">lng</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">alt</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>lat</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>the latutide of the reported icing</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>lng</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>the longitue of the reported icing</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>alt</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>the altitude of the top of the reported icing</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC16getWeatherByType07weatherF08altRange8timeSpan9zoomLevelSSAA6WXTypeO_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF"></a>
-                    <a name="//apple_ref/swift/Method/getWeatherByType(weatherType:altRange:timeSpan:zoomLevel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC16getWeatherByType07weatherF08altRange8timeSpan9zoomLevelSSAA6WXTypeO_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getWeatherByType(weatherType:<wbr>altRange:<wbr>timeSpan:<wbr>zoomLevel:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Get weather JSON</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getWeatherByType</span><span class="p">(</span><span class="nv">weatherType</span><span class="p">:</span> <span class="kt"><a href="../Enums/WXType.html">WXType</a></span><span class="p">,</span>
-                             <span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;&gt;</span><span class="p">,</span>
-                             <span class="nv">timeSpan</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
-                             <span class="nv">zoomLevel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>weatherType</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>the type of weather needed (WXType enum)</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>altRange</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>altitude range ClosedRange<Measurement<UnitLength>&gt;</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>timeSpan</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>number of minutes before current time for turbulence query (example 120)</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>zoomLevel</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>display map zoom level. Rounded down i.e 3.8 -&gt; 3</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>GeoJson</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC16getWeatherByType07weatherF08altRange8timeSpan9zoomLevelSayAA0D4ItemVGAA6WXTypeO_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF"></a>
-                    <a name="//apple_ref/swift/Method/getWeatherByType(weatherType:altRange:timeSpan:zoomLevel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC16getWeatherByType07weatherF08altRange8timeSpan9zoomLevelSayAA0D4ItemVGAA6WXTypeO_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getWeatherByType(weatherType:<wbr>altRange:<wbr>timeSpan:<wbr>zoomLevel:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Get weather</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getWeatherByType</span><span class="p">(</span><span class="nv">weatherType</span><span class="p">:</span> <span class="kt"><a href="../Enums/WXType.html">WXType</a></span><span class="p">,</span>
-                             <span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;&gt;</span><span class="p">,</span>
-                             <span class="nv">timeSpan</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
-                             <span class="nv">zoomLevel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/WeatherItem.html">WeatherItem</a></span><span class="p">]</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>weatherType</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>the type of weather needed (WXType enum)</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>altRange</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>altitude range ClosedRange<Measurement<UnitLength>&gt;</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>timeSpan</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>number of minutes before current time for turbulence query (example 120)</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>zoomLevel</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>display map zoom level. Rounded down i.e 3.8 -&gt; 3</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>WeatherItem array</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC17getWeatherByTypes07weatherF08altRange8timeSpan9zoomLevelSayAA0D4ItemVGSayAA6WXTypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF"></a>
-                    <a name="//apple_ref/swift/Method/getWeatherByTypes(weatherTypes:altRange:timeSpan:zoomLevel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC17getWeatherByTypes07weatherF08altRange8timeSpan9zoomLevelSayAA0D4ItemVGSayAA6WXTypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getWeatherByTypes(weatherTypes:<wbr>altRange:<wbr>timeSpan:<wbr>zoomLevel:<wbr>)</a>
+                    <a name="/s:7Yamasee0A4CoreC10getWeather5types8altRange8timeSpan9zoomLevelSayAA0D0VGSayAA0D4TypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF"></a>
+                    <a name="//apple_ref/swift/Method/getWeather(types:altRange:timeSpan:zoomLevel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC10getWeather5types8altRange8timeSpan9zoomLevelSayAA0D0VGSayAA0D4TypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getWeather(types:<wbr>altRange:<wbr>timeSpan:<wbr>zoomLevel:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1720,10 +1390,10 @@ returns the status of user on the server</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getWeatherByTypes</span><span class="p">(</span><span class="nv">weatherTypes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/WXType.html">WXType</a></span><span class="p">],</span>
-                              <span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;&gt;</span><span class="p">,</span>
-                              <span class="nv">timeSpan</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
-                              <span class="nv">zoomLevel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/WeatherItem.html">WeatherItem</a></span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getWeather</span><span class="p">(</span><span class="nv">types</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/WeatherType.html">WeatherType</a></span><span class="p">],</span>
+                       <span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;&gt;</span><span class="p">,</span>
+                       <span class="nv">timeSpan</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+                       <span class="nv">zoomLevel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/Weather.html">Weather</a></span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -1792,9 +1462,9 @@ returns the status of user on the server</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Yamasee0A4CoreC17getWeatherByTypes07weatherF08altRange8timeSpan9zoomLevelSSSayAA6WXTypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF"></a>
-                    <a name="//apple_ref/swift/Method/getWeatherByTypes(weatherTypes:altRange:timeSpan:zoomLevel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC17getWeatherByTypes07weatherF08altRange8timeSpan9zoomLevelSSSayAA6WXTypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getWeatherByTypes(weatherTypes:<wbr>altRange:<wbr>timeSpan:<wbr>zoomLevel:<wbr>)</a>
+                    <a name="/s:7Yamasee0A4CoreC10getWeather5types8altRange8timeSpan9zoomLevelSSSayAA0D4TypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF"></a>
+                    <a name="//apple_ref/swift/Method/getWeather(types:altRange:timeSpan:zoomLevel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC10getWeather5types8altRange8timeSpan9zoomLevelSSSayAA0D4TypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getWeather(types:<wbr>altRange:<wbr>timeSpan:<wbr>zoomLevel:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1809,10 +1479,10 @@ returns the status of user on the server</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getWeatherByTypes</span><span class="p">(</span><span class="nv">weatherTypes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/WXType.html">WXType</a></span><span class="p">],</span>
-                              <span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;&gt;</span><span class="p">,</span>
-                              <span class="nv">timeSpan</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
-                              <span class="nv">zoomLevel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getWeather</span><span class="p">(</span><span class="nv">types</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/WeatherType.html">WeatherType</a></span><span class="p">],</span>
+                       <span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;&gt;</span><span class="p">,</span>
+                       <span class="nv">timeSpan</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+                       <span class="nv">zoomLevel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -1881,187 +1551,9 @@ returns the status of user on the server</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Yamasee0A4CoreC19getOwnWeatherByType07weatherG08altRange8timeSpan9zoomLevelSSAA6WXTypeO_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF"></a>
-                    <a name="//apple_ref/swift/Method/getOwnWeatherByType(weatherType:altRange:timeSpan:zoomLevel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC19getOwnWeatherByType07weatherG08altRange8timeSpan9zoomLevelSSAA6WXTypeO_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getOwnWeatherByType(weatherType:<wbr>altRange:<wbr>timeSpan:<wbr>zoomLevel:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Get Own weather JSON</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getOwnWeatherByType</span><span class="p">(</span><span class="nv">weatherType</span><span class="p">:</span> <span class="kt"><a href="../Enums/WXType.html">WXType</a></span><span class="p">,</span>
-                                <span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;&gt;</span><span class="p">,</span>
-                                <span class="nv">timeSpan</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
-                                <span class="nv">zoomLevel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>weatherType</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>the type of weather needed (WXType enum)</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>altRange</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>altitude range ClosedRange<Measurement<UnitLength>&gt;</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>timeSpan</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>number of minutes before current time for turbulence query (example 120)</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>zoomLevel</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>display map zoom level. Rounded down i.e 3.8 -&gt; 3</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>GeoJson</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC19getOwnWeatherByType07weatherG08altRange8timeSpan9zoomLevelSayAA0E4ItemVGAA6WXTypeO_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF"></a>
-                    <a name="//apple_ref/swift/Method/getOwnWeatherByType(weatherType:altRange:timeSpan:zoomLevel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC19getOwnWeatherByType07weatherG08altRange8timeSpan9zoomLevelSayAA0E4ItemVGAA6WXTypeO_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getOwnWeatherByType(weatherType:<wbr>altRange:<wbr>timeSpan:<wbr>zoomLevel:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Get Own weather</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getOwnWeatherByType</span><span class="p">(</span><span class="nv">weatherType</span><span class="p">:</span><span class="kt"><a href="../Enums/WXType.html">WXType</a></span><span class="p">,</span>
-                                <span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;&gt;</span><span class="p">,</span>
-                                <span class="nv">timeSpan</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
-                                <span class="nv">zoomLevel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/WeatherItem.html">WeatherItem</a></span><span class="p">]</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>weatherType</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>the type of weather needed (WXType enum)</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>altRange</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>altitude range ClosedRange<Measurement<UnitLength>&gt;</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>timeSpan</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>number of minutes before current time for turbulence query (example 120)</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>zoomLevel</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>display map zoom level. Rounded down i.e 3.8 -&gt; 3</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>WeatherItem array</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC20getOwnWeatherByTypes07weatherG08altRange8timeSpan9zoomLevelSayAA0E4ItemVGSayAA6WXTypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF"></a>
-                    <a name="//apple_ref/swift/Method/getOwnWeatherByTypes(weatherTypes:altRange:timeSpan:zoomLevel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC20getOwnWeatherByTypes07weatherG08altRange8timeSpan9zoomLevelSayAA0E4ItemVGSayAA6WXTypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getOwnWeatherByTypes(weatherTypes:<wbr>altRange:<wbr>timeSpan:<wbr>zoomLevel:<wbr>)</a>
+                    <a name="/s:7Yamasee0A4CoreC13getOwnWeather5types8altRange8timeSpan9zoomLevelSayAA0E0VGSayAA0E4TypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF"></a>
+                    <a name="//apple_ref/swift/Method/getOwnWeather(types:altRange:timeSpan:zoomLevel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC13getOwnWeather5types8altRange8timeSpan9zoomLevelSayAA0E0VGSayAA0E4TypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getOwnWeather(types:<wbr>altRange:<wbr>timeSpan:<wbr>zoomLevel:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2076,10 +1568,10 @@ returns the status of user on the server</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getOwnWeatherByTypes</span><span class="p">(</span><span class="nv">weatherTypes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/WXType.html">WXType</a></span><span class="p">],</span>
-                                 <span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;&gt;</span><span class="p">,</span>
-                                 <span class="nv">timeSpan</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
-                                 <span class="nv">zoomLevel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/WeatherItem.html">WeatherItem</a></span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getOwnWeather</span><span class="p">(</span><span class="nv">types</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/WeatherType.html">WeatherType</a></span><span class="p">],</span>
+                          <span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;&gt;</span><span class="p">,</span>
+                          <span class="nv">timeSpan</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+                          <span class="nv">zoomLevel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/Weather.html">Weather</a></span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -2148,9 +1640,9 @@ returns the status of user on the server</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Yamasee0A4CoreC20getOwnWeatherByTypes07weatherG08altRange8timeSpan9zoomLevelSSSayAA6WXTypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF"></a>
-                    <a name="//apple_ref/swift/Method/getOwnWeatherByTypes(weatherTypes:altRange:timeSpan:zoomLevel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC20getOwnWeatherByTypes07weatherG08altRange8timeSpan9zoomLevelSSSayAA6WXTypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getOwnWeatherByTypes(weatherTypes:<wbr>altRange:<wbr>timeSpan:<wbr>zoomLevel:<wbr>)</a>
+                    <a name="/s:7Yamasee0A4CoreC13getOwnWeather5types8altRange8timeSpan9zoomLevelSSSayAA0E4TypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF"></a>
+                    <a name="//apple_ref/swift/Method/getOwnWeather(types:altRange:timeSpan:zoomLevel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC13getOwnWeather5types8altRange8timeSpan9zoomLevelSSSayAA0E4TypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getOwnWeather(types:<wbr>altRange:<wbr>timeSpan:<wbr>zoomLevel:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2165,10 +1657,10 @@ returns the status of user on the server</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getOwnWeatherByTypes</span><span class="p">(</span><span class="nv">weatherTypes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/WXType.html">WXType</a></span><span class="p">],</span>
-                                 <span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;&gt;</span><span class="p">,</span>
-                                 <span class="nv">timeSpan</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
-                                 <span class="nv">zoomLevel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getOwnWeather</span><span class="p">(</span><span class="nv">types</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/WeatherType.html">WeatherType</a></span><span class="p">],</span>
+                          <span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;&gt;</span><span class="p">,</span>
+                          <span class="nv">timeSpan</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+                          <span class="nv">zoomLevel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -2395,6 +1887,52 @@ returns the status of user on the server</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>TurbulenceItem array</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC6deleteyySayAA7WeatherVGF"></a>
+                    <a name="//apple_ref/swift/Method/delete(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC6deleteyySayAA7WeatherVGF">delete(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Delete own reported weather</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">delete</span><span class="p">(</span><span class="n">_</span> <span class="nv">weather</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/Weather.html">Weather</a></span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>weather</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>weather reports to delete</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -2760,6 +2298,52 @@ returns the status of user on the server</p>
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC25alertedTurbulenceSeverityyyAA0dE0OF"></a>
+                    <a name="//apple_ref/swift/Method/alertedTurbulenceSeverity(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC25alertedTurbulenceSeverityyyAA0dE0OF">alertedTurbulenceSeverity(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Call when the turbulence alert was presented to the user in the app</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">alertedTurbulenceSeverity</span><span class="p">(</span><span class="n">_</span> <span class="nv">sev</span><span class="p">:</span> <span class="kt"><a href="../Enums/TurbulenceSeverity.html">TurbulenceSeverity</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sev</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>severity of a turbulence that was alerted</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
             <div class="task-group">
@@ -2907,9 +2491,9 @@ returns the status of user on the server</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Yamasee0A4CoreC12getWaypoints12flightPlanId10completionySS_y10Foundation4DataVSg_So13NSURLResponseCSgs5Error_pSgtctF"></a>
-                    <a name="//apple_ref/swift/Method/getWaypoints(flightPlanId:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC12getWaypoints12flightPlanId10completionySS_y10Foundation4DataVSg_So13NSURLResponseCSgs5Error_pSgtctF">getWaypoints(flightPlanId:<wbr>completion:<wbr>)</a>
+                    <a name="/s:7Yamasee0A4CoreC12getWaypoints5route10completionySS_y10Foundation4DataVSg_So13NSURLResponseCSgs5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/getWaypoints(route:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC12getWaypoints5route10completionySS_y10Foundation4DataVSg_So13NSURLResponseCSgs5Error_pSgtctF">getWaypoints(route:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2917,14 +2501,14 @@ returns the status of user on the server</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get waypoints list for a flight to show on the map for customers with routes privilege</p>
+                        <p>Get waypoints list for a pilot flight route waypoints as a text to show on the map</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getWaypoints</span><span class="p">(</span><span class="nv">flightPlanId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getWaypoints</span><span class="p">(</span><span class="nv">route</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
                          <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/YamaseeCore.html#/s:7Yamasee0A4CoreC23RawAPIResponseDataBlocka">RawAPIResponseDataBlock</a></span><span class="p">)</span></code></pre>
 
                         </div>
@@ -2936,12 +2520,12 @@ returns the status of user on the server</p>
                             <tr>
                               <td>
                                 <code>
-                                <em>flightPlanId</em>
+                                <em>route</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>String</p>
+                                  <p>route waypoints string</p>
                                 </div>
                               </td>
                             </tr>
@@ -3102,53 +2686,6 @@ returns the status of user on the server</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Yamasee0A4CoreC22setAppForegroundStatus02inE0ySb_tF"></a>
-                    <a name="//apple_ref/swift/Method/setAppForegroundStatus(inForeground:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC22setAppForegroundStatus02inE0ySb_tF">setAppForegroundStatus(inForeground:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Set App Forground Status.
-The framework uses this parameter to conserve energy while app is in the background (taking into account the airplane ground/air status)</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setAppForegroundStatus</span><span class="p">(</span><span class="nv">inForeground</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>inForground</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>- true if the app is in the foreground. false otherwise.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:7Yamasee0A4CoreC8setAngleyyF"></a>
                     <a name="//apple_ref/swift/Method/setAngle()" class="dashAnchor"></a>
                     <a class="token" href="#/s:7Yamasee0A4CoreC8setAngleyyF">setAngle()</a>
@@ -3176,6 +2713,33 @@ The framework uses this parameter to conserve energy while app is in the backgro
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:7Yamasee0A4CoreC10resetAngleyyF"></a>
+                    <a name="//apple_ref/swift/Method/resetAngle()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC10resetAngleyyF">resetAngle()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reset angle of device in a cradle to zero to start position from scratch</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">resetAngle</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:7Yamasee0A4CoreC12isInPositionSbyF"></a>
                     <a name="//apple_ref/swift/Method/isInPosition()" class="dashAnchor"></a>
                     <a class="token" href="#/s:7Yamasee0A4CoreC12isInPositionSbyF">isInPosition()</a>
@@ -3194,6 +2758,33 @@ The framework uses this parameter to conserve energy while app is in the backgro
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isInPosition</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC23isCurrentPositionSteadySbyF"></a>
+                    <a name="//apple_ref/swift/Method/isCurrentPositionSteady()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC23isCurrentPositionSteadySbyF">isCurrentPositionSteady()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Checks if current device angle wasn&rsquo;t significantly changed during last few seconds to identify position as a steady position</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isCurrentPositionSteady</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -3296,9 +2887,9 @@ The framework uses this parameter to conserve energy while app is in the backgro
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Yamasee0A4CoreC17getNearestAirport10toLocationAA0E0VSgSo10CLLocationC_tF"></a>
-                    <a name="//apple_ref/swift/Method/getNearestAirport(toLocation:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC17getNearestAirport10toLocationAA0E0VSgSo10CLLocationC_tF">getNearestAirport(toLocation:<wbr>)</a>
+                    <a name="/s:7Yamasee0A4CoreC18getNearestAirports2toSayAA7AirportVGSo10CLLocationC_tF"></a>
+                    <a name="//apple_ref/swift/Method/getNearestAirports(to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC18getNearestAirports2toSayAA7AirportVGSo10CLLocationC_tF">getNearestAirports(to:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -3306,20 +2897,51 @@ The framework uses this parameter to conserve energy while app is in the backgro
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get nearest Airport</p>
+                        <p>Get nearest Airports</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getNearestAirport</span><span class="p">(</span><span class="nv">toLocation</span><span class="p">:</span> <span class="kt">CLLocation</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Airport.html">Airport</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getNearestAirports</span><span class="p">(</span><span class="n">to</span> <span class="nv">location</span><span class="p">:</span> <span class="kt">CLLocation</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/Airport.html">Airport</a></span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>a GeoJson of airports</p>
+                        <p>nearest airports to the given location as an array of objects</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC18getNearestAirports2toSSSo10CLLocationC_tF"></a>
+                    <a name="//apple_ref/swift/Method/getNearestAirports(to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC18getNearestAirports2toSSSo10CLLocationC_tF">getNearestAirports(to:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get nearest Airports</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getNearestAirports</span><span class="p">(</span><span class="n">to</span> <span class="nv">location</span><span class="p">:</span> <span class="kt">CLLocation</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>nearest airports to the given location as a GeoJSON string</p>
                       </div>
                     </section>
                   </div>
@@ -3396,6 +3018,53 @@ The framework uses this parameter to conserve energy while app is in the backgro
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC18setDemoDataEnabledyySbF"></a>
+                    <a name="//apple_ref/swift/Method/setDemoDataEnabled(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC18setDemoDataEnabledyySbF">setDemoDataEnabled(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If you would like the SDK to use demo data in addition to the real data call this method.
+Use it only when you need demo data, if you don&rsquo;t need it, please do not call this method even with <code>false</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setDemoDataEnabled</span><span class="p">(</span><span class="n">_</span> <span class="nv">enabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>enabled</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass <code>true</code> to start adding demo data and <code>false</code> to stop adding demo data</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
             <div class="task-group">
@@ -3451,33 +3120,6 @@ The framework uses this parameter to conserve energy while app is in the backgro
                             </tr>
                           </tbody>
                         </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC18stopSimulationNoDRyyF"></a>
-                    <a name="//apple_ref/swift/Method/stopSimulationNoDR()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC18stopSimulationNoDRyyF">stopSimulationNoDR()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Allows client to stop location updates to the framework without the move to DR</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stopSimulationNoDR</span><span class="p">()</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>
@@ -3582,6 +3224,52 @@ timestamp (should not be &ldquo;older&rdquo; than 2 seconds ago)</p>
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC18simulateTurbulence3sevyAA0D8SeverityO_tF"></a>
+                    <a name="//apple_ref/swift/Method/simulateTurbulence(sev:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC18simulateTurbulence3sevyAA0D8SeverityO_tF">simulateTurbulence(sev:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Simulate turbulence event for testing</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">simulateTurbulence</span><span class="p">(</span><span class="nv">sev</span><span class="p">:</span> <span class="kt"><a href="../Enums/TurbulenceSeverity.html">TurbulenceSeverity</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sev</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>turbulence severity level to simulate event for</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
             <div class="task-group">
@@ -3621,7 +3309,7 @@ timestamp (should not be &ldquo;older&rdquo; than 2 seconds ago)</p>
                       <span class="nv">infoOn</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
                       <span class="nv">warningOn</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
                       <span class="nv">networkOn</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
-                      <span class="nv">onLog</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+                      <span class="nv">onLog</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -3712,7 +3400,7 @@ timestamp (should not be &ldquo;older&rdquo; than 2 seconds ago)</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://skypath.app" target="_blank" rel="external">Yamasee LTD</a>. All rights reserved. (Last updated: 2020-11-06)</p>
+          <p>&copy; 2021 <a class="link" href="https://skypath.app" target="_blank" rel="external">Yamasee LTD</a>. All rights reserved. (Last updated: 2021-01-26)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

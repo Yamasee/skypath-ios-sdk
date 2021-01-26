@@ -17,7 +17,7 @@
     <a title="Extensions  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html"> Docs</a> (73% documented)</p>
+        <p><a href="index.html"> Docs</a> (59% documented)</p>
         <p class="header-right">
           <form role="search" action="search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -47,19 +47,28 @@
             <a href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Enums/Environment.html">Environment</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Enums/ForgotPasswordError.html">ForgotPasswordError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/GeneralError.html">GeneralError</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/LoginError.html">LoginError</a>
               </li>
               <li class="nav-group-task">
+                <a href="Enums/PartnerLoginError.html">PartnerLoginError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/RawDataTriggerType.html">RawDataTriggerType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Enums/TurbulenceSeverity.html">TurbulenceSeverity</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/WXType.html">WXType</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/YamaseeCoreNotifications.html">YamaseeCoreNotifications</a>
+                <a href="Enums/WeatherType.html">WeatherType</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/YamaseeLocationState.html">YamaseeLocationState</a>
@@ -70,13 +79,22 @@
             <a href="Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Extensions/UIApplication.html">UIApplication</a>
+                <a href="Extensions/CLLocationCoordinate2D.html">CLLocationCoordinate2D</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Encodable.html">Encodable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/NSError.html">NSError</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols.html#/s:7Yamasee7YSErrorP">YSError</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Protocols/YamaseeCoreDelegate.html">YamaseeCoreDelegate</a>
               </li>
@@ -85,6 +103,15 @@
           <li class="nav-group-name">
             <a href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/Airport.html">Airport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/RawDataResponseRequest.html">RawDataResponseRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/RawDataUserResponse.html">RawDataUserResponse</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Structs/SessionTimeouts.html">SessionTimeouts</a>
               </li>
@@ -95,7 +122,10 @@
                 <a href="Structs/TurbulenceItem.html">TurbulenceItem</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/WeatherItem.html">WeatherItem</a>
+                <a href="Structs/User.html">User</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Weather.html">Weather</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/YamaseeAircraftType.html">YamaseeAircraftType</a>
@@ -120,9 +150,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)UIApplication"></a>
-                    <a name="//apple_ref/swift/Extension/UIApplication" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIApplication">UIApplication</a>
+                    <a name="/c:@S@CLLocationCoordinate2D"></a>
+                    <a name="//apple_ref/swift/Extension/CLLocationCoordinate2D" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@S@CLLocationCoordinate2D">CLLocationCoordinate2D</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -131,13 +161,67 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         
-                        <a href="Extensions/UIApplication.html" class="slightly-smaller">See more</a>
+                        <a href="Extensions/CLLocationCoordinate2D.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">UIApplication</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CLLocationCoordinate2D</span><span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SE"></a>
+                    <a name="//apple_ref/swift/Extension/Encodable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SE">Encodable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/Encodable.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">Encodable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSError"></a>
+                    <a name="//apple_ref/swift/Extension/NSError" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSError">NSError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/NSError.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">NSError</span></code></pre>
 
                         </div>
                       </div>
@@ -149,7 +233,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-08-14)</p>
+          <p>&copy; 2021 <a class="link" href="https://skypath.app" target="_blank" rel="external">Yamasee LTD</a>. All rights reserved. (Last updated: 2021-01-26)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
