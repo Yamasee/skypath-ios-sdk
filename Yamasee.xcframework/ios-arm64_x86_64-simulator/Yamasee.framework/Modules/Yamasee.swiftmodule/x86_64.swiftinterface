@@ -39,7 +39,7 @@ public struct RawDataResponseRequest {
   public let startTs: Swift.Int
   public let duration: Swift.Int
 }
-public struct User : Swift.Decodable {
+public struct User : Swift.Codable {
   public let id: Swift.String
   public let role: Swift.String
   public let userName: Swift.String?
@@ -51,6 +51,7 @@ public struct User : Swift.Decodable {
   public let routingEnabled: Swift.Bool?
   public let betaFeatures: Swift.Bool?
   public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
 }
 public enum ForgotPasswordError : Yamasee.YSError {
   case userIdInvalid
@@ -221,6 +222,7 @@ public protocol YamaseeCoreDelegate : AnyObject {
   public func getAirports() -> Swift.String
   public func getNearestAirports(to location: CoreLocation.CLLocation) -> [Yamasee.Airport]
   public func getNearestAirports(to location: CoreLocation.CLLocation) -> Swift.String
+  public func addAirport(_ airport: Yamasee.Airport)
   public func contact(email: Swift.String, message: Swift.String, completionHandler: @escaping (Swift.Bool, Swift.Error?) -> Swift.Void)
   public func setDemoDataEnabled(_ enabled: Swift.Bool)
   @objc deinit
