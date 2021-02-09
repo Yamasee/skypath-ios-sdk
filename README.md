@@ -19,12 +19,6 @@ SDK API [documentation](https://yamasee.github.io/skypath-ios-sdk)
 
 ## Installation
 
-### CocoaPods
-
-[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. 
-
-SkyPath by Yamasee SDK will be available via CocoaPods later this year.
-
 
 ### Manually
 
