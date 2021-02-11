@@ -50,6 +50,8 @@ YamaseeCore.shared.start(
 	apiKey: "YAMASEE_API_KEY",
 	baseUrl: "YAMASEE_BASE_URL",
 	env: .development | .production)
+	
+YamaseeCore.shared.delegate = self // where self conforms to `YamaseeCoreDelegate`
 ```
 
 #### Login
@@ -79,7 +81,8 @@ YamaseeCore.shared.logout()
 
 #### Turbulence
 
-SDK provides turbulence data in a GeoJSON format and as an array of models.
+SDK provides turbulence data in a GeoJSON format and as an array of models.<br>
+Aircraft type must be set. See [Aircraft](#aircraft) for more details.
 
 ```swift
 let json = YamaseeCore.shared.getTurbulenceGeoJson(
@@ -96,7 +99,8 @@ let turbItems = YamaseeCore.shared.getTurbulence(
 
 #### Turbulence Alerts
 
-Get turbulence alerts ahead.
+Get turbulence alerts ahead.<br>
+Aircraft type must be set. See [Aircraft](#aircraft) for more details.
 
 ```swift
 let altitude: Measurement<UnitLength> = Measurement(value: location.altitude, unit: .meters)
@@ -117,7 +121,8 @@ let turbulences: [TurbulenceItem] = [
 
 #### Weather 
 
-The following weather data types are supported: clouds, lightning, wind-shear.
+The following weather data types are supported: clouds, lightning, wind-shear.<br>
+Aircraft type must be set. See [Aircraft](#aircraft) for more details.
 
 ```swift
 let weather: [Weather] = YamaseeCore.shared.getWeather(
@@ -135,6 +140,7 @@ YamaseeCore.shared.reportWeather(
 	location: location)
 ```
 
+<div id="aircraft"></div>
 #### Aircraft
 
 To identify aircraft in the system set it from predefined in the SDK.
