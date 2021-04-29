@@ -261,7 +261,6 @@ public protocol YamaseeCoreDelegate : AnyObject {
   func newDataFetchingFailed(with error: Yamasee.YSError)
 }
 @_hasMissingDesignatedInitializers public class YamaseeCore {
-  public typealias RawAPIResponseDataBlock = (Foundation.Data?, Foundation.URLResponse?, Swift.Error?) -> Swift.Void
   public static let shared: Yamasee.YamaseeCore
   weak public var delegate: Yamasee.YamaseeCoreDelegate?
   public var askBeforeRequestingLocationAuthorizationBlock: ((@escaping (Swift.Bool) -> Swift.Void) -> Swift.Bool)?
@@ -293,6 +292,7 @@ public protocol YamaseeCoreDelegate : AnyObject {
   public var dataUpdatedAt: Foundation.Date? {
     get
   }
+  public func fetchData()
   public func getTrafficJson(altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, predict: Swift.Bool = false) -> Swift.String
   public func getTraffic(altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, predict: Swift.Bool = false) -> [Yamasee.Traffic]
   public func reportWeather(type: Yamasee.WeatherType, at location: CoreLocation.CLLocation)
@@ -351,14 +351,14 @@ public protocol YamaseeCoreDelegate : AnyObject {
   @available(*, deprecated, message: "Use nearestAirports(to:) instead")
   public func getNearestAirports(to location: CoreLocation.CLLocation) -> Swift.String
   public func addAirport(_ airport: Yamasee.Airport)
-  public func setFlightNumber(_ flightNumber: Swift.String?)
-  @available(*, deprecated, message: "Use setFlightNumber(:) instead")
-  public func setFlightNumber(flightNumber: Swift.String)
-  public func setFlightPlan(_ flightPlan: Yamasee.FlightPlan?)
   public func setAngle()
   public func resetAngle()
   public func isInPosition() -> Swift.Bool
   public func isCurrentPositionSteady() -> Swift.Bool
+  public func setFlightNumber(_ flightNumber: Swift.String?)
+  @available(*, deprecated, message: "Use setFlightNumber(:) instead")
+  public func setFlightNumber(flightNumber: Swift.String)
+  public func setFlightPlan(_ flightPlan: Yamasee.FlightPlan?)
   public func contact(email: Swift.String, message: Swift.String, logsFileUrl: Foundation.URL? = nil, completionHandler: @escaping (Swift.Bool, Swift.Error?) -> Swift.Void)
   public func sendFlightLogs(fileUrl: Foundation.URL)
   public func setDemoDataEnabled(_ enabled: Swift.Bool)
@@ -366,7 +366,6 @@ public protocol YamaseeCoreDelegate : AnyObject {
   public var serverSettings: Yamasee.ServerSettings? {
     get
   }
-  public func fetchData()
   public var airborne: Swift.Bool {
     get
   }
@@ -406,10 +405,6 @@ public struct RawDataUserResponse : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-extension UserDefaults {
-  public func codableValue<T>(of type: T.Type, forKey key: Swift.String) -> T? where T : Swift.Decodable
-  public func setCodableValue<T>(_ value: T?, forKey key: Swift.String) where T : Swift.Encodable
-}
 @available(*, deprecated, message: "Use `Aircraft` instead")
 public typealias YamaseeAircraftType = Yamasee.Aircraft
 public enum AircraftSize : Swift.String, Swift.Codable {
@@ -431,19 +426,8 @@ public struct Aircraft : Swift.Codable {
 extension Aircraft {
   public init(from decoder: Swift.Decoder) throws
 }
-@_hasMissingDesignatedInitializers public class MapGrid {
+public struct MapGrid {
   public static func mapGridGeoJSON(stepDegrees: CoreLocation.CLLocationDegrees) -> Swift.String
-  @objc deinit
-}
-extension Encodable {
-  public var dictionary: [Swift.String : Any]? {
-    get
-  }
-}
-extension String {
-  public var dictionary: [Swift.String : Any]? {
-    get
-  }
 }
 extension NSError {
   public var isNoConnectionError: Swift.Bool {
@@ -466,7 +450,9 @@ public enum GeneralError : Yamasee.YSError {
   case upgradeRequired(message: Swift.String?)
   case other(error: Swift.Error?)
 }
+@available(*, deprecated, message: "Use `WeatherType` instead")
 public typealias WXType = Yamasee.WeatherType
+@available(*, deprecated, message: "Use `Weather` instead")
 public typealias WeatherItem = Yamasee.Weather
 public enum WeatherType : Swift.String, Swift.Codable {
   case cb

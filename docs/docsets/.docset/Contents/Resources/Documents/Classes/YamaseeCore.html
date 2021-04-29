@@ -17,7 +17,7 @@
     <a title="YamaseeCore Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (44% documented)</p>
+        <p><a href="../index.html"> Docs</a> (61% documented)</p>
         <p class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -38,15 +38,6 @@
           <li class="nav-group-name">
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Classes/FlightPlan.html">FlightPlan</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/FlightWaypoint.html">FlightWaypoint</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/MapGrid.html">MapGrid</a>
-              </li>
               <li class="nav-group-task">
                 <a href="../Classes/YamaseeCore.html">YamaseeCore</a>
               </li>
@@ -74,9 +65,6 @@
                 <a href="../Enums/PartnerLoginError.html">PartnerLoginError</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/RawDataTriggerType.html">RawDataTriggerType</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Enums/TurbulenceSeverity.html">TurbulenceSeverity</a>
               </li>
               <li class="nav-group-task">
@@ -91,28 +79,7 @@
             <a href="../Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Extensions/CLAuthorizationStatus.html">CLAuthorizationStatus</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/CLError.html">CLError</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/CLError/Code.html">– Code</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/CLLocationCoordinate2D.html">CLLocationCoordinate2D</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/Encodable.html">Encodable</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Extensions/NSError.html">NSError</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/String.html">String</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/UserDefaults.html">UserDefaults</a>
               </li>
             </ul>
           </li>
@@ -135,42 +102,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/Airport.html">Airport</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/FlightWaypointInput.html">FlightWaypointInput</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/Hello.html">Hello</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/PathQuery.html">PathQuery</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/RawDataResponseRequest.html">RawDataResponseRequest</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/RawDataUserResponse.html">RawDataUserResponse</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/RouteWaypointsTranslationResponse.html">RouteWaypointsTranslationResponse</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/ServerSettings.html">ServerSettings</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/SessionTimeouts.html">SessionTimeouts</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/SettingsModuleConnectivity.html">SettingsModuleConnectivity</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/SettingsModuleDebug.html">SettingsModuleDebug</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/SettingsModules.html">SettingsModules</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/SettingsValue.html">SettingsValue</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/Traffic.html">Traffic</a>
@@ -223,49 +154,23 @@
                 </div>
               </div>
             <p>A wrapper class handling all communications between host app and internal Yamasee logic</p>
-<h1 id='overview' class='heading'>Overview</h1>
+<h3 id='overview' class='heading'>Overview</h3>
 
 <p>YamaseeCore instantiates as a singleton object.
 Get the shared instance by calling <code><a href="../Classes/YamaseeCore.html#/s:7Yamasee0A4CoreC6sharedACvpZ">YamaseeCore.shared</a></code></p>
 
-<p>Assign a custom object to the delegate property, conforming to the YamaseeCoreDelegate protocol. Assign the delegate before starting any YamaseeCore services. All turbulence, Traffic and weather reports updates events are delivered to that delegate.
-Events only notify the delegate that a new data arrived from the server. It is the host app responsibility to fetch the updated data by calling the relevant function <strong>when the host app needs to redraw the information</strong> as YamaseeLib doesn&rsquo;t hold the state of the UI i.e. min/max altitude of the display, timespan for turbulence age etc.</p>
+<p>Assign a custom object to the delegate property, conforming to the <code><a href="../Protocols/YamaseeCoreDelegate.html">YamaseeCoreDelegate</a></code> protocol. Assign the delegate before starting any YamaseeCore services. All turbulence, traffic and weather reports updates events are delivered to that delegate.</p>
+
+<p>Events only notify the delegate that a new data arrived from the server. It is the host app responsibility to fetch the updated data by calling the relevant function when the host app needs to redraw the information as Yamasee SDK doesn&rsquo;t hold the state of the UI i.e. min/max altitude of the display, timespan for turbulence etc.</p>
 
 <p>YamaseeCore handles all communications with Yamasee servers. The host app should provide a baseURL that act as a proxy and forward all communication to Yamasee servers.</p>
 
-<p>The host app needs to initiate Yamasee server communications by calling the login method with userId and aircraft parameters. After a successful login the needed token is saved for future app operations until logout is called or the user license is removed in the server.</p>
+<p>The host app needs to initiate Yamasee server communications by logining in with partner login method and provided by Yamasee credentials. After a successful login the user token is saved for future app operations until logout is called or the user license is removed on the server.</p>
 
           </section>
           <section class="section task-group-section">
             <div class="task-group">
               <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC23RawAPIResponseDataBlocka"></a>
-                    <a name="//apple_ref/swift/Alias/RawAPIResponseDataBlock" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC23RawAPIResponseDataBlocka">RawAPIResponseDataBlock</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">RawAPIResponseDataBlock</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">URLResponse</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -373,14 +278,19 @@ Events only notify the delegate that a new data arrived from the server. It is t
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Deprecated. Use <code><a href="../Classes/YamaseeCore.html#/s:7Yamasee0A4CoreC5start6apiKey7baseUrl3envySS_SSAA11EnvironmentOSgtF">start(apiKey:baseUrl:env:)</a></code> instead
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">start</span><span class="p">(</span><span class="nv">apiKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Use start(apiKey:baseUrl:env:﹚ instead"</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">start</span><span class="p">(</span><span class="nv">apiKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
                   <span class="nv">baseUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
                   <span class="nv">dataUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
@@ -512,162 +422,6 @@ Events only notify the delegate that a new data arrived from the server. It is t
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Yamasee0A4CoreC9userLogin0C2Id8password17completionHandlerySS_SSySb_AA0D5ErrorOSgtctF"></a>
-                    <a name="//apple_ref/swift/Method/userLogin(userId:password:completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC9userLogin0C2Id8password17completionHandlerySS_SSySb_AA0D5ErrorOSgtctF">userLogin(userId:<wbr>password:<wbr>completionHandler:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>UserLogin to Yamasee server</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">userLogin</span><span class="p">(</span><span class="nv">userId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                      <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                      <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Enums/LoginError.html">LoginError</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>userId</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>String</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>password</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>String</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC8ssoLogin4from12airlinesCode6userId11onDisappear10completionySo16UIViewControllerC_SSSgALyycySb_AA0D5ErrorOSgAA15SessionTimeoutsVSgtctF"></a>
-                    <a name="//apple_ref/swift/Method/ssoLogin(from:airlinesCode:userId:onDisappear:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC8ssoLogin4from12airlinesCode6userId11onDisappear10completionySo16UIViewControllerC_SSSgALyycySb_AA0D5ErrorOSgAA15SessionTimeoutsVSgtctF">ssoLogin(from:<wbr>airlinesCode:<wbr>userId:<wbr>onDisappear:<wbr>completion:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Login with an airlines account if supported</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">ssoLogin</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span>
-                     <span class="nv">airlinesCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-                     <span class="nv">userId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-                     <span class="nv">onDisappear</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span>
-                     <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Enums/LoginError.html">LoginError</a></span><span class="p">?,</span> <span class="n">_</span> <span class="nv">timeouts</span><span class="p">:</span> <span class="kt"><a href="../Structs/SessionTimeouts.html">SessionTimeouts</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>userId</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>String</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC15setOnSSOReloginyyyycF"></a>
-                    <a name="//apple_ref/swift/Method/setOnSSORelogin(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC15setOnSSOReloginyyyycF">setOnSSORelogin(_:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>When user was logged out and redirected to SSO login page and user logged in again, app should authorize logged in user again</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setOnSSORelogin</span><span class="p">(</span><span class="n">_</span> <span class="nv">onSSORelogin</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>onSSORelogin</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>block that should be called and authorize user</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:7Yamasee0A4CoreC10isLoggedInSbyF"></a>
                     <a name="//apple_ref/swift/Method/isLoggedIn()" class="dashAnchor"></a>
                     <a class="token" href="#/s:7Yamasee0A4CoreC10isLoggedInSbyF">isLoggedIn()</a>
@@ -747,361 +501,6 @@ returns the login status of the framework</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">user</span><span class="p">:</span> <span class="kt"><a href="../Structs/User.html">User</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC22setPrivateDistributionyySbF"></a>
-                    <a name="//apple_ref/swift/Method/setPrivateDistribution(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC22setPrivateDistributionyySbF">setPrivateDistribution(_:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>When distribute internally via Apple Business Manager set to <code>true</code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setPrivateDistribution</span><span class="p">(</span><span class="n">_</span> <span class="nv">privateDistribution</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>privateDistribution</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Bool</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC14forgotPassword6userId17completionHandlerySS_ySb_AA06ForgotD5ErrorOSgtctF"></a>
-                    <a name="//apple_ref/swift/Method/forgotPassword(userId:completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC14forgotPassword6userId17completionHandlerySS_ySb_AA06ForgotD5ErrorOSgtctF">forgotPassword(userId:<wbr>completionHandler:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Forgot password call</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">forgotPassword</span><span class="p">(</span><span class="nv">userId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                           <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Enums/ForgotPasswordError.html">ForgotPasswordError</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>userId</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>String</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC9isNewUser13userIdOrEmail17completionHandlerySS_ySbSg_AA10LoginErrorOSgtctF"></a>
-                    <a name="//apple_ref/swift/Method/isNewUser(userIdOrEmail:completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC9isNewUser13userIdOrEmail17completionHandlerySS_ySbSg_AA10LoginErrorOSgtctF">isNewUser(userIdOrEmail:<wbr>completionHandler:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>isNewUser
-returns the status of user on the server</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isNewUser</span><span class="p">(</span><span class="nv">userIdOrEmail</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                      <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Enums/LoginError.html">LoginError</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>Bool?.  true if the user is new</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC14setUserProfile13userIdOrEmail8password17completionHandlerySS_SSySb_AA10LoginErrorOSgtctF"></a>
-                    <a name="//apple_ref/swift/Method/setUserProfile(userIdOrEmail:password:completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC14setUserProfile13userIdOrEmail8password17completionHandlerySS_SSySb_AA10LoginErrorOSgtctF">setUserProfile(userIdOrEmail:<wbr>password:<wbr>completionHandler:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Set User Profile call</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setUserProfile</span><span class="p">(</span><span class="nv">userIdOrEmail</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                           <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                           <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Enums/LoginError.html">LoginError</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>userIdOrEmail</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>String</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>password</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>String</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>Bool. true the call was succesful</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC11isFreshUser13userIdOrEmail17completionHandlerySS_ySbSg_AA10LoginErrorOSgtctF"></a>
-                    <a name="//apple_ref/swift/Method/isFreshUser(userIdOrEmail:completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC11isFreshUser13userIdOrEmail17completionHandlerySS_ySbSg_AA10LoginErrorOSgtctF">isFreshUser(userIdOrEmail:<wbr>completionHandler:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns the status of user on the server and an OTP token when it is a new user</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isFreshUser</span><span class="p">(</span><span class="nv">userIdOrEmail</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                        <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Enums/LoginError.html">LoginError</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>Bool?.  true if the user is new</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC10otpRequest17completionHandleryySbSg_AA10LoginErrorOSgtc_tF"></a>
-                    <a name="//apple_ref/swift/Method/otpRequest(completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC10otpRequest17completionHandleryySbSg_AA10LoginErrorOSgtc_tF">otpRequest(completionHandler:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Sends an OTP request to the server</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">otpRequest</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Enums/LoginError.html">LoginError</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>Bool?.  true if the request sent</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC11otpValidate0C017completionHandlerySS_ySbSg_AA10LoginErrorOSgtctF"></a>
-                    <a name="//apple_ref/swift/Method/otpValidate(otp:completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC11otpValidate0C017completionHandlerySS_ySbSg_AA10LoginErrorOSgtctF">otpValidate(otp:<wbr>completionHandler:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Validate an OTP on the server</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">otpValidate</span><span class="p">(</span><span class="nv">otp</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                        <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Enums/LoginError.html">LoginError</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>otp</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>String the one time password the user received through his email</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>Bool?.  true if the validation is ok</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC10setProfile8password17completionHandlerySS_ySb_AA10LoginErrorOSgtctF"></a>
-                    <a name="//apple_ref/swift/Method/setProfile(password:completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC10setProfile8password17completionHandlerySS_ySb_AA10LoginErrorOSgtctF">setProfile(password:<wbr>completionHandler:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Set Profile  call</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setProfile</span><span class="p">(</span><span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                       <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Enums/LoginError.html">LoginError</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>password</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>String</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>Bool. true the call was succesful</p>
                       </div>
                     </section>
                   </div>
@@ -1611,6 +1010,33 @@ returns the status of user on the server</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">dataUpdatedAt</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC9fetchDatayyF"></a>
+                    <a name="//apple_ref/swift/Method/fetchData()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC9fetchDatayyF">fetchData()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>In case you need to get new data immediately (for example when opened the app) call this method and the result will be notified in corresponding delegate methods.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetchData</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -2260,14 +1686,19 @@ returns the status of user on the server</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Deprecated. Use <code><a href="../Classes/YamaseeCore.html#/s:7Yamasee0A4CoreC13reportWeather4type2atyAA0D4TypeO_So10CLLocationCtF">reportWeather(type:at:)</a></code> instead
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reportLightning</span><span class="p">(</span><span class="nv">lat</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">lng</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">alt</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Use reportWeather(type:at:﹚ instead"</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">reportLightning</span><span class="p">(</span><span class="nv">lat</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">lng</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">alt</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2287,14 +1718,19 @@ returns the status of user on the server</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Deprecated. Use <code><a href="../Classes/YamaseeCore.html#/s:7Yamasee0A4CoreC13reportWeather4type2atyAA0D4TypeO_So10CLLocationCtF">reportWeather(type:at:)</a></code> instead
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reportShear</span><span class="p">(</span><span class="nv">lat</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">lng</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">alt</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Use reportWeather(type:at:﹚ instead"</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">reportShear</span><span class="p">(</span><span class="nv">lat</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">lng</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">alt</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2314,14 +1750,19 @@ returns the status of user on the server</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Deprecated. Use <code><a href="../Classes/YamaseeCore.html#/s:7Yamasee0A4CoreC13reportWeather4type2atyAA0D4TypeO_So10CLLocationCtF">reportWeather(type:at:)</a></code> instead
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reportIcing</span><span class="p">(</span><span class="nv">lat</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">lng</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">alt</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Use reportWeather(type:at:﹚ instead"</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">reportIcing</span><span class="p">(</span><span class="nv">lat</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">lng</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">alt</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2341,14 +1782,19 @@ returns the status of user on the server</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Deprecated. Use <code><a href="../Classes/YamaseeCore.html#/s:7Yamasee0A4CoreC10getWeather5types8altRange8timeSpan9zoomLevelSayAA0D0VGSayAA0D4TypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getWeather(types:altRange:timeSpan:zoomLevel:)</a></code> instead
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getWeatherByType</span><span class="p">(</span><span class="nv">weatherType</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:7Yamasee6WXTypea">WXType</a></span><span class="p">,</span>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Use getWeather(types:altRange:timeSpan:zoomLevel:﹚ instead"</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getWeatherByType</span><span class="p">(</span><span class="nv">weatherType</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:7Yamasee6WXTypea">WXType</a></span><span class="p">,</span>
                              <span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;&gt;</span><span class="p">,</span>
                              <span class="nv">timeSpan</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
                              <span class="nv">zoomLevel</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
@@ -2371,14 +1817,19 @@ returns the status of user on the server</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Deprecated. Use <code><a href="../Classes/YamaseeCore.html#/s:7Yamasee0A4CoreC10getWeather5types8altRange8timeSpan9zoomLevelSayAA0D0VGSayAA0D4TypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getWeather(types:altRange:timeSpan:zoomLevel:)</a></code> instead
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getWeatherByType</span><span class="p">(</span><span class="nv">weatherType</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:7Yamasee6WXTypea">WXType</a></span><span class="p">,</span>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Use getWeather(types:altRange:timeSpan:zoomLevel:﹚ instead"</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getWeatherByType</span><span class="p">(</span><span class="nv">weatherType</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:7Yamasee6WXTypea">WXType</a></span><span class="p">,</span>
                              <span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;&gt;</span><span class="p">,</span>
                              <span class="nv">timeSpan</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
                              <span class="nv">zoomLevel</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Typealiases.html#/s:7Yamasee11WeatherItema">WeatherItem</a></span><span class="p">]</span></code></pre>
@@ -2401,14 +1852,19 @@ returns the status of user on the server</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Deprecated. Use <code><a href="../Classes/YamaseeCore.html#/s:7Yamasee0A4CoreC10getWeather5types8altRange8timeSpan9zoomLevelSayAA0D0VGSayAA0D4TypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getWeather(types:altRange:timeSpan:zoomLevel:)</a></code> instead
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getWeatherByTypes</span><span class="p">(</span><span class="nv">weatherTypes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Typealiases.html#/s:7Yamasee6WXTypea">WXType</a></span><span class="p">],</span>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Use getWeather(types:altRange:timeSpan:zoomLevel:﹚ instead"</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getWeatherByTypes</span><span class="p">(</span><span class="nv">weatherTypes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Typealiases.html#/s:7Yamasee6WXTypea">WXType</a></span><span class="p">],</span>
                               <span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;&gt;</span><span class="p">,</span>
                               <span class="nv">timeSpan</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
                               <span class="nv">zoomLevel</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Typealiases.html#/s:7Yamasee11WeatherItema">WeatherItem</a></span><span class="p">]</span></code></pre>
@@ -2431,14 +1887,19 @@ returns the status of user on the server</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Deprecated. Use <code><a href="../Classes/YamaseeCore.html#/s:7Yamasee0A4CoreC10getWeather5types8altRange8timeSpan9zoomLevelSayAA0D0VGSayAA0D4TypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getWeather(types:altRange:timeSpan:zoomLevel:)</a></code> instead
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getWeatherByTypes</span><span class="p">(</span><span class="nv">weatherTypes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Typealiases.html#/s:7Yamasee6WXTypea">WXType</a></span><span class="p">],</span>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Use getWeather(types:altRange:timeSpan:zoomLevel:﹚ instead"</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getWeatherByTypes</span><span class="p">(</span><span class="nv">weatherTypes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Typealiases.html#/s:7Yamasee6WXTypea">WXType</a></span><span class="p">],</span>
                               <span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;&gt;</span><span class="p">,</span>
                               <span class="nv">timeSpan</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
                               <span class="nv">zoomLevel</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
@@ -2461,14 +1922,19 @@ returns the status of user on the server</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Deprecated. Use <code><a href="../Classes/YamaseeCore.html#/s:7Yamasee0A4CoreC13getOwnWeather5types8altRange8timeSpan9zoomLevelSayAA0E0VGSayAA0E4TypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getOwnWeather(types:altRange:timeSpan:zoomLevel:)</a></code> instead
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getOwnWeatherByType</span><span class="p">(</span><span class="nv">weatherType</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:7Yamasee6WXTypea">WXType</a></span><span class="p">,</span>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Use getOwnWeather(types:altRange:timeSpan:zoomLevel:﹚ instead"</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getOwnWeatherByType</span><span class="p">(</span><span class="nv">weatherType</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:7Yamasee6WXTypea">WXType</a></span><span class="p">,</span>
                                 <span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;&gt;</span><span class="p">,</span>
                                 <span class="nv">timeSpan</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
                                 <span class="nv">zoomLevel</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Typealiases.html#/s:7Yamasee11WeatherItema">WeatherItem</a></span><span class="p">]</span></code></pre>
@@ -2491,14 +1957,19 @@ returns the status of user on the server</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Deprecated. Use <code><a href="../Classes/YamaseeCore.html#/s:7Yamasee0A4CoreC13getOwnWeather5types8altRange8timeSpan9zoomLevelSayAA0E0VGSayAA0E4TypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getOwnWeather(types:altRange:timeSpan:zoomLevel:)</a></code> instead
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getOwnWeatherByTypes</span><span class="p">(</span><span class="nv">weatherTypes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Typealiases.html#/s:7Yamasee6WXTypea">WXType</a></span><span class="p">],</span>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Use getOwnWeather(types:altRange:timeSpan:zoomLevel:﹚ instead"</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getOwnWeatherByTypes</span><span class="p">(</span><span class="nv">weatherTypes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Typealiases.html#/s:7Yamasee6WXTypea">WXType</a></span><span class="p">],</span>
                                  <span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;&gt;</span><span class="p">,</span>
                                  <span class="nv">timeSpan</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
                                  <span class="nv">zoomLevel</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Typealiases.html#/s:7Yamasee11WeatherItema">WeatherItem</a></span><span class="p">]</span></code></pre>
@@ -2521,14 +1992,19 @@ returns the status of user on the server</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Deprecated. Use <code><a href="../Classes/YamaseeCore.html#/s:7Yamasee0A4CoreC13getOwnWeather5types8altRange8timeSpan9zoomLevelSayAA0E0VGSayAA0E4TypeOG_SNy10Foundation11MeasurementVySo12NSUnitLengthCGGS2itF">getOwnWeather(types:altRange:timeSpan:zoomLevel:)</a></code> instead
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getOwnWeatherByTypes</span><span class="p">(</span><span class="nv">weatherTypes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Typealiases.html#/s:7Yamasee6WXTypea">WXType</a></span><span class="p">],</span>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Use getOwnWeather(types:altRange:timeSpan:zoomLevel:﹚ instead"</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getOwnWeatherByTypes</span><span class="p">(</span><span class="nv">weatherTypes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Typealiases.html#/s:7Yamasee6WXTypea">WXType</a></span><span class="p">],</span>
                                  <span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;&gt;</span><span class="p">,</span>
                                  <span class="nv">timeSpan</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
                                  <span class="nv">zoomLevel</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
@@ -2949,255 +2425,6 @@ returns the status of user on the server</p>
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/ROUTES"></a>
-                <a name="//apple_ref/swift/Section/ROUTES" class="dashAnchor"></a>
-                <div class="section-name-container">
-                  <a class="section-name-link" href="#/ROUTES"></a>
-                  <h3 class="section-name"><p>ROUTES</p>
-</h3>
-                </div>
-              </div>
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC11getMyFlight10completionyyAA0E4PlanCSg_s5Error_pSgtc_tF"></a>
-                    <a name="//apple_ref/swift/Method/getMyFlight(completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC11getMyFlight10completionyyAA0E4PlanCSg_s5Error_pSgtc_tF">getMyFlight(completion:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Get a scheduled for pilot flight if any. For customers with routes privilege</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getMyFlight</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">flight</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlightPlan.html">FlightPlan</a></span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>completion</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Received flight plan if any or error</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC9getFlight4byId10completionySS_yAA0D4PlanCSg_s5Error_pSgtctF"></a>
-                    <a name="//apple_ref/swift/Method/getFlight(byId:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC9getFlight4byId10completionySS_yAA0D4PlanCSg_s5Error_pSgtctF">getFlight(byId:<wbr>completion:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Get a flight by an id using a fuzzy search for customers with routes privilege</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getFlight</span><span class="p">(</span><span class="n">byId</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                      <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">flight</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlightPlan.html">FlightPlan</a></span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>id</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>id of a flight from the user</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>completion</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Received flight plan if any or error</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC10getFlights4from2to10completiony10Foundation4DateV_AJySayAA10FlightPlanCGSg_s5Error_pSgtctF"></a>
-                    <a name="//apple_ref/swift/Method/getFlights(from:to:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC10getFlights4from2to10completiony10Foundation4DateV_AJySayAA10FlightPlanCGSg_s5Error_pSgtctF">getFlights(from:<wbr>to:<wbr>completion:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Get flights list in dates range for customers with routes privilege</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getFlights</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="kt">Date</span><span class="p">,</span>
-                       <span class="nv">to</span><span class="p">:</span> <span class="kt">Date</span><span class="p">,</span>
-                       <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">flights</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/FlightPlan.html">FlightPlan</a></span><span class="p">]?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>from</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>from date</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>to</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>to date</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>completion</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Received flight plans if any or error</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC12getWaypoints3for10completionySayAA19FlightWaypointInputVG_yAA05RouteD19TranslationResponseVSg_s5Error_pSgtctF"></a>
-                    <a name="//apple_ref/swift/Method/getWaypoints(for:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC12getWaypoints3for10completionySayAA19FlightWaypointInputVG_yAA05RouteD19TranslationResponseVSg_s5Error_pSgtctF">getWaypoints(for:<wbr>completion:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Get waypoints list for a pilot flight route waypoints as a text to show on the map</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getWaypoints</span><span class="p">(</span><span class="k">for</span> <span class="nv">inputs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/FlightWaypointInput.html">FlightWaypointInput</a></span><span class="p">],</span>
-                         <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">response</span><span class="p">:</span> <span class="kt"><a href="../Structs/RouteWaypointsTranslationResponse.html">RouteWaypointsTranslationResponse</a></span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>inputs</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>route waypoints models to identify custom entered waypoints with coordinates and those which should be searched by waypoint_id in the system</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>completion</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Received route waypoints for waypoint inputs or error</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
                 <a name="/AIRCRAFT"></a>
                 <a name="//apple_ref/swift/Section/AIRCRAFT" class="dashAnchor"></a>
                 <div class="section-name-container">
@@ -3329,6 +2556,11 @@ returns the status of user on the server</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Set a current aircraft</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Deprecated. Use <code>setAircraft(:)</code> instead
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -3376,6 +2608,11 @@ returns the status of user on the server</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Gets the current aircraft type registered in the framework</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Deprecated. Use <code><a href="../Classes/YamaseeCore.html#/s:7Yamasee0A4CoreC8aircraftAA8AircraftVSgyF">aircraft()</a></code> instead
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -3408,6 +2645,11 @@ returns the status of user on the server</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Get airplaneTypes</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Deprecated. Use <code><a href="../Classes/YamaseeCore.html#/s:7Yamasee0A4CoreC9aircraftsSayAA8AircraftVGyF">aircrafts()</a></code> instead
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -3483,14 +2725,19 @@ returns the status of user on the server</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Deprecated. Use <code><a href="../Classes/YamaseeCore.html#/s:7Yamasee0A4CoreC8airportsSayAA7AirportVGyF">airports()</a></code> instead
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getAirports</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/Airport.html">Airport</a></span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Use airports(﹚ instead"</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getAirports</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/Airport.html">Airport</a></span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -3541,14 +2788,19 @@ returns the status of user on the server</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Deprecated. Use <code><a href="../Classes/YamaseeCore.html#/s:7Yamasee0A4CoreC8airportsSayAA7AirportVGyF">airports()</a></code> instead
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getAirports</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Use airports(﹚ instead"</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getAirports</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -3599,14 +2851,19 @@ returns the status of user on the server</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Deprecated. Use <code><a href="../Classes/YamaseeCore.html#/s:7Yamasee0A4CoreC15nearestAirports2toSayAA7AirportVGSo10CLLocationC_tF">nearestAirports(to:)</a></code> instead
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getNearestAirports</span><span class="p">(</span><span class="n">to</span> <span class="nv">location</span><span class="p">:</span> <span class="kt">CLLocation</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/Airport.html">Airport</a></span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Use nearestAirports(to:﹚ instead"</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getNearestAirports</span><span class="p">(</span><span class="n">to</span> <span class="nv">location</span><span class="p">:</span> <span class="kt">CLLocation</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/Airport.html">Airport</a></span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -3657,62 +2914,21 @@ returns the status of user on the server</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Deprecated. Use <code><a href="../Classes/YamaseeCore.html#/s:7Yamasee0A4CoreC15nearestAirports2toSayAA7AirportVGSo10CLLocationC_tF">nearestAirports(to:)</a></code> instead
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getNearestAirports</span><span class="p">(</span><span class="n">to</span> <span class="nv">location</span><span class="p">:</span> <span class="kt">CLLocation</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Use nearestAirports(to:﹚ instead"</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getNearestAirports</span><span class="p">(</span><span class="n">to</span> <span class="nv">location</span><span class="p">:</span> <span class="kt">CLLocation</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
 
                         </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC10addAirportyyAA0D0VF"></a>
-                    <a name="//apple_ref/swift/Method/addAirport(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC10addAirportyyAA0D0VF">addAirport(_:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Add a missing airport to the full list of airports</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addAirport</span><span class="p">(</span><span class="n">_</span> <span class="nv">airport</span><span class="p">:</span> <span class="kt"><a href="../Structs/Airport.html">Airport</a></span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>airport</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Missing airport object to save</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -3721,134 +2937,15 @@ returns the status of user on the server</p>
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/MISC"></a>
-                <a name="//apple_ref/swift/Section/MISC" class="dashAnchor"></a>
+                <a name="/ANGLE"></a>
+                <a name="//apple_ref/swift/Section/ANGLE" class="dashAnchor"></a>
                 <div class="section-name-container">
-                  <a class="section-name-link" href="#/MISC"></a>
-                  <h3 class="section-name"><p>MISC</p>
+                  <a class="section-name-link" href="#/ANGLE"></a>
+                  <h3 class="section-name"><p>ANGLE</p>
 </h3>
                 </div>
               </div>
               <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC15setFlightNumberyySSSgF"></a>
-                    <a name="//apple_ref/swift/Method/setFlightNumber(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC15setFlightNumberyySSSgF">setFlightNumber(_:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Set a flight number when a new flight (route) is started</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setFlightNumber</span><span class="p">(</span><span class="n">_</span> <span class="nv">flightNumber</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>flightNumber</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>String</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC15setFlightNumber06flightE0ySS_tF"></a>
-                    <a name="//apple_ref/swift/Method/setFlightNumber(flightNumber:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC15setFlightNumber06flightE0ySS_tF">setFlightNumber(flightNumber:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setFlightNumber</span><span class="p">(</span><span class="nv">flightNumber</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC13setFlightPlanyyAA0dE0CSgF"></a>
-                    <a name="//apple_ref/swift/Method/setFlightPlan(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC13setFlightPlanyyAA0dE0CSgF">setFlightPlan(_:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Set current flight plan, saved until removed explicitly passing nil</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setFlightPlan</span><span class="p">(</span><span class="n">_</span> <span class="nv">flightPlan</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlightPlan.html">FlightPlan</a></span><span class="p">?)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>flightPlan</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>entity model of received from the server flight plan</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -3957,6 +3054,97 @@ returns the status of user on the server</p>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/MISC"></a>
+                <a name="//apple_ref/swift/Section/MISC" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/MISC"></a>
+                  <h3 class="section-name"><p>MISC</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC15setFlightNumberyySSSgF"></a>
+                    <a name="//apple_ref/swift/Method/setFlightNumber(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC15setFlightNumberyySSSgF">setFlightNumber(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set a flight number when a new flight (route) is started</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setFlightNumber</span><span class="p">(</span><span class="n">_</span> <span class="nv">flightNumber</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>flightNumber</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee0A4CoreC15setFlightNumber06flightE0ySS_tF"></a>
+                    <a name="//apple_ref/swift/Method/setFlightNumber(flightNumber:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee0A4CoreC15setFlightNumber06flightE0ySS_tF">setFlightNumber(flightNumber:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Deprecated. Use <code>setFlightNumber(:)</code> instead
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Use setFlightNumber(:﹚ instead"</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">setFlightNumber</span><span class="p">(</span><span class="nv">flightNumber</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -4033,33 +3221,6 @@ returns the status of user on the server</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Yamasee0A4CoreC14sendFlightLogs7fileUrly10Foundation3URLV_tF"></a>
-                    <a name="//apple_ref/swift/Method/sendFlightLogs(fileUrl:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC14sendFlightLogs7fileUrly10Foundation3URLV_tF">sendFlightLogs(fileUrl:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Sends flight logs to analyze</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendFlightLogs</span><span class="p">(</span><span class="nv">fileUrl</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:7Yamasee0A4CoreC18setDemoDataEnabledyySbF"></a>
                     <a name="//apple_ref/swift/Method/setDemoDataEnabled(_:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:7Yamasee0A4CoreC18setDemoDataEnabledyySbF">setDemoDataEnabled(_:<wbr>)</a>
@@ -4101,106 +3262,6 @@ Use it only when you need demo data, if you don&rsquo;t need it, please do not c
                             </tr>
                           </tbody>
                         </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC8sayHello10completionyyAA0D0VSg_s5Error_pSgtc_tF"></a>
-                    <a name="//apple_ref/swift/Method/sayHello(completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC8sayHello10completionyyAA0D0VSg_s5Error_pSgtc_tF">sayHello(completion:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Gets basic information about SkyPath server version and minimal client version needed, if the app version is lower than the minimal allowed app version the client needs to block logging-in and suggest the user to upgrade the SkyPath app version on the device.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sayHello</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Structs/Hello.html">Hello</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>completion</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>block called after api request response received</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC14serverSettingsAA06ServerD0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/serverSettings" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC14serverSettingsAA06ServerD0VSgvp">serverSettings</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Server settings</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">serverSettings</span><span class="p">:</span> <span class="kt"><a href="../Structs/ServerSettings.html">ServerSettings</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee0A4CoreC9fetchDatayyF"></a>
-                    <a name="//apple_ref/swift/Method/fetchData()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee0A4CoreC9fetchDatayyF">fetchData()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>In case you need to get new data immediately (for example when opened the app) call this method and the result will be notified in corresponding delegate methods.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetchData</span><span class="p">()</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>
@@ -4358,14 +3419,19 @@ timestamp (should not be &ldquo;older&rdquo; than 2 seconds ago)</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Deprecated. Use <code>simulatedLocation(:)</code> instead
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">simulatedLocation</span><span class="p">(</span><span class="nv">location</span><span class="p">:</span> <span class="kt">CLLocation</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Use simulatedLocation(:﹚ instead"</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">simulatedLocation</span><span class="p">(</span><span class="nv">location</span><span class="p">:</span> <span class="kt">CLLocation</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>

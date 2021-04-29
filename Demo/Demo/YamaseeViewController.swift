@@ -27,7 +27,7 @@ class YamaseeViewController: UITableViewController {
         
         switch indexPath.row {
         case 0:
-            login()
+            loginPartner()
         case 1:
             logout()
         case 2:
@@ -41,19 +41,15 @@ class YamaseeViewController: UITableViewController {
         case 6:
             contact()
         case 7:
-            forgotPassword()
-        case 8:
             devicePosition()
-        case 9:
+        case 8:
             requestTurbulenceAlertTiles()
-        case 10:
+        case 9:
             getTurbulence()
-        case 11:
+        case 10:
             getWeather()
-        case 12:
+        case 11:
             submitWeatherReport()
-        case 13:
-            getFlights()
         default:
             break
         }
@@ -69,18 +65,16 @@ extension YamaseeViewController {
     
     func setupYamasee() {
         
-        let apiKey = "YAMASEE_API_KEY" // provided by Yamasee
-        let baseUrl = "YAMASEE_BASE_URL" // provided by Yamasee
-
-        YamaseeCore.shared.start(apiKey: apiKey, baseUrl: baseUrl, env: .development)
-        YamaseeCore.shared.setLogger(isOn: true, isSymbol: true, errorOn: true, infoOn: true, warningOn: true, networkOn: true) { message in
-            print(message)
-        }
-        YamaseeCore.shared.setPushSimulatedEnabled(false)
+        let apiKey = "API_KEY"
+        let baseUrl = "BASE_URL"
+        
+        YamaseeCore.shared.setLogger(isOn: true, isSymbol: true, errorOn: true, infoOn: true, warningOn: true, networkOn: true)
         YamaseeCore.shared.delegate = self
+        YamaseeCore.shared.start(apiKey: apiKey, baseUrl: baseUrl, env: .development)
+        YamaseeCore.shared.setPushSimulatedEnabled(false)
     }
     
-    func login() {
+    func loginPartner() {
         
         guard !YamaseeCore.shared.isLoggedIn() else {
             AlertManager.showMessage(with: "Already logged in")
@@ -89,8 +83,8 @@ extension YamaseeViewController {
         
         Loader.show()
         
-        let userId = "" // your any user id
-        let companyId = "" // provided by Yamasee
+        let userId = "USER_ID" // your any user id
+        let companyId = "COMPANY_ID" // provided by Yamasee
         
         YamaseeCore.shared.partnerLogin(userId: userId, companyId: companyId) { success, error in
             
@@ -134,20 +128,22 @@ extension YamaseeViewController {
     
     func getAirports() {
         
-        let airports: [Airport] = YamaseeCore.shared.getAirports()
+        let airports: [Airport] = YamaseeCore.shared.airports()
         print(airports)
         
-        let json: String = YamaseeCore.shared.getAirports() // GeoJSON
+        let json: String = YamaseeCore.shared.airports() // GeoJSON
         print(json)
     }
     
     func getAircrafts() {
         
-        let aircrafts = YamaseeCore.shared.getAircraftTypes()
+        let aircrafts = YamaseeCore.shared.aircrafts()
         print(aircrafts.map { $0.description })
         
-        let aircraft = YamaseeCore.shared.getAircraft()
-        YamaseeCore.shared.setAircraft(aircraft: aircraft)
+        let aircraft = YamaseeCore.shared.aircraft()
+        print("set aircraft: \(String(describing: aircraft))")
+        
+        YamaseeCore.shared.setAircraft("B733")
     }
     
     func contact() {
@@ -173,29 +169,6 @@ extension YamaseeViewController {
                 return
             }
             AlertManager.showMessage(with: "Sent")
-        }
-    }
-    
-    func forgotPassword() {
-        
-        Loader.show()
-        let userId = ""
-        YamaseeCore.shared.forgotPassword(userId: userId) { _, error in
-            
-            Loader.hide()
-            
-            if let error = error {
-                switch error {
-                case .userIdInvalid:
-                    break
-                case .general(let error):
-                    AlertManager.showErrorMessage(with: error.localizedDescription)
-                    return
-                @unknown default:
-                    break
-                }
-            }
-            AlertManager.showMessage(with: "Success")
         }
     }
     
@@ -229,6 +202,8 @@ extension YamaseeViewController {
             heading: Measurement(value: location.course, unit: .degrees),
             timeSpan: timeSpan)
         turbulences = [tiles.alertTilesAbove, tiles.alertTilesAtAlt, tiles.alertTilesBelow].flatMap { $0 }
+        
+        print(turbulences)
     }
     
     func getTurbulence() {
@@ -280,56 +255,6 @@ extension YamaseeViewController {
         YamaseeCore.shared.reportWeather(type: .cb, at: location)
         YamaseeCore.shared.reportWeather(type: .lightning, at: location)
     }
-    
-    func getFlights() {
-        
-        YamaseeCore.shared.setFlightNumber(flightNumber: "")
-        
-        guard YamaseeCore.shared.user?.routingEnabled == true else {
-            return
-        }
-        
-        let from = Date()
-        let to = Date() + 3 * 86_400
-        
-        YamaseeCore.shared.getFlights(from: from, to: to) { data, _, error in
-            
-            guard error == nil else {
-                AlertManager.showErrorMessage(with: error?.localizedDescription)
-                return
-            }
-            guard let data = data else {
-                AlertManager.showErrorMessage(with: "Unknown")
-                return
-            }
-            
-            //            do {
-            //                let flightPlans = try JSONDecoder().decode([FlightPlan].self, from: data)
-            //            } catch {
-            //                print(error)
-            //            }
-        }
-    }
-    
-    //    private func getWaypoints(for flightPlan: FlightPlan, completion: @escaping (_ waypoints: [FlightWaypoint]) -> Void) {
-    //
-    //        YamaseeCore.shared.getWaypoints(flightPlanId: flightPlan.flightPlanId) { data, _, error in
-    //
-    //            guard error == nil else {
-    //                AlertManager.showErrorMessage(with: error?.localizedDescription)
-    //                return
-    //            }
-    //            guard let data = data else {
-    //                AlertManager.showErrorMessage(with: "Unknown")
-    //                return
-    //            }
-    //            do {
-    //                let waypoints = try JSONDecoder().decode([FlightWaypoint].self, from: data)
-    //            } catch {
-    //                print(error)
-    //            }
-    //        }
-    //    }
 }
 
 // MARK: - YamaseeCoreDelegate
@@ -352,8 +277,8 @@ extension YamaseeViewController: YamaseeCoreDelegate {
         print("YM: turbulenceDetected newTurbulence: \(newTurbulence)")
     }
     
-    func yamaseeNewLocationUpdate(location: YamaseeLocation) {
-        print("YM: yamaseeNewLocationUpdate location: \(location)")
+    func locationUpdated(to location: YMLocation) {
+        print("YM: locationUpdated location: \(location)")
         
         if location.state == .dr {
             print("YM: in DR state")
