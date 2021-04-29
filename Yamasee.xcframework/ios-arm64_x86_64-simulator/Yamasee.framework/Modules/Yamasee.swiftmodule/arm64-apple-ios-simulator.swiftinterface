@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Yamasee
 import CFNetwork
 import SystemConfiguration.CaptiveNetwork
@@ -13,6 +13,27 @@ import SystemConfiguration
 import UIKit
 import WebKit
 @_exported import Yamasee
+public class FlightPlan : Swift.Codable {
+  final public let id: Swift.Int
+  final public let flightPlanId: Swift.String
+  final public let updatedAt: Swift.String
+  final public let airlineId: Swift.String
+  final public let flightId: Swift.String
+  final public let departureAirport: Swift.String
+  final public let arrivalAirport: Swift.String
+  final public let fuelWeight: Swift.Int
+  final public let fuelUnit: Swift.String
+  final public let fuelDuration: Swift.String
+  final public let reserveFuel: Swift.Int
+  final public let reserveFuelUnit: Swift.String
+  final public let scheduledDeparture: Swift.String
+  final public let scheduledArrival: Swift.String
+  final public let flightPlanVersion: Swift.String
+  final public let waypoints: [Yamasee.FlightWaypoint]
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
 public struct Airport : Swift.Codable, Swift.Hashable {
   public var name: Swift.String
   public var icao: Swift.String
@@ -21,16 +42,41 @@ public struct Airport : Swift.Codable, Swift.Hashable {
   public var iata: Swift.String
   public var size: Swift.Int
   public init()
-  public init(from decoder: Swift.Decoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: Yamasee.Airport, b: Yamasee.Airport) -> Swift.Bool
   public func encode(to encoder: Swift.Encoder) throws
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: Yamasee.Airport, b: Yamasee.Airport) -> Swift.Bool
+}
+extension Airport {
+  public init(from decoder: Swift.Decoder) throws
 }
 extension Airport {
   public var coordinate: CoreLocation.CLLocationCoordinate2D {
+    get
+  }
+}
+public class FlightWaypoint : Swift.Codable {
+  final public let id: Swift.Int
+  final public let flightPlanId: Swift.String?
+  final public let waypointId: Swift.String
+  final public let name: Swift.String
+  final public let latitude: Swift.Double
+  final public let longitude: Swift.Double
+  final public let order: Swift.Int
+  required public init(from decoder: Swift.Decoder) throws
+  public var coordinate: CoreLocation.CLLocationCoordinate2D {
+    get
+  }
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension FlightWaypoint : Swift.Equatable {
+  public static func == (lhs: Yamasee.FlightWaypoint, rhs: Yamasee.FlightWaypoint) -> Swift.Bool
+}
+extension FlightWaypoint {
+  public var airport: Yamasee.Airport? {
     get
   }
 }
@@ -50,8 +96,8 @@ public struct User : Swift.Codable {
   public let email: Swift.String?
   public let routingEnabled: Swift.Bool?
   public let betaFeatures: Swift.Bool?
-  public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
 public enum ForgotPasswordError : Yamasee.YSError {
   case userIdInvalid
@@ -64,8 +110,8 @@ public enum TurbulenceSeverity : Swift.Int, Swift.Equatable, Swift.Comparable, S
   case Moderate
   case ModerateSevere
   case Severe
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -88,10 +134,32 @@ public struct TurbulenceItem {
   public let sev: Yamasee.TurbulenceSeverity
   public let bbox: [CoreLocation.CLLocationCoordinate2D]
   public let tile: Swift.String
+  public let tileX: Swift.Int
+  public let tileY: Swift.Int
+  public let tileAlt: Swift.Int
+  public let alt: Swift.Double
+  public let ts: Swift.Int
+  public let coordinate: CoreLocation.CLLocationCoordinate2D
 }
 extension CLLocationCoordinate2D : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
+}
+public struct RouteWaypointsTranslationResponse : Swift.Decodable {
+  public var waypoints: [Yamasee.FlightWaypoint]
+  public var pathQuery: [Yamasee.PathQuery]
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct PathQuery : Swift.Decodable {
+  public let name: Swift.String
+  public let processed: Swift.Bool
+  public var subWaypoints: [Yamasee.FlightWaypoint]?
+  public init(from decoder: Swift.Decoder) throws
+}
+extension CLError.Code : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
 }
 public enum LoginError : Yamasee.YSError {
   case userIdOrPasswordInvalid
@@ -101,31 +169,76 @@ public enum LoginError : Yamasee.YSError {
   case weakPassword
   case general(error: Yamasee.GeneralError)
 }
+extension CLAuthorizationStatus : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public struct ServerSettings : Swift.Codable {
+  public var modules: Yamasee.SettingsModules
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SettingsModules : Swift.Codable {
+  public var connectivity: Yamasee.SettingsModuleConnectivity?
+  public var debug: Yamasee.SettingsModuleDebug?
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SettingsModuleConnectivity : Swift.Codable {
+  public var timeToNotice: Yamasee.SettingsValue<Swift.Int>?
+  public var timeToAlert: Yamasee.SettingsValue<Swift.Int>?
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SettingsModuleDebug : Swift.Codable {
+  public var sendLogsAutomaticallyOnFlightEnd: Yamasee.SettingsValue<Swift.Bool>?
+  public var extendedLogs: Yamasee.SettingsValue<Swift.Bool>?
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SettingsValue<T> : Swift.Codable where T : Swift.Decodable, T : Swift.Encodable {
+  public var saveLocal: Swift.Bool?
+  public var value: T?
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@available(*, deprecated, message: "Use YMLocation instead")
+public typealias YamaseeLocation = Yamasee.YMLocation
+@available(*, deprecated, message: "Use YMLocationState instead")
+public typealias YamaseeLocationState = Yamasee.YMLocationState
+public enum YMLocationState {
+  case good
+  case dr
+  case none
+  public static func == (a: Yamasee.YMLocationState, b: Yamasee.YMLocationState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct YMLocation {
+  public let location: CoreLocation.CLLocation?
+  public let state: Yamasee.YMLocationState
+}
 public enum PartnerLoginError : Yamasee.YSError {
   case userIdOrCompanyIdInvalid
   case general(error: Yamasee.GeneralError)
 }
-public enum YamaseeLocationState {
-  case good
-  case dr
-  case none
-  public static func == (a: Yamasee.YamaseeLocationState, b: Yamasee.YamaseeLocationState) -> Swift.Bool
-  public var hashValue: Swift.Int {
-    get
-  }
-  public func hash(into hasher: inout Swift.Hasher)
-}
-public struct YamaseeLocation {
-  public var location: CoreLocation.CLLocation?
-  public var state: Yamasee.YamaseeLocationState
+public struct Hello : Swift.Codable {
+  public var ver: Swift.String
+  public var currentAppVersion: Swift.String
+  public var minimalCompatibleAppVersion: Swift.String
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
 }
 public protocol YSError : Swift.Error {
 }
 public struct SessionTimeouts : Swift.Codable {
   public var session: Swift.Int
   public var idle: Swift.Int
-  public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
 public protocol YamaseeCoreDelegate : AnyObject {
   func newTurbulenceData(serverUpdateTime: Swift.Int)
@@ -134,8 +247,11 @@ public protocol YamaseeCoreDelegate : AnyObject {
   func turbulenceDetected(newTurbulence: Yamasee.TurbulenceItem)
   func loginStatus(isLoggedIn: Swift.Bool)
   func airborneStatus(isAirborne: Swift.Bool)
+  func locationUpdated(to location: Yamasee.YMLocation)
+  @available(*, deprecated, message: "Use locationUpdated(to:) instead")
   func yamaseeNewLocationUpdate(location: Yamasee.YamaseeLocation)
   func locationManagerDidChangeAuthorization(status: CoreLocation.CLAuthorizationStatus)
+  func locationManagerDidFail(withError error: Swift.Error)
   func ownTurbulenceChanged()
   func newWeatherData(serverUpdateTime: Swift.Int)
   func ownWeatherChanged()
@@ -148,6 +264,7 @@ public protocol YamaseeCoreDelegate : AnyObject {
   public typealias RawAPIResponseDataBlock = (Foundation.Data?, Foundation.URLResponse?, Swift.Error?) -> Swift.Void
   public static let shared: Yamasee.YamaseeCore
   weak public var delegate: Yamasee.YamaseeCoreDelegate?
+  public var askBeforeRequestingLocationAuthorizationBlock: ((@escaping (Swift.Bool) -> Swift.Void) -> Swift.Bool)?
   @available(*, deprecated, message: "Use start(apiKey:baseUrl:env:) instead")
   public func start(apiKey: Swift.String, baseUrl: Swift.String, dataUrl: Swift.String? = nil)
   public func start(apiKey: Swift.String, baseUrl: Swift.String, env: Yamasee.Environment? = nil)
@@ -168,18 +285,22 @@ public protocol YamaseeCoreDelegate : AnyObject {
   public func otpRequest(completionHandler: @escaping (Swift.Bool?, Yamasee.LoginError?) -> Swift.Void)
   public func otpValidate(otp: Swift.String, completionHandler: @escaping (Swift.Bool?, Yamasee.LoginError?) -> Swift.Void)
   public func setProfile(password: Swift.String, completionHandler: @escaping (Swift.Bool, Yamasee.LoginError?) -> Swift.Void)
-  public func getTurbulenceGeoJson(altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int, excludeTiles: [Swift.String] = []) -> Swift.String
-  public func getTurbulence(altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int, excludeTiles: [Swift.String] = []) -> [Yamasee.TurbulenceItem]
-  public func getTrafficJson(altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>) -> Swift.String
-  public func getTraffic(altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>) -> Swift.Array<Yamasee.Traffic>
+  public func getTurbulenceGeoJson(altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int = 1, excludeTiles: [Swift.String] = [], aggregate: Swift.Bool = true) -> Swift.String
+  public func getTurbulence(altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int = 1, excludeTiles: [Swift.String] = [], aggregate: Swift.Bool = true) -> [Yamasee.TurbulenceItem]
+  public func getOwnTurbulenceGeoJson(altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int = 1, aggregate: Swift.Bool = true) -> Swift.String
+  public func getOwnTurbulence(altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int = 1, aggregate: Swift.Bool = true) -> [Yamasee.TurbulenceItem]
+  public func turbulence(inTile tile: Swift.String, altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, own: Swift.Bool = false) -> [Yamasee.TurbulenceItem]
   public var dataUpdatedAt: Foundation.Date? {
     get
   }
+  public func getTrafficJson(altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, predict: Swift.Bool = false) -> Swift.String
+  public func getTraffic(altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, predict: Swift.Bool = false) -> [Yamasee.Traffic]
   public func reportWeather(type: Yamasee.WeatherType, at location: CoreLocation.CLLocation)
-  public func getWeather(types: [Yamasee.WeatherType], altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> [Yamasee.Weather]
-  public func getWeather(types: [Yamasee.WeatherType], altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> Swift.String
-  public func getOwnWeather(types: [Yamasee.WeatherType], altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> [Yamasee.Weather]
-  public func getOwnWeather(types: [Yamasee.WeatherType], altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> Swift.String
+  public func getWeather(types: [Yamasee.WeatherType], altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int = 1) -> [Yamasee.Weather]
+  public func getWeather(types: [Yamasee.WeatherType], altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int = 1) -> Swift.String
+  public func getOwnWeather(types: [Yamasee.WeatherType], altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int = 1) -> [Yamasee.Weather]
+  public func getOwnWeather(types: [Yamasee.WeatherType], altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int = 1) -> Swift.String
+  public func delete(_ weather: [Yamasee.Weather])
   @available(*, deprecated, message: "Use reportWeather(type:at:) instead")
   public func reportLightning(lat: Swift.Double, lng: Swift.Double, alt: Foundation.Measurement<Foundation.UnitLength>)
   @available(*, deprecated, message: "Use reportWeather(type:at:) instead")
@@ -187,44 +308,68 @@ public protocol YamaseeCoreDelegate : AnyObject {
   @available(*, deprecated, message: "Use reportWeather(type:at:) instead")
   public func reportIcing(lat: Swift.Double, lng: Swift.Double, alt: Foundation.Measurement<Foundation.UnitLength>)
   @available(*, deprecated, message: "Use getWeather(types:altRange:timeSpan:zoomLevel:) instead")
-  public func getWeatherByType(weatherType: Yamasee.WXType, altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> Swift.String
+  public func getWeatherByType(weatherType: Yamasee.WXType, altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int = 1) -> Swift.String
   @available(*, deprecated, message: "Use getWeather(types:altRange:timeSpan:zoomLevel:) instead")
-  public func getWeatherByType(weatherType: Yamasee.WXType, altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> [Yamasee.WeatherItem]
+  public func getWeatherByType(weatherType: Yamasee.WXType, altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int = 1) -> [Yamasee.WeatherItem]
   @available(*, deprecated, message: "Use getWeather(types:altRange:timeSpan:zoomLevel:) instead")
-  public func getWeatherByTypes(weatherTypes: [Yamasee.WXType], altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> [Yamasee.WeatherItem]
+  public func getWeatherByTypes(weatherTypes: [Yamasee.WXType], altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int = 1) -> [Yamasee.WeatherItem]
   @available(*, deprecated, message: "Use getWeather(types:altRange:timeSpan:zoomLevel:) instead")
-  public func getWeatherByTypes(weatherTypes: [Yamasee.WXType], altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> Swift.String
+  public func getWeatherByTypes(weatherTypes: [Yamasee.WXType], altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int = 1) -> Swift.String
   @available(*, deprecated, message: "Use getOwnWeather(types:altRange:timeSpan:zoomLevel:) instead")
-  public func getOwnWeatherByType(weatherType: Yamasee.WXType, altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> [Yamasee.WeatherItem]
+  public func getOwnWeatherByType(weatherType: Yamasee.WXType, altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int = 1) -> [Yamasee.WeatherItem]
   @available(*, deprecated, message: "Use getOwnWeather(types:altRange:timeSpan:zoomLevel:) instead")
-  public func getOwnWeatherByTypes(weatherTypes: [Yamasee.WXType], altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> [Yamasee.WeatherItem]
+  public func getOwnWeatherByTypes(weatherTypes: [Yamasee.WXType], altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int = 1) -> [Yamasee.WeatherItem]
   @available(*, deprecated, message: "Use getOwnWeather(types:altRange:timeSpan:zoomLevel:) instead")
-  public func getOwnWeatherByTypes(weatherTypes: [Yamasee.WXType], altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> Swift.String
-  public func getOwnTurbulenceGeoJson(altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> Swift.String
-  public func getOwnTurbulence(altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int) -> [Yamasee.TurbulenceItem]
-  public func delete(_ weather: [Yamasee.Weather])
+  public func getOwnWeatherByTypes(weatherTypes: [Yamasee.WXType], altRange: Swift.ClosedRange<Foundation.Measurement<Foundation.UnitLength>>, timeSpan: Swift.Int, zoomLevel: Swift.Int = 1) -> Swift.String
   public func getAlert(lat: Swift.Double, long: Swift.Double, altitude: Foundation.Measurement<Foundation.UnitLength>, heading: Foundation.Measurement<Foundation.UnitAngle>, timeSpan: Swift.Int, distance: Foundation.Measurement<Foundation.UnitLength> = .init(value: 100, unit: UnitLength.nauticalMiles), angleSpan: Foundation.Measurement<Foundation.UnitAngle> = .init(value: 15, unit: UnitAngle.degrees)) -> (maxTurboSevAtAlt: Yamasee.TurbulenceSeverity, maxTurboSevBelow: Yamasee.TurbulenceSeverity, maxTurboSevAbove: Yamasee.TurbulenceSeverity)
   public func getAlertTiles(lat: Swift.Double, long: Swift.Double, altitude: Foundation.Measurement<Foundation.UnitLength>, heading: Foundation.Measurement<Foundation.UnitAngle>, timeSpan: Swift.Int, distance: Foundation.Measurement<Foundation.UnitLength> = .init(value: 100, unit: UnitLength.nauticalMiles), angleSpan: Foundation.Measurement<Foundation.UnitAngle> = .init(value: 15, unit: UnitAngle.degrees)) -> (alertTilesAtAlt: [Yamasee.TurbulenceItem], alertTilesBelow: [Yamasee.TurbulenceItem], alertTilesAbove: [Yamasee.TurbulenceItem])
   public func getRouteAlerts(route: [CoreLocation.CLLocation], widthAround: Foundation.Measurement<Foundation.UnitLength> = .init(value: 0, unit: UnitLength.nauticalMiles), altitude: Foundation.Measurement<Foundation.UnitLength>, timeSpan: Swift.Int) -> (alertTilesAtAlt: [Yamasee.TurbulenceItem], alertTilesBelow: [Yamasee.TurbulenceItem], alertTilesAbove: [Yamasee.TurbulenceItem])
   public func alertedTurbulenceSeverity(_ sev: Yamasee.TurbulenceSeverity)
-  public func getFlight(byId id: Swift.String, completion: @escaping Yamasee.YamaseeCore.RawAPIResponseDataBlock)
-  public func getFlights(from: Foundation.Date, to: Foundation.Date, completion: @escaping Yamasee.YamaseeCore.RawAPIResponseDataBlock)
-  public func getWaypoints(route: Swift.String, completion: @escaping Yamasee.YamaseeCore.RawAPIResponseDataBlock)
+  public func getMyFlight(completion: @escaping (Yamasee.FlightPlan?, Swift.Error?) -> Swift.Void)
+  public func getFlight(byId id: Swift.String, completion: @escaping (Yamasee.FlightPlan?, Swift.Error?) -> Swift.Void)
+  public func getFlights(from: Foundation.Date, to: Foundation.Date, completion: @escaping ([Yamasee.FlightPlan]?, Swift.Error?) -> Swift.Void)
+  public func getWaypoints(for inputs: [Yamasee.FlightWaypointInput], completion: @escaping (Yamasee.RouteWaypointsTranslationResponse?, Swift.Error?) -> Swift.Void)
+  public func setAircraft(_ aircraft: Swift.String?)
+  public func aircraft() -> Yamasee.Aircraft?
+  public func aircrafts() -> [Yamasee.Aircraft]
+  @available(*, deprecated, message: "Use setAircraft(:) instead")
   public func setAircraft(aircraft: Swift.String)
+  @available(*, deprecated, message: "Use aircraft() instead")
   public func getAircraft() -> Swift.String
+  @available(*, deprecated, message: "Use aircrafts() instead")
+  public func getAircraftTypes() -> [Yamasee.Aircraft]
+  public func airports() -> [Yamasee.Airport]
+  @available(*, deprecated, message: "Use airports() instead")
+  public func getAirports() -> [Yamasee.Airport]
+  public func airports() -> Swift.String
+  @available(*, deprecated, message: "Use airports() instead")
+  public func getAirports() -> Swift.String
+  public func nearestAirports(to location: CoreLocation.CLLocation) -> [Yamasee.Airport]
+  @available(*, deprecated, message: "Use nearestAirports(to:) instead")
+  public func getNearestAirports(to location: CoreLocation.CLLocation) -> [Yamasee.Airport]
+  public func nearestAirports(to location: CoreLocation.CLLocation) -> Swift.String
+  @available(*, deprecated, message: "Use nearestAirports(to:) instead")
+  public func getNearestAirports(to location: CoreLocation.CLLocation) -> Swift.String
+  public func addAirport(_ airport: Yamasee.Airport)
+  public func setFlightNumber(_ flightNumber: Swift.String?)
+  @available(*, deprecated, message: "Use setFlightNumber(:) instead")
   public func setFlightNumber(flightNumber: Swift.String)
+  public func setFlightPlan(_ flightPlan: Yamasee.FlightPlan?)
   public func setAngle()
   public func resetAngle()
   public func isInPosition() -> Swift.Bool
   public func isCurrentPositionSteady() -> Swift.Bool
-  public func getAircraftTypes() -> [Yamasee.YamaseeAircraftType]
-  public func getAirports() -> [Yamasee.Airport]
-  public func getAirports() -> Swift.String
-  public func getNearestAirports(to location: CoreLocation.CLLocation) -> [Yamasee.Airport]
-  public func getNearestAirports(to location: CoreLocation.CLLocation) -> Swift.String
-  public func addAirport(_ airport: Yamasee.Airport)
-  public func contact(email: Swift.String, message: Swift.String, completionHandler: @escaping (Swift.Bool, Swift.Error?) -> Swift.Void)
+  public func contact(email: Swift.String, message: Swift.String, logsFileUrl: Foundation.URL? = nil, completionHandler: @escaping (Swift.Bool, Swift.Error?) -> Swift.Void)
+  public func sendFlightLogs(fileUrl: Foundation.URL)
   public func setDemoDataEnabled(_ enabled: Swift.Bool)
+  public func sayHello(completion: @escaping (Yamasee.Hello?, Swift.Error?) -> Swift.Void)
+  public var serverSettings: Yamasee.ServerSettings? {
+    get
+  }
+  public func fetchData()
+  public var airborne: Swift.Bool {
+    get
+  }
   @objc deinit
 }
 extension YamaseeCoreDelegate {
@@ -232,8 +377,10 @@ extension YamaseeCoreDelegate {
   public func ownTurbulenceChanged()
   public func loginStatus(isLoggedIn: Swift.Bool)
   public func airborneStatus(isAirborne: Swift.Bool)
+  public func locationUpdated(to location: Yamasee.YMLocation)
   public func yamaseeNewLocationUpdate(location: Yamasee.YamaseeLocation)
   public func locationManagerDidChangeAuthorization(status: CoreLocation.CLAuthorizationStatus)
+  public func locationManagerDidFail(withError error: Swift.Error)
   public func newWeatherData(serverUpdateTime: Swift.Int)
   public func ownWeatherChanged()
   public func newAirportsData()
@@ -243,6 +390,8 @@ extension YamaseeCoreDelegate {
 }
 extension YamaseeCore {
   public func setSimulatorMode(isLocationSimulatorOn: Swift.Bool)
+  public func simulatedLocation(_ location: CoreLocation.CLLocation)
+  @available(*, deprecated, message: "Use simulatedLocation(:) instead")
   public func simulatedLocation(location: CoreLocation.CLLocation)
   public func setPushSimulatedEnabled(_ enabled: Swift.Bool)
   public func simulateTurbulence(sev: Yamasee.TurbulenceSeverity)
@@ -254,14 +403,44 @@ public struct RawDataUserResponse : Swift.Codable {
   public let confirmed: Swift.Bool
   public let suggestedLevel: Yamasee.TurbulenceSeverity?
   public init(confirmed: Swift.Bool, suggestedLevel: Yamasee.TurbulenceSeverity?)
-  public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
-public struct YamaseeAircraftType {
+extension UserDefaults {
+  public func codableValue<T>(of type: T.Type, forKey key: Swift.String) -> T? where T : Swift.Decodable
+  public func setCodableValue<T>(_ value: T?, forKey key: Swift.String) where T : Swift.Encodable
+}
+@available(*, deprecated, message: "Use `Aircraft` instead")
+public typealias YamaseeAircraftType = Yamasee.Aircraft
+public enum AircraftSize : Swift.String, Swift.Codable {
+  case small
+  case medium
+  case large
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct Aircraft : Swift.Codable {
   public var aircraft: Swift.String
   public var description: Swift.String
+  public var size: Yamasee.AircraftSize
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension Aircraft {
+  public init(from decoder: Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class MapGrid {
+  public static func mapGridGeoJSON(stepDegrees: CoreLocation.CLLocationDegrees) -> Swift.String
+  @objc deinit
 }
 extension Encodable {
+  public var dictionary: [Swift.String : Any]? {
+    get
+  }
+}
+extension String {
   public var dictionary: [Swift.String : Any]? {
     get
   }
@@ -294,22 +473,23 @@ public enum WeatherType : Swift.String, Swift.Codable {
   case lightning
   case icing
   case shear
+  public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
-  public init?(rawValue: Swift.String)
 }
 public struct Weather : Swift.Equatable, Swift.Codable {
-  public var id: Swift.String
+  public var id: Swift.String?
   public var ts: Swift.Int
   public var type: Yamasee.WeatherType
   public var tileX: Swift.Int
   public var tileY: Swift.Int
   public var alt: Swift.Int
-  public var repId: Swift.String
+  public var repId: Swift.String?
+  public var fNum: Swift.String?
   public init(from decoder: Swift.Decoder) throws
-  public init(type: Yamasee.WeatherType, lat: Swift.Double, lng: Swift.Double, alt: Foundation.Measurement<Foundation.UnitLength>, simulated: Swift.Bool?, repId: Swift.String)
+  public init(type: Yamasee.WeatherType, lat: Swift.Double, lng: Swift.Double, alt: Foundation.Measurement<Foundation.UnitLength>, simulated: Swift.Bool?, repId: Swift.String, fNum: Swift.String?)
   public static func == (a: Yamasee.Weather, b: Yamasee.Weather) -> Swift.Bool
   public func encode(to encoder: Swift.Encoder) throws
 }
@@ -321,6 +501,17 @@ extension Weather {
     get
   }
 }
+public struct FlightWaypointInput : Swift.Codable {
+  public var waypoint_id: Swift.String
+  public var name: Swift.String?
+  public var latitude: Swift.Double?
+  public var longitude: Swift.Double?
+  public var id: Swift.Int?
+  public var custom: Swift.Bool
+  public init(waypoint_id: Swift.String, name: Swift.String?, latitude: Swift.Double?, longitude: Swift.Double?, id: Swift.Int?, custom: Swift.Bool)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
 public struct Traffic : Swift.Encodable {
   public var lat: Swift.Double
   public var lng: Swift.Double
@@ -331,6 +522,7 @@ public struct Traffic : Swift.Encodable {
   public var airplane: Swift.String
   public var speed: Swift.Double
   public var fNum: Swift.String
+  public var aircraftSize: Yamasee.AircraftSize
   public func encode(to encoder: Swift.Encoder) throws
 }
 extension Traffic : Swift.Decodable {
@@ -340,15 +532,18 @@ public enum Environment {
   case development
   case production
   public static func == (a: Yamasee.Environment, b: Yamasee.Environment) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
 extension Yamasee.TurbulenceSeverity : Swift.Hashable {}
 extension Yamasee.TurbulenceSeverity : Swift.RawRepresentable {}
-extension Yamasee.YamaseeLocationState : Swift.Equatable {}
-extension Yamasee.YamaseeLocationState : Swift.Hashable {}
+extension Yamasee.YMLocationState : Swift.Equatable {}
+extension Yamasee.YMLocationState : Swift.Hashable {}
+extension Yamasee.AircraftSize : Swift.Equatable {}
+extension Yamasee.AircraftSize : Swift.Hashable {}
+extension Yamasee.AircraftSize : Swift.RawRepresentable {}
 extension Yamasee.WeatherType : Swift.Equatable {}
 extension Yamasee.WeatherType : Swift.Hashable {}
 extension Yamasee.WeatherType : Swift.RawRepresentable {}

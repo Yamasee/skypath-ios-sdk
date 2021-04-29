@@ -7,14 +7,14 @@ SkyPath's goal is delivery of accurate real-time turbulence data, based on crowd
 
 ## Description
 
-Yamasee supplies its partners who wish to integrate SkyPath technology, an iOS SDK as a binary iOS Swift framework that enables rapid and seamless integration into existing iOS apps. The SDK doesn’t assume anything regarding the app UI, and supplies needed abstraction for SkyPath push and pull server REST API communication, turbulence measurements, and turbulence alerts.
+Yamasee supplies its partners who wish to integrate SkyPath technology, an iOS SDK that enables rapid and seamless integration into existing iOS apps. The SDK doesn’t assume anything regarding the app UI, and supplies needed abstraction for SkyPath push and pull server REST API communication, turbulence measurements, and turbulence alerts.
 
 SDK API [documentation](https://yamasee.github.io/skypath-ios-sdk)
 
 ## Requirements
 
 - iOS 11.0+
-- Xcode 12+
+- Xcode 12.5+
 - Swift 5.0+
 
 ## Installation
@@ -24,9 +24,9 @@ SDK API [documentation](https://yamasee.github.io/skypath-ios-sdk)
 
 You can integrate SkyPath into your project manually. 
 
-- Download .xcframework or .framework (each one contains both device and simulator architectures inside)
-- Copy framework file to a project directory
-- In Xcode project target in `General` tab, in `Frameworks, Libraries, and Embedded Content` tap "Add items", choose a Yamasee framework file. Make sure the added framework "Embed" value is set to `Embed & Sign`
+- Download Yamasee.xcframework
+- Copy Yamasee.xcframework to a project directory
+- In Xcode project target in `General` tab, in `Frameworks, Libraries, and Embedded Content` tap "Add items", choose a Yamasee.xcframework file. Make sure the added framework "Embed" value is set to `Embed & Sign`
 - `import Yamasee` where needed
 
 
