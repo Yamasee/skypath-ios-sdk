@@ -2,8 +2,15 @@
   "warnings": [
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Extensions/Foundation/Encodable+JSONString.swift",
-      "line": 24,
+      "line": 28,
       "symbol": "Encodable.dictionary",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Extensions/Foundation/Encodable+JSONString.swift",
+      "line": 36,
+      "symbol": "String.dictionary",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
@@ -33,6 +40,34 @@
       "line": 41,
       "symbol": "NSError.serviceUnavailableCodes",
       "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Extensions/Foundation/UserDefaults+Ext.swift",
+      "line": 13,
+      "symbol": "UserDefaults.codableValue(of:forKey:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Extensions/Foundation/UserDefaults+Ext.swift",
+      "line": 30,
+      "symbol": "UserDefaults.setCodableValue(_:forKey:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Managers/MapGrid.swift",
+      "line": 29,
+      "symbol": "MapGrid",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Managers/MapGrid.swift",
+      "line": 31,
+      "symbol": "MapGrid.mapGridGeoJSON(stepDegrees:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
@@ -127,17 +162,73 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/AircraftTypeModel.swift",
-      "line": 15,
-      "symbol": "YamaseeAircraftType.aircraft",
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Aircraft.swift",
+      "line": 12,
+      "symbol": "YamaseeAircraftType",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Aircraft.swift",
+      "line": 14,
+      "symbol": "AircraftSize",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Aircraft.swift",
+      "line": 16,
+      "symbol": "AircraftSize.small",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Aircraft.swift",
+      "line": 17,
+      "symbol": "AircraftSize.medium",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Aircraft.swift",
+      "line": 18,
+      "symbol": "AircraftSize.large",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Aircraft.swift",
+      "line": 21,
+      "symbol": "Aircraft",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Aircraft.swift",
+      "line": 23,
+      "symbol": "Aircraft.aircraft",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/AircraftTypeModel.swift",
-      "line": 16,
-      "symbol": "YamaseeAircraftType.description",
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Aircraft.swift",
+      "line": 24,
+      "symbol": "Aircraft.description",
       "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Aircraft.swift",
+      "line": 25,
+      "symbol": "Aircraft.size",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Aircraft.swift",
+      "line": 35,
+      "symbol": "Aircraft",
+      "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
@@ -205,7 +296,14 @@
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Airport.swift",
-      "line": 42,
+      "line": 56,
+      "symbol": "Airport",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Airport.swift",
+      "line": 58,
       "symbol": "Airport.coordinate",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
@@ -239,78 +337,519 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Traffic.swift",
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightPlan.swift",
       "line": 11,
+      "symbol": "FlightPlan",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightPlan.swift",
+      "line": 13,
+      "symbol": "FlightPlan.id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightPlan.swift",
+      "line": 14,
+      "symbol": "FlightPlan.flightPlanId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightPlan.swift",
+      "line": 15,
+      "symbol": "FlightPlan.updatedAt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightPlan.swift",
+      "line": 16,
+      "symbol": "FlightPlan.airlineId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightPlan.swift",
+      "line": 17,
+      "symbol": "FlightPlan.flightId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightPlan.swift",
+      "line": 18,
+      "symbol": "FlightPlan.departureAirport",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightPlan.swift",
+      "line": 19,
+      "symbol": "FlightPlan.arrivalAirport",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightPlan.swift",
+      "line": 20,
+      "symbol": "FlightPlan.fuelWeight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightPlan.swift",
+      "line": 21,
+      "symbol": "FlightPlan.fuelUnit",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightPlan.swift",
+      "line": 22,
+      "symbol": "FlightPlan.fuelDuration",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightPlan.swift",
+      "line": 23,
+      "symbol": "FlightPlan.reserveFuel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightPlan.swift",
+      "line": 24,
+      "symbol": "FlightPlan.reserveFuelUnit",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightPlan.swift",
+      "line": 25,
+      "symbol": "FlightPlan.scheduledDeparture",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightPlan.swift",
+      "line": 26,
+      "symbol": "FlightPlan.scheduledArrival",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightPlan.swift",
+      "line": 27,
+      "symbol": "FlightPlan.flightPlanVersion",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightPlan.swift",
+      "line": 28,
+      "symbol": "FlightPlan.waypoints",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightWaypoint.swift",
+      "line": 12,
+      "symbol": "FlightWaypoint",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightWaypoint.swift",
+      "line": 14,
+      "symbol": "FlightWaypoint.id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightWaypoint.swift",
+      "line": 15,
+      "symbol": "FlightWaypoint.flightPlanId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightWaypoint.swift",
+      "line": 16,
+      "symbol": "FlightWaypoint.waypointId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightWaypoint.swift",
+      "line": 17,
+      "symbol": "FlightWaypoint.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightWaypoint.swift",
+      "line": 18,
+      "symbol": "FlightWaypoint.latitude",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightWaypoint.swift",
+      "line": 19,
+      "symbol": "FlightWaypoint.longitude",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightWaypoint.swift",
+      "line": 20,
+      "symbol": "FlightWaypoint.order",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightWaypoint.swift",
+      "line": 46,
+      "symbol": "FlightWaypoint.coordinate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightWaypoint.swift",
+      "line": 54,
+      "symbol": "FlightWaypoint",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightWaypoint.swift",
+      "line": 64,
+      "symbol": "FlightWaypoint",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightWaypoint.swift",
+      "line": 66,
+      "symbol": "FlightWaypoint.airport",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightWaypointInput.swift",
+      "line": 11,
+      "symbol": "FlightWaypointInput",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightWaypointInput.swift",
+      "line": 13,
+      "symbol": "FlightWaypointInput.waypoint_id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightWaypointInput.swift",
+      "line": 14,
+      "symbol": "FlightWaypointInput.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightWaypointInput.swift",
+      "line": 15,
+      "symbol": "FlightWaypointInput.latitude",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightWaypointInput.swift",
+      "line": 16,
+      "symbol": "FlightWaypointInput.longitude",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightWaypointInput.swift",
+      "line": 17,
+      "symbol": "FlightWaypointInput.id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightWaypointInput.swift",
+      "line": 18,
+      "symbol": "FlightWaypointInput.custom",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/FlightWaypointInput.swift",
+      "line": 20,
+      "symbol": "FlightWaypointInput.init(waypoint_id:name:latitude:longitude:id:custom:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/RouteWaypointsTranslationResponse.swift",
+      "line": 11,
+      "symbol": "RouteWaypointsTranslationResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/RouteWaypointsTranslationResponse.swift",
+      "line": 13,
+      "symbol": "RouteWaypointsTranslationResponse.waypoints",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/RouteWaypointsTranslationResponse.swift",
+      "line": 14,
+      "symbol": "RouteWaypointsTranslationResponse.pathQuery",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/RouteWaypointsTranslationResponse.swift",
+      "line": 17,
+      "symbol": "PathQuery",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/RouteWaypointsTranslationResponse.swift",
+      "line": 19,
+      "symbol": "PathQuery.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/RouteWaypointsTranslationResponse.swift",
+      "line": 20,
+      "symbol": "PathQuery.processed",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Flight/RouteWaypointsTranslationResponse.swift",
+      "line": 21,
+      "symbol": "PathQuery.subWaypoints",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Hello.swift",
+      "line": 11,
+      "symbol": "Hello",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Hello.swift",
+      "line": 13,
+      "symbol": "Hello.ver",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Hello.swift",
+      "line": 14,
+      "symbol": "Hello.currentAppVersion",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Hello.swift",
+      "line": 15,
+      "symbol": "Hello.minimalCompatibleAppVersion",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/ServerSettings.swift",
+      "line": 16,
+      "symbol": "ServerSettings",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/ServerSettings.swift",
+      "line": 18,
+      "symbol": "ServerSettings.modules",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/ServerSettings.swift",
+      "line": 21,
+      "symbol": "SettingsModules",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/ServerSettings.swift",
+      "line": 23,
+      "symbol": "SettingsModules.connectivity",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/ServerSettings.swift",
+      "line": 24,
+      "symbol": "SettingsModules.debug",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/ServerSettings.swift",
+      "line": 41,
+      "symbol": "SettingsModuleConnectivity",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/ServerSettings.swift",
+      "line": 43,
+      "symbol": "SettingsModuleConnectivity.timeToNotice",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/ServerSettings.swift",
+      "line": 44,
+      "symbol": "SettingsModuleConnectivity.timeToAlert",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/ServerSettings.swift",
+      "line": 61,
+      "symbol": "SettingsModuleDebug",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/ServerSettings.swift",
+      "line": 63,
+      "symbol": "SettingsModuleDebug.sendLogsAutomaticallyOnFlightEnd",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/ServerSettings.swift",
+      "line": 64,
+      "symbol": "SettingsModuleDebug.extendedLogs",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/ServerSettings.swift",
+      "line": 81,
+      "symbol": "SettingsValue",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/ServerSettings.swift",
+      "line": 83,
+      "symbol": "SettingsValue.saveLocal",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/ServerSettings.swift",
+      "line": 84,
+      "symbol": "SettingsValue.value",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Traffic.swift",
+      "line": 12,
       "symbol": "Traffic",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Traffic.swift",
-      "line": 13,
+      "line": 14,
       "symbol": "Traffic.lat",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Traffic.swift",
-      "line": 14,
+      "line": 15,
       "symbol": "Traffic.lng",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Traffic.swift",
-      "line": 15,
+      "line": 16,
       "symbol": "Traffic.alt",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Traffic.swift",
-      "line": 16,
+      "line": 17,
       "symbol": "Traffic.hdg",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Traffic.swift",
-      "line": 17,
+      "line": 18,
       "symbol": "Traffic.ts",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Traffic.swift",
-      "line": 18,
+      "line": 19,
       "symbol": "Traffic.uuid",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Traffic.swift",
-      "line": 19,
+      "line": 20,
       "symbol": "Traffic.airplane",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Traffic.swift",
-      "line": 20,
+      "line": 21,
       "symbol": "Traffic.speed",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Traffic.swift",
-      "line": 21,
+      "line": 22,
       "symbol": "Traffic.fNum",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Traffic.swift",
-      "line": 24,
+      "line": 23,
+      "symbol": "Traffic.aircraftSize",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Traffic.swift",
+      "line": 40,
       "symbol": "Traffic",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
@@ -340,6 +879,48 @@
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Turbulence/TurbulenceItem.swift",
       "line": 16,
       "symbol": "TurbulenceItem.tile",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Turbulence/TurbulenceItem.swift",
+      "line": 17,
+      "symbol": "TurbulenceItem.tileX",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Turbulence/TurbulenceItem.swift",
+      "line": 18,
+      "symbol": "TurbulenceItem.tileY",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Turbulence/TurbulenceItem.swift",
+      "line": 19,
+      "symbol": "TurbulenceItem.tileAlt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Turbulence/TurbulenceItem.swift",
+      "line": 20,
+      "symbol": "TurbulenceItem.alt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Turbulence/TurbulenceItem.swift",
+      "line": 21,
+      "symbol": "TurbulenceItem.ts",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Turbulence/TurbulenceItem.swift",
+      "line": 22,
+      "symbol": "TurbulenceItem.coordinate",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
@@ -583,50 +1164,78 @@
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Weather.swift",
-      "line": 68,
-      "symbol": "Weather.init(type:lat:lng:alt:simulated:repId:)",
+      "line": 33,
+      "symbol": "Weather.fNum",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Weather.swift",
+      "line": 71,
+      "symbol": "Weather.init(type:lat:lng:alt:simulated:repId:fNum:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Weather.swift",
-      "line": 88,
+      "line": 93,
       "symbol": "Weather",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Weather.swift",
-      "line": 106,
+      "line": 95,
+      "symbol": "Weather.coordinates",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Weather.swift",
+      "line": 99,
       "symbol": "Weather.center",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/YamaseeLocation.swift",
-      "line": 12,
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/YMLocation.swift",
+      "line": 13,
+      "symbol": "YamaseeLocation",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/YMLocation.swift",
+      "line": 16,
       "symbol": "YamaseeLocationState",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/YMLocation.swift",
+      "line": 19,
+      "symbol": "YMLocationState",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/YamaseeLocation.swift",
-      "line": 21,
-      "symbol": "YamaseeLocation",
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/YMLocation.swift",
+      "line": 29,
+      "symbol": "YMLocation",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/YamaseeLocation.swift",
-      "line": 22,
-      "symbol": "YamaseeLocation.location",
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/YMLocation.swift",
+      "line": 31,
+      "symbol": "YMLocation.location",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/YamaseeLocation.swift",
-      "line": 23,
-      "symbol": "YamaseeLocation.state",
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/YMLocation.swift",
+      "line": 32,
+      "symbol": "YMLocation.state",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
@@ -646,99 +1255,155 @@
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
-      "line": 113,
+      "line": 60,
+      "symbol": "YamaseeCoreDelegate.yamaseeNewLocationUpdate(location:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
+      "line": 121,
       "symbol": "YamaseeCore.RawAPIResponseDataBlock",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
-      "line": 115,
+      "line": 123,
       "symbol": "YamaseeCore.shared",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
-      "line": 116,
+      "line": 124,
       "symbol": "YamaseeCore.delegate",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
-      "line": 127,
+      "line": 140,
       "symbol": "YamaseeCore.start(apiKey:baseUrl:dataUrl:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
-      "line": 545,
+      "line": 666,
       "symbol": "YamaseeCore.reportLightning(lat:lng:alt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
-      "line": 555,
+      "line": 676,
       "symbol": "YamaseeCore.reportShear(lat:lng:alt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
-      "line": 565,
+      "line": 686,
       "symbol": "YamaseeCore.reportIcing(lat:lng:alt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
-      "line": 575,
+      "line": 696,
       "symbol": "YamaseeCore.getWeatherByType(weatherType:altRange:timeSpan:zoomLevel:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
-      "line": 587,
+      "line": 708,
       "symbol": "YamaseeCore.getWeatherByType(weatherType:altRange:timeSpan:zoomLevel:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
-      "line": 599,
+      "line": 720,
       "symbol": "YamaseeCore.getWeatherByTypes(weatherTypes:altRange:timeSpan:zoomLevel:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
-      "line": 611,
+      "line": 732,
       "symbol": "YamaseeCore.getWeatherByTypes(weatherTypes:altRange:timeSpan:zoomLevel:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
-      "line": 623,
+      "line": 744,
       "symbol": "YamaseeCore.getOwnWeatherByType(weatherType:altRange:timeSpan:zoomLevel:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
-      "line": 635,
+      "line": 756,
       "symbol": "YamaseeCore.getOwnWeatherByTypes(weatherTypes:altRange:timeSpan:zoomLevel:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
-      "line": 647,
+      "line": 768,
       "symbol": "YamaseeCore.getOwnWeatherByTypes(weatherTypes:altRange:timeSpan:zoomLevel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
+      "line": 1016,
+      "symbol": "YamaseeCore.getAirports()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
+      "line": 1029,
+      "symbol": "YamaseeCore.getAirports()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
+      "line": 1042,
+      "symbol": "YamaseeCore.getNearestAirports(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
+      "line": 1055,
+      "symbol": "YamaseeCore.getNearestAirports(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
+      "line": 1088,
+      "symbol": "YamaseeCore.setFlightNumber(flightNumber:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
+      "line": 1248,
+      "symbol": "YamaseeCoreDelegate.yamaseeNewLocationUpdate(location:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
+      "line": 1415,
+      "symbol": "YamaseeCore.simulatedLocation(location:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }

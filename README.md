@@ -7,14 +7,14 @@ SkyPath's goal is delivery of accurate real-time turbulence data, based on crowd
 
 ## Description
 
-Yamasee supplies its partners who wish to integrate SkyPath technology, an iOS SDK as a binary iOS Swift framework that enables rapid and seamless integration into existing iOS apps. The SDK doesn’t assume anything regarding the app UI, and supplies needed abstraction for SkyPath push and pull server REST API communication, turbulence measurements, and turbulence alerts.
+Yamasee supplies its partners who wish to integrate SkyPath technology, an iOS SDK that enables rapid and seamless integration into existing iOS apps. The SDK doesn’t assume anything regarding the app UI, and supplies needed abstraction for SkyPath push and pull server REST API communication, turbulence measurements, and turbulence alerts.
 
 SDK API [documentation](https://yamasee.github.io/skypath-ios-sdk)
 
 ## Requirements
 
 - iOS 11.0+
-- Xcode 11+
+- Xcode 12.5+
 - Swift 5.0+
 
 ## Installation
@@ -24,16 +24,16 @@ SDK API [documentation](https://yamasee.github.io/skypath-ios-sdk)
 
 You can integrate SkyPath into your project manually. 
 
-- Download .xcframework or .framework (each one contains both device and simulator architectures inside)
-- Copy framework file to a project directory
-- In Xcode project target in `General` tab, in `Frameworks, Libraries, and Embedded Content` tap "Add items", choose a Yamasee framework file. Make sure the added framework "Embed" value is set to `Embed & Sign`
+- Download Yamasee.xcframework
+- Copy Yamasee.xcframework to a project directory
+- In Xcode project target in `General` tab, in `Frameworks, Libraries, and Embedded Content` tap "Add items", choose a Yamasee.xcframework file. Make sure the added framework "Embed" value is set to `Embed & Sign`
 - `import Yamasee` where needed
 
 
 #### Background Modes
 
 The location can be used while the app is in background to keep tracking and alert turbulence. The `Location updates` background mode is needed.<br>
-Make sure the corresponding `Privacy - Location Always and When In Use Usage Description` and/or `Privacy - Location When In Use Usage Description` descriptions are provided in the Info.plist of the project. 
+Make sure the  `Privacy - Location When In Use Usage Description` description is provided in the Info.plist of the project. 
 
 
 ## Usage
@@ -50,8 +50,6 @@ YamaseeCore.shared.start(
 	apiKey: "YAMASEE_API_KEY",
 	baseUrl: "YAMASEE_BASE_URL",
 	env: .development | .production)
-	
-YamaseeCore.shared.delegate = self // where self conforms to `YamaseeCoreDelegate`
 ```
 
 #### Login
@@ -81,26 +79,22 @@ YamaseeCore.shared.logout()
 
 #### Turbulence
 
-SDK provides turbulence data in a GeoJSON format and as an array of models.<br>
-Aircraft type must be set. See [Aircraft](#aircraft) for more details.
+SDK provides turbulence data in a GeoJSON format and as an array of models.
 
 ```swift
 let json = YamaseeCore.shared.getTurbulenceGeoJson(
 	altRange: altRange,
-	timeSpan: timeSpan,
-	zoomLevel: 1)
+	timeSpan: timeSpan)
 ```
 ```swift
 let turbItems = YamaseeCore.shared.getTurbulence(
 	altRange: altRange,
-	timeSpan: timeSpan,
-	zoomLevel: 1)                     
+	timeSpan: timeSpan)                     
 ```
 
 #### Turbulence Alerts
 
-Get turbulence alerts ahead.<br>
-Aircraft type must be set. See [Aircraft](#aircraft) for more details.
+Get turbulence alerts ahead.
 
 ```swift
 let altitude: Measurement<UnitLength> = Measurement(value: location.altitude, unit: .meters)
@@ -121,15 +115,13 @@ let turbulences: [TurbulenceItem] = [
 
 #### Weather 
 
-The following weather data types are supported: clouds, lightning, wind-shear.<br>
-Aircraft type must be set. See [Aircraft](#aircraft) for more details.
+The following weather data types are supported: clouds, lightning, wind-shear.
 
 ```swift
 let weather: [Weather] = YamaseeCore.shared.getWeather(
 	types: [.cb, .lightning, .shear],
 	altRange: Constants.Altitude.maxRangeFeet,
-	timeSpan: timeSpan,
-	zoomLevel: 1)
+	timeSpan: timeSpan)
 ```
 
 Report wheather example
@@ -140,18 +132,16 @@ YamaseeCore.shared.reportWeather(
 	location: location)
 ```
 
-<div id="aircraft"></div>
-
 #### Aircraft
 
 To identify aircraft in the system set it from predefined in the SDK.
 
 ```swift
 // get all available aircraft types
-let aircrafts = YamaseeCore.shared.getAircraftTypes()
+let aircrafts = YamaseeCore.shared.aircrafts()
 
-// choose appropriate and set an aircraft id
-YamaseeCore.shared.setAircraft(aircraft: aircraft)
+// choose appropriate and set an aircraft
+YamaseeCore.shared.setAircraft(aircraft)
 ```
 
 #### Angle Position
@@ -178,7 +168,7 @@ YamaseeCore.shared.setSimulatorMode(isLocationSimulatorOn: true)
 YamaseeCore.shared.setPushSimulatedEnabled(env != .production)
 
 // set custom location for simulation
-YamaseeCore.shared.simulatedLocation(location: location)
+YamaseeCore.shared.simulatedLocation(location)
 
 // exit simulation mode
 YamaseeCore.shared.setSimulatorMode(isLocationSimulatorOn: false)
