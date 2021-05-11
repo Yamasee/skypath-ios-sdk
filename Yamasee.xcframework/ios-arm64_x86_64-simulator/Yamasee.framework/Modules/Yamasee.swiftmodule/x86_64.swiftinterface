@@ -369,6 +369,7 @@ public protocol YamaseeCoreDelegate : AnyObject {
   public var airborne: Swift.Bool {
     get
   }
+  public func acknowledgeTerms()
   @objc deinit
 }
 extension YamaseeCoreDelegate {
