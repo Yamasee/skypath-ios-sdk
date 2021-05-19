@@ -92,6 +92,12 @@ let turbItems = YamaseeCore.shared.getTurbulence(
 	timeSpan: timeSpan)                     
 ```
 
+To update how SDK updates data you can configure `DataMode`. For example, to save network traffic when you don't need SkyPath latest data, you can set SDK to `writeOnly` mode.
+
+```swift
+YamaseeCore.shared.dataMode = .writeOnly
+```
+
 #### Turbulence Alerts
 
 Get turbulence alerts ahead.

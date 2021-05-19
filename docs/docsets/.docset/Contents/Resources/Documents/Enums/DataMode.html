@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>GeneralError Enumeration Reference</title>
+    <title>DataMode Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -13,8 +13,8 @@
     <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/GeneralError" class="dashAnchor"></a>
-    <a title="GeneralError Enumeration Reference"></a>
+    <a name="//apple_ref/swift/Enum/DataMode" class="dashAnchor"></a>
+    <a title="DataMode Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html"> Docs</a> (61% documented)</p>
@@ -29,7 +29,7 @@
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" />
-        GeneralError Enumeration Reference
+        DataMode Enumeration Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -148,15 +148,15 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>GeneralError</h1>
+            <h1>DataMode</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">GeneralError</span> <span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:7Yamasee7YSErrorP">YSError</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">DataMode</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
 
                 </div>
               </div>
-            <p>General errors</p>
+            <p>To save network traffic SDK allows to set different working modes like <code>writeOnly</code> when SDK will not fetch new data from the server periodically. It can be useful when pilot is not on the map right now or SkyPath turbulence layer is turned off etc.</p>
 
           </section>
           <section class="section task-group-section">
@@ -165,9 +165,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Yamasee12GeneralErrorO32internetConnectionAppearsOfflineyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/internetConnectionAppearsOffline" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee12GeneralErrorO32internetConnectionAppearsOfflineyA2CmF">internetConnectionAppearsOffline</a>
+                    <a name="/s:7Yamasee8DataModeO7defaultyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/default" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee8DataModeO7defaultyA2CmF">default</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -175,14 +175,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Track, send and receive data</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">internetConnectionAppearsOffline</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="p">`</span><span class="nv">default</span><span class="p">`</span></code></pre>
 
                         </div>
                       </div>
@@ -192,9 +192,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Yamasee12GeneralErrorO15tooManyRequestsyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/tooManyRequests" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee12GeneralErrorO15tooManyRequestsyA2CmF">tooManyRequests</a>
+                    <a name="/s:7Yamasee8DataModeO9writeOnlyyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/writeOnly" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee8DataModeO9writeOnlyyA2CmF">writeOnly</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -202,95 +202,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>when trying to call same endpoint too many times and requests are restricted for some time</p>
+                        <p>Do not receive data, only track and send data</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">tooManyRequests</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee12GeneralErrorO13apiKeyInvalidyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/apiKeyInvalid" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee12GeneralErrorO13apiKeyInvalidyA2CmF">apiKeyInvalid</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>api key is invalid</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">apiKeyInvalid</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee12GeneralErrorO15upgradeRequiredyACSSSg_tcACmF"></a>
-                    <a name="//apple_ref/swift/Element/upgradeRequired(message:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee12GeneralErrorO15upgradeRequiredyACSSSg_tcACmF">upgradeRequired(message:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>sdk or app version is not supported, upgrade is required</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">upgradeRequired</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee12GeneralErrorO5otheryACs0C0_pSg_tcACmF"></a>
-                    <a name="//apple_ref/swift/Element/other(error:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee12GeneralErrorO5otheryACs0C0_pSg_tcACmF">other(error:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>other errors</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">other</span><span class="p">(</span><span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">writeOnly</span></code></pre>
 
                         </div>
                       </div>
