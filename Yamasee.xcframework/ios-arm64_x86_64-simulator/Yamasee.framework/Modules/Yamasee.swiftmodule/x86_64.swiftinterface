@@ -234,6 +234,26 @@ public enum PartnerLoginError : Yamasee.YSError {
   case userIdOrCompanyIdInvalid
   case general(error: Yamasee.GeneralError)
 }
+public enum StaticContentType {
+  case airports
+  case fakeTurbulences
+  case userGuide
+  case releaseNotes
+  case troubleshooting
+  case training
+  public static var appVersion: Swift.String {
+    get
+    set
+  }
+  public var fileUrl: Foundation.URL {
+    get
+  }
+  public static func == (a: Yamasee.StaticContentType, b: Yamasee.StaticContentType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public struct Hello : Swift.Codable {
   public var ver: Swift.String
   public var currentAppVersion: Swift.String
@@ -544,6 +564,8 @@ extension Yamasee.DataMode : Swift.Hashable {}
 extension Yamasee.DataMode : Swift.RawRepresentable {}
 extension Yamasee.YMLocationState : Swift.Equatable {}
 extension Yamasee.YMLocationState : Swift.Hashable {}
+extension Yamasee.StaticContentType : Swift.Equatable {}
+extension Yamasee.StaticContentType : Swift.Hashable {}
 extension Yamasee.AircraftSize : Swift.Equatable {}
 extension Yamasee.AircraftSize : Swift.Hashable {}
 extension Yamasee.AircraftSize : Swift.RawRepresentable {}
