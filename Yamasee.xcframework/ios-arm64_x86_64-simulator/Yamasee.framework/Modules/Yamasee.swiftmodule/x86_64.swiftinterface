@@ -1,16 +1,19 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Yamasee
 import CFNetwork
 import SystemConfiguration.CaptiveNetwork
+import CommonCrypto
 import CoreLocation
 import CoreMotion
+import CryptoKit
 import Foundation
 import GameKit
 import MapKit
 import Swift
 import SystemConfiguration
 import UIKit
+import UserNotifications
 import WebKit
 @_exported import Yamasee
 public class FlightPlan : Swift.Codable {
@@ -84,6 +87,17 @@ public struct RawDataResponseRequest {
   public let type: Yamasee.RawDataTriggerType
   public let startTs: Swift.Int
   public let duration: Swift.Int
+}
+public struct AlertQuery {
+  public var lat: Swift.Double
+  public var long: Swift.Double
+  public var altitude: Foundation.Measurement<Foundation.UnitLength>
+  public let heading: Foundation.Measurement<Foundation.UnitAngle>
+  public let timeSpan: Swift.Int
+  public let distance: Foundation.Measurement<Foundation.UnitLength>
+  public let angleSpan: Foundation.Measurement<Foundation.UnitAngle>
+  public init(lat: Swift.Double, long: Swift.Double, altitude: Foundation.Measurement<Foundation.UnitLength>, heading: Foundation.Measurement<Foundation.UnitAngle>, timeSpan: Swift.Int, distance: Foundation.Measurement<Foundation.UnitLength> = .init(value: 100, unit: UnitLength.nauticalMiles), angleSpan: Foundation.Measurement<Foundation.UnitAngle> = .init(value: 15, unit: UnitAngle.degrees))
+  public init(forMonitoringTimeSpan timeSpan: Swift.Int = 120, distance: Foundation.Measurement<Foundation.UnitLength> = .init(value: 100, unit: UnitLength.nauticalMiles), angleSpan: Foundation.Measurement<Foundation.UnitAngle> = .init(value: 15, unit: UnitAngle.degrees))
 }
 public struct User : Swift.Codable {
   public let id: Swift.String
@@ -212,6 +226,13 @@ public struct SettingsValue<T> : Swift.Codable where T : Swift.Decodable, T : Sw
   public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
 }
+@objc @_inheritsConvenienceInitializers public class YMLocalNotificationManager : ObjectiveC.NSObject {
+  public static let shared: Yamasee.YMLocalNotificationManager
+  public func checkNotificationSettings(completion: ((UserNotifications.UNAuthorizationStatus) -> Swift.Void)? = nil)
+  public func scheduleNotification(title: Swift.String, body: Swift.String, sound: Swift.String? = nil)
+  @objc override dynamic public init()
+  @objc deinit
+}
 @available(*, deprecated, message: "Use YMLocation instead")
 public typealias YamaseeLocation = Yamasee.YMLocation
 @available(*, deprecated, message: "Use YMLocationState instead")
@@ -229,6 +250,17 @@ public enum YMLocationState {
 public struct YMLocation {
   public let location: CoreLocation.CLLocation?
   public let state: Yamasee.YMLocationState
+}
+public struct AlertResult {
+  public let at: [Yamasee.TurbulenceItem]
+  public let atMaxSev: Yamasee.TurbulenceSeverity
+  public let below: [Yamasee.TurbulenceItem]
+  public let belowMaxSev: Yamasee.TurbulenceSeverity
+  public let above: [Yamasee.TurbulenceItem]
+  public let aboveMaxSev: Yamasee.TurbulenceSeverity
+}
+extension AlertResult : Swift.Equatable {
+  public static func == (lhs: Yamasee.AlertResult, rhs: Yamasee.AlertResult) -> Swift.Bool
 }
 public enum PartnerLoginError : Yamasee.YSError {
   case userIdOrCompanyIdInvalid
@@ -288,6 +320,7 @@ public protocol YamaseeCoreDelegate : AnyObject {
   func serverReachabilityUpdate(isReachable: Swift.Bool)
   func feedbackRequested(with request: Yamasee.RawDataResponseRequest, completion: @escaping (Yamasee.RawDataUserResponse?) -> Swift.Void)
   func newDataFetchingFailed(with error: Yamasee.YSError)
+  func newAlert(_ alert: Yamasee.AlertResult)
 }
 @_hasMissingDesignatedInitializers public class YamaseeCore {
   public static let shared: Yamasee.YamaseeCore
@@ -358,6 +391,12 @@ public protocol YamaseeCoreDelegate : AnyObject {
   public func getAlertTiles(lat: Swift.Double, long: Swift.Double, altitude: Foundation.Measurement<Foundation.UnitLength>, heading: Foundation.Measurement<Foundation.UnitAngle>, timeSpan: Swift.Int, distance: Foundation.Measurement<Foundation.UnitLength> = .init(value: 100, unit: UnitLength.nauticalMiles), angleSpan: Foundation.Measurement<Foundation.UnitAngle> = .init(value: 15, unit: UnitAngle.degrees)) -> (alertTilesAtAlt: [Yamasee.TurbulenceItem], alertTilesBelow: [Yamasee.TurbulenceItem], alertTilesAbove: [Yamasee.TurbulenceItem])
   public func getRouteAlerts(route: [CoreLocation.CLLocation], widthAround: Foundation.Measurement<Foundation.UnitLength> = .init(value: 0, unit: UnitLength.nauticalMiles), altitude: Foundation.Measurement<Foundation.UnitLength>, timeSpan: Swift.Int) -> (alertTilesAtAlt: [Yamasee.TurbulenceItem], alertTilesBelow: [Yamasee.TurbulenceItem], alertTilesAbove: [Yamasee.TurbulenceItem])
   public func alertedTurbulenceSeverity(_ sev: Yamasee.TurbulenceSeverity)
+  public func getAlerts(with query: Yamasee.AlertQuery) -> Yamasee.AlertResult
+  public func startMonitoringAlerts(with query: Yamasee.AlertQuery? = nil)
+  public func stopMonitoringAlerts()
+  public var isMonitoringAlerts: Swift.Bool {
+    get
+  }
   public func getMyFlight(completion: @escaping (Yamasee.FlightPlan?, Swift.Error?) -> Swift.Void)
   public func getFlight(byId id: Swift.String, completion: @escaping (Yamasee.FlightPlan?, Swift.Error?) -> Swift.Void)
   public func getFlights(from: Foundation.Date, to: Foundation.Date, completion: @escaping ([Yamasee.FlightPlan]?, Swift.Error?) -> Swift.Void)
@@ -403,6 +442,7 @@ public protocol YamaseeCoreDelegate : AnyObject {
     get
   }
   public func acknowledgeTerms()
+  public var allowsBackgroundLocationUpdates: Swift.Bool
   @objc deinit
 }
 extension YamaseeCoreDelegate {
@@ -420,6 +460,7 @@ extension YamaseeCoreDelegate {
   public func serverReachabilityUpdate(isReachable: Swift.Bool)
   public func feedbackRequested(with request: Yamasee.RawDataResponseRequest, completion: @escaping (Yamasee.RawDataUserResponse?) -> Swift.Void)
   public func newDataFetchingFailed(with error: Yamasee.YSError)
+  public func newAlert(_ alert: Yamasee.AlertResult)
 }
 extension YamaseeCore {
   public func setSimulatorMode(isLocationSimulatorOn: Swift.Bool)

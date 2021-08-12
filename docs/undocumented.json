@@ -169,6 +169,20 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Alert/AlertQuery.swift",
+      "line": 29,
+      "symbol": "AlertQuery.init(lat:long:altitude:heading:timeSpan:distance:angleSpan:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Alert/AlertQuery.swift",
+      "line": 46,
+      "symbol": "AlertQuery.init(forMonitoringTimeSpan:distance:angleSpan:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/Environment.swift",
       "line": 16,
       "symbol": "Environment.development",
@@ -646,15 +660,22 @@
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
-      "line": 125,
+      "line": 131,
       "symbol": "YamaseeCore.shared",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
-      "line": 126,
+      "line": 132,
       "symbol": "YamaseeCore.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
+      "line": 971,
+      "symbol": "YamaseeCore.isMonitoringAlerts",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     }

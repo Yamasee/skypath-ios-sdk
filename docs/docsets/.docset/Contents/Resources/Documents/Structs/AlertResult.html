@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Aircraft Structure Reference</title>
+    <title>AlertResult Structure Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -13,8 +13,8 @@
     <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/swift/Struct/Aircraft" class="dashAnchor"></a>
-    <a title="Aircraft Structure Reference"></a>
+    <a name="//apple_ref/swift/Struct/AlertResult" class="dashAnchor"></a>
+    <a title="AlertResult Structure Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html"> Docs</a> (64% documented)</p>
@@ -29,7 +29,7 @@
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" />
-        Aircraft Structure Reference
+        AlertResult Structure Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -157,15 +157,16 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Aircraft</h1>
+            <h1>AlertResult</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Aircraft</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AlertResult</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">AlertResult</span><span class="p">:</span> <span class="kt">Equatable</span></code></pre>
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>Result of alerts search by <code><a href="../Structs/AlertQuery.html">AlertQuery</a></code>.</p>
 
           </section>
           <section class="section task-group-section">
@@ -174,9 +175,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Yamasee8AircraftV8aircraftSSvp"></a>
-                    <a name="//apple_ref/swift/Property/aircraft" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee8AircraftV8aircraftSSvp">aircraft</a>
+                    <a name="/s:7Yamasee11AlertResultV2atSayAA14TurbulenceItemVGvp"></a>
+                    <a name="//apple_ref/swift/Property/at" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee11AlertResultV2atSayAA14TurbulenceItemVGvp">at</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -184,14 +185,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>At current tile altitude turbulence found.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">aircraft</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">at</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/TurbulenceItem.html">TurbulenceItem</a></span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -201,9 +202,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Yamasee8AircraftV11descriptionSSvp"></a>
-                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee8AircraftV11descriptionSSvp">description</a>
+                    <a name="/s:7Yamasee11AlertResultV8atMaxSevAA18TurbulenceSeverityOvp"></a>
+                    <a name="//apple_ref/swift/Property/atMaxSev" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee11AlertResultV8atMaxSevAA18TurbulenceSeverityOvp">atMaxSev</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -211,14 +212,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Max turbulence severity at current tile altitude.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">atMaxSev</span><span class="p">:</span> <span class="kt"><a href="../Enums/TurbulenceSeverity.html">TurbulenceSeverity</a></span></code></pre>
 
                         </div>
                       </div>
@@ -228,9 +229,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Yamasee8AircraftV4sizeAA0B4SizeOvp"></a>
-                    <a name="//apple_ref/swift/Property/size" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee8AircraftV4sizeAA0B4SizeOvp">size</a>
+                    <a name="/s:7Yamasee11AlertResultV5belowSayAA14TurbulenceItemVGvp"></a>
+                    <a name="//apple_ref/swift/Property/below" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee11AlertResultV5belowSayAA14TurbulenceItemVGvp">below</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -238,14 +239,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Below current tile altitude turbulence found.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">size</span><span class="p">:</span> <span class="kt"><a href="../Enums/AircraftSize.html">AircraftSize</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">below</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/TurbulenceItem.html">TurbulenceItem</a></span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -255,9 +256,90 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Se4fromxs7Decoder_p_tKcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Se4fromxs7Decoder_p_tKcfc">init(from:<wbr>)</a>
+                    <a name="/s:7Yamasee11AlertResultV11belowMaxSevAA18TurbulenceSeverityOvp"></a>
+                    <a name="//apple_ref/swift/Property/belowMaxSev" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee11AlertResultV11belowMaxSevAA18TurbulenceSeverityOvp">belowMaxSev</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Max turbulence severity below current tile altitude.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">belowMaxSev</span><span class="p">:</span> <span class="kt"><a href="../Enums/TurbulenceSeverity.html">TurbulenceSeverity</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee11AlertResultV5aboveSayAA14TurbulenceItemVGvp"></a>
+                    <a name="//apple_ref/swift/Property/above" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee11AlertResultV5aboveSayAA14TurbulenceItemVGvp">above</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Above current tile altitude turbulence found.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">above</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/TurbulenceItem.html">TurbulenceItem</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee11AlertResultV11aboveMaxSevAA18TurbulenceSeverityOvp"></a>
+                    <a name="//apple_ref/swift/Property/aboveMaxSev" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee11AlertResultV11aboveMaxSevAA18TurbulenceSeverityOvp">aboveMaxSev</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Max turbulence severity above current tile altitude.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">aboveMaxSev</span><span class="p">:</span> <span class="kt"><a href="../Enums/TurbulenceSeverity.html">TurbulenceSeverity</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SQ2eeoiySbx_xtFZ"></a>
+                    <a name="//apple_ref/swift/Method/==(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SQ2eeoiySbx_xtFZ">==(_:<wbr>_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -271,7 +353,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">from</span> <span class="nv">decoder</span><span class="p">:</span> <span class="kt">Decoder</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">==</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">AlertResult</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">AlertResult</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
