@@ -3,7 +3,7 @@
   
 # SkyPath iOS SDK
 
-SkyPath's goal is delivery of accurate real-time turbulence data, based on crowdsourcing [https://skypath.app](https://skypath.app/)
+SkyPath's goal is delivery of accurate real-time turbulence data, based on crowdsourcing [https://skypath.io](https://skypath.io/)
 
 ## Description
 
