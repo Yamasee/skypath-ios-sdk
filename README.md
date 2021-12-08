@@ -1,13 +1,13 @@
 ![SkyPath: Turbulence alert system](./docs-logo.jpg)
 [![Version](https://img.shields.io/github/v/release/Yamasee/skypath-ios-sdk)]()
   
-# SkyPath by Yamasee iOS SDK
+# SkyPath iOS SDK
 
 SkyPath's goal is delivery of accurate real-time turbulence data, based on crowdsourcing [https://skypath.app](https://skypath.app/)
 
 ## Description
 
-Yamasee supplies its partners who wish to integrate SkyPath technology, an iOS SDK that enables rapid and seamless integration into existing iOS apps. The SDK doesn’t assume anything regarding the app UI, and supplies needed abstraction for SkyPath push and pull server REST API communication, turbulence measurements, and turbulence alerts.
+SkyPath iOS SDK enables rapid and seamless integration of SkyPath technology into existing iOS apps. The SDK doesn’t assume anything regarding the app UI, and supplies needed abstraction for SkyPath push and pull server REST API communication, turbulence measurements, and turbulence alerts.
 
 SDK API [documentation](https://yamasee.github.io/skypath-ios-sdk)
 
@@ -40,8 +40,8 @@ Make sure the  `Privacy - Location When In Use Usage Description` description is
 
 #### Setup
 
-You need to get an API key and server URL from Yamasee to use the SDK. <br>
-You can [contact us] (https://skypath.app/contact/) and request a demo. <br>
+You need to get an API key and server URL to use the SDK. <br>
+You can [contact us] (https://skypath.io/contact/) and request a demo. <br>
 
 The SDK has an entry point class `YamaseeCore`, start the SDK early on app launch (for example in application did finish delegate method) before making other API calls.
 
@@ -54,7 +54,7 @@ YamaseeCore.shared.start(
 
 #### Login
 
-You need to identify the user in the system by login as a partner, where `userId` is a pilot identifier, and `companyId` is provided to you by Yamasee.
+You need to identify the user in the system by login as a partner, where `userId` is a pilot identifier, and `companyId` is provided to you.
 
 ```swift
 guard !YamaseeCore.shared.isLoggedIn() else {
@@ -200,4 +200,4 @@ YamaseeCore.shared.setLogger(
 ## License
 
 Copyright © Yamasee LTD 2021. All rights reserved. 
-See [Terms & Conditions](https://skypath.app/terms/).
+See [Terms & Conditions](https://skypath.io/terms/).
