@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/Yamasee-Swift.h</key>
 		<data>
-		A0I7bH3ff6d1I2+SUFfshO3enco=
+		Bh68igaXRWV25NfdFbQnRzP5boo=
 		</data>
 		<key>Headers/Yamasee.h</key>
 		<data>
@@ -14,31 +14,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		gCvVpTMTax0pwuPNYCoTPfHzwhY=
+		Uo664/0c4Y6JyIgAnNwWBYhb54s=
 		</data>
 		<key>Modules/Yamasee.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		KIx1ySCZptLs4LsiJU5zVHpU/B8=
+		+J7HdMulbaPrhpzzbHDgmraIJoQ=
 		</data>
 		<key>Modules/Yamasee.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		0pP5uvZ12Iv7LbdzBiJvxHQjRck=
+		mpBzmOfdxq2ssQcxl5qu1Zmw8pk=
 		</data>
 		<key>Modules/Yamasee.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		lLFzg/d9AkE17vh5/MytSECg2eo=
+		BKQvyR+N7oAJJEQT0g0uev7vNm8=
 		</data>
 		<key>Modules/Yamasee.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		KIx1ySCZptLs4LsiJU5zVHpU/B8=
+		+J7HdMulbaPrhpzzbHDgmraIJoQ=
 		</data>
 		<key>Modules/Yamasee.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		0pP5uvZ12Iv7LbdzBiJvxHQjRck=
+		mpBzmOfdxq2ssQcxl5qu1Zmw8pk=
 		</data>
 		<key>Modules/Yamasee.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		lLFzg/d9AkE17vh5/MytSECg2eo=
+		BKQvyR+N7oAJJEQT0g0uev7vNm8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>aircrafts.json</key>
 		<data>
-		/19i4Qpa8e2wDXbfKKgA7G2PsvM=
+		1dd7cmkus5qcJCfMAoqXULjaGPw=
 		</data>
 		<key>airports.json</key>
 		<data>
@@ -59,7 +59,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yQ0MyzIHdfMkjQA+jp0VeswOrziq7jlL69ajXIfldXk=
+			VIvo8jOQ18YefuUd9Fkne9lhbPoiSzK9NM1MTL8oRBw=
 			</data>
 		</dict>
 		<key>Headers/Yamasee.h</key>
@@ -73,42 +73,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RUFtSxyv4Dz+VvQWogoLTA5qPr0Mgni3oBa5j0wj4UY=
+			Od0jMVFIPwbfQ+Hv29SeZYNcdHHtzrL3idzobT2Ty0w=
 			</data>
 		</dict>
 		<key>Modules/Yamasee.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Lkj0lrfX+RLWtE7QGfwGmgznxPgpSZ5jpdvnjrMDlto=
+			neCcMQUUB313UGnGmK3vBZi28tijmCzoWi2ihFER3rA=
 			</data>
 		</dict>
 		<key>Modules/Yamasee.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jnYYs7CE5fsJKWL0PSYskQV9ifHMFkv5UhLcGyOLawo=
+			eqUfBebPNdfpIpl6zSgiHkXd9N1qOEwKI7uHBQS5dQo=
 			</data>
 		</dict>
 		<key>Modules/Yamasee.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RUFtSxyv4Dz+VvQWogoLTA5qPr0Mgni3oBa5j0wj4UY=
+			Od0jMVFIPwbfQ+Hv29SeZYNcdHHtzrL3idzobT2Ty0w=
 			</data>
 		</dict>
 		<key>Modules/Yamasee.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Lkj0lrfX+RLWtE7QGfwGmgznxPgpSZ5jpdvnjrMDlto=
+			neCcMQUUB313UGnGmK3vBZi28tijmCzoWi2ihFER3rA=
 			</data>
 		</dict>
 		<key>Modules/Yamasee.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jnYYs7CE5fsJKWL0PSYskQV9ifHMFkv5UhLcGyOLawo=
+			eqUfBebPNdfpIpl6zSgiHkXd9N1qOEwKI7uHBQS5dQo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -122,7 +122,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6y+l6IZNBrhFW2aovLvO947oX+5kN1muOOrOG3hqzdU=
+			5vm9Jf5xgvf/v6b5PPCbawfXA9cTr1ZRc7hakpAoyKc=
 			</data>
 		</dict>
 		<key>airports.json</key>

@@ -68,7 +68,7 @@ extension YamaseeViewController {
         let apiKey = "API_KEY"
         let baseUrl = "BASE_URL"
         
-        YamaseeCore.shared.setLogger(isOn: true, isSymbol: true, errorOn: true, infoOn: true, warningOn: true, networkOn: true)
+        YamaseeCore.shared.setLogger(isOn: true, errorOn: true, infoOn: true, warningOn: true, networkOn: true)
         YamaseeCore.shared.delegate = self
         YamaseeCore.shared.start(apiKey: apiKey, baseUrl: baseUrl, env: .development)
         YamaseeCore.shared.setPushSimulatedEnabled(false)

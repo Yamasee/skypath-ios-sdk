@@ -13,8 +13,8 @@ SDK API [documentation](https://yamasee.github.io/skypath-ios-sdk)
 
 ## Requirements
 
-- iOS 11.0+
-- Xcode 12.5+
+- iOS 12.0+
+- Xcode 13.0+
 - Swift 5.0+
 
 ## Installation
@@ -77,19 +77,46 @@ YamaseeCore.shared.partnerLogin(
 YamaseeCore.shared.logout()
 ```
 
+#### Flight
+
+Provide current flight information via `startFlight(_:)`. 
+
+```swift
+let flight = Flight(
+	dep: "ICAO",
+	dest: "ICAO",
+	fnum: "FLIGHT_NUMBER")
+		
+YamaseeCore.shared.startFlight(flight)
+```
+When flight is ended call `endFlight()`.
+
+```swift
+YamaseeCore.shared.endFlight()
+```
+
+
 #### Turbulence
 
-SDK provides turbulence data in a GeoJSON format and as an array of models.
+Use `TurbulenceQuery` to specify how you would like to filter data and how to receive the result - as a GeoJSON or as an array of models. See `TurbulenceQuery` and `TurbulenceResult` docs for more details.
 
 ```swift
-let json = YamaseeCore.shared.getTurbulenceGeoJson(
+let query = TurbulenceQuery(
+	type: .server,
+	timeSpan: timeSpan,
 	altRange: altRange,
-	timeSpan: timeSpan)
-```
-```swift
-let turbItems = YamaseeCore.shared.getTurbulence(
-	altRange: altRange,
-	timeSpan: timeSpan)                     
+	resultOptions: .items,
+	excludeTiles: excludeTiles,
+	aggregate: aggregate)
+
+let result = dependencies.turbulenceManager.turbulence(with: query)
+
+switch result {
+	case .success(let result):
+		print(result.items)
+	case .failure(let error):
+		print(error)
+}
 ```
 
 To update how SDK updates data you can configure `DataMode`. For example, to save network traffic when you don't need SkyPath latest data, you can set SDK to `writeOnly` mode.
@@ -98,25 +125,33 @@ To update how SDK updates data you can configure `DataMode`. For example, to sav
 YamaseeCore.shared.dataMode = .writeOnly
 ```
 
+Specify how much time of initial data should be fetched on start. To reduce network traffic you can set less time. If set new time higher than previous during app running the initial data will be refetched immediately.
+
+```swift
+YamaseeCore.shared.dataHistoryTime = .halfHour
+```
+
 #### Turbulence Alerts
 
-Get turbulence alerts ahead.
+Use `AlertQuery` to get turbulence alerts ahead. See `AlertQuery` and `AlertResult` docs for more details. Route coordinates and beam modes are supported.
 
 ```swift
 let altitude: Measurement<UnitLength> = Measurement(value: location.altitude, unit: .meters)
-        
-let tiles = YamaseeCore.shared.getAlertTiles(
-	lat: location.coordinate.latitude,
-	long: location.coordinate.longitude,
+	
+let query = AlertQuery(
 	altitude: altitude,
-	heading: Measurement(value: location.course, unit: .degrees),
-	timeSpan: timeSpan)
+	timeSpan: timeSpan,
+	coordinates: route.map { $0.coordinate },
+	widthAround: widthAround)
 
-let turbulences: [TurbulenceItem] = [
-	tiles.alertTilesAbove, 
-	tiles.alertTilesAtAlt, 
-	tiles.alertTilesBelow]
-	.flatMap { $0 }
+let result = dependencies.alertManager.alerts(with: query)
+
+switch result {
+	case .success(let result):
+		print(result)
+	case .failure(let error):
+		print(error)
+}
 ```
 
 #### Weather 
@@ -182,22 +217,19 @@ YamaseeCore.shared.setSimulatorMode(isLocationSimulatorOn: false)
 
 #### Logger
 
-You can use logger to get more debug logs in a console.
+Disable logging if needed
 
 ```swift
-YamaseeCore.shared.setLogger(
-	isOn: true, 
-	isSymbol: true, 
-	errorOn: true, 
-	infoOn: true, 
-	warningOn: true, 
-	networkOn: true) { message in
-		print(message)
-}
+YMLogger.shared.enabled = false
+```
+Get log files urls to export for debug
+
+```swift
+let fileUrls = YMLogger.shared.logFileUrls()
 ```
 
 
 ## License
 
-Copyright © Yamasee LTD 2021. All rights reserved. 
+Copyright © Yamasee LTD 2022. All rights reserved. 
 See [Terms & Conditions](https://skypath.io/terms/).

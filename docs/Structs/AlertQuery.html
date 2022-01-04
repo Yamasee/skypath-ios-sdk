@@ -17,7 +17,7 @@
     <a title="AlertQuery Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (64% documented)</p>
+        <p><a href="../index.html"> Docs</a> (61% documented)</p>
         <p class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -42,6 +42,9 @@
                 <a href="../Classes/YMLocalNotificationManager.html">YMLocalNotificationManager</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/YMLogger.html">YMLogger</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/YamaseeCore.html">YamaseeCore</a>
               </li>
             </ul>
@@ -51,6 +54,18 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Enums/AircraftSize.html">AircraftSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AirportDataTrend.html">AirportDataTrend</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AlertError.html">AlertError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AlertResultType.html">AlertResultType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DataHistoryTime.html">DataHistoryTime</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/DataMode.html">DataMode</a>
@@ -69,6 +84,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/PartnerLoginError.html">PartnerLoginError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/QueryError.html">QueryError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TurbulenceResultType.html">TurbulenceResultType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/TurbulenceSeverity.html">TurbulenceSeverity</a>
@@ -110,16 +131,49 @@
                 <a href="../Structs/Airport.html">Airport</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/AirportData.html">AirportData</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/AlertQuery.html">AlertQuery</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/AlertResult.html">AlertResult</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/BrakingAction.html">BrakingAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:7Yamasee15CodableLocationV">CodableLocation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Flight.html">Flight</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/LandingDelay.html">LandingDelay</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/LandingTimeReport.html">LandingTimeReport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Tile.html">Tile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TilesBeamQuery.html">TilesBeamQuery</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/Traffic.html">Traffic</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/TurbulenceItem.html">TurbulenceItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TurbulenceQuery.html">TurbulenceQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TurbulenceResult.html">TurbulenceResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TurbulenceResultOptions.html">TurbulenceResultOptions</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/User.html">User</a>
@@ -174,9 +228,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Yamasee10AlertQueryV3latSdvp"></a>
-                    <a name="//apple_ref/swift/Property/lat" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee10AlertQueryV3latSdvp">lat</a>
+                    <a name="/s:7Yamasee10AlertQueryV10coordinateSo22CLLocationCoordinate2DVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/coordinate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee10AlertQueryV10coordinateSo22CLLocationCoordinate2DVSgvp">coordinate</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -184,41 +238,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Latitude</p>
+                        <p>Current location coordinate. Can be nil when providing <code><a href="../Structs/AlertQuery.html#/s:7Yamasee10AlertQueryV11coordinatesSaySo22CLLocationCoordinate2DVGSgvp">coordinates</a></code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">lat</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Yamasee10AlertQueryV4longSdvp"></a>
-                    <a name="//apple_ref/swift/Property/long" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee10AlertQueryV4longSdvp">long</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Longitude</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">long</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">coordinate</span><span class="p">:</span> <span class="kt">CLLocationCoordinate2D</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -238,7 +265,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Altitude</p>
+                        <p>Altitude to search turbulence alerts in.</p>
 
                       </div>
                       <div class="declaration">
@@ -255,9 +282,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Yamasee10AlertQueryV7heading10Foundation11MeasurementVySo11NSUnitAngleCGvp"></a>
+                    <a name="/s:7Yamasee10AlertQueryV7heading10Foundation11MeasurementVySo11NSUnitAngleCGSgvp"></a>
                     <a name="//apple_ref/swift/Property/heading" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee10AlertQueryV7heading10Foundation11MeasurementVySo11NSUnitAngleCGvp">heading</a>
+                    <a class="token" href="#/s:7Yamasee10AlertQueryV7heading10Foundation11MeasurementVySo11NSUnitAngleCGSgvp">heading</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -265,14 +292,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Heading</p>
+                        <p>Heading. Can be nil when providing <code><a href="../Structs/AlertQuery.html#/s:7Yamasee10AlertQueryV11coordinatesSaySo22CLLocationCoordinate2DVGSgvp">coordinates</a></code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">heading</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitAngle</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">heading</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitAngle</span><span class="o">&gt;</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -363,9 +390,63 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Yamasee10AlertQueryV3lat4long8altitude7heading8timeSpan8distance05angleI0ACSd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGAMySo0N5AngleCGSiApStcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(lat:long:altitude:heading:timeSpan:distance:angleSpan:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Yamasee10AlertQueryV3lat4long8altitude7heading8timeSpan8distance05angleI0ACSd_Sd10Foundation11MeasurementVySo12NSUnitLengthCGAMySo0N5AngleCGSiApStcfc">init(lat:<wbr>long:<wbr>altitude:<wbr>heading:<wbr>timeSpan:<wbr>distance:<wbr>angleSpan:<wbr>)</a>
+                    <a name="/s:7Yamasee10AlertQueryV11coordinatesSaySo22CLLocationCoordinate2DVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/coordinates" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee10AlertQueryV11coordinatesSaySo22CLLocationCoordinate2DVGSgvp">coordinates</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set coordinates to search turbulence around them only. Coordinate will be translated into tile area and returned turbulence inside tile area that meets other query criterias. Use <code><a href="../Structs/AlertQuery.html#/s:7Yamasee10AlertQueryV11widthAround10Foundation11MeasurementVySo12NSUnitLengthCGSgvp">widthAround</a></code> to set how far search from coordinates.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">coordinates</span><span class="p">:</span> <span class="p">[</span><span class="kt">CLLocationCoordinate2D</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee10AlertQueryV11widthAround10Foundation11MeasurementVySo12NSUnitLengthCGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/widthAround" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee10AlertQueryV11widthAround10Foundation11MeasurementVySo12NSUnitLengthCGSgvp">widthAround</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Use only when <code><a href="../Structs/AlertQuery.html#/s:7Yamasee10AlertQueryV11coordinatesSaySo22CLLocationCoordinate2DVGSgvp">coordinates</a></code> is set. Determine how far from <code><a href="../Structs/AlertQuery.html#/s:7Yamasee10AlertQueryV11coordinatesSaySo22CLLocationCoordinate2DVGSgvp">coordinates</a></code> to search for turbulence.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">widthAround</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Yamasee10AlertQueryV10coordinate8altitude7heading8timeSpan8distance05angleH011coordinates11widthAroundACSo22CLLocationCoordinate2DVSg_10Foundation11MeasurementVySo12NSUnitLengthCGAQySo0R5AngleCGSgSiAtWSayAMGSgATSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(coordinate:altitude:heading:timeSpan:distance:angleSpan:coordinates:widthAround:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Yamasee10AlertQueryV10coordinate8altitude7heading8timeSpan8distance05angleH011coordinates11widthAroundACSo22CLLocationCoordinate2DVSg_10Foundation11MeasurementVySo12NSUnitLengthCGAQySo0R5AngleCGSgSiAtWSayAMGSgATSgtcfc">init(coordinate:<wbr>altitude:<wbr>heading:<wbr>timeSpan:<wbr>distance:<wbr>angleSpan:<wbr>coordinates:<wbr>widthAround:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -380,13 +461,14 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">lat</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span>
-            <span class="nv">long</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">coordinate</span><span class="p">:</span> <span class="kt">CLLocationCoordinate2D</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
             <span class="nv">altitude</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;</span><span class="p">,</span>
-            <span class="nv">heading</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitAngle</span><span class="o">&gt;</span><span class="p">,</span>
+            <span class="nv">heading</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitAngle</span><span class="o">&gt;</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
             <span class="nv">timeSpan</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
             <span class="nv">distance</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;</span> <span class="o">=</span> <span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">unit</span><span class="p">:</span> <span class="kt">UnitLength</span><span class="o">.</span><span class="n">nauticalMiles</span><span class="p">),</span>
-            <span class="nv">angleSpan</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitAngle</span><span class="o">&gt;</span> <span class="o">=</span> <span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="nv">unit</span><span class="p">:</span> <span class="kt">UnitAngle</span><span class="o">.</span><span class="n">degrees</span><span class="p">))</span></code></pre>
+            <span class="nv">angleSpan</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitAngle</span><span class="o">&gt;</span> <span class="o">=</span> <span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="nv">unit</span><span class="p">:</span> <span class="kt">UnitAngle</span><span class="o">.</span><span class="n">degrees</span><span class="p">),</span>
+            <span class="nv">coordinates</span><span class="p">:</span> <span class="p">[</span><span class="kt">CLLocationCoordinate2D</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+            <span class="nv">widthAround</span><span class="p">:</span> <span class="kt">Measurement</span><span class="o">&lt;</span><span class="kt">UnitLength</span><span class="o">&gt;</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -427,7 +509,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://skypath.app" target="_blank" rel="external">Yamasee LTD</a>. All rights reserved. (Last updated: 2021-08-12)</p>
+          <p>&copy; 2022 <a class="link" href="https://skypath.app" target="_blank" rel="external">Yamasee LTD</a>. All rights reserved. (Last updated: 2022-01-04)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
