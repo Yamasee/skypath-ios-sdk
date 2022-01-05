@@ -109,7 +109,7 @@ let query = TurbulenceQuery(
 	excludeTiles: excludeTiles,
 	aggregate: aggregate)
 
-let result = dependencies.turbulenceManager.turbulence(with: query)
+let result = YamaseeCore.shared.turbulence(with: query)
 
 switch result {
 	case .success(let result):
@@ -144,7 +144,7 @@ let query = AlertQuery(
 	coordinates: route.map { $0.coordinate },
 	widthAround: widthAround)
 
-let result = dependencies.alertManager.alerts(with: query)
+let result = YamaseeCore.shared.alerts(with: query)
 
 switch result {
 	case .success(let result):

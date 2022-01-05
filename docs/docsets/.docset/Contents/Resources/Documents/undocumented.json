@@ -2,35 +2,35 @@
   "warnings": [
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Extensions/CLLocation/CLLocation+Codable.swift",
-      "line": 12,
+      "line": 15,
       "symbol": "CodableLocation",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Extensions/Foundation/NSError/NSError+Poor.swift",
-      "line": 14,
+      "line": 17,
       "symbol": "NSError.isNoConnectionError",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Extensions/Foundation/NSError/NSError+Poor.swift",
-      "line": 18,
+      "line": 21,
       "symbol": "NSError.noConnectionCodes",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Extensions/Foundation/NSError/NSError+Poor.swift",
-      "line": 37,
+      "line": 40,
       "symbol": "NSError.isServiceUnavailableError",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Extensions/Foundation/NSError/NSError+Poor.swift",
-      "line": 41,
+      "line": 44,
       "symbol": "NSError.serviceUnavailableCodes",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
@@ -254,56 +254,56 @@
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/AirportData.swift",
-      "line": 11,
+      "line": 14,
       "symbol": "AirportDataTrend",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/AirportData.swift",
-      "line": 13,
+      "line": 16,
       "symbol": "AirportDataTrend.negative",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/AirportData.swift",
-      "line": 14,
+      "line": 17,
       "symbol": "AirportDataTrend.neutral",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/AirportData.swift",
-      "line": 15,
+      "line": 18,
       "symbol": "AirportDataTrend.positive",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/AirportData.swift",
-      "line": 18,
+      "line": 24,
       "symbol": "AirportData",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/AirportData.swift",
-      "line": 20,
+      "line": 26,
       "symbol": "AirportData.weather",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/AirportData.swift",
-      "line": 21,
+      "line": 27,
       "symbol": "AirportData.brakingAction",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/AirportData.swift",
-      "line": 22,
+      "line": 28,
       "symbol": "AirportData.landingDelay",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
@@ -345,21 +345,21 @@
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/BrakingAction.swift",
-      "line": 11,
+      "line": 14,
       "symbol": "BrakingAction",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/BrakingAction.swift",
-      "line": 13,
+      "line": 16,
       "symbol": "BrakingAction.trend",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/BrakingAction.swift",
-      "line": 14,
+      "line": 17,
       "symbol": "BrakingAction.reports",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
@@ -450,56 +450,56 @@
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/LandingDelay.swift",
-      "line": 11,
+      "line": 14,
       "symbol": "LandingDelay",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/LandingDelay.swift",
-      "line": 13,
+      "line": 16,
       "symbol": "LandingDelay.trend",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/LandingDelay.swift",
-      "line": 14,
+      "line": 17,
       "symbol": "LandingDelay.reports",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/LandingTimeReport.swift",
-      "line": 11,
+      "line": 14,
       "symbol": "LandingTimeReport",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/LandingTimeReport.swift",
-      "line": 13,
+      "line": 16,
       "symbol": "LandingTimeReport.landingTime",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/LandingTimeReport.swift",
-      "line": 14,
+      "line": 17,
       "symbol": "LandingTimeReport.ts",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/LandingTimeReport.swift",
-      "line": 15,
+      "line": 18,
       "symbol": "LandingTimeReport.airportICAO",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Model/LandingTimeReport.swift",
-      "line": 16,
+      "line": 19,
       "symbol": "LandingTimeReport.delayTime",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
