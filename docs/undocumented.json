@@ -884,21 +884,21 @@
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
-      "line": 151,
+      "line": 157,
       "symbol": "YamaseeCore.shared",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
-      "line": 152,
+      "line": 158,
       "symbol": "YamaseeCore.delegate",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alexkovalov/Dev/sky-path-framework-ios/Yamasee/Yamasee.swift",
-      "line": 1122,
+      "line": 1128,
       "symbol": "YamaseeCore.isMonitoringAlerts",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"

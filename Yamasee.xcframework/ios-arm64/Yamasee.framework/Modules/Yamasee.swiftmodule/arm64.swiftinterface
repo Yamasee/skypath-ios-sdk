@@ -132,6 +132,22 @@ public enum ForgotPasswordError : Yamasee.YSError {
   case userIdInvalid
   case general(error: Yamasee.GeneralError)
 }
+@_hasMissingDesignatedInitializers public class Storage {
+  public enum Directory {
+    case documents
+    case caches
+    public static func == (a: Yamasee.Storage.Directory, b: Yamasee.Storage.Directory) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static func url(forFileNamed fileName: Swift.String, in directory: Yamasee.Storage.Directory) -> Foundation.URL
+  public static func store<T>(_ object: T, to url: Foundation.URL) where T : Swift.Encodable
+  public static func retrieve<T>(from url: Foundation.URL, as type: T.Type) -> T? where T : Swift.Decodable
+  public static func remove(fileUrl url: Foundation.URL)
+  @objc deinit
+}
 public enum TurbulenceSeverity : Swift.Int, Swift.Equatable, Swift.Comparable, Swift.Codable {
   case None
   case Light
@@ -161,7 +177,7 @@ extension CoreLocation.CLLocationCoordinate2D {
 extension CoreLocation.CLLocationCoordinate2D {
   public func isBehindOf(coordinate: CoreLocation.CLLocationCoordinate2D, heading: Swift.Double) -> Swift.Bool
 }
-public struct Tile : Swift.Decodable, Swift.Equatable, Swift.Hashable {
+public struct Tile : Swift.Codable, Swift.Equatable, Swift.Hashable {
   public var tileX: Swift.Int
   public var tileY: Swift.Int
   public var alt: Swift.Int
@@ -169,6 +185,7 @@ public struct Tile : Swift.Decodable, Swift.Equatable, Swift.Hashable {
   public init?(keyByCoord: Swift.String)
   public static func == (a: Yamasee.Tile, b: Yamasee.Tile) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
+  public func encode(to encoder: Swift.Encoder) throws
   public var hashValue: Swift.Int {
     get
   }
@@ -227,7 +244,7 @@ public struct BrakingAction : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-public struct TurbulenceItem {
+public struct TurbulenceItem : Swift.Codable {
   public let sev: Yamasee.TurbulenceSeverity
   public let bbox: [CoreLocation.CLLocationCoordinate2D]
   public let tile: Yamasee.Tile
@@ -235,6 +252,8 @@ public struct TurbulenceItem {
   public let ts: Swift.Int
   public let coordinate: CoreLocation.CLLocationCoordinate2D
   public init(sev: Yamasee.TurbulenceSeverity, bbox: [CoreLocation.CLLocationCoordinate2D], tile: Yamasee.Tile, alt: Swift.Double, ts: Swift.Int, coordinate: CoreLocation.CLLocationCoordinate2D)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
 extension Yamasee.TurbulenceItem {
   public var description: Swift.String {
@@ -472,8 +491,15 @@ public struct SettingsUI : Swift.Codable {
     public func encode(to encoder: Swift.Encoder) throws
     public init(from decoder: Swift.Decoder) throws
   }
+  public struct FlightSummary : Swift.Codable {
+    public var enabled: Swift.Bool?
+    public var timeToShowAfterLanded: Swift.Int?
+    public func encode(to encoder: Swift.Encoder) throws
+    public init(from decoder: Swift.Decoder) throws
+  }
   public var verticalView: Yamasee.SettingsUI.VerticalView?
   public var timeControl: Yamasee.SettingsUI.TimeControl?
+  public var flightSummary: Yamasee.SettingsUI.FlightSummary?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -502,6 +528,9 @@ public struct SettingsLocation : Swift.Codable {
   public var accuracyHorizontal: Swift.Double?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
+}
+extension Foundation.InputStream {
+  public func readfully() -> Foundation.Data
 }
 public struct Flight : Swift.Codable {
   public let dep: Swift.String
@@ -621,6 +650,7 @@ public protocol YamaseeCoreDelegate : AnyObject {
   func newAlert(_ alert: Yamasee.AlertResult)
   func flightPhaseDidChange(to flightPhase: Yamasee.FlightPhase)
   func flightPlanDidUpdate(to flightPlan: Yamasee.FlightPlan)
+  func didReportWeather(_ weather: Yamasee.Weather)
 }
 @_hasMissingDesignatedInitializers public class YamaseeCore {
   public static let shared: Yamasee.YamaseeCore
@@ -804,6 +834,7 @@ extension Yamasee.YamaseeCoreDelegate {
   public func newAlert(_ alert: Yamasee.AlertResult)
   public func flightPhaseDidChange(to flightPhase: Yamasee.FlightPhase)
   public func flightPlanDidUpdate(to flightPlan: Yamasee.FlightPlan)
+  public func didReportWeather(_ weather: Yamasee.Weather)
 }
 public enum AirportDataTrend : Swift.String, Swift.Codable {
   case negative
@@ -1046,6 +1077,8 @@ public enum Environment {
     get
   }
 }
+extension Yamasee.Storage.Directory : Swift.Equatable {}
+extension Yamasee.Storage.Directory : Swift.Hashable {}
 extension Yamasee.TurbulenceSeverity : Swift.Hashable {}
 extension Yamasee.TurbulenceSeverity : Swift.RawRepresentable {}
 extension Yamasee.BrakingActionLevel : Swift.Equatable {}

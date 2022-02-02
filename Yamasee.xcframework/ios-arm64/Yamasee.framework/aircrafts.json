@@ -1,1 +1,1249 @@
-[{"size":"small","id":"AT43","title":"Aerospatiale\/Alenia ATR 42-300","iata":"AT4","group":"C30","icao":"AT43"},{"size":"small","id":"AT45","title":"Aerospatiale\/Alenia ATR 42-500","iata":"AT5","group":"C30","icao":"AT45"},{"size":"small","id":"AT46","title":"Aerospatiale\/Alenia ATR 42-600","iata":"ATR","group":"C30","icao":"AT46"},{"size":"small","id":"AT72","title":"Aerospatiale\/Alenia ATR 72","iata":"AT7","group":"C30","icao":"AT72"},{"size":"large","id":"A30B","title":"Airbus A300","iata":"AB3","group":"C70","icao":"A30B"},{"size":"large","id":"A306","title":"Airbus A300-600","iata":"AB6","group":"C70","icao":"A306"},{"size":"medium","id":"A319","title":"Airbus A319","iata":"319","group":"C60","icao":"A319"},{"size":"medium","id":"A318","title":"Airbus A318","iata":"318","group":"C60","icao":"A318"},{"size":"medium","id":"A19N","title":"Airbus A319neo","iata":"31N","group":"C60","icao":"A19N"},{"size":"large","id":"A310","title":"Airbus A310","iata":"310","group":"C70","icao":"A310"},{"size":"medium","id":"A320","title":"Airbus A320","iata":"320","group":"C60","icao":"A320"},{"size":"medium","id":"A20N","title":"Airbus A320neo","iata":"32N","group":"C60","icao":"A20N"},{"size":"medium","id":"A321","title":"Airbus A321","iata":"321","group":"C60","icao":"A321"},{"size":"medium","id":"A21N","title":"Airbus A321neo","iata":"32Q","group":"C60","icao":"A21N"},{"size":"large","id":"A333","title":"Airbus A330-300","iata":"333","group":"C80","icao":"A333"},{"size":"large","id":"A332","title":"Airbus A330-200","iata":"332","group":"C80","icao":"A332"},{"size":"large","id":"A338","title":"Airbus A330-800neo","iata":"338","group":"C80","icao":"A338"},{"size":"large","id":"A343","title":"Airbus A340-300","iata":"343","group":"C90","icao":"A343"},{"size":"large","id":"A35K","title":"Airbus A350-1000","iata":"351","group":"C90","icao":"A35K"},{"size":"large","id":"A345","title":"Airbus A340-500","iata":"345","group":"C90","icao":"A345"},{"size":"large","id":"A339","title":"Airbus A330-900neo","iata":"339","group":"C80","icao":"A339"},{"size":"large","id":"A342","title":"Airbus A340-200","iata":"342","group":"C90","icao":"A342"},{"size":"large","id":"A346","title":"Airbus A340-600","iata":"346","group":"C90","icao":"A346"},{"size":"large","id":"A359","title":"Airbus A350-900","iata":"359","group":"C90","icao":"A359"},{"size":"large","id":"A388","title":"Airbus A380-800","iata":"388","group":"C110","icao":"A388"},{"size":"small","id":"RJ1H","title":"Avro RJ100","iata":"AR1","group":"C40","icao":"RJ1H"},{"size":"small","id":"RJ70","title":"Avro RJ70","iata":"AR7","group":"C40","icao":"RJ70"},{"size":"small","id":"RJ85","title":"Avro RJ85","iata":"AR8","group":"C40","icao":"RJ85"},{"size":"small","id":"B462","title":"BAe 146-200","iata":"142","group":"C40","icao":"B462"},{"size":"small","id":"B463","title":"BAe 146-300","iata":"143","group":"C40","icao":"B463"},{"size":"small","id":"B461","title":"BAe 146-100","iata":"141","group":"C40","icao":"B461"},{"size":"medium","id":"B712","title":"Boeing 717","iata":"717","group":"C60","icao":"B712"},{"size":"medium","id":"B37M","title":"Boeing 737 MAX 7","iata":"7M7","group":"C60","icao":"B37M"},{"size":"medium","id":"B733","title":"Boeing 737-300","iata":"733","group":"C60","icao":"B733"},{"size":"medium","id":"B38M","title":"Boeing 737 MAX 8","iata":"7M8","group":"C60","icao":"B38M"},{"size":"medium","id":"B735","title":"Boeing 737-500","iata":"735","group":"C60","icao":"B735"},{"size":"medium","id":"B732","title":"Boeing 737-200","iata":"732","group":"C60","icao":"B732"},{"size":"medium","id":"B39M","title":"Boeing 737 MAX 9","iata":"7M9","group":"C60","icao":"B39M"},{"size":"medium","id":"B736","title":"Boeing 737-600","iata":"736","group":"C60","icao":"B736"},{"size":"medium","id":"B734","title":"Boeing 737-400","iata":"734","group":"C60","icao":"B734"},{"size":"medium","id":"B737","title":"Boeing 737-700","iata":"73G","group":"C60","icao":"B737"},{"size":"large","id":"B741","title":"Boeing 747-100","iata":"741","group":"C100","icao":"B741"},{"size":"large","id":"B743","title":"Boeing 747-300","iata":"743","group":"C100","icao":"B743"},{"size":"medium","id":"B738","title":"Boeing 737-800","iata":"738","group":"C60","icao":"B738"},{"size":"medium","id":"B739","title":"Boeing 737-900","iata":"739","group":"C60","icao":"B739"},{"size":"large","id":"B74S","title":"Boeing 747SP","iata":"74L","group":"C100","icao":"B74S"},{"size":"large","id":"BLCF","title":"Boeing 747 LCF Dreamlifter","iata":"74B","group":"C100","icao":"BLCF"},{"size":"large","id":"B74R","title":"Boeing 747SR","iata":"74R","group":"C100","icao":"B74R"},{"size":"large","id":"B744","title":"Boeing 747-400","iata":"744","group":"C100","icao":"B744"},{"size":"large","id":"B742","title":"Boeing 747-200","iata":"742","group":"C100","icao":"B742"},{"size":"large","id":"B74D","title":"Boeing 747-400D","iata":"74J","group":"C100","icao":"B74D"},{"size":"large","id":"B748","title":"Boeing 747-8","iata":"748","group":"C100","icao":"B748"},{"size":"large","id":"B752","title":"Boeing 757-200","iata":"752","group":"C70","icao":"B752"},{"size":"large","id":"B764","title":"Boeing 767-400","iata":"764","group":"C70","icao":"B764"},{"size":"large","id":"B77L","title":"Boeing 777-200LR","iata":"77L","group":"C90","icao":"B77L"},{"size":"large","id":"B753","title":"Boeing 757-300","iata":"753","group":"C70","icao":"B753"},{"size":"large","id":"B762","title":"Boeing 767-200","iata":"762","group":"C70","icao":"B762"},{"size":"large","id":"B763","title":"Boeing 767-300","iata":"763","group":"C70","icao":"B763"},{"size":"large","id":"B773","title":"Boeing 777-300","iata":"773","group":"C90","icao":"B773"},{"size":"large","id":"B779","title":"Boeing 777-9","iata":"779","group":"C90","icao":"B779"},{"size":"large","id":"B788","title":"Boeing 787-8","iata":"788","group":"C80","icao":"B788"},{"size":"large","id":"B78X","title":"Boeing 787-10","iata":"78J","group":"C80","icao":"B78X"},{"size":"large","id":"B778","title":"Boeing 777-8","iata":"778","group":"C90","icao":"B778"},{"size":"large","id":"B772","title":"Boeing 777-200","iata":"772","group":"C90","icao":"B772"},{"size":"large","id":"B77W","title":"Boeing 777-300ER","iata":"77W","group":"C90","icao":"B77W"},{"size":"large","id":"B789","title":"Boeing 787-9","iata":"789","group":"C80","icao":"B789"},{"size":"small","id":"GLEX","title":"Bombardier Global Express","iata":"CCX","group":"C20","icao":"GLEX"},{"size":"medium","id":"BCS3","title":"Bombardier CS300","iata":"CS3","group":"C60","icao":"BCS3"},{"size":"small","id":"ATP","title":"British Aerospace ATP","iata":"ATP","group":"C30","icao":"ATP"},{"size":"small","id":"BCS1","title":"Bombardier CS100","iata":"CS1","group":"C50","icao":"BCS1"},{"size":"small","id":"JS41","title":"British Aerospace Jetstream 41","iata":"J41","group":"C30","icao":"JS41"},{"size":"small","id":"H25B","title":"British Aerospace 125 series \/ Hawker\/Raytheon 700\/800\/800XP\/850\/900","iata":"H25","group":"C20","icao":"H25B"},{"size":"small","id":"H25C","title":"British Aerospace 125-1000 series \/ Hawker\/Raytheon 1000","iata":"H25","group":"C20","icao":"H25C"},{"size":"small","id":"CL60","title":"Canadair Challenger","iata":"CCJ","group":"C20","icao":"CL60"},{"size":"small","id":"JS31","title":"British Aerospace Jetstream 31","iata":"J31","group":"C30","icao":"JS31"},{"size":"small","id":"JS32","title":"British Aerospace Jetstream 32","iata":"J32","group":"C30","icao":"JS32"},{"size":"small","id":"CRJ1","title":"Canadair Regional Jet 100","iata":"CR1","group":"C40","icao":"CRJ1"},{"size":"small","id":"CRJX","title":"Canadair Regional Jet 1000","iata":"CRK","group":"C50","icao":"CRJX"},{"size":"small","id":"C25B","title":"Cessna Citation CJ3","iata":"CNJ","group":"C20","icao":"C25B"},{"size":"small","id":"CRJ2","title":"Canadair Regional Jet 200","iata":"CR2","group":"C40","icao":"CRJ2"},{"size":"small","id":"C56X","title":"Cessna Citation Excel","iata":"CNJ","group":"C20","icao":"C56X"},{"size":"small","id":"CRJ9","title":"Canadair Regional Jet 900","iata":"CR9","group":"C50","icao":"CRJ9"},{"size":"small","id":"CRJ7","title":"Canadair Regional Jet 700","iata":"CR7","group":"C50","icao":"CRJ7"},{"size":"small","id":"C25C","title":"Cessna Citation CJ4","iata":"CNJ","group":"C20","icao":"C25C"},{"size":"small","id":"C500","title":"Cessna Citation I","iata":"CNJ","group":"C20","icao":"C500"},{"size":"small","id":"C510","title":"Cessna Citation Mustang","iata":"CNJ","group":"C20","icao":"C510"},{"size":"small","id":"C550","title":"Cessna Citation II","iata":"CNJ","group":"C20","icao":"C550"},{"size":"small","id":"F2TH","title":"Dassault Falcon 2000","iata":"D20","group":"C20","icao":"F2TH"},{"size":"small","id":"C750","title":"Cessna Citation X","iata":"CNJ","group":"C20","icao":"C750"},{"size":"small","id":"F900","title":"Dassault Falcon 900","iata":"DF9","group":"C20","icao":"F900"},{"size":"small","id":"C680","title":"Cessna Citation Sovereign","iata":"CNJ","group":"C20","icao":"C680"},{"size":"small","id":"FA50","title":"Dassault Falcon 50","iata":"DF3","group":"C20","icao":"FA50"},{"size":"small","id":"FA7X","title":"Dassault Falcon 7X","iata":"DF7","group":"C20","icao":"FA7X"},{"size":"small","id":"DHC7","title":"De Havilland Canada DHC-7 Dash 7","iata":"DH7","group":"C30","icao":"DHC7"},{"size":"small","id":"DH8A","title":"De Havilland Canada DHC-8-100 Dash 8 \/ 8Q","iata":"DH1","group":"C30","icao":"DH8A"},{"size":"small","id":"DH8B","title":"De Havilland Canada DHC-8-200 Dash 8 \/ 8Q","iata":"DH2","group":"C30","icao":"DH8B"},{"size":"small","id":"DH8C","title":"De Havilland Canada DHC-8-300 Dash 8","iata":"DH3","group":"C30","icao":"DH8C"},{"size":"small","id":"DOVE","title":"De Havilland DH.104 Dove","iata":"DHD","group":"C30","icao":"DOVE"},{"size":"small","id":"DH8D","title":"De Havilland Canada DHC-8-400 Dash 8Q","iata":"DH4","group":"C30","icao":"DH8D"},{"size":"medium","id":"DC92","title":"Douglas DC-9-20","iata":"D92","group":"C60","icao":"DC92"},{"size":"medium","id":"DC93","title":"Douglas DC-9-30","iata":"D93","group":"C60","icao":"DC93"},{"size":"medium","id":"DC91","title":"Douglas DC-9-10","iata":"D91","group":"C60","icao":"DC91"},{"size":"medium","id":"DC95","title":"Douglas DC-9-50","iata":"D95","group":"C60","icao":"DC95"},{"size":"medium","id":"DC94","title":"Douglas DC-9-40","iata":"D94","group":"C60","icao":"DC94"},{"size":"small","id":"E75L","title":"Embraer 175 (long wing)","iata":"E7W","group":"C50","icao":"E75L"},{"size":"small","id":"E75S","title":"Embraer 175 (short wing)","iata":"E7W","group":"C50","icao":"E75S"},{"size":"small","id":"E290","title":"Embraer E190-E2","iata":"290","group":"C50","icao":"E290"},{"size":"small","id":"E195","title":"Embraer 195","iata":"E95","group":"C50","icao":"E195"},{"size":"small","id":"E170","title":"Embraer 170","iata":"E70","group":"C50","icao":"E170"},{"size":"small","id":"E110","title":"Embraer EMB 110 Bandeirante","iata":"EMB","group":"C10","icao":"E110"},{"size":"small","id":"E120","title":"Embraer EMB 120 Brasilia","iata":"EM2","group":"C10","icao":"E120"},{"size":"small","id":"E190","title":"Embraer 190","iata":"E90","group":"C50","icao":"E190"},{"size":"small","id":"E35L","title":"Embraer Legacy 600","iata":"ER3","group":"C20","icao":"E35L"},{"size":"small","id":"E295","title":"Embraer E195-E2","iata":"295","group":"C50","icao":"E295"},{"size":"small","id":"E135","title":"Embraer RJ135","iata":"ER3","group":"C30","icao":"E135"},{"size":"small","id":"E55P","title":"Embraer Phenom 300","iata":"EP3","group":"C20","icao":"E55P"},{"size":"small","id":"E50P","title":"Embraer Phenom 100","iata":"EP1","group":"C20","icao":"E50P"},{"size":"small","id":"E145","title":"Embraer RJ145","iata":"ER4","group":"C30","icao":"E145"},{"size":"small","id":"G280","title":"Gulfstream G280","iata":"GR3","group":"C20","icao":"G280"},{"size":"small","id":"G159","title":"Gulfstream Aerospace G-159 Gulfstream I","iata":"GRS","group":"C20","icao":"G159"},{"size":"small","id":"F50","title":"Fokker 50","iata":"F50","group":"C40","icao":"F50"},{"size":"small","id":"GLF6","title":"Gulfstream G650","iata":"GJ6","group":"C30","icao":"GLF6"},{"size":"small","id":"GLF5","title":"Gulfstream V","iata":"GJ5","group":"C20","icao":"GLF5"},{"size":"small","id":"GLF4","title":"Gulfstream IV","iata":"GJ4","group":"C20","icao":"GLF4"},{"size":"small","id":"SB20","title":"Saab 2000","iata":"S20","group":"C30","icao":"SB20"},{"size":"small","id":"LJ35","title":"Learjet 35","iata":"LRJ","group":"C20","icao":"LJ35"},{"size":"small","id":"SF34","title":"Saab SF340A\/B","iata":"SF3","group":"C30","icao":"SF34"},{"size":"small","id":"LJ60","title":"Learjet 60","iata":"LRJ","group":"C20","icao":"LJ60"},{"size":"medium","id":"MD81","title":"McDonnell Douglas MD-81","iata":"M81","group":"C60","icao":"MD81"},{"size":"medium","id":"MD83","title":"McDonnell Douglas MD-83","iata":"M83","group":"C60","icao":"MD83"},{"size":"medium","id":"MD82","title":"McDonnell Douglas MD-82","iata":"M82","group":"C60","icao":"MD82"},{"size":"large","id":"MD11","title":"McDonnell Douglas MD-11","iata":"M11","group":"C90","icao":"MD11"},{"size":"medium","id":"MD87","title":"McDonnell Douglas MD-87","iata":"M87","group":"C60","icao":"MD87"},{"size":"medium","id":"MD90","title":"McDonnell Douglas MD-90","iata":"M90","group":"C60","icao":"MD90"},{"size":"medium","id":"MD88","title":"McDonnell Douglas MD-88","iata":"M88","group":"C60","icao":"MD88"},{"size":"medium","id":"A220","title":"Airbus 220-300","iata":"223","group":"C60","icao":"A220"},{"size":"small","id":"E135","title":"Embraer RJ140","iata":"ERD","group":"C30","icao":"E135"}]
+[
+  {
+    "family" : "318",
+    "icao" : "A318",
+    "id" : "A318",
+    "title" : "Airbus A318",
+    "size" : "medium",
+    "iata" : "318",
+    "group" : "C60"
+  },
+  {
+    "family" : "319",
+    "icao" : "A319",
+    "id" : "A319",
+    "title" : "Airbus A319",
+    "size" : "medium",
+    "iata" : "319",
+    "group" : "C60"
+  },
+  {
+    "family" : "330",
+    "icao" : "A332",
+    "id" : "A332",
+    "title" : "Airbus A330-200",
+    "size" : "large",
+    "iata" : "332",
+    "group" : "C80"
+  },
+  {
+    "family" : "A300",
+    "icao" : "A30B",
+    "id" : "A30B",
+    "title" : "Airbus A300",
+    "size" : "large",
+    "iata" : "AB3",
+    "group" : "C70"
+  },
+  {
+    "family" : "",
+    "icao" : "AT45",
+    "id" : "AT45",
+    "title" : "Aerospatiale/Alenia ATR 42-500",
+    "size" : "small",
+    "iata" : "AT5",
+    "group" : "C30"
+  },
+  {
+    "family" : "320",
+    "icao" : "A20N",
+    "id" : "A20N",
+    "title" : "Airbus A320neo",
+    "size" : "medium",
+    "iata" : "32N",
+    "group" : "C60"
+  },
+  {
+    "family" : "737",
+    "icao" : "B38M",
+    "id" : "B38M",
+    "title" : "Boeing 737 MAX 8",
+    "size" : "medium",
+    "iata" : "7M8",
+    "group" : "C60"
+  },
+  {
+    "family" : "330",
+    "icao" : "A333",
+    "id" : "A333",
+    "title" : "Airbus A330-300",
+    "size" : "large",
+    "iata" : "333",
+    "group" : "C80"
+  },
+  {
+    "family" : "330",
+    "icao" : "A338",
+    "id" : "A338",
+    "title" : "Airbus A330-800neo",
+    "size" : "large",
+    "iata" : "338",
+    "group" : "C80"
+  },
+  {
+    "family" : "340",
+    "icao" : "A343",
+    "id" : "A343",
+    "title" : "Airbus A340-300",
+    "size" : "large",
+    "iata" : "343",
+    "group" : "C90"
+  },
+  {
+    "family" : "340",
+    "icao" : "A342",
+    "id" : "A342",
+    "title" : "Airbus A340-200",
+    "size" : "large",
+    "iata" : "342",
+    "group" : "C90"
+  },
+  {
+    "family" : "340",
+    "icao" : "A346",
+    "id" : "A346",
+    "title" : "Airbus A340-600",
+    "size" : "large",
+    "iata" : "346",
+    "group" : "C90"
+  },
+  {
+    "family" : "",
+    "icao" : "AT43",
+    "id" : "AT43",
+    "title" : "Aerospatiale/Alenia ATR 42-300",
+    "size" : "small",
+    "iata" : "AT4",
+    "group" : "C30"
+  },
+  {
+    "family" : "",
+    "icao" : "A19N",
+    "id" : "A19N",
+    "title" : "Airbus A319neo",
+    "size" : "medium",
+    "iata" : "31N",
+    "group" : "C60"
+  },
+  {
+    "family" : "320",
+    "icao" : "A320",
+    "id" : "A320",
+    "title" : "Airbus A320",
+    "size" : "medium",
+    "iata" : "320",
+    "group" : "C60"
+  },
+  {
+    "family" : "350",
+    "icao" : "A35K",
+    "id" : "A35K",
+    "title" : "Airbus A350-1000",
+    "size" : "large",
+    "iata" : "351",
+    "group" : "C90"
+  },
+  {
+    "family" : "350",
+    "icao" : "A359",
+    "id" : "A359",
+    "title" : "Airbus A350-900",
+    "size" : "large",
+    "iata" : "359",
+    "group" : "C90"
+  },
+  {
+    "family" : "",
+    "icao" : "B462",
+    "id" : "B462",
+    "title" : "BAe 146-200",
+    "size" : "small",
+    "iata" : "142",
+    "group" : "C40"
+  },
+  {
+    "family" : "A310",
+    "icao" : "A310",
+    "id" : "A310",
+    "title" : "Airbus A310",
+    "size" : "large",
+    "iata" : "310",
+    "group" : "C70"
+  },
+  {
+    "family" : "",
+    "icao" : "RJ85",
+    "id" : "RJ85",
+    "title" : "Avro RJ85",
+    "size" : "small",
+    "iata" : "AR8",
+    "group" : "C40"
+  },
+  {
+    "family" : "737",
+    "icao" : "B732",
+    "id" : "B732",
+    "title" : "Boeing 737-200",
+    "size" : "medium",
+    "iata" : "732",
+    "group" : "C60"
+  },
+  {
+    "family" : "737",
+    "icao" : "B734",
+    "id" : "B734",
+    "title" : "Boeing 737-400",
+    "size" : "medium",
+    "iata" : "734",
+    "group" : "C60"
+  },
+  {
+    "family" : "737",
+    "icao" : "B735",
+    "id" : "B735",
+    "title" : "Boeing 737-500",
+    "size" : "medium",
+    "iata" : "735",
+    "group" : "C60"
+  },
+  {
+    "family" : "",
+    "icao" : "A21N",
+    "id" : "A21N",
+    "title" : "Airbus A321neo",
+    "size" : "medium",
+    "iata" : "32Q",
+    "group" : "C60"
+  },
+  {
+    "family" : "",
+    "icao" : "B463",
+    "id" : "B463",
+    "title" : "BAe 146-300",
+    "size" : "small",
+    "iata" : "143",
+    "group" : "C40"
+  },
+  {
+    "family" : "380",
+    "icao" : "A388",
+    "id" : "A388",
+    "title" : "Airbus A380-800",
+    "size" : "large",
+    "iata" : "388",
+    "group" : "C110"
+  },
+  {
+    "family" : "",
+    "icao" : "B461",
+    "id" : "B461",
+    "title" : "BAe 146-100",
+    "size" : "small",
+    "iata" : "141",
+    "group" : "C40"
+  },
+  {
+    "family" : "",
+    "icao" : "AT46",
+    "id" : "AT46",
+    "title" : "Aerospatiale/Alenia ATR 42-600",
+    "size" : "small",
+    "iata" : "ATR",
+    "group" : "C30"
+  },
+  {
+    "family" : "",
+    "icao" : "AT72",
+    "id" : "AT72",
+    "title" : "Aerospatiale/Alenia ATR 72",
+    "size" : "small",
+    "iata" : "AT7",
+    "group" : "C30"
+  },
+  {
+    "family" : "340",
+    "icao" : "A345",
+    "id" : "A345",
+    "title" : "Airbus A340-500",
+    "size" : "large",
+    "iata" : "345",
+    "group" : "C90"
+  },
+  {
+    "family" : "A300",
+    "icao" : "A306",
+    "id" : "A306",
+    "title" : "Airbus A300-600",
+    "size" : "large",
+    "iata" : "AB6",
+    "group" : "C70"
+  },
+  {
+    "family" : "330",
+    "icao" : "A339",
+    "id" : "A339",
+    "title" : "Airbus A330-900neo",
+    "size" : "large",
+    "iata" : "339",
+    "group" : "C80"
+  },
+  {
+    "family" : "737",
+    "icao" : "B39M",
+    "id" : "B39M",
+    "title" : "Boeing 737 MAX 9",
+    "size" : "medium",
+    "iata" : "7M9",
+    "group" : "C60"
+  },
+  {
+    "family" : "",
+    "icao" : "A321",
+    "id" : "A321",
+    "title" : "Airbus A321",
+    "size" : "medium",
+    "iata" : "321",
+    "group" : "C60"
+  },
+  {
+    "family" : "717",
+    "icao" : "B712",
+    "id" : "B712",
+    "title" : "Boeing 717",
+    "size" : "medium",
+    "iata" : "717",
+    "group" : "C60"
+  },
+  {
+    "family" : "737",
+    "icao" : "B37M",
+    "id" : "B37M",
+    "title" : "Boeing 737 MAX 7",
+    "size" : "medium",
+    "iata" : "7M7",
+    "group" : "C60"
+  },
+  {
+    "family" : "",
+    "icao" : "RJ1H",
+    "id" : "RJ1H",
+    "title" : "Avro RJ100",
+    "size" : "small",
+    "iata" : "AR1",
+    "group" : "C40"
+  },
+  {
+    "family" : "",
+    "icao" : "RJ70",
+    "id" : "RJ70",
+    "title" : "Avro RJ70",
+    "size" : "small",
+    "iata" : "AR7",
+    "group" : "C40"
+  },
+  {
+    "family" : "737",
+    "icao" : "B733",
+    "id" : "B733",
+    "title" : "Boeing 737-300",
+    "size" : "medium",
+    "iata" : "733",
+    "group" : "C60"
+  },
+  {
+    "family" : "",
+    "icao" : "JS41",
+    "id" : "JS41",
+    "title" : "British Aerospace Jetstream 41",
+    "size" : "small",
+    "iata" : "J41",
+    "group" : "C30"
+  },
+  {
+    "family" : "747",
+    "icao" : "B74S",
+    "id" : "B74S",
+    "title" : "Boeing 747SP",
+    "size" : "large",
+    "iata" : "74L",
+    "group" : "C100"
+  },
+  {
+    "family" : "",
+    "icao" : "CRJ1",
+    "id" : "CRJ1",
+    "title" : "Canadair Regional Jet 100",
+    "size" : "small",
+    "iata" : "CR1",
+    "group" : "C40"
+  },
+  {
+    "family" : "",
+    "icao" : "DH8C",
+    "id" : "DH8C",
+    "title" : "De Havilland Canada DHC-8-300 Dash 8",
+    "size" : "small",
+    "iata" : "DH3",
+    "group" : "C30"
+  },
+  {
+    "family" : "",
+    "icao" : "GLF6",
+    "id" : "GLF6",
+    "title" : "Gulfstream G650",
+    "size" : "small",
+    "iata" : "GJ6",
+    "group" : "C30"
+  },
+  {
+    "family" : "787",
+    "icao" : "B78X",
+    "id" : "B78X",
+    "title" : "Boeing 787-10",
+    "size" : "large",
+    "iata" : "78J",
+    "group" : "C80"
+  },
+  {
+    "family" : "",
+    "icao" : "H25B",
+    "id" : "H25B",
+    "title" : "British Aerospace 125 series / Hawker/Raytheon 700/800/800XP/850/900",
+    "size" : "small",
+    "iata" : "H25",
+    "group" : "C20"
+  },
+  {
+    "family" : "",
+    "icao" : "H25C",
+    "id" : "H25C",
+    "title" : "British Aerospace 125-1000 series / Hawker/Raytheon 1000",
+    "size" : "small",
+    "iata" : "H25",
+    "group" : "C20"
+  },
+  {
+    "family" : "DC-9",
+    "icao" : "DC92",
+    "id" : "DC92",
+    "title" : "Douglas DC-9-20",
+    "size" : "medium",
+    "iata" : "D92",
+    "group" : "C60"
+  },
+  {
+    "family" : "175",
+    "icao" : "E75S",
+    "id" : "E75S",
+    "title" : "Embraer 175 (short wing)",
+    "size" : "small",
+    "iata" : "E7W",
+    "group" : "C50"
+  },
+  {
+    "family" : "",
+    "icao" : "E50P",
+    "id" : "E50P",
+    "title" : "Embraer Phenom 100",
+    "size" : "small",
+    "iata" : "EP1",
+    "group" : "C20"
+  },
+  {
+    "family" : "MD-9",
+    "icao" : "MD90",
+    "id" : "MD90",
+    "title" : "McDonnell Douglas MD-90",
+    "size" : "medium",
+    "iata" : "M90",
+    "group" : "C60"
+  },
+  {
+    "family" : "",
+    "icao" : "CL60",
+    "id" : "CL60",
+    "title" : "Canadair Challenger",
+    "size" : "small",
+    "iata" : "CCJ",
+    "group" : "C20"
+  },
+  {
+    "family" : "747",
+    "icao" : "BLCF",
+    "id" : "BLCF",
+    "title" : "Boeing 747 LCF Dreamlifter",
+    "size" : "large",
+    "iata" : "74B",
+    "group" : "C100"
+  },
+  {
+    "family" : "",
+    "icao" : "CRJ2",
+    "id" : "CRJ2",
+    "title" : "Canadair Regional Jet 200",
+    "size" : "small",
+    "iata" : "CR2",
+    "group" : "C40"
+  },
+  {
+    "family" : "290",
+    "icao" : "E290",
+    "id" : "E290",
+    "title" : "Embraer E190-E2",
+    "size" : "small",
+    "iata" : "290",
+    "group" : "C50"
+  },
+  {
+    "family" : "",
+    "icao" : "E135",
+    "id" : "E135",
+    "title" : "Embraer RJ135",
+    "size" : "small",
+    "iata" : "ER3",
+    "group" : "C30"
+  },
+  {
+    "family" : "",
+    "icao" : "JS31",
+    "id" : "JS31",
+    "title" : "British Aerospace Jetstream 31",
+    "size" : "small",
+    "iata" : "J31",
+    "group" : "C30"
+  },
+  {
+    "family" : "",
+    "icao" : "G280",
+    "id" : "G280",
+    "title" : "Gulfstream G280",
+    "size" : "small",
+    "iata" : "GR3",
+    "group" : "C20"
+  },
+  {
+    "iata" : "SU9",
+    "id" : "SU95",
+    "title" : "Sukhoi Superjet 100-95",
+    "size" : "small",
+    "icao" : "SU95"
+  },
+  {
+    "family" : "757",
+    "icao" : "B752",
+    "id" : "B752",
+    "title" : "Boeing 757-200",
+    "size" : "large",
+    "iata" : "752",
+    "group" : "C70"
+  },
+  {
+    "family" : "777",
+    "icao" : "B779",
+    "id" : "B779",
+    "title" : "Boeing 777-9",
+    "size" : "large",
+    "iata" : "779",
+    "group" : "C90"
+  },
+  {
+    "family" : "787",
+    "icao" : "B788",
+    "id" : "B788",
+    "title" : "Boeing 787-8",
+    "size" : "large",
+    "iata" : "788",
+    "group" : "C80"
+  },
+  {
+    "family" : "",
+    "icao" : "C25B",
+    "id" : "C25B",
+    "title" : "Cessna Citation CJ3",
+    "size" : "small",
+    "iata" : "CNJ",
+    "group" : "C20"
+  },
+  {
+    "family" : "",
+    "icao" : "C550",
+    "id" : "C550",
+    "title" : "Cessna Citation II",
+    "size" : "small",
+    "iata" : "CNJ",
+    "group" : "C20"
+  },
+  {
+    "family" : "",
+    "icao" : "C750",
+    "id" : "C750",
+    "title" : "Cessna Citation X",
+    "size" : "small",
+    "iata" : "CNJ",
+    "group" : "C20"
+  },
+  {
+    "family" : "",
+    "icao" : "DH8A",
+    "id" : "DH8A",
+    "title" : "De Havilland Canada DHC-8-100 Dash 8 / 8Q",
+    "size" : "small",
+    "iata" : "DH1",
+    "group" : "C30"
+  },
+  {
+    "family" : "",
+    "icao" : "DOVE",
+    "id" : "DOVE",
+    "title" : "De Havilland DH.104 Dove",
+    "size" : "small",
+    "iata" : "DHD",
+    "group" : "C30"
+  },
+  {
+    "family" : "295",
+    "icao" : "E295",
+    "id" : "E295",
+    "title" : "Embraer E195-E2",
+    "size" : "small",
+    "iata" : "295",
+    "group" : "C50"
+  },
+  {
+    "family" : "",
+    "icao" : "E135",
+    "id" : "E135",
+    "title" : "Embraer RJ140",
+    "size" : "small",
+    "iata" : "ERD",
+    "group" : "C30"
+  },
+  {
+    "family" : "",
+    "icao" : "E55P",
+    "id" : "E55P",
+    "title" : "Embraer Phenom 300",
+    "size" : "small",
+    "iata" : "EP3",
+    "group" : "C20"
+  },
+  {
+    "family" : "MD-8",
+    "icao" : "MD83",
+    "id" : "MD83",
+    "title" : "McDonnell Douglas MD-83",
+    "size" : "medium",
+    "iata" : "M83",
+    "group" : "C60"
+  },
+  {
+    "family" : "747",
+    "icao" : "B741",
+    "id" : "B741",
+    "title" : "Boeing 747-100",
+    "size" : "large",
+    "iata" : "741",
+    "group" : "C100"
+  },
+  {
+    "family" : "",
+    "icao" : "GLEX",
+    "id" : "GLEX",
+    "title" : "Bombardier Global Express",
+    "size" : "small",
+    "iata" : "CCX",
+    "group" : "C20"
+  },
+  {
+    "family" : "",
+    "icao" : "C25C",
+    "id" : "C25C",
+    "title" : "Cessna Citation CJ4",
+    "size" : "small",
+    "iata" : "CNJ",
+    "group" : "C20"
+  },
+  {
+    "family" : "",
+    "icao" : "F2TH",
+    "id" : "F2TH",
+    "title" : "Dassault Falcon 2000",
+    "size" : "small",
+    "iata" : "D20",
+    "group" : "C20"
+  },
+  {
+    "family" : "DC-9",
+    "icao" : "DC91",
+    "id" : "DC91",
+    "title" : "Douglas DC-9-10",
+    "size" : "medium",
+    "iata" : "D91",
+    "group" : "C60"
+  },
+  {
+    "family" : "737",
+    "icao" : "B739",
+    "id" : "B739",
+    "title" : "Boeing 737-900",
+    "size" : "medium",
+    "iata" : "739",
+    "group" : "C60"
+  },
+  {
+    "family" : "DC-9",
+    "icao" : "DC93",
+    "id" : "DC93",
+    "title" : "Douglas DC-9-30",
+    "size" : "medium",
+    "iata" : "D93",
+    "group" : "C60"
+  },
+  {
+    "family" : "170",
+    "icao" : "E170",
+    "id" : "E170",
+    "title" : "Embraer 170",
+    "size" : "small",
+    "iata" : "E70",
+    "group" : "C50"
+  },
+  {
+    "family" : "",
+    "icao" : "E35L",
+    "id" : "E35L",
+    "title" : "Embraer Legacy 600",
+    "size" : "small",
+    "iata" : "ER3",
+    "group" : "C20"
+  },
+  {
+    "family" : "",
+    "icao" : "SB20",
+    "id" : "SB20",
+    "title" : "Saab 2000",
+    "size" : "small",
+    "iata" : "S20",
+    "group" : "C30"
+  },
+  {
+    "family" : "737",
+    "icao" : "B736",
+    "id" : "B736",
+    "title" : "Boeing 737-600",
+    "size" : "medium",
+    "iata" : "736",
+    "group" : "C60"
+  },
+  {
+    "family" : "CS300",
+    "icao" : "BCS3",
+    "id" : "BCS3",
+    "title" : "Bombardier CS300",
+    "size" : "medium",
+    "iata" : "CS3",
+    "group" : "C60"
+  },
+  {
+    "family" : "",
+    "icao" : "C56X",
+    "id" : "C56X",
+    "title" : "Cessna Citation Excel",
+    "size" : "small",
+    "iata" : "CNJ",
+    "group" : "C20"
+  },
+  {
+    "family" : "",
+    "icao" : "C500",
+    "id" : "C500",
+    "title" : "Cessna Citation I",
+    "size" : "small",
+    "iata" : "CNJ",
+    "group" : "C20"
+  },
+  {
+    "family" : "",
+    "icao" : "FA50",
+    "id" : "FA50",
+    "title" : "Dassault Falcon 50",
+    "size" : "small",
+    "iata" : "DF3",
+    "group" : "C20"
+  },
+  {
+    "family" : "",
+    "icao" : "FA7X",
+    "id" : "FA7X",
+    "title" : "Dassault Falcon 7X",
+    "size" : "small",
+    "iata" : "DF7",
+    "group" : "C20"
+  },
+  {
+    "family" : "",
+    "icao" : "DH8B",
+    "id" : "DH8B",
+    "title" : "De Havilland Canada DHC-8-200 Dash 8 / 8Q",
+    "size" : "small",
+    "iata" : "DH2",
+    "group" : "C30"
+  },
+  {
+    "family" : "",
+    "icao" : "E145",
+    "id" : "E145",
+    "title" : "Embraer RJ145",
+    "size" : "small",
+    "iata" : "ER4",
+    "group" : "C30"
+  },
+  {
+    "family" : "",
+    "icao" : "LJ35",
+    "id" : "LJ35",
+    "title" : "Learjet 35",
+    "size" : "small",
+    "iata" : "LRJ",
+    "group" : "C20"
+  },
+  {
+    "family" : "MD-8",
+    "icao" : "MD82",
+    "id" : "MD82",
+    "title" : "McDonnell Douglas MD-82",
+    "size" : "medium",
+    "iata" : "M82",
+    "group" : "C60"
+  },
+  {
+    "family" : "MD-8",
+    "icao" : "MD88",
+    "id" : "MD88",
+    "title" : "McDonnell Douglas MD-88",
+    "size" : "medium",
+    "iata" : "M88",
+    "group" : "C60"
+  },
+  {
+    "family" : "767",
+    "icao" : "B764",
+    "id" : "B764",
+    "title" : "Boeing 767-400",
+    "size" : "large",
+    "iata" : "764",
+    "group" : "C70"
+  },
+  {
+    "family" : "",
+    "icao" : "CRJX",
+    "id" : "CRJX",
+    "title" : "Canadair Regional Jet 1000",
+    "size" : "small",
+    "iata" : "CRK",
+    "group" : "C50"
+  },
+  {
+    "family" : "195",
+    "icao" : "E195",
+    "id" : "E195",
+    "title" : "Embraer 195",
+    "size" : "small",
+    "iata" : "E95",
+    "group" : "C50"
+  },
+  {
+    "family" : "747",
+    "icao" : "B743",
+    "id" : "B743",
+    "title" : "Boeing 747-300",
+    "size" : "large",
+    "iata" : "743",
+    "group" : "C100"
+  },
+  {
+    "family" : "",
+    "icao" : "CRJ9",
+    "id" : "CRJ9",
+    "title" : "Canadair Regional Jet 900",
+    "size" : "small",
+    "iata" : "CR9",
+    "group" : "C50"
+  },
+  {
+    "family" : "",
+    "icao" : "LJ60",
+    "id" : "LJ60",
+    "title" : "Learjet 60",
+    "size" : "small",
+    "iata" : "LRJ",
+    "group" : "C20"
+  },
+  {
+    "family" : "737",
+    "icao" : "B737",
+    "id" : "B737",
+    "title" : "Boeing 737-700",
+    "size" : "medium",
+    "iata" : "73G",
+    "group" : "C60"
+  },
+  {
+    "family" : "747",
+    "icao" : "B744",
+    "id" : "B744",
+    "title" : "Boeing 747-400",
+    "size" : "large",
+    "iata" : "744",
+    "group" : "C100"
+  },
+  {
+    "family" : "747",
+    "icao" : "B74R",
+    "id" : "B74R",
+    "title" : "Boeing 747SR",
+    "size" : "large",
+    "iata" : "74R",
+    "group" : "C100"
+  },
+  {
+    "family" : "767",
+    "icao" : "B762",
+    "id" : "B762",
+    "title" : "Boeing 767-200",
+    "size" : "large",
+    "iata" : "762",
+    "group" : "C70"
+  },
+  {
+    "family" : "",
+    "icao" : "CRJ7",
+    "id" : "CRJ7",
+    "title" : "Canadair Regional Jet 700",
+    "size" : "small",
+    "iata" : "CR7",
+    "group" : "C50"
+  },
+  {
+    "iata" : "",
+    "id" : "C919",
+    "title" : "COMAC C-919",
+    "size" : "small",
+    "icao" : "C919"
+  },
+  {
+    "family" : "",
+    "icao" : "SF34",
+    "id" : "SF34",
+    "title" : "Saab SF340A/B",
+    "size" : "small",
+    "iata" : "SF3",
+    "group" : "C30"
+  },
+  {
+    "family" : "757",
+    "icao" : "B753",
+    "id" : "B753",
+    "title" : "Boeing 757-300",
+    "size" : "large",
+    "iata" : "753",
+    "group" : "C70"
+  },
+  {
+    "family" : "",
+    "icao" : "JS32",
+    "id" : "JS32",
+    "title" : "British Aerospace Jetstream 32",
+    "size" : "small",
+    "iata" : "J32",
+    "group" : "C30"
+  },
+  {
+    "family" : "",
+    "icao" : "DHC7",
+    "id" : "DHC7",
+    "title" : "De Havilland Canada DHC-7 Dash 7",
+    "size" : "small",
+    "iata" : "DH7",
+    "group" : "C30"
+  },
+  {
+    "family" : "MD-11",
+    "icao" : "MD11",
+    "id" : "MD11",
+    "title" : "McDonnell Douglas MD-11",
+    "size" : "large",
+    "iata" : "M11",
+    "group" : "C90"
+  },
+  {
+    "family" : "747",
+    "icao" : "B74D",
+    "id" : "B74D",
+    "title" : "Boeing 747-400D",
+    "size" : "large",
+    "iata" : "74J",
+    "group" : "C100"
+  },
+  {
+    "family" : "747",
+    "icao" : "B742",
+    "id" : "B742",
+    "title" : "Boeing 747-200",
+    "size" : "large",
+    "iata" : "742",
+    "group" : "C100"
+  },
+  {
+    "family" : "",
+    "icao" : "ATP",
+    "id" : "ATP",
+    "title" : "British Aerospace ATP",
+    "size" : "small",
+    "iata" : "ATP",
+    "group" : "C30"
+  },
+  {
+    "family" : "",
+    "icao" : "F900",
+    "id" : "F900",
+    "title" : "Dassault Falcon 900",
+    "size" : "small",
+    "iata" : "DF9",
+    "group" : "C20"
+  },
+  {
+    "family" : "175",
+    "icao" : "E75L",
+    "id" : "E75L",
+    "title" : "Embraer 175 (long wing)",
+    "size" : "small",
+    "iata" : "E7W",
+    "group" : "C50"
+  },
+  {
+    "family" : "",
+    "icao" : "E110",
+    "id" : "E110",
+    "title" : "Embraer EMB 110 Bandeirante",
+    "size" : "small",
+    "iata" : "EMB",
+    "group" : "C10"
+  },
+  {
+    "family" : "",
+    "icao" : "E120",
+    "id" : "E120",
+    "title" : "Embraer EMB 120 Brasilia",
+    "size" : "small",
+    "iata" : "EM2",
+    "group" : "C10"
+  },
+  {
+    "family" : "767",
+    "icao" : "B763",
+    "id" : "B763",
+    "title" : "Boeing 767-300",
+    "size" : "large",
+    "iata" : "763",
+    "group" : "C70"
+  },
+  {
+    "family" : "777",
+    "icao" : "B778",
+    "id" : "B778",
+    "title" : "Boeing 777-8",
+    "size" : "large",
+    "iata" : "778",
+    "group" : "C90"
+  },
+  {
+    "family" : "",
+    "icao" : "C680",
+    "id" : "C680",
+    "title" : "Cessna Citation Sovereign",
+    "size" : "small",
+    "iata" : "CNJ",
+    "group" : "C20"
+  },
+  {
+    "family" : "DC-9",
+    "icao" : "DC94",
+    "id" : "DC94",
+    "title" : "Douglas DC-9-40",
+    "size" : "medium",
+    "iata" : "D94",
+    "group" : "C60"
+  },
+  {
+    "family" : "747",
+    "icao" : "B748",
+    "id" : "B748",
+    "title" : "Boeing 747-8",
+    "size" : "large",
+    "iata" : "748",
+    "group" : "C100"
+  },
+  {
+    "family" : "737",
+    "icao" : "B738",
+    "id" : "B738",
+    "title" : "Boeing 737-800",
+    "size" : "medium",
+    "iata" : "738",
+    "group" : "C60"
+  },
+  {
+    "family" : "777",
+    "icao" : "B773",
+    "id" : "B773",
+    "title" : "Boeing 777-300",
+    "size" : "large",
+    "iata" : "773",
+    "group" : "C90"
+  },
+  {
+    "family" : "787",
+    "icao" : "B789",
+    "id" : "B789",
+    "title" : "Boeing 787-9",
+    "size" : "large",
+    "iata" : "789",
+    "group" : "C80"
+  },
+  {
+    "family" : "CS100",
+    "icao" : "BCS1",
+    "id" : "BCS1",
+    "title" : "Bombardier CS100",
+    "size" : "small",
+    "iata" : "CS1",
+    "group" : "C50"
+  },
+  {
+    "family" : "",
+    "icao" : "C510",
+    "id" : "C510",
+    "title" : "Cessna Citation Mustang",
+    "size" : "small",
+    "iata" : "CNJ",
+    "group" : "C20"
+  },
+  {
+    "family" : "",
+    "icao" : "DH8D",
+    "id" : "DH8D",
+    "title" : "De Havilland Canada DHC-8-400 Dash 8Q",
+    "size" : "small",
+    "iata" : "DH4",
+    "group" : "C30"
+  },
+  {
+    "family" : "",
+    "icao" : "F50",
+    "id" : "F50",
+    "title" : "Fokker 50",
+    "size" : "small",
+    "iata" : "F50",
+    "group" : "C40"
+  },
+  {
+    "family" : "MD-8",
+    "icao" : "MD81",
+    "id" : "MD81",
+    "title" : "McDonnell Douglas MD-81",
+    "size" : "medium",
+    "iata" : "M81",
+    "group" : "C60"
+  },
+  {
+    "family" : "777",
+    "icao" : "B77L",
+    "id" : "B77L",
+    "title" : "Boeing 777-200LR",
+    "size" : "large",
+    "iata" : "77L",
+    "group" : "C90"
+  },
+  {
+    "family" : "777",
+    "icao" : "B772",
+    "id" : "B772",
+    "title" : "Boeing 777-200",
+    "size" : "large",
+    "iata" : "772",
+    "group" : "C90"
+  },
+  {
+    "family" : "777",
+    "icao" : "B77W",
+    "id" : "B77W",
+    "title" : "Boeing 777-300ER",
+    "size" : "large",
+    "iata" : "77W",
+    "group" : "C90"
+  },
+  {
+    "family" : "DC-9",
+    "icao" : "DC95",
+    "id" : "DC95",
+    "title" : "Douglas DC-9-50",
+    "size" : "medium",
+    "iata" : "D95",
+    "group" : "C60"
+  },
+  {
+    "family" : "190",
+    "icao" : "E190",
+    "id" : "E190",
+    "title" : "Embraer 190",
+    "size" : "small",
+    "iata" : "E90",
+    "group" : "C50"
+  },
+  {
+    "family" : "",
+    "icao" : "G159",
+    "id" : "G159",
+    "title" : "Gulfstream Aerospace G-159 Gulfstream I",
+    "size" : "small",
+    "iata" : "GRS",
+    "group" : "C20"
+  },
+  {
+    "family" : "",
+    "icao" : "GLF5",
+    "id" : "GLF5",
+    "title" : "Gulfstream V",
+    "size" : "small",
+    "iata" : "GJ5",
+    "group" : "C20"
+  },
+  {
+    "family" : "",
+    "icao" : "GLF4",
+    "id" : "GLF4",
+    "title" : "Gulfstream IV",
+    "size" : "small",
+    "iata" : "GJ4",
+    "group" : "C20"
+  },
+  {
+    "family" : "MD-8",
+    "icao" : "MD87",
+    "id" : "MD87",
+    "title" : "McDonnell Douglas MD-87",
+    "size" : "medium",
+    "iata" : "M87",
+    "group" : "C60"
+  },
+  {
+    "family" : "220",
+    "icao" : "A220",
+    "id" : "A220",
+    "title" : "Airbus 220-300",
+    "size" : "medium",
+    "iata" : "223",
+    "group" : "C60"
+  }
+]
