@@ -5,6 +5,6 @@ use_frameworks!
 
 target 'Demo' do
 
-pod 'SkyPath', :git => 'https://github.com/Yamasee/skypath-ios-sdk.git', :branch => 'feature/pod'
+pod 'SkyPath', :git => 'https://github.com/Yamasee/skypath-ios-sdk.git', :tag => 'v1.11.1'
 
 end
