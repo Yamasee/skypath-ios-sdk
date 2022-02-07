@@ -1,0 +1,10 @@
+project 'DemoPod.xcodeproj'
+platform :ios, '12.0'
+
+use_frameworks!
+
+target 'Demo' do
+
+pod 'SkyPath', :git => 'https://github.com/Yamasee/skypath-ios-sdk.git', :branch => 'feature/pod'
+
+end
