@@ -5,7 +5,8 @@
   
 ## SkyPath iOS SDK
 
-SkyPath's goal is delivery of accurate real-time turbulence data, based on crowdsourcing [https://skypath.io](https://skypath.io/)
+The world’s leading turbulence and auto-PIREPS data source.<br>
+Improve safety and operational efficiency with real-time turbulence information by automatically sensing and sharing accurate, aircraft behaviour via the iPad.
 
 ## Contents
 
@@ -13,6 +14,7 @@ SkyPath's goal is delivery of accurate real-time turbulence data, based on crowd
 - [Requirements](#requirements)
 - [Migration Guides](#migration-guides)
 - [Installation](#installation)
+- [Demo](#demo)
 - [Quick Start Guide](/Documentation/Quick%20Start%20Guide.md)
 - [Documentation](https://yamasee.github.io/skypath-ios-sdk)
 - [License](#license)
@@ -45,20 +47,19 @@ Make sure the  `Privacy - Location When In Use Usage Description` description is
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate SkyPath into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'SkyPath', '~> 2.0-beta1'
+pod 'SkyPath', '2.0-beta1'
 ```
 
 ### Swift Package Manager
 
 The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
 
-To integrate SkyPath into your Xcode project using Swift Package Manager, add it to the dependencies value of your Package.swift:
+Use the following to add SkyPath Apple Package Dependency:
 
-```swift
-dependencies: [
-    .package(url: "https://github.com/Yamasee/skypath-ios-sdk.git", .upToNextMajor(from: "2.0-beta1"))
-]
 ```
+https://github.com/Yamasee/skypath-ios-sdk
+Dependency Rule: Branch, master // v2.0-beta1
+``` 
 
 ### Manually
 
@@ -67,6 +68,10 @@ If you prefer not to use either of the aforementioned dependency managers, you c
 - Download `SkyPathSDK.xcframework`
 - Copy `SkyPathSDK.xcframework` to a project directory
 - In Xcode project target in `General` tab, in `Frameworks, Libraries, and Embedded Content` tap "Add items", choose a `SkyPathSDK.xcframework` file. Make sure the added framework "Embed" value is set to `Embed & Sign`
+
+## Demo
+
+Try out the `Demo` project inside the repo. You will need just a valid SkyPath API key and enter an airline ICAO and user id in the `ViewController`.
 
 ## License
 

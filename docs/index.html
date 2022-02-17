@@ -155,7 +155,8 @@
 <img src="https://img.shields.io/cocoapods/p/SkyPath" alt="Cocoapods platforms"></p>
 <h2 id='skypath-ios-sdk' class='heading'>SkyPath iOS SDK</h2>
 
-<p>SkyPath&rsquo;s goal is delivery of accurate real-time turbulence data, based on crowdsourcing <a href="https://skypath.io/">https://skypath.io</a></p>
+<p>The world’s leading turbulence and auto-PIREPS data source.<br>
+Improve safety and operational efficiency with real-time turbulence information by automatically sensing and sharing accurate, aircraft behaviour via the iPad.</p>
 <h2 id='contents' class='heading'>Contents</h2>
 
 <ul>
@@ -163,6 +164,7 @@
 <li><a href="#requirements">Requirements</a></li>
 <li><a href="#migration-guides">Migration Guides</a></li>
 <li><a href="#installation">Installation</a></li>
+<li><a href="#demo">Demo</a></li>
 <li><a href="/Documentation/Quick%20Start%20Guide.md">Quick Start Guide</a></li>
 <li><a href="https://yamasee.github.io/skypath-ios-sdk">Documentation</a></li>
 <li><a href="#license">License</a></li>
@@ -191,16 +193,15 @@ Make sure the  <code>Privacy - Location When In Use Usage Description</code> des
 <h3 id='cocoapods' class='heading'>CocoaPods</h3>
 
 <p><a href="https://cocoapods.org">CocoaPods</a> is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate SkyPath into your Xcode project using CocoaPods, specify it in your <code>Podfile</code>:</p>
-<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'SkyPath'</span><span class="p">,</span> <span class="s1">'~&gt; 2.0-beta1'</span>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'SkyPath'</span><span class="p">,</span> <span class="s1">'2.0-beta1'</span>
 </code></pre>
 <h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
 
 <p>The <a href="https://swift.org/package-manager/">Swift Package Manager</a> is a tool for automating the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.</p>
 
-<p>To integrate SkyPath into your Xcode project using Swift Package Manager, add it to the dependencies value of your Package.swift:</p>
-<pre class="highlight swift"><code><span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
-    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/Yamasee/skypath-ios-sdk.git"</span><span class="p">,</span> <span class="o">.</span><span class="nf">upToNextMajor</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="s">"2.0-beta1"</span><span class="p">))</span>
-<span class="p">]</span>
+<p>Use the following to add SkyPath Apple Package Dependency:</p>
+<pre class="highlight plaintext"><code>https://github.com/Yamasee/skypath-ios-sdk
+Dependency Rule: Branch, master // v2.0-beta1
 </code></pre>
 <h3 id='manually' class='heading'>Manually</h3>
 
@@ -211,6 +212,9 @@ Make sure the  <code>Privacy - Location When In Use Usage Description</code> des
 <li>Copy <code>SkyPathSDK.xcframework</code> to a project directory</li>
 <li>In Xcode project target in <code>General</code> tab, in <code>Frameworks, Libraries, and Embedded Content</code> tap &ldquo;Add items&rdquo;, choose a <code>SkyPathSDK.xcframework</code> file. Make sure the added framework &ldquo;Embed&rdquo; value is set to <code>Embed &amp; Sign</code></li>
 </ul>
+<h2 id='demo' class='heading'>Demo</h2>
+
+<p>Try out the <code>Demo</code> project inside the repo. You will need just a valid SkyPath API key and enter an airline ICAO and user id in the <code>ViewController</code>.</p>
 <h2 id='license' class='heading'>License</h2>
 
 <p>Copyright © Yamasee LTD 2022. All rights reserved. 
