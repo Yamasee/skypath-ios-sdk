@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SkyPath",
+        "repositoryURL": "https://github.com/Yamasee/skypath-ios-sdk",
+        "state": {
+          "branch": "release/v2.0-beta1",
+          "revision": "c84c77853774572938b05b34233752cbde57c0c0",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
