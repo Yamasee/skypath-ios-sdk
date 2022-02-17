@@ -5,8 +5,8 @@
         "package": "SkyPath",
         "repositoryURL": "https://github.com/Yamasee/skypath-ios-sdk",
         "state": {
-          "branch": "release/v2.0-beta1",
-          "revision": "c84c77853774572938b05b34233752cbde57c0c0",
+          "branch": "master",
+          "revision": "226779052fb3787084188dfa4bef24d80483b6b3",
           "version": null
         }
       }

@@ -390,7 +390,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Yamasee/skypath-ios-sdk";
 			requirement = {
-				branch = "release/v2.0-beta1";
+				branch = master;
 				kind = branch;
 			};
 		};

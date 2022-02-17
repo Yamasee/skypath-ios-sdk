@@ -4,11 +4,11 @@ Pod::Spec.new do |s|
 
     s.name = 'SkyPath'
     s.version = sdk_version
-    s.summary = 'SkyPath iOS SDK'
+    s.summary = 'The world’s leading turbulence and auto-PIREPS data source.'
     s.homepage = 'https://github.com/Yamasee/skypath-ios-sdk'
-
     s.author = { 'SkyPath' => 'info@skypath.io' }
     s.license = { type: 'Commercial', file: 'LICENSE' }
+    s.documentation_url = 'https://yamasee.github.io/skypath-ios-sdk/'
 
     s.platform = :ios
     s.source = { :git => 'https://github.com/Yamasee/skypath-ios-sdk.git', :tag => "v#{sdk_version}" } 
