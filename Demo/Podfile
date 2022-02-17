@@ -5,6 +5,5 @@ use_frameworks!
 
 target 'Demo' do
 
-pod 'SkyPath', :git => 'https://github.com/Yamasee/skypath-ios-sdk.git', :branch => 'release/v2.0-beta1'
-
+pod 'SkyPath', '~> 2.0-beta1'
 end
