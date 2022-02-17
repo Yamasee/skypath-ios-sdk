@@ -2,21 +2,21 @@ PODS:
   - SkyPath (1.11.1)
 
 DEPENDENCIES:
-  - SkyPath (from `https://github.com/Yamasee/skypath-ios-sdk.git`, tag `v1.11.1`)
+  - SkyPath (from `https://github.com/Yamasee/skypath-ios-sdk.git`, branch `release/v2.0-beta1`)
 
 EXTERNAL SOURCES:
   SkyPath:
+    :branch: release/v2.0-beta1
     :git: https://github.com/Yamasee/skypath-ios-sdk.git
-    :tag: v1.11.1
 
 CHECKOUT OPTIONS:
   SkyPath:
+    :commit: c84c77853774572938b05b34233752cbde57c0c0
     :git: https://github.com/Yamasee/skypath-ios-sdk.git
-    :tag: v1.11.1
 
 SPEC CHECKSUMS:
-  SkyPath: df079a1b90d5db79d4be160e6a8f73c23c7ee017
+  SkyPath: b8edbe775ea4204bfa49a9bc6a6b0153783b1a3b
 
-PODFILE CHECKSUM: 0814d7d560439e01f97838c00ffa873376204bd0
+PODFILE CHECKSUM: a3918a73f5e5ce922e62cbac2c3c2ee3f4f591ea
 
 COCOAPODS: 1.11.2

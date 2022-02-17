@@ -1,0 +1,4 @@
+framework module SkyPathSDK {
+  header "SkyPathSDK-Swift.h"
+  requires objc
+}

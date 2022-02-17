@@ -2,8 +2,7 @@
 //  AppDelegate.swift
 //  Demo
 //
-//  Created by Alex Kovalov on 20.10.2020.
-//  Copyright © 2020 Yamasee. All rights reserved.
+//  Created by Alex Kovalov on 17.02.2022.
 //
 
 import UIKit
