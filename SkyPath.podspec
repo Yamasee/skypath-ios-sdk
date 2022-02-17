@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
     s.name = 'SkyPath'
     s.version = sdk_version
     s.summary = 'SkyPath iOS SDK'
-    s.homepage = 'https://skypath.io'
+    s.homepage = 'https://github.com/Yamasee/skypath-ios-sdk'
 
     s.author = { 'SkyPath' => 'info@skypath.io' }
     s.license = { type: 'Commercial', file: 'LICENSE' }

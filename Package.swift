@@ -16,7 +16,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "SkyPath",
-            path: "./Yamasee.xcframework"
+            path: "./SkyPathSDK.xcframework"
         )
     ]
 )
