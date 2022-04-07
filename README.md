@@ -15,7 +15,7 @@ Improve safety and operational efficiency with real-time turbulence information 
 - [Migration Guides](#migration-guides)
 - [Installation](#installation)
 - [Demo](#demo)
-- [Quick Start Guide](/Documentation/Quick%20Start%20Guide.md)
+- [Quick Start Guide](https://github.com/Yamasee/skypath-ios-sdk/tree/master/Documentation/Quick%20Start%20Guide.md)
 - [Documentation](https://yamasee.github.io/skypath-ios-sdk)
 - [License](#license)
 
@@ -25,7 +25,7 @@ SkyPath iOS SDK enables rapid and seamless integration of SkyPath technology int
 
 ## Requirements
 
-- iOS 12.0+
+- iOS 13.0+
 - Xcode 13.0+
 - Swift 5.0+
 
@@ -38,7 +38,7 @@ Make sure the  `Privacy - Location When In Use Usage Description` description is
 
 ## Migration Guides
 
-- [SkyPath 2.0 Migration Guide](/Documentation/SkyPath%202.0%20Migration%20Guide.md)
+- [SkyPath 2.0 Migration Guide](https://github.com/Yamasee/skypath-ios-sdk/tree/master/Documentation/SkyPath%202.0%20Migration%20Guide.md)
 
 ## Installation
 
@@ -47,7 +47,7 @@ Make sure the  `Privacy - Location When In Use Usage Description` description is
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate SkyPath into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'SkyPath', '2.0-beta1'
+pod 'SkyPath', '2.0-beta2'
 ```
 
 ### Swift Package Manager
@@ -58,7 +58,7 @@ Use the following to add SkyPath Apple Package Dependency:
 
 ```
 https://github.com/Yamasee/skypath-ios-sdk
-Dependency Rule: Branch, master // v2.0-beta1
+Dependency Rule: Branch, master // v2.0-beta2
 ``` 
 
 ### Manually

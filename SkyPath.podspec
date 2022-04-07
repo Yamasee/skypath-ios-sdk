@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|  
 
-    sdk_version = '2.0-beta1'
+    sdk_version = '2.0-beta2'
 
     s.name = 'SkyPath'
     s.version = sdk_version
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
 
     s.platform = :ios
     s.source = { :git => 'https://github.com/Yamasee/skypath-ios-sdk.git', :tag => "v#{sdk_version}" } 
-    s.ios.deployment_target = '12.0'
+    s.ios.deployment_target = '13.0'
     s.swift_version = '5.0'
     s.ios.vendored_frameworks = 'SkyPathSDK.xcframework'
 
