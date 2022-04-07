@@ -8,37 +8,45 @@
 		<data>
 		HExCAvNm+hD68NMv3D9Zyap5XbM=
 		</data>
+		<key>Headers/SkyPathSDK.h</key>
+		<data>
+		srNSXPmvbxLz2dB++kihtg9uwNM=
+		</data>
+		<key>Headers/h3api.h</key>
+		<data>
+		B/xM7015J/gzzCzw8Hediz4j9ZA=
+		</data>
 		<key>Info.plist</key>
 		<data>
-		H0unCPhHBwsued2O0loG7+hWSh4=
+		McH8ZnoVGVvCfaJifz9JnV8KEns=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		G0mbAJCfrWFT5oCV8PlzgRSR+bU=
+		PFstC3x4K6WB8aVdeMIG7q5Z6I4=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		cQ/YlRvnIFFZiL9p+Sm8N1a0XcI=
+		NZrgpTqlwnbGJuBXPp1tYIrLIJQ=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		srVgbNeoRGuNSjySABJuxQTb8L0=
+		pGqh0S4CNoa8qGIystQKi/+iVmY=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		G0mbAJCfrWFT5oCV8PlzgRSR+bU=
+		PFstC3x4K6WB8aVdeMIG7q5Z6I4=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		cQ/YlRvnIFFZiL9p+Sm8N1a0XcI=
+		NZrgpTqlwnbGJuBXPp1tYIrLIJQ=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		srVgbNeoRGuNSjySABJuxQTb8L0=
+		pGqh0S4CNoa8qGIystQKi/+iVmY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		ExKPBuaYl33+AH2pCb3oM1X/9Ns=
+		QUIztpBg4Og8fwOwsIBh4AkAmi4=
 		</data>
 		<key>aircrafts.json</key>
 		<data>
@@ -46,7 +54,7 @@
 		</data>
 		<key>airports.json</key>
 		<data>
-		TlA51rpNsH1Vb1E2CtyypLhga7M=
+		mT5KTb0qMUCt8RJ0SrMuja08Hts=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -58,53 +66,67 @@
 			4UWbr3k/jhNX9/pBtpkpL+rTXwQlLrOCkaUhej+qL00=
 			</data>
 		</dict>
+		<key>Headers/SkyPathSDK.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			nKO5RyHyjgHEs4KocmMtyIwvaSVd4bYsLYQSz7o4Zdg=
+			</data>
+		</dict>
+		<key>Headers/h3api.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			q1lxlpaUsEvy9/schHPtpTePCqgcbLQpnbogml1E290=
+			</data>
+		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			C9g8qAonk9e3dsoK7lkkhURmGBjQzm5ZWl4kkVUKDhg=
+			hqLVPnYa7CteeFeT5jAZNLaV+S7ZJQKUqEbORpqLbV0=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rewPLhbbp+5BHKyGWvnrCnM8WbJdEHkSUQHmOBmJH0Y=
+			vTYWTZbJmAr2tercYznTHUaF1d97PVgrWSNe9mp19p8=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uO+5nkSkv0RRZ4YFVhUDlx3Fzln6MHqmJ4WLPg9oXIo=
+			NTI1H6pvgDSJIArXFLv+o8NZZ52HxkoKTBhmoBJddNU=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			C9g8qAonk9e3dsoK7lkkhURmGBjQzm5ZWl4kkVUKDhg=
+			hqLVPnYa7CteeFeT5jAZNLaV+S7ZJQKUqEbORpqLbV0=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rewPLhbbp+5BHKyGWvnrCnM8WbJdEHkSUQHmOBmJH0Y=
+			vTYWTZbJmAr2tercYznTHUaF1d97PVgrWSNe9mp19p8=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uO+5nkSkv0RRZ4YFVhUDlx3Fzln6MHqmJ4WLPg9oXIo=
+			NTI1H6pvgDSJIArXFLv+o8NZZ52HxkoKTBhmoBJddNU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9sF5vM4C5DJ5VVL3JeUsNODPUJCj/Z7KZ8IC3dQnNvA=
+			g9l33sQZTfRH9rVxIvUJ9He2jRASeMZYdweiSK2RsU4=
 			</data>
 		</dict>
 		<key>aircrafts.json</key>
@@ -118,7 +140,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AeChr3CDgmslXKK8+JDFlBH3WwjcuhogoLOSZ0O22kA=
+			iHoXknd1syZ7UExuYSksj4uYi7dNHFQrR+oa2I6jHXI=
 			</data>
 		</dict>
 	</dict>

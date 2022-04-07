@@ -17,7 +17,7 @@
     <a title="SkyPath Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (79% documented)</p>
+        <p><a href="../index.html"> Docs</a> (80% documented)</p>
         <p class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -386,7 +386,7 @@ See <code>Quick Start Guide</code> and API reference for usage details.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">dataQuery</span><span class="p">:</span> <span class="kt"><a href="../Structs/DataQuery.html">DataQuery</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">dataQuery</span><span class="p">:</span> <span class="kt"><a href="../Structs/DataQuery.html">DataQuery</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -477,6 +477,52 @@ When started, SDK fetches initial data for time back in time and then receive on
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C9fetchData7refreshySb_tF"></a>
+                    <a name="//apple_ref/swift/Method/fetchData(refresh:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C9fetchData7refreshySb_tF">fetchData(refresh:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>In case you need to get new data immediately (for example when opened the app) call this method and the result will be notified in corresponding delegate methods.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetchData</span><span class="p">(</span><span class="nv">refresh</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>refresh</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If true, all data per query will be fetched.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
             <div class="task-group">
@@ -532,6 +578,33 @@ When started, SDK fetches initial data for time back in time and then receive on
                             </tr>
                           </tbody>
                         </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C18turbulencePolygonsSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/turbulencePolygons" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C18turbulencePolygonsSSSgvp">turbulencePolygons</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Turbulence polygons GeoJSON string if available.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">turbulencePolygons</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1219,7 +1292,7 @@ When started, SDK fetches initial data for time back in time and then receive on
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="https://skypath.io" target="_blank" rel="external">Yamasee LTD</a>. All rights reserved. (Last updated: 2022-02-17)</p>
+          <p>&copy; 2022 <a class="link" href="https://skypath.io" target="_blank" rel="external">Yamasee LTD</a>. All rights reserved. (Last updated: 2022-04-07)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

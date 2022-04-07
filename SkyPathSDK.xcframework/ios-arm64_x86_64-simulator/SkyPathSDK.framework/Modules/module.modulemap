@@ -1,4 +1,11 @@
 framework module SkyPathSDK {
-  header "SkyPathSDK-Swift.h"
-  requires objc
+  umbrella header "SkyPathSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module SkyPathSDK.Swift {
+    header "SkyPathSDK-Swift.h"
+    requires objc
 }

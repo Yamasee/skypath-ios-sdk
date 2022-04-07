@@ -17,7 +17,7 @@
     <a title="DataQuery Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (79% documented)</p>
+        <p><a href="../index.html"> Docs</a> (80% documented)</p>
         <p class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -220,60 +220,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10SkyPathSDK9DataQueryV5routeSaySo22CLLocationCoordinate2DVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/route" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10SkyPathSDK9DataQueryV5routeSaySo22CLLocationCoordinate2DVGSgvp">route</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Set route coordinates to get turbulence around. Coordinate will be translated into tile area and returned turbulence inside tile area that meets other query criterias. Use <code><a href="../Structs/DataQuery.html#/s:10SkyPathSDK9DataQueryV11widthAroundSdSgvp">widthAround</a></code> to set how far search from coordinates.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">route</span><span class="p">:</span> <span class="p">[</span><span class="kt">CLLocationCoordinate2D</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10SkyPathSDK9DataQueryV11widthAroundSdSgvp"></a>
-                    <a name="//apple_ref/swift/Property/widthAround" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10SkyPathSDK9DataQueryV11widthAroundSdSgvp">widthAround</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Use only when <code><a href="../Structs/DataQuery.html#/s:10SkyPathSDK9DataQueryV5routeSaySo22CLLocationCoordinate2DVGSgvp">route</a></code> is set. Determine how far from <code><a href="../Structs/DataQuery.html#/s:10SkyPathSDK9DataQueryV5routeSaySo22CLLocationCoordinate2DVGSgvp">route</a></code> to search for turbulence. Default is 20 NM. Measured in nautical miles (NM).</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">widthAround</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:10SkyPathSDK9DataQueryV7polygonSaySo22CLLocationCoordinate2DVGSgvp"></a>
                     <a name="//apple_ref/swift/Property/polygon" class="dashAnchor"></a>
                     <a class="token" href="#/s:10SkyPathSDK9DataQueryV7polygonSaySo22CLLocationCoordinate2DVGSgvp">polygon</a>
@@ -301,9 +247,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10SkyPathSDK9DataQueryV5types4sevs5route11widthAround7polygonAcA0D11TypeOptionsV_SayAA18TurbulenceSeverityOGSaySo22CLLocationCoordinate2DVGSgSdAQtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(types:sevs:route:widthAround:polygon:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10SkyPathSDK9DataQueryV5types4sevs5route11widthAround7polygonAcA0D11TypeOptionsV_SayAA18TurbulenceSeverityOGSaySo22CLLocationCoordinate2DVGSgSdAQtcfc">init(types:<wbr>sevs:<wbr>route:<wbr>widthAround:<wbr>polygon:<wbr>)</a>
+                    <a name="/s:10SkyPathSDK9DataQueryV5types4sevs7polygonAcA0D11TypeOptionsV_SayAA18TurbulenceSeverityOGSaySo22CLLocationCoordinate2DVGSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(types:sevs:polygon:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK9DataQueryV5types4sevs7polygonAcA0D11TypeOptionsV_SayAA18TurbulenceSeverityOGSaySo22CLLocationCoordinate2DVGSgtcfc">init(types:<wbr>sevs:<wbr>polygon:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -320,8 +266,6 @@
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">types</span><span class="p">:</span> <span class="kt"><a href="../Structs/DataTypeOptions.html">DataTypeOptions</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">turbulence</span><span class="p">,</span>
             <span class="nv">sevs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/TurbulenceSeverity.html">TurbulenceSeverity</a></span><span class="p">]</span> <span class="o">=</span> <span class="kt"><a href="../Enums/TurbulenceSeverity.html">TurbulenceSeverity</a></span><span class="o">.</span><span class="n">allCases</span><span class="p">,</span>
-            <span class="nv">route</span><span class="p">:</span> <span class="p">[</span><span class="kt">CLLocationCoordinate2D</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-            <span class="nv">widthAround</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
             <span class="nv">polygon</span><span class="p">:</span> <span class="p">[</span><span class="kt">CLLocationCoordinate2D</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
@@ -334,7 +278,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="https://skypath.io" target="_blank" rel="external">Yamasee LTD</a>. All rights reserved. (Last updated: 2022-02-17)</p>
+          <p>&copy; 2022 <a class="link" href="https://skypath.io" target="_blank" rel="external">Yamasee LTD</a>. All rights reserved. (Last updated: 2022-04-07)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

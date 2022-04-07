@@ -17,7 +17,7 @@
     <a title="TurbulenceQuery Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (79% documented)</p>
+        <p><a href="../index.html"> Docs</a> (80% documented)</p>
         <p class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -284,7 +284,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Array of tile ids <code>Tile.keyByCoord</code>. Use it to query turbulence in specific tiles.</p>
+                        <p>Array of a tile id as (x,y) or as H3 hex when used. Use it to query turbulence in specific tiles.</p>
 
                       </div>
                       <div class="declaration">
@@ -301,36 +301,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10SkyPathSDK15TurbulenceQueryV4sevsSayAA0D8SeverityOGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/sevs" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10SkyPathSDK15TurbulenceQueryV4sevsSayAA0D8SeverityOGSgvp">sevs</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Severity levels of turbulence. Will fetch only turbulence with these severities if set. Default is all.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">sevs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/TurbulenceSeverity.html">TurbulenceSeverity</a></span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10SkyPathSDK15TurbulenceQueryV4type8altRange13resultOptions9aggregate5tiles4sevsAcA0D10ResultTypeO_SNySdGSgAA0dnJ0VSbSaySSGSgSayAA0D8SeverityOGSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(type:altRange:resultOptions:aggregate:tiles:sevs:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10SkyPathSDK15TurbulenceQueryV4type8altRange13resultOptions9aggregate5tiles4sevsAcA0D10ResultTypeO_SNySdGSgAA0dnJ0VSbSaySSGSgSayAA0D8SeverityOGSgtcfc">init(type:<wbr>altRange:<wbr>resultOptions:<wbr>aggregate:<wbr>tiles:<wbr>sevs:<wbr>)</a>
+                    <a name="/s:10SkyPathSDK15TurbulenceQueryV4type8altRange13resultOptions9aggregate5tilesAcA0D10ResultTypeO_SNySdGSgAA0dmJ0VSbSaySSGSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(type:altRange:resultOptions:aggregate:tiles:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK15TurbulenceQueryV4type8altRange13resultOptions9aggregate5tilesAcA0D10ResultTypeO_SNySdGSgAA0dmJ0VSbSaySSGSgtcfc">init(type:<wbr>altRange:<wbr>resultOptions:<wbr>aggregate:<wbr>tiles:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -348,8 +321,7 @@
             <span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Double</span><span class="o">&gt;</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
             <span class="nv">resultOptions</span><span class="p">:</span> <span class="kt"><a href="../Structs/TurbulenceResultOptions.html">TurbulenceResultOptions</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">geoJSON</span><span class="p">,</span>
             <span class="nv">aggregate</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
-            <span class="nv">tiles</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-            <span class="nv">sevs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/TurbulenceSeverity.html">TurbulenceSeverity</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+            <span class="nv">tiles</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -440,7 +412,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="https://skypath.io" target="_blank" rel="external">Yamasee LTD</a>. All rights reserved. (Last updated: 2022-02-17)</p>
+          <p>&copy; 2022 <a class="link" href="https://skypath.io" target="_blank" rel="external">Yamasee LTD</a>. All rights reserved. (Last updated: 2022-04-07)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

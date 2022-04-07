@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
-// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SkyPathSDK
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SkyPathSDK
 import CFNetwork
 import SystemConfiguration.CaptiveNetwork
 import CommonCrypto
@@ -11,6 +11,7 @@ import CryptoKit
 import Foundation
 import GameKit
 import MapKit
+@_exported import SkyPathSDK
 import Swift
 import SystemConfiguration
 import UIKit
@@ -46,13 +47,24 @@ public class FlightPlan : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
 }
+public enum AirportSize : Swift.Int, Swift.Codable {
+  case important
+  case large
+  case medium
+  case small
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 public struct Airport : Swift.Codable, Swift.Hashable {
   public var name: Swift.String
   public var icao: Swift.String
   public var lat: Swift.Float
   public var lng: Swift.Float
   public var iata: Swift.String
-  public var size: Swift.Int
+  public var size: SkyPathSDK.AirportSize
   public var show: Swift.Bool
   public var search: Swift.Bool
   public init()
@@ -118,6 +130,7 @@ public struct User : Swift.Codable {
 }
 public enum AlertError : SkyPathSDK.SPError {
   case invalidCoordinates
+  case invalidPolygon
   case altRangeNotRoundToThousandFeet
   case general(error: SkyPathSDK.GeneralError)
 }
@@ -163,6 +176,7 @@ public enum DataUpdateFrequency : Swift.String, Swift.Codable {
   public static func store<T>(_ object: T, to url: Foundation.URL) where T : Swift.Encodable
   public static func retrieve<T>(from url: Foundation.URL, as type: T.Type) -> T? where T : Swift.Decodable
   public static func remove(fileUrl url: Foundation.URL)
+  public static func storeData(_ data: Foundation.Data, to url: Foundation.URL)
   @objc deinit
 }
 public enum TurbulenceSeverity : Swift.Int, Swift.Equatable, Swift.Comparable, Swift.Codable {
@@ -230,11 +244,9 @@ extension CoreLocation.CLLocationCoordinate2D {
   public func isBehindOf(coordinate: CoreLocation.CLLocationCoordinate2D, heading: Swift.Double) -> Swift.Bool
 }
 public struct Tile : Swift.Codable, Swift.Equatable, Swift.Hashable {
-  public var tileX: Swift.Int
-  public var tileY: Swift.Int
+  public var h3Hex: Swift.String
   public var alt: Swift.Int
-  public init(tileX: Swift.Int, tileY: Swift.Int, alt: Swift.Int?)
-  public init?(keyByCoord: Swift.String)
+  public init(h3Hex: Swift.String, alt: Swift.Int?)
   public static func == (a: SkyPathSDK.Tile, b: SkyPathSDK.Tile) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public func encode(to encoder: Swift.Encoder) throws
@@ -254,6 +266,9 @@ extension SkyPathSDK.Tile {
     get
   }
   public var altMeters: Swift.Double {
+    get
+  }
+  public var center: CoreLocation.CLLocationCoordinate2D {
     get
   }
 }
@@ -436,7 +451,8 @@ public struct TurbulenceItem : Swift.Codable {
   public let alt: Swift.Double
   public let ts: Swift.Int
   public let coordinate: CoreLocation.CLLocationCoordinate2D
-  public init(sev: SkyPathSDK.TurbulenceSeverity, bbox: [CoreLocation.CLLocationCoordinate2D], tile: SkyPathSDK.Tile, alt: Swift.Double, ts: Swift.Int, coordinate: CoreLocation.CLLocationCoordinate2D)
+  public var h3Hex: Swift.String
+  public init(sev: SkyPathSDK.TurbulenceSeverity, bbox: [CoreLocation.CLLocationCoordinate2D], tile: SkyPathSDK.Tile, alt: Swift.Double, ts: Swift.Int, coordinate: CoreLocation.CLLocationCoordinate2D, h3Hex: Swift.String)
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -504,9 +520,6 @@ extension CoreLocation.CLLocationCoordinate2D : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
 }
-extension SkyPathSDK.Tile {
-  public func isBehindOf(tile: SkyPathSDK.Tile, heading: Swift.Double) -> Swift.Bool
-}
 public struct RouteWaypointsTranslationResponse : Swift.Decodable {
   public var waypoints: [SkyPathSDK.FlightWaypoint]
   public var pathQuery: [SkyPathSDK.PathQuery]
@@ -535,6 +548,17 @@ public enum StartError : SkyPathSDK.SPError {
   case weakPassword
   case general(error: SkyPathSDK.GeneralError)
 }
+public struct DataTypeOptions : Swift.OptionSet {
+  public let rawValue: Swift.Int
+  public static let turbulence: SkyPathSDK.DataTypeOptions
+  public static let turbulencePolygons: SkyPathSDK.DataTypeOptions
+  public static let traffic: SkyPathSDK.DataTypeOptions
+  public static let pireps: SkyPathSDK.DataTypeOptions
+  public init(rawValue: Swift.Int)
+  public typealias ArrayLiteralElement = SkyPathSDK.DataTypeOptions
+  public typealias Element = SkyPathSDK.DataTypeOptions
+  public typealias RawValue = Swift.Int
+}
 extension CoreLocation.CLAuthorizationStatus : Swift.CustomStringConvertible {
   public var description: Swift.String {
     get
@@ -561,32 +585,23 @@ public struct AlertQuery {
   public let angleSpan: Swift.Double
   public let altRange: Swift.ClosedRange<Swift.Double>?
   public let switchToBeamOnDistanceFromRoute: Swift.Double
-  public var dataHistoryTime: SkyPathSDK.DataHistoryTime?
+  public let excludeOwnTimeSpan: Swift.Int
   public var route: [CoreLocation.CLLocationCoordinate2D]?
   public var widthAround: Swift.Double?
-  public init(distance: Swift.Double = 100, angleSpan: Swift.Double = 15, altRange: Swift.ClosedRange<Swift.Double>? = nil, switchToBeamOnDistanceFromRoute: Swift.Double = 20)
+  public var polygon: [CoreLocation.CLLocationCoordinate2D]?
+  public var dataHistoryTime: SkyPathSDK.DataHistoryTime?
+  public init(distance: Swift.Double = 100, angleSpan: Swift.Double = 15, altRange: Swift.ClosedRange<Swift.Double>? = nil, route: [CoreLocation.CLLocationCoordinate2D]? = nil, widthAround: Swift.Double? = 20, switchToBeamOnDistanceFromRoute: Swift.Double = 20, excludeOwnTimeSpan: Swift.Int = 60)
 }
 public struct DataQuery {
   public var types: SkyPathSDK.DataTypeOptions
   public var sevs: [SkyPathSDK.TurbulenceSeverity]
-  public var route: [CoreLocation.CLLocationCoordinate2D]?
-  public var widthAround: Swift.Double?
   public var polygon: [CoreLocation.CLLocationCoordinate2D]?
-  public init(types: SkyPathSDK.DataTypeOptions = .turbulence, sevs: [SkyPathSDK.TurbulenceSeverity] = TurbulenceSeverity.allCases, route: [CoreLocation.CLLocationCoordinate2D]? = nil, widthAround: Swift.Double = 20, polygon: [CoreLocation.CLLocationCoordinate2D]? = nil)
-}
-public struct DataTypeOptions : Swift.OptionSet {
-  public let rawValue: Swift.Int
-  public static let turbulence: SkyPathSDK.DataTypeOptions
-  public static let traffic: SkyPathSDK.DataTypeOptions
-  public static let pireps: SkyPathSDK.DataTypeOptions
-  public init(rawValue: Swift.Int)
-  public typealias ArrayLiteralElement = SkyPathSDK.DataTypeOptions
-  public typealias Element = SkyPathSDK.DataTypeOptions
-  public typealias RawValue = Swift.Int
+  public init(types: SkyPathSDK.DataTypeOptions = .turbulence, sevs: [SkyPathSDK.TurbulenceSeverity] = TurbulenceSeverity.allCases, polygon: [CoreLocation.CLLocationCoordinate2D]? = nil)
 }
 public enum AlertResultType {
   case none
   case coordinates
+  case polygon
   case beam
   public static func == (a: SkyPathSDK.AlertResultType, b: SkyPathSDK.AlertResultType) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
@@ -617,6 +632,7 @@ public struct ServerSettings : Swift.Codable {
   public var beta: SkyPathSDK.SettingsBeta?
   public var data: SkyPathSDK.SettingsData?
   public var location: SkyPathSDK.SettingsLocation?
+  public var filter: SkyPathSDK.SettingsFilter?
   public var updatedAtDate: Foundation.Date? {
     get
   }
@@ -659,8 +675,15 @@ public struct SettingsAirportInfo : Swift.Codable {
     public func encode(to encoder: Swift.Encoder) throws
     public init(from decoder: Swift.Decoder) throws
   }
+  public struct LandingNotification : Swift.Codable {
+    public var maxTimeTo: Swift.Int?
+    public var maxDistanceToArrivalAirport: Swift.Double?
+    public func encode(to encoder: Swift.Encoder) throws
+    public init(from decoder: Swift.Decoder) throws
+  }
   public var enabled: Swift.Bool?
   public var features: SkyPathSDK.SettingsAirportInfo.Features?
+  public var landingNotification: SkyPathSDK.SettingsAirportInfo.LandingNotification?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -735,6 +758,22 @@ public struct SettingsLocation : Swift.Codable {
   public var baroAltitudeDifference: Swift.Double?
   public var accuracyVertical: Swift.Double?
   public var accuracyHorizontal: Swift.Double?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SettingsFilter : Swift.Codable {
+  public var thDelta1: Swift.Double?
+  public var thDelta2: Swift.Double?
+  public var thDelta3: Swift.Double?
+  public var thDelta4: Swift.Double?
+  public var thDelta5: Swift.Double?
+  public var lpTh1: Swift.Double?
+  public var lpTh2: Swift.Double?
+  public var lpTh3: Swift.Double?
+  public var lpTh4: Swift.Double?
+  public var avg: Swift.Double?
+  public var timeWindowForChange: Swift.Int?
+  public var noChangesForTurbulence: Swift.Int?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -875,7 +914,10 @@ public protocol SkyPathDelegate : AnyObject {
   public func otpRequest(completion: @escaping (_ result: Swift.Bool?, _ error: SkyPathSDK.StartError?) -> Swift.Void)
   public func otpValidate(otp: Swift.String, completion: @escaping (_ result: Swift.Bool?, _ error: SkyPathSDK.StartError?) -> Swift.Void)
   public func setProfile(password: Swift.String, completion: @escaping (_ result: Swift.Bool, _ error: SkyPathSDK.StartError?) -> Swift.Void)
-  public var dataQuery: SkyPathSDK.DataQuery
+  public var dataQuery: SkyPathSDK.DataQuery {
+    get
+    set
+  }
   public var dataUpdateFrequency: SkyPathSDK.DataUpdateFrequency {
     get
     set
@@ -887,9 +929,12 @@ public protocol SkyPathDelegate : AnyObject {
   public var dataUpdatedAt: Foundation.Date? {
     get
   }
-  public func fetchData()
+  public func fetchData(refresh: Swift.Bool = false)
   public func turbulence(with query: SkyPathSDK.TurbulenceQuery) -> Swift.Result<SkyPathSDK.TurbulenceResult, SkyPathSDK.QueryError>
   public func tilesInBeam(with query: SkyPathSDK.TilesBeamQuery) -> [Swift.String]
+  public var turbulencePolygons: Swift.String? {
+    get
+  }
   public func getTrafficJson(altRange: Swift.ClosedRange<Swift.Double>, predict: Swift.Bool = false) -> Swift.String
   public func getTraffic(altRange: Swift.ClosedRange<Swift.Double>, predict: Swift.Bool = false) -> [SkyPathSDK.Traffic]
   public func reportWeather(type: SkyPathSDK.WeatherType, at location: CoreLocation.CLLocation, speed: Swift.Double? = nil)
@@ -950,6 +995,9 @@ public protocol SkyPathDelegate : AnyObject {
   public var version: Swift.String {
     get
   }
+  public var apiKey: Swift.String {
+    get
+  }
   public func enableSimulation(_ enabled: Swift.Bool)
   public func simulatedLocation(_ location: CoreLocation.CLLocation)
   public func enablePushSimulated(_ enabled: Swift.Bool)
@@ -1003,7 +1051,7 @@ public struct TurbulenceQuery {
   public var dataHistoryTime: SkyPathSDK.DataHistoryTime?
   public var route: [CoreLocation.CLLocationCoordinate2D]?
   public var widthAround: Swift.Double?
-  public init(type: SkyPathSDK.TurbulenceResultType = .server, altRange: Swift.ClosedRange<Swift.Double>? = nil, resultOptions: SkyPathSDK.TurbulenceResultOptions = .geoJSON, aggregate: Swift.Bool = true, tiles: [Swift.String]? = nil, sevs: [SkyPathSDK.TurbulenceSeverity]? = nil)
+  public init(type: SkyPathSDK.TurbulenceResultType = .server, altRange: Swift.ClosedRange<Swift.Double>? = nil, resultOptions: SkyPathSDK.TurbulenceResultOptions = .geoJSON, aggregate: Swift.Bool = true, tiles: [Swift.String]? = nil)
 }
 public struct TurbulenceResultOptions : Swift.OptionSet {
   public let rawValue: Swift.Int
@@ -1131,14 +1179,12 @@ public enum WeatherType : Swift.String, Swift.Codable {
 }
 public struct Weather : Swift.Equatable, Swift.Codable {
   public var id: Swift.String?
-  public var ts: Swift.Int
-  public var type: SkyPathSDK.WeatherType
-  public var tileX: Swift.Int
-  public var tileY: Swift.Int
   public var alt: Swift.Int?
   public var altFeet: Swift.Double?
+  public var ts: Swift.Int
+  public var type: SkyPathSDK.WeatherType
   public var repId: Swift.String?
-  public var fNum: Swift.String?
+  public var hexId: Swift.String
   public var speed: Swift.Double?
   public init(from decoder: Swift.Decoder) throws
   public init(type: SkyPathSDK.WeatherType, lat: Swift.Double, lng: Swift.Double, alt: Swift.Double, simulated: Swift.Bool?, repId: Swift.String, fNum: Swift.String?)
@@ -1188,16 +1234,22 @@ public struct Traffic : Swift.Encodable {
   public var lat: Swift.Double
   public var lng: Swift.Double
   public var alt: Swift.Double
+  public var spAlt: Swift.Int
   public var hdg: Swift.Double
+  public var spdNmH: Swift.Double
   public var ts: Swift.Int
-  public var uuid: Swift.String
-  public var airplane: Swift.String
-  public var speed: Swift.Double
-  public var fNum: Swift.String
-  public var aircraftSize: SkyPathSDK.AircraftSize
+  public var user: Swift.String
   public var companyId: Swift.String
+  public var aircraftCat: Swift.String
+  public var airplane: Swift.String
+  public var aircraftSize: SkyPathSDK.AircraftSize
+  public var fNum: Swift.String
   public var fNumInsertedManually: Swift.Bool?
+  public var dest: Swift.String
+  public var dep: Swift.String
+  public var spFlightId: Swift.String
   public var tile: SkyPathSDK.Tile
+  public var speed: Swift.Double
   public func encode(to encoder: Swift.Encoder) throws
 }
 extension SkyPathSDK.Traffic : Swift.Decodable {
@@ -1220,6 +1272,9 @@ public enum Environment : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
+extension SkyPathSDK.AirportSize : Swift.Equatable {}
+extension SkyPathSDK.AirportSize : Swift.Hashable {}
+extension SkyPathSDK.AirportSize : Swift.RawRepresentable {}
 extension SkyPathSDK.DataUpdateFrequency : Swift.Equatable {}
 extension SkyPathSDK.DataUpdateFrequency : Swift.Hashable {}
 extension SkyPathSDK.DataUpdateFrequency : Swift.RawRepresentable {}
