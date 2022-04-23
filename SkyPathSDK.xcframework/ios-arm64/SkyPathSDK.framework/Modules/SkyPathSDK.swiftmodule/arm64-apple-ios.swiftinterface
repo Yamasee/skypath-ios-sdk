@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SkyPathSDK
 import CFNetwork
 import SystemConfiguration.CaptiveNetwork
@@ -548,7 +548,7 @@ public enum StartError : SkyPathSDK.SPError {
   case weakPassword
   case general(error: SkyPathSDK.GeneralError)
 }
-public struct DataTypeOptions : Swift.OptionSet {
+public struct DataTypeOptions : Swift.OptionSet, Swift.Hashable {
   public let rawValue: Swift.Int
   public static let turbulence: SkyPathSDK.DataTypeOptions
   public static let turbulencePolygons: SkyPathSDK.DataTypeOptions
@@ -596,6 +596,9 @@ public struct DataQuery {
   public var types: SkyPathSDK.DataTypeOptions
   public var sevs: [SkyPathSDK.TurbulenceSeverity]
   public var polygon: [CoreLocation.CLLocationCoordinate2D]?
+  public var viewport: [CoreLocation.CLLocationCoordinate2D]?
+  public var globalEnabled: Swift.Bool
+  public var altRange: Swift.ClosedRange<Swift.Double>?
   public init(types: SkyPathSDK.DataTypeOptions = .turbulence, sevs: [SkyPathSDK.TurbulenceSeverity] = TurbulenceSeverity.allCases, polygon: [CoreLocation.CLLocationCoordinate2D]? = nil)
 }
 public enum AlertResultType {
@@ -741,8 +744,26 @@ public struct SettingsBeta : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
 }
 public struct SettingsData : Swift.Codable {
+  public struct UpdateFrequency : Swift.Codable {
+    public var minimal: Swift.Double?
+    public var medium: Swift.Double?
+    public var fast: Swift.Double?
+    public func encode(to encoder: Swift.Encoder) throws
+    public init(from decoder: Swift.Decoder) throws
+  }
+  public struct Update : Swift.Codable {
+    public var globalTurbulencePolygons: SkyPathSDK.SettingsData.UpdateFrequency?
+    public var globalTrafficPireps: SkyPathSDK.SettingsData.UpdateFrequency?
+    public var route: SkyPathSDK.SettingsData.UpdateFrequency?
+    public var viewport: SkyPathSDK.SettingsData.UpdateFrequency?
+    public func encode(to encoder: Swift.Encoder) throws
+    public init(from decoder: Swift.Decoder) throws
+  }
   public var pollEveryXSecs: Swift.Int?
-  public var updateEveryXSecs: Swift.Int?
+  public var update: SkyPathSDK.SettingsData.Update?
+  public var corridorDistanceNM: Swift.Int?
+  public var trafficLimit: Swift.Int?
+  public var pirepsLimit: Swift.Int?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -878,6 +899,7 @@ public protocol SkyPathDelegate : AnyObject {
   func didUpdateRecordingStatus(to recording: Swift.Bool)
   func didReceiveNewTurbulenceData()
   func detectedTurbulence(_ turbulence: SkyPathSDK.TurbulenceItem)
+  func didReceiveNewTurbulencePolygons()
   func didReceiveNewTrafficData()
   func didReceiveNewWeatherData()
   func didReportWeather(_ weather: SkyPathSDK.Weather)
@@ -1009,6 +1031,7 @@ public protocol SkyPathDelegate : AnyObject {
 }
 extension SkyPathSDK.SkyPathDelegate {
   public func detectedTurbulence(_ turbulence: SkyPathSDK.TurbulenceItem)
+  public func didReceiveNewTurbulencePolygons()
   public func didReceiveNewTrafficData()
   public func didReceiveNewWeatherData()
   public func didReportWeather(_ weather: SkyPathSDK.Weather)
@@ -1079,7 +1102,7 @@ public enum AircraftSize : Swift.String, Swift.Codable {
     get
   }
 }
-public struct Aircraft : Swift.Codable {
+public struct Aircraft : Swift.Codable, Swift.Equatable {
   public var id: Swift.String
   public var title: Swift.String
   public var size: SkyPathSDK.AircraftSize
@@ -1091,6 +1114,7 @@ public struct Aircraft : Swift.Codable {
   public var aircraft: Swift.String?
   @available(*, unavailable, renamed: "title")
   public var description: Swift.String?
+  public static func == (a: SkyPathSDK.Aircraft, b: SkyPathSDK.Aircraft) -> Swift.Bool
   public func encode(to encoder: Swift.Encoder) throws
 }
 extension SkyPathSDK.Aircraft {

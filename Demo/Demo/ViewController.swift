@@ -111,6 +111,18 @@ extension ViewController: MKMapViewDelegate {
 
         return MKOverlayRenderer()
     }
+    
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+    
+        let region = MKCoordinateRegion(mapView.visibleMapRect)
+        var polygon = region.boundingBoxCoordinates
+        polygon.append(polygon[0])
+        
+        // to make data fetch smaller 
+        if mapView.currentZoomLevel >= 8 {
+            SkyPath.shared.dataQuery.viewport = polygon
+        }
+    }
 }
 
 // MARK: - SkyPath
