@@ -13,7 +13,9 @@
 		9D374E2027BE517B000DE836 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D374E1E27BE517B000DE836 /* Main.storyboard */; };
 		9D374E2227BE517D000DE836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D374E2127BE517D000DE836 /* Assets.xcassets */; };
 		9D374E2527BE517D000DE836 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D374E2327BE517D000DE836 /* LaunchScreen.storyboard */; };
-		9DF5CB6727BE8CCD00312E67 /* SkyPath in Frameworks */ = {isa = PBXBuildFile; productRef = 9DF5CB6627BE8CCD00312E67 /* SkyPath */; };
+		9DA6977A281471170045ECF5 /* MKCoordinateRegion+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA69778281471170045ECF5 /* MKCoordinateRegion+Ext.swift */; };
+		9DA6977B281471170045ECF5 /* MKMapView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA69779281471170045ECF5 /* MKMapView+Ext.swift */; };
+		9DA6977E281472F50045ECF5 /* SkyPathSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 9DA6977D281472F50045ECF5 /* SkyPathSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +40,8 @@
 		9D374E2127BE517D000DE836 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D374E2427BE517D000DE836 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D374E2627BE517D000DE836 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DA69778281471170045ECF5 /* MKCoordinateRegion+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Ext.swift"; sourceTree = "<group>"; };
+		9DA69779281471170045ECF5 /* MKMapView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MKMapView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DF5CB6727BE8CCD00312E67 /* SkyPath in Frameworks */,
+				9DA6977E281472F50045ECF5 /* SkyPathSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +75,7 @@
 		9D374E1727BE517B000DE836 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				9DA69777281471170045ECF5 /* Extensions */,
 				9D374E1827BE517B000DE836 /* AppDelegate.swift */,
 				9D374E1A27BE517B000DE836 /* SceneDelegate.swift */,
 				9D374E1C27BE517B000DE836 /* ViewController.swift */,
@@ -80,6 +85,15 @@
 				9D374E2627BE517D000DE836 /* Info.plist */,
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		9DA69777281471170045ECF5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9DA69778281471170045ECF5 /* MKCoordinateRegion+Ext.swift */,
+				9DA69779281471170045ECF5 /* MKMapView+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,7 +114,7 @@
 			);
 			name = Demo;
 			packageProductDependencies = (
-				9DF5CB6627BE8CCD00312E67 /* SkyPath */,
+				9DA6977D281472F50045ECF5 /* SkyPathSDK */,
 			);
 			productName = Demo;
 			productReference = 9D374E1527BE517B000DE836 /* Demo.app */;
@@ -131,7 +145,7 @@
 			);
 			mainGroup = 9D374E0C27BE517B000DE836;
 			packageReferences = (
-				9DF5CB6527BE8CCD00312E67 /* XCRemoteSwiftPackageReference "skypath-ios-sdk" */,
+				9DA6977C281472F50045ECF5 /* XCRemoteSwiftPackageReference "skypath-ios-sdk" */,
 			);
 			productRefGroup = 9D374E1627BE517B000DE836 /* Products */;
 			projectDirPath = "";
@@ -162,7 +176,9 @@
 			files = (
 				9D374E1D27BE517B000DE836 /* ViewController.swift in Sources */,
 				9D374E1927BE517B000DE836 /* AppDelegate.swift in Sources */,
+				9DA6977B281471170045ECF5 /* MKMapView+Ext.swift in Sources */,
 				9D374E1B27BE517B000DE836 /* SceneDelegate.swift in Sources */,
+				9DA6977A281471170045ECF5 /* MKCoordinateRegion+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,7 +402,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9DF5CB6527BE8CCD00312E67 /* XCRemoteSwiftPackageReference "skypath-ios-sdk" */ = {
+		9DA6977C281472F50045ECF5 /* XCRemoteSwiftPackageReference "skypath-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Yamasee/skypath-ios-sdk";
 			requirement = {
@@ -397,10 +413,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9DF5CB6627BE8CCD00312E67 /* SkyPath */ = {
+		9DA6977D281472F50045ECF5 /* SkyPathSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9DF5CB6527BE8CCD00312E67 /* XCRemoteSwiftPackageReference "skypath-ios-sdk" */;
-			productName = SkyPath;
+			package = 9DA6977C281472F50045ECF5 /* XCRemoteSwiftPackageReference "skypath-ios-sdk" */;
+			productName = SkyPathSDK;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

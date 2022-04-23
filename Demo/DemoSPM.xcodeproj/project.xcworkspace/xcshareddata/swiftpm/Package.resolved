@@ -1,16 +1,14 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "SkyPath",
-        "repositoryURL": "https://github.com/Yamasee/skypath-ios-sdk",
-        "state": {
-          "branch": "master",
-          "revision": "3d3b02190c56a0f6d0c300809f436d1771051b52",
-          "version": null
-        }
+  "pins" : [
+    {
+      "identity" : "skypath-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Yamasee/skypath-ios-sdk",
+      "state" : {
+        "branch" : "master",
+        "revision" : "aa8e376b10497daa4a2e5c279e90178861c2b001"
       }
-    ]
-  },
-  "version": 1
+    }
+  ],
+  "version" : 2
 }

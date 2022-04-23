@@ -13,6 +13,8 @@
 		9D374E2027BE517B000DE836 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D374E1E27BE517B000DE836 /* Main.storyboard */; };
 		9D374E2227BE517D000DE836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D374E2127BE517D000DE836 /* Assets.xcassets */; };
 		9D374E2527BE517D000DE836 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D374E2327BE517D000DE836 /* LaunchScreen.storyboard */; };
+		9DE1C413281470C100EB660F /* MKCoordinateRegion+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE1C411281470C100EB660F /* MKCoordinateRegion+Ext.swift */; };
+		9DE1C414281470C100EB660F /* MKMapView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE1C412281470C100EB660F /* MKMapView+Ext.swift */; };
 		DB24D57EB81C5845DDBCB81D /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AF67B1E2318B8F814F9C68D /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,8 @@
 		9D374E2127BE517D000DE836 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D374E2427BE517D000DE836 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D374E2627BE517D000DE836 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DE1C411281470C100EB660F /* MKCoordinateRegion+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Ext.swift"; sourceTree = "<group>"; };
+		9DE1C412281470C100EB660F /* MKMapView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MKMapView+Ext.swift"; sourceTree = "<group>"; };
 		BA45A4C44BE8267D87675443 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +80,7 @@
 		9D374E1727BE517B000DE836 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				9DE1C410281470C100EB660F /* Extensions */,
 				9D374E1827BE517B000DE836 /* AppDelegate.swift */,
 				9D374E1A27BE517B000DE836 /* SceneDelegate.swift */,
 				9D374E1C27BE517B000DE836 /* ViewController.swift */,
@@ -87,13 +92,21 @@
 			path = Demo;
 			sourceTree = "<group>";
 		};
+		9DE1C410281470C100EB660F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9DE1C411281470C100EB660F /* MKCoordinateRegion+Ext.swift */,
+				9DE1C412281470C100EB660F /* MKMapView+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		AF967DBD1FB530B6B26D5AC2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				5B3A23C3C12A3547B172F0B3 /* Pods-Demo.debug.xcconfig */,
 				BA45A4C44BE8267D87675443 /* Pods-Demo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -223,7 +236,9 @@
 			files = (
 				9D374E1D27BE517B000DE836 /* ViewController.swift in Sources */,
 				9D374E1927BE517B000DE836 /* AppDelegate.swift in Sources */,
+				9DE1C414281470C100EB660F /* MKMapView+Ext.swift in Sources */,
 				9D374E1B27BE517B000DE836 /* SceneDelegate.swift in Sources */,
+				9DE1C413281470C100EB660F /* MKCoordinateRegion+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
