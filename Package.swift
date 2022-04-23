@@ -8,14 +8,14 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "SkyPath",
-            targets: ["SkyPath"])
+            name: "SkyPathSDK",
+            targets: ["SkyPathSDK"])
     ],
     dependencies: [
     ],
     targets: [
         .binaryTarget(
-            name: "SkyPath",
+            name: "SkyPathSDK",
             path: "./SkyPathSDK.xcframework"
         )
     ]
