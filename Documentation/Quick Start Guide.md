@@ -2,15 +2,15 @@
 
 #### 1. Install
 
-Use [Requirements](/README.md#requirements) and [Installation](/README.md#installation) sections instructions to add SkyPath iOS SDK to the project.
-
+The SkyPath iOS SDK is provided as a pre-built .xcframework file.<br>
+Use [Requirements](/README.md#requirements) and [Installation](/README.md#installation) sections instructions to add SkyPath iOS SDK to the project.<br>
 Also, see [Documentation](/README.md) for a complete API reference.
 
 Add `import SkyPathSDK`.
 
 #### 2. Setup Delegate
 
-Implement `SkyPathDelegate` methods.
+Implement `SkyPathDelegate` methods to get notified when new data has been received from the server. This will be a good place to query for turbulence data and update layer on the map. Below are provided the minimum required methods for the quick start.
 
 ```swift
 extension Controller: SkyPathDelegate {
@@ -49,7 +49,7 @@ extension Controller: SkyPathDelegate {
 }
 ```
 
-Set `SkyPathDelegate` object.
+Set your `SkyPathDelegate` object.
 
 ```swift
 SkyPath.shared.delegate = delegate
@@ -57,39 +57,79 @@ SkyPath.shared.delegate = delegate
 
 #### 3. Configure Data
 
-These params have default values, so you can skip it and back to this step later when will have more specific requirements.
+SkyPath uses [H3](https://h3geo.org) hexagonal hierarchical geospatial indexing system to represent turbulence area by hexagons of different severity level.
 
-All these parameters can be updated at any time.
+<center>![H3](./Images/h3.jpeg)</center>
+	
+There are thousands of turbulence reports around the globe. To reduce network traffic usage and keep only data that is currently needed the data fetch is separated in the different types controlled by the `SkyPath.shared.dataQuery` object that is set initially to default values and can be updated at any time. All of the below are optional to set, but recommended due to your specific flow.
 
-Set `DataHistoryTime`, it's en enum with cases: `halfHour`, `hour`, `twoHours`, `fourHours`, `sixHours`. Default is `twoHours`.
+- Global turbulence polygons. A planet wide aggregated turbulence area polygons as a GeoJSON string. Used to show turbulence area worldwide without fetching too many data. Can be turned off, enabled by default.
+
+	```swift
+	SkyPath.shared.dataQuery.globalEnabled = false
+	```
+	By default polygons are generated for all altitude range. Set your specific altitude range Please note that it will need to make an API request first to provide you with updated data. Measured in thousands of feet.
+	
+	```swift
+	SkyPath.shared.dataQuery.altRange = 10...50
+	```
+	
+	SDK periodically fetches global turbulence polygons and calls the delegate method when received a new data.
+	
+	```swift
+	// SkyPathDelegate
+	func didReceiveNewTurbulencePolygons() { }
+	```
+	<center>![Turbulence Polygons](./Images/turbulence_polygons.jpeg)</center>
+
+- Polygon. Geo fence area to fetch data inside only. Route line coordinates can be used to create a polygon that includes the route with radius distance. It is fetched separately from other data types and as fast as possible, and also stored offline.
+
+	```swift
+	let polygon: [CLLocationCoordinate2D] = []
+	SkyPath.shared.dataQuery.polygon = polygon
+	```
+	<center>![Route Polygon](./Images/route_polygon.jpeg)</center>
+	
+- Viewport. A polygon of a visible map area in the app to fetch the right data when it's needed. Please keep in mind, that the SDK will try to fetch the data for the viewport as soon as possible after updating `SkyPath.shared.dataQuery.viewport`. So to save network traffic consider updating `viewport` when it's actually needed. A good place could be when the pilot moved the map manually, released the finger and map stopped moving after animation, or when focused map area is moved by code far from previous focused area.
+
+	```swift
+	let polygon: [CLLocationCoordinate2D] = []
+	SkyPath.shared.dataQuery.viewport = polygon
+	```
+	<center>![Route Polygon](./Images/viewport.jpeg)</center>
+
+Set `DataHistoryTime` to fetch data for. It's en enum with cases: `halfHour`, `hour`, `twoHours`, `fourHours`, `sixHours`. Default is `twoHours`.
 
 ```swift
 SkyPath.shared.dataHistoryTime = .twoHours
 ```
 
-Set `DataUpdateFrequency`, it's an enum with cases: `none`, `minimal`, `medium`, `fast`. Default is `fast`.
-
+Set `DataUpdateFrequency`, it's an enum with cases: `none`, `minimal`, `medium`, `fast`. Default is `fast`. It control time intervals to fetch data for global turbulence polygons, route polygon and viewport. However, when data query route polygon or viewport changed, they are fetched as fast as possible not waiting the next time interval. 
 
 ```swift
 SkyPath.shared.dataUpdateFrequency = .fast
 ```
 
-Configure `DataQuery` data types to fetch from the server. Available types are: `turbulence`, `traffic`, `pireps`. Default is `turbulence`. By default all severities of turbulence will be fetched.
+SkyPath provides the follwoing data types: `turbulence`, `traffic`, `pireps`. Default is `turbulence` only. Set it if you need more than just turbulence data.
 
 ```swift
-SkyPath.shared.dataQuery.types = .turbulence
-SkyPath.shared.dataQuery.sevs = TurbulenceSeverity.allCases
+SkyPath.shared.dataQuery.types = [.turbulence, .pireps]
+```
+By default all severities of turbulence will be fetched, but you can provide list of severities to fetch.
+
+```swift
+SkyPath.shared.dataQuery.sevs = [.moderate, .moderateSevere, .severe]
+```
+If you change some query parameter and need to fetch fresh data immediately, or just need to fetch immediately at some point, force SDK to fetch data now.
+
+```swift
+SkyPath.shared.fetchData(refresh: true)
 ```
 
-Configure `DataQuery` geo fence to fetch from the server. By default data is fetched for the whole world.
+It could be helpful to know if SkyPath data was updated long time ago (when offline for example), so check when last time data was succesfully received from the server.
 
 ```swift
-let route: [CLLocationCoordinate2D] = []
-SkyPath.shared.dataQuery.route = route
-SkyPath.shared.dataQuery.widthAround = 20 // Nautical Miles
-// or 
-let polygon: [CLLocationCoordinate2D] = []
-SkyPath.shared.dataQuery.polygon = polygon
+SkyPath.shared.dataUpdatedAt
 ```
 
 #### 3. Setup Aircraft
@@ -152,6 +192,8 @@ SkyPath.shared.endFlight()
 
 #### 6. Get Turbulence
 
+[H3 resolution](https://h3geo.org/docs/core-library/restable) 5 is used by SkyPath for the turbulence reports area. Each turbulence report covers ~252.9 square km hexagon area (as per H3 resolutions table) and 1000 feet of altitude. Each hexagon is connected to each other so this allows to cover area better. So one turbulence report covers for example FL370..<FL380 or FL380..<FL390.
+
 Use `TurbulenceQuery` to specify how you would like to filter data and how to receive the result - as a GeoJSON or as an array of models. See `TurbulenceQuery` and `TurbulenceResult` docs for more details.
 It will query locall cached data received previously per the configuration.
 
@@ -173,40 +215,64 @@ case .failure(let error):
 
 #### 7. Recording Simulation Testing (optional)
 
-Enable simulation mode during testing. Use it only in development environment by setting `env` parameter in `SkyPath.shared.start(...)`.
+Recording turbulence works only in the air, so to test on the ground if SDK is configured properly to track some turbulence and send it to the server you will need to enable the simulation mode. This is for <b>development environment only</b> which can be set by setting `env` parameter. By default when no `env` parameter is passed, the production server is used.<br>
+
 
 ```swift
+// If you want to simulate location when already started production environment, 
+// you need to stop it first
+// SkyPath.shared.stop()
+
+// Set a dev environment when starting the SDK recording.
+SkyPath.shared.start(apiKey: "API_KEY", 
+                     airline: "ICAO", 
+                     userId: "USER_ID", 
+                     env: .dev(serverUrl: nil)) { error in }
+
+// To let the SDK use simulated location that you provide instead of real from the device
 SkyPath.shared.enableSimulation(true)
+
+// To let the SDK to send turbulence and events to the server
+// If not set, simulated events will not be sent
 SkyPath.shared.enablePushSimulated(true)
+
+// Stop simulation when not needed
+SkyPath.shared.enableSimulation(false)
 ```
 
-Provide a custom location.
+Provide an own simulated location. The simplest way is to have an array of CLLocationCoordinate2D on the same in air altitude and pass it by timer with 1 second time intervals. You can use your flight simulation as well.
 
 ```swift
 SkyPath.shared.simulatedLocation(location)
 ```
 
-Trigger a simulated turbulence event.
+It is good to have some hidden developer option to enable / disable simulation mode for QA testing. Simulation mode can be enabled / disabled at any time.
+
+Trigger a turbulence event by using a timer at some time intervals, or randomly during some time, or just by having a test button or own event to trigger. Turbulence will not be tracked on the ground, so need in air simulated location.
 
 ```swift
 SkyPath.shared.simulateTurbulence(sev: .moderate)
 ```
 
-#### 8. Configure Logging (optional)
-
-SDK has an internal logging to help with debugging and solve issues. To see more or less SkyPath logs in console configure the logging level.
+If turbulence was recorded the `SkyPathDelegate` method will be called.
 
 ```swift
-SkyPath.shared.logger.level = .verbose
+func detectedTurbulence(_ turbulence: TurbulenceItem) { }
 ```
 
-You can disable logging completely if needed, but not recommended.
+#### 8. Configure Logging (optional)
+
+SDK has an internal logging system to help with debugging and solving issues. SDK logs are stored in the own files along with other files used by the SDK. To see more or less SkyPath logs in the app console you can change the logging level. By default, it is set to `LoggingLevel.error` to see only critical logs. More verbous levels can be needed only to debug the issue, otherwise it is fine to have just default value.
+
+```swift
+SkyPath.shared.logger.level = .error
+```
+The SDK rolls out the logs files to keep only fresh ones and do not take lot of disk size. You can also disable logging completely and SDK will not write any logging information, however in this case it will be complex to debug any possible issues with the integration, so strongly discouraged.
 
 ```swift
 SkyPath.shared.logger.enabled = false
 ```
-
-Get log files urls to export.
+Logs help to identify the issue, so files can be exported and then sent to the SkyPath team. By the following API you can get the log files urls (there could be a few). It's up to you currently how to provide them to us. It's better to make a zip archive with these files to upload. You can upload it to your own issues tracking system and then inform SkyPath or any other convenient flow.
 
 ```swift
 let fileUrls = SkyPath.shared.logger.logFileUrls()
