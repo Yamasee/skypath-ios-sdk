@@ -59,7 +59,7 @@ SkyPath.shared.delegate = delegate
 
 SkyPath uses [H3](https://h3geo.org) hexagonal hierarchical geospatial indexing system to represent turbulence area by hexagons of different severity level.
 
-<center>![H3](./Images/h3.jpeg)</center>
+![H3](./Images/h3.jpeg)
 	
 There are thousands of turbulence reports around the globe. To reduce network traffic usage and keep only data that is currently needed the data fetch is separated in the different types controlled by the `SkyPath.shared.dataQuery` object that is set initially to default values and can be updated at any time. All of the below are optional to set, but recommended due to your specific flow.
 
@@ -80,7 +80,7 @@ There are thousands of turbulence reports around the globe. To reduce network tr
 	// SkyPathDelegate
 	func didReceiveNewTurbulencePolygons() { }
 	```
-	<center>![Turbulence Polygons](./Images/turbulence_polygons.jpeg)</center>
+	![Turbulence Polygons](./Images/turbulence_polygons.jpeg)
 
 - Polygon. Geo fence area to fetch data inside only. Route line coordinates can be used to create a polygon that includes the route with radius distance. It is fetched separately from other data types and as fast as possible, and also stored offline.
 
@@ -88,7 +88,7 @@ There are thousands of turbulence reports around the globe. To reduce network tr
 	let polygon: [CLLocationCoordinate2D] = []
 	SkyPath.shared.dataQuery.polygon = polygon
 	```
-	<center>![Route Polygon](./Images/route_polygon.jpeg)</center>
+	![Route Polygon](./Images/route_polygon.jpeg)
 	
 - Viewport. A polygon of a visible map area in the app to fetch the right data when it's needed. Please keep in mind, that the SDK will try to fetch the data for the viewport as soon as possible after updating `SkyPath.shared.dataQuery.viewport`. So to save network traffic consider updating `viewport` when it's actually needed. A good place could be when the pilot moved the map manually, released the finger and map stopped moving after animation, or when focused map area is moved by code far from previous focused area.
 
@@ -96,7 +96,7 @@ There are thousands of turbulence reports around the globe. To reduce network tr
 	let polygon: [CLLocationCoordinate2D] = []
 	SkyPath.shared.dataQuery.viewport = polygon
 	```
-	<center>![Route Polygon](./Images/viewport.jpeg)</center>
+	![Route Polygon](./Images/viewport.jpeg)
 
 Set `DataHistoryTime` to fetch data for. It's en enum with cases: `halfHour`, `hour`, `twoHours`, `fourHours`, `sixHours`. Default is `twoHours`.
 
