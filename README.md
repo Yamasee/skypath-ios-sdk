@@ -73,6 +73,8 @@ If you prefer not to use either of the aforementioned dependency managers, you c
 
 Try out the `Demo` project inside the repo. You will need just a valid SkyPath API key and enter an airline ICAO and user id in the `ViewController`.
 
+![Demo App](./Documentation/Images/demo_app.jpeg)
+
 ## License
 
 Copyright © Yamasee LTD 2022. All rights reserved. 
