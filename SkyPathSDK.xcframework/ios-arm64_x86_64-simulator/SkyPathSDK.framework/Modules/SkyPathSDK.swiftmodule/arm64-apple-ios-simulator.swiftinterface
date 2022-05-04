@@ -67,19 +67,15 @@ public struct Airport : Swift.Codable, Swift.Hashable {
   public var size: SkyPathSDK.AirportSize
   public var show: Swift.Bool
   public var search: Swift.Bool
+  public var coordinate: CoreLocation.CLLocationCoordinate2D {
+    get
+  }
   public init()
+  public init(from decoder: Swift.Decoder) throws
   public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: SkyPathSDK.Airport, b: SkyPathSDK.Airport) -> Swift.Bool
   public func encode(to encoder: Swift.Encoder) throws
   public var hashValue: Swift.Int {
-    get
-  }
-}
-extension SkyPathSDK.Airport {
-  public init(from decoder: Swift.Decoder) throws
-}
-extension SkyPathSDK.Airport {
-  public var coordinate: CoreLocation.CLLocationCoordinate2D {
     get
   }
 }
@@ -106,6 +102,9 @@ extension SkyPathSDK.FlightWaypoint {
   public var airport: SkyPathSDK.Airport? {
     get
   }
+}
+extension Foundation.NSNotification.Name {
+  public static let spMapDataLoading: Foundation.Notification.Name
 }
 public struct RawDataResponseRequest {
   public let type: SkyPathSDK.RawDataTriggerType
@@ -162,21 +161,40 @@ public enum DataUpdateFrequency : Swift.String, Swift.Codable {
     get
   }
 }
-@_hasMissingDesignatedInitializers public class Storage {
-  public enum Directory {
-    case documents
-    case caches
-    public static func == (a: SkyPathSDK.Storage.Directory, b: SkyPathSDK.Storage.Directory) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
-      get
-    }
+public enum FileType : Swift.String, Swift.CaseIterable {
+  case airports
+  case aircrafts
+  case brakingActions
+  case weatherToSend
+  case ownWeather
+  case deletedWeather
+  case weather
+  case events
+  case turbulenceToSend
+  case ownTurbulence
+  case turbulence
+  case turbulencePolygons
+  case rawDataInputs
+  case ownPositions
+  case flights
+  case flightSummary
+  public var url: Foundation.URL {
+    get
   }
-  public static func url(forFileNamed fileName: Swift.String, in directory: SkyPathSDK.Storage.Directory) -> Foundation.URL
-  public static func store<T>(_ object: T, to url: Foundation.URL) where T : Swift.Encodable
-  public static func retrieve<T>(from url: Foundation.URL, as type: T.Type) -> T? where T : Swift.Decodable
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [SkyPathSDK.FileType]
+  public typealias RawValue = Swift.String
+  public static var allCases: [SkyPathSDK.FileType] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class Storage {
+  public static func retrieve<T>(_ fileType: SkyPathSDK.FileType, as type: T.Type) -> T? where T : Swift.Decodable
+  public static func store<T>(_ object: T, as fileType: SkyPathSDK.FileType) where T : Swift.Encodable
   public static func remove(fileUrl url: Foundation.URL)
-  public static func storeData(_ data: Foundation.Data, to url: Foundation.URL)
   @objc deinit
 }
 public enum TurbulenceSeverity : Swift.Int, Swift.Equatable, Swift.Comparable, Swift.Codable {
@@ -478,10 +496,8 @@ public struct FlightEndReportTotal : Swift.Codable {
   public var turb3Total: Swift.Int
   public var turb4Total: Swift.Int
   public var turb5Total: Swift.Int
-  public func encode(to encoder: Swift.Encoder) throws
-}
-extension SkyPathSDK.FlightEndReportTotal {
   public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
 }
 public enum BrakingActionLevel : Swift.String, Swift.Codable {
   case lessThanPoor
@@ -507,14 +523,12 @@ public struct BrakingActionReport : Swift.Codable {
   public var aircraft: Swift.String?
   public var flight_id: Swift.String?
   public var id: Swift.String?
-  public init(runway: Swift.String, level: SkyPathSDK.BrakingActionLevel, date: Foundation.Date, airport: SkyPathSDK.Airport)
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
-extension SkyPathSDK.BrakingActionReport {
   public var date: Foundation.Date {
     get
   }
+  public init(runway: Swift.String, level: SkyPathSDK.BrakingActionLevel, date: Foundation.Date, airport: SkyPathSDK.Airport)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
 extension CoreLocation.CLLocationCoordinate2D : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
@@ -536,6 +550,9 @@ extension CoreLocation.CLError.Code : Swift.CustomStringConvertible {
   public var description: Swift.String {
     get
   }
+}
+extension Swift.Array where Element == SkyPathSDK.TurbulenceItem {
+  public func aggregatedBySeverity() -> [SkyPathSDK.TurbulenceItem]
 }
 public enum StartError : SkyPathSDK.SPError {
   case apiKeyInvalid
@@ -711,6 +728,7 @@ public struct SettingsTurbulence : Swift.Codable {
   public var alertMaxTimeTo: Swift.Int?
   public var alertMinTimeToShowOnMap: Swift.Int?
   public var alertMaxTimeToShowOnMap: Swift.Int?
+  public var alertMinAlt: Swift.Int?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -804,6 +822,13 @@ extension Swift.Array where Element == CoreLocation.CLLocationCoordinate2D {
 }
 extension Foundation.InputStream {
   public func readfully() -> Foundation.Data
+}
+@_hasMissingDesignatedInitializers public class H3 {
+  public static func h3HexToCoord(_ h3Hex: Swift.String) -> CoreLocation.CLLocationCoordinate2D
+  public static func verts(forH3Hex h3Hex: Swift.String) -> [CoreLocation.CLLocationCoordinate2D]
+  public static func circleCenterAndRadius(fromH3Hex h3Hex: Swift.String) -> (center: CoreLocation.CLLocationCoordinate2D, radius: CoreLocation.CLLocationDistance)
+  public static func h3Hex(coord: CoreLocation.CLLocationCoordinate2D) -> Swift.String
+  @objc deinit
 }
 public struct Flight : Swift.Codable {
   public let dep: Swift.String
@@ -930,7 +955,6 @@ public protocol SkyPathDelegate : AnyObject {
   }
   public func setPrivateDistribution(_ privateDistribution: Swift.Bool)
   public func forgotPassword(userId: Swift.String, completion: @escaping (_ result: Swift.Bool, _ error: SkyPathSDK.ForgotPasswordError?) -> Swift.Void)
-  public func isNewUser(userIdOrEmail: Swift.String, completion: @escaping (_ result: Swift.Bool?, _ error: SkyPathSDK.StartError?) -> Swift.Void)
   public func setUserProfile(userIdOrEmail: Swift.String, password: Swift.String, completion: @escaping (_ result: Swift.Bool, _ error: SkyPathSDK.StartError?) -> Swift.Void)
   public func isFreshUser(userIdOrEmail: Swift.String, completion: @escaping (_ result: Swift.Bool?, _ error: SkyPathSDK.StartError?) -> Swift.Void)
   public func otpRequest(completion: @escaping (_ result: Swift.Bool?, _ error: SkyPathSDK.StartError?) -> Swift.Void)
@@ -1018,6 +1042,9 @@ public protocol SkyPathDelegate : AnyObject {
     get
   }
   public var apiKey: Swift.String {
+    get
+  }
+  public var devicePositionSteady: Swift.Bool {
     get
   }
   public func enableSimulation(_ enabled: Swift.Bool)
@@ -1254,7 +1281,7 @@ public struct TilesBeamQuery {
   public let widthAround: Swift.Double?
   public init(coordinate: CoreLocation.CLLocationCoordinate2D, heading: Swift.Double, distance: Swift.Double, angleSpan: Swift.Double? = nil, widthAround: Swift.Double? = nil)
 }
-public struct Traffic : Swift.Encodable {
+public struct Traffic : Swift.Codable {
   public var lat: Swift.Double
   public var lng: Swift.Double
   public var alt: Swift.Double
@@ -1274,15 +1301,11 @@ public struct Traffic : Swift.Encodable {
   public var spFlightId: Swift.String
   public var tile: SkyPathSDK.Tile
   public var speed: Swift.Double
-  public func encode(to encoder: Swift.Encoder) throws
-}
-extension SkyPathSDK.Traffic : Swift.Decodable {
-  public init(from decoder: Swift.Decoder) throws
-}
-extension SkyPathSDK.Traffic {
   public var coordinate: CoreLocation.CLLocationCoordinate2D {
     get
   }
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
 }
 extension Swift.Array where Element == SkyPathSDK.Traffic {
   public func geoJSON() -> Swift.String
@@ -1302,8 +1325,9 @@ extension SkyPathSDK.AirportSize : Swift.RawRepresentable {}
 extension SkyPathSDK.DataUpdateFrequency : Swift.Equatable {}
 extension SkyPathSDK.DataUpdateFrequency : Swift.Hashable {}
 extension SkyPathSDK.DataUpdateFrequency : Swift.RawRepresentable {}
-extension SkyPathSDK.Storage.Directory : Swift.Equatable {}
-extension SkyPathSDK.Storage.Directory : Swift.Hashable {}
+extension SkyPathSDK.FileType : Swift.Equatable {}
+extension SkyPathSDK.FileType : Swift.Hashable {}
+extension SkyPathSDK.FileType : Swift.RawRepresentable {}
 extension SkyPathSDK.TurbulenceSeverity : Swift.Hashable {}
 extension SkyPathSDK.TurbulenceSeverity : Swift.RawRepresentable {}
 @available(*, unavailable, message: "Use `DataUpdateFrequency` instead")
