@@ -63,7 +63,7 @@ SkyPath uses [H3](https://h3geo.org) hexagonal hierarchical geospatial indexing 
 	
 There are thousands of turbulence reports around the globe. To reduce network traffic usage and keep only data that is currently needed the data fetch is separated in the different types controlled by the `SkyPath.shared.dataQuery` object that is set initially to default values and can be updated at any time. All of the below are optional to set, but recommended due to your specific flow.
 
-- Global turbulence polygons. A planet wide aggregated turbulence area polygons as a GeoJSON string. Used to show turbulence area worldwide without fetching too many data. Can be turned off, enabled by default.
+- Global turbulence polygons. A planet wide aggregated turbulence area polygons as a GeoJSON string. Used to show turbulence area worldwide without fetching too much data. Can be turned off, enabled by default.
 
 	```swift
 	SkyPath.shared.dataQuery.globalEnabled = false
@@ -82,7 +82,7 @@ There are thousands of turbulence reports around the globe. To reduce network tr
 	```
 	![Turbulence Polygons](./Images/turbulence_polygons.jpeg)
 
-- Polygon. Geo fence area to fetch data inside only. Route line coordinates can be used to create a polygon that includes the route with radius distance. It is fetched separately from other data types and as fast as possible, and also stored offline.
+- Polygon. Geo fence area to fetch data inside only. Route line coordinates can be used to create a polygon that includes the route with radius distance. It is fetched separately from other data types and as fast as possible, and also stored offline. It is not recommended to set a worldwide polygon, use global turbulence polygons for it instead.
 
 	```swift
 	let polygon: [CLLocationCoordinate2D] = []
@@ -213,6 +213,12 @@ case .failure(let error):
 }
 ```
 
+Global turbulence polygons GeoJSON string can be used if available.
+
+```swift
+let geoJSON = SkyPath.shared.turbulencePolygons
+```
+
 #### 7. Recording Simulation Testing (optional)
 
 Recording turbulence works only in the air, so to test on the ground if SDK is configured properly to track some turbulence and send it to the server you will need to enable the simulation mode. This is for <b>development environment only</b> which can be set by setting `env` parameter. By default when no `env` parameter is passed, the production server is used.<br>
@@ -272,10 +278,12 @@ The SDK rolls out the logs files to keep only fresh ones and do not take lot of 
 ```swift
 SkyPath.shared.logger.enabled = false
 ```
-Logs help to identify the issue, so files can be exported and then sent to the SkyPath team. By the following API you can get the log files urls (there could be a few). It's up to you currently how to provide them to us. It's better to make a zip archive with these files to upload. You can upload it to your own issues tracking system and then inform SkyPath or any other convenient flow.
+Logs help to identify the issue, so files can be exported and then sent to the SkyPath team. By the following API you can get the logs file url. You can for example upload it to your own issues tracking system and then inform the SkyPath team.
 
 ```swift
-let fileUrls = SkyPath.shared.logger.logFileUrls()
+SkyPath.shared.logger.exportLogs { fileUrl, error in
+    // fileUrl of a file created in the temporary directory or an error if exporting failed
+}
 ```
 
 
