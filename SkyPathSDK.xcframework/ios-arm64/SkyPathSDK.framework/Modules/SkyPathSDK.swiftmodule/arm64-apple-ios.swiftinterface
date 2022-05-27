@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SkyPathSDK
 import CFNetwork
 import SystemConfiguration.CaptiveNetwork
@@ -141,11 +141,6 @@ public struct LandingTimeReport : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-public struct FlightEndReport : Swift.Codable {
-  public var total: SkyPathSDK.FlightEndReportTotal
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
 public enum ForgotPasswordError : SkyPathSDK.SPError {
   case userIdInvalid
   case general(error: SkyPathSDK.GeneralError)
@@ -178,6 +173,7 @@ public enum FileType : Swift.String, Swift.CaseIterable {
   case ownPositions
   case flights
   case flightSummary
+  case noisyTiles
   public var url: Foundation.URL {
     get
   }
@@ -259,7 +255,7 @@ extension CoreLocation.CLLocationCoordinate2D {
   }
 }
 extension CoreLocation.CLLocationCoordinate2D {
-  public func isBehindOf(coordinate: CoreLocation.CLLocationCoordinate2D, heading: Swift.Double) -> Swift.Bool
+  public func isBehindOf(coordinate: CoreLocation.CLLocationCoordinate2D, usingCource course: CoreLocation.CLLocationDirection) -> Swift.Bool
 }
 public struct Tile : Swift.Codable, Swift.Equatable, Swift.Hashable {
   public var h3Hex: Swift.String
@@ -451,7 +447,7 @@ public enum LoggingLevel {
   }
   @objc deinit
   public func log(_ text: Swift.String)
-  public func logFileUrls() -> [Foundation.URL]
+  public func exportLogs(completion: @escaping (_ fileUrl: Foundation.URL?, _ error: Swift.Error?) -> Swift.Void)
 }
 extension SkyPathSDK.Logger {
   public func logNetworkInterfaces()
@@ -485,10 +481,9 @@ extension Swift.Array where Element == SkyPathSDK.TurbulenceItem {
 extension SkyPathSDK.TurbulenceItem : Swift.Equatable {
   public static func == (lhs: SkyPathSDK.TurbulenceItem, rhs: SkyPathSDK.TurbulenceItem) -> Swift.Bool
 }
-public struct FlightEndReportTotal : Swift.Codable {
-  public var user: Swift.String
-  public var flights: Swift.Int
-  public var pirepTotal: Swift.Int
+public struct UserStats : Swift.Codable {
+  public var id: Swift.String
+  public var userId: Swift.String
   public var turbTotal: Swift.Int
   public var turb0Total: Swift.Int
   public var turb1Total: Swift.Int
@@ -496,6 +491,8 @@ public struct FlightEndReportTotal : Swift.Codable {
   public var turb3Total: Swift.Int
   public var turb4Total: Swift.Int
   public var turb5Total: Swift.Int
+  public var pirepTotal: Swift.Int
+  public var flightsTotal: Swift.Int
   public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
 }
@@ -584,6 +581,7 @@ extension CoreLocation.CLAuthorizationStatus : Swift.CustomStringConvertible {
 public struct AviationWeather : Swift.Codable {
   public var metar: SkyPathSDK.AviationWeatherMetar
   public var taf: SkyPathSDK.AviationWeatherTaf
+  public var atis: Swift.String
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -653,6 +651,7 @@ public struct ServerSettings : Swift.Codable {
   public var data: SkyPathSDK.SettingsData?
   public var location: SkyPathSDK.SettingsLocation?
   public var filter: SkyPathSDK.SettingsFilter?
+  public var noiseFilter: SkyPathSDK.SettingsNoiseFilter?
   public var updatedAtDate: Foundation.Date? {
     get
   }
@@ -729,6 +728,8 @@ public struct SettingsTurbulence : Swift.Codable {
   public var alertMinTimeToShowOnMap: Swift.Int?
   public var alertMaxTimeToShowOnMap: Swift.Int?
   public var alertMinAlt: Swift.Int?
+  public var recordMinAlt: Swift.Int?
+  public var recordMinSpeedKn: Swift.Int?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -782,6 +783,8 @@ public struct SettingsData : Swift.Codable {
   public var corridorDistanceNM: Swift.Int?
   public var trafficLimit: Swift.Int?
   public var pirepsLimit: Swift.Int?
+  public var mapMinAlt: Swift.Int?
+  public var userServicesInterval: Swift.Int?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -813,6 +816,16 @@ public struct SettingsFilter : Swift.Codable {
   public var avg: Swift.Double?
   public var timeWindowForChange: Swift.Int?
   public var noChangesForTurbulence: Swift.Int?
+  public var sendG: Swift.Bool?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SettingsNoiseFilter : Swift.Codable {
+  public var enabled: Swift.Bool?
+  public var movingAvgTilesCount: Swift.Int?
+  public var movingAvgTilesMinCount: Swift.Int?
+  public var movingAvgDevStreak: Swift.Double?
+  public var movingAvgDevNotStreak: Swift.Double?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -1030,7 +1043,7 @@ public protocol SkyPathDelegate : AnyObject {
   public var airborne: Swift.Bool {
     get
   }
-  public func getFlightEndReport(completion: @escaping (_ flightEndReport: SkyPathSDK.FlightEndReport?, _ error: Swift.Error?) -> Swift.Void)
+  public func getUserStats(completion: @escaping (_ userStats: SkyPathSDK.UserStats?, _ error: Swift.Error?) -> Swift.Void)
   public func contact(email: Swift.String, message: Swift.String, logsFileUrl: Foundation.URL? = nil, completion: @escaping (Swift.Bool, Swift.Error?) -> Swift.Void)
   public func sayHello(completion: @escaping (SkyPathSDK.Hello?, Swift.Error?) -> Swift.Void)
   public var serverSettings: SkyPathSDK.ServerSettings? {
@@ -1187,6 +1200,13 @@ extension SkyPathSDK.GeoUtils {
   public static func boundingCoordinates(forTileX tileX: Swift.Int, tileY: Swift.Int) -> [CoreLocation.CLLocationCoordinate2D]
   public static func boundingCoordinatesCenter(forTileX tileX: Swift.Int, tileY: Swift.Int) -> CoreLocation.CLLocationCoordinate2D
 }
+public enum SPConstants {
+  public enum URL {
+    public static let dev: Swift.String
+    public static let staging: Swift.String
+    public static let prod: Swift.String
+  }
+}
 extension Foundation.NSNotification.Name {
   public static let skyPathDidUpdateSettings: Foundation.Notification.Name
 }
@@ -1318,6 +1338,11 @@ public enum Environment : Swift.Codable {
   }
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
+}
+extension SkyPathSDK.Environment {
+  public var baseUrl: Swift.String {
+    get
+  }
 }
 extension SkyPathSDK.AirportSize : Swift.Equatable {}
 extension SkyPathSDK.AirportSize : Swift.Hashable {}

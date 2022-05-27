@@ -2,7 +2,8 @@
 ![Version](https://img.shields.io/github/v/release/Yamasee/skypath-ios-sdk)
 ![Cocoapods](https://img.shields.io/cocoapods/v/SkyPath)
 ![Cocoapods platforms](https://img.shields.io/cocoapods/p/SkyPath)
-  
+![Swift 5.0+](https://img.shields.io/badge/Swift-5.0+-blue.svg)
+
 ## SkyPath iOS SDK
 
 The world’s leading turbulence and auto-PIREPS data source.<br>
