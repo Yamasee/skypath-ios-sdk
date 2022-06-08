@@ -5,6 +5,6 @@ use_frameworks!
 
 target 'Demo' do
 
-pod 'SkyPath', '2.0.0-beta.5'
+pod 'SkyPath', '2.0.0-beta.6'
 
 end
