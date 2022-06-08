@@ -781,10 +781,14 @@ public struct SettingsData : Swift.Codable {
   public var pollEveryXSecs: Swift.Int?
   public var update: SkyPathSDK.SettingsData.Update?
   public var corridorDistanceNM: Swift.Int?
+  public var corridorMinDistanceNM: Swift.Int?
+  public var corridorMaxDistanceNM: Swift.Int?
   public var trafficLimit: Swift.Int?
   public var pirepsLimit: Swift.Int?
   public var mapMinAlt: Swift.Int?
   public var userServicesInterval: Swift.Int?
+  public var trafficHistoryTime: Swift.Int?
+  public var verticalCorridorDistanceNM: Swift.Int?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
