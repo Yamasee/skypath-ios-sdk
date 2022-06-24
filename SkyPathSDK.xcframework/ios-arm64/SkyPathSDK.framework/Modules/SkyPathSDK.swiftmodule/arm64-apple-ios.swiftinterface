@@ -289,7 +289,8 @@ extension SkyPathSDK.Tile {
 @objc @_inheritsConvenienceInitializers public class SPLocalNotificationManager : ObjectiveC.NSObject {
   public static let shared: SkyPathSDK.SPLocalNotificationManager
   public func checkNotificationSettings(completion: ((_ status: UserNotifications.UNAuthorizationStatus) -> Swift.Void)? = nil)
-  public func scheduleNotification(title: Swift.String, body: Swift.String, sound: Swift.String? = nil, contentCategoryIdentifier: Swift.String? = nil)
+  @discardableResult
+  public func scheduleNotification(title: Swift.String, body: Swift.String, sound: Swift.String? = "default", soundEnabled: Swift.Bool = true, contentCategoryIdentifier: Swift.String? = nil, timeInterval: Foundation.TimeInterval = 1, identifier: Swift.String = UUID().uuidString) -> Swift.String
   @objc override dynamic public init()
   @objc deinit
 }
@@ -548,9 +549,6 @@ extension CoreLocation.CLError.Code : Swift.CustomStringConvertible {
     get
   }
 }
-extension Swift.Array where Element == SkyPathSDK.TurbulenceItem {
-  public func aggregatedBySeverity() -> [SkyPathSDK.TurbulenceItem]
-}
 public enum StartError : SkyPathSDK.SPError {
   case apiKeyInvalid
   case envInvalid
@@ -789,6 +787,7 @@ public struct SettingsData : Swift.Codable {
   public var userServicesInterval: Swift.Int?
   public var trafficHistoryTime: Swift.Int?
   public var verticalCorridorDistanceNM: Swift.Int?
+  public var verticalMaxAwayCoordDistanceNM: Swift.Int?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -804,6 +803,11 @@ public struct SettingsLocation : Swift.Codable {
   public var baroAltitudeDifference: Swift.Double?
   public var accuracyVertical: Swift.Double?
   public var accuracyHorizontal: Swift.Double?
+  public var lowPowerModeNotificationEnabled: Swift.Bool?
+  public var lowPowerModeWhenSpeedLessThanKnots: Swift.Int?
+  public var lowPowerModeWhenSpeedLessForTime: Swift.Int?
+  public var lowPowerModeAfterLandedMaxTime: Swift.Int?
+  public var lowPowerModeNotificationTime: Swift.Int?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -826,10 +830,7 @@ public struct SettingsFilter : Swift.Codable {
 }
 public struct SettingsNoiseFilter : Swift.Codable {
   public var enabled: Swift.Bool?
-  public var movingAvgTilesCount: Swift.Int?
-  public var movingAvgTilesMinCount: Swift.Int?
-  public var movingAvgDevStreak: Swift.Double?
-  public var movingAvgDevNotStreak: Swift.Double?
+  public var autoDisableOfflineTime: Foundation.TimeInterval?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -871,6 +872,7 @@ public enum SPLocationState {
 public struct SPLocation {
   public let location: CoreLocation.CLLocation?
   public let state: SkyPathSDK.SPLocationState
+  public let error: Swift.Error?
 }
 public enum StaticContentType {
   case airports
@@ -957,6 +959,7 @@ public protocol SkyPathDelegate : AnyObject {
   func feedbackRequested(with request: SkyPathSDK.RawDataResponseRequest, completion: @escaping (SkyPathSDK.RawDataUserResponse?) -> Swift.Void)
   func flightPlanDidUpdate(to flightPlan: SkyPathSDK.FlightPlan)
   func didChangeDevicePosition(_ inPosition: Swift.Bool, horizontal: Swift.Bool)
+  func didUpdateLowPowerMode(_ lowPowerMode: Swift.Bool)
 }
 @_hasMissingDesignatedInitializers public class SkyPath {
   public static let shared: SkyPathSDK.SkyPath
@@ -998,6 +1001,7 @@ public protocol SkyPathDelegate : AnyObject {
   public var turbulencePolygons: Swift.String? {
     get
   }
+  public func spAggregatedBySeveritySupport(_ turbulence: [SkyPathSDK.TurbulenceItem]) -> [SkyPathSDK.TurbulenceItem]
   public func getTrafficJson(altRange: Swift.ClosedRange<Swift.Double>, predict: Swift.Bool = false) -> Swift.String
   public func getTraffic(altRange: Swift.ClosedRange<Swift.Double>, predict: Swift.Bool = false) -> [SkyPathSDK.Traffic]
   public func reportWeather(type: SkyPathSDK.WeatherType, at location: CoreLocation.CLLocation, speed: Swift.Double? = nil)
@@ -1040,6 +1044,7 @@ public protocol SkyPathDelegate : AnyObject {
     get
     set
   }
+  public func setFlightWaypoints(_ waypoints: [[Swift.String : Any]])
   public func sendFlightLogs(fileUrl: Foundation.URL)
   public var flightPhase: SkyPathSDK.FlightPhase {
     get
@@ -1062,6 +1067,9 @@ public protocol SkyPathDelegate : AnyObject {
     get
   }
   public var devicePositionSteady: Swift.Bool {
+    get
+  }
+  public var lowPowerMode: Swift.Bool {
     get
   }
   public func enableSimulation(_ enabled: Swift.Bool)
@@ -1090,6 +1098,7 @@ extension SkyPathSDK.SkyPathDelegate {
   public func serverReachabilityUpdated(to isReachable: Swift.Bool)
   public func feedbackRequested(with request: SkyPathSDK.RawDataResponseRequest, completion: @escaping (SkyPathSDK.RawDataUserResponse?) -> Swift.Void)
   public func flightPlanDidUpdate(to flightPlan: SkyPathSDK.FlightPlan)
+  public func didUpdateLowPowerMode(_ lowPowerMode: Swift.Bool)
 }
 public enum AirportDataTrend : Swift.String, Swift.Codable {
   case negative

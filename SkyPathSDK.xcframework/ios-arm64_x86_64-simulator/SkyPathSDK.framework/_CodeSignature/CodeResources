@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/SkyPathSDK-Swift.h</key>
 		<data>
-		3cEz7Epggowup0nnCvlaF8Krrjw=
+		yV0iv6uJGxEaA6KeJxDgZNKiCDc=
 		</data>
 		<key>Headers/SkyPathSDK.h</key>
 		<data>
@@ -18,31 +18,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		r0KzFv+0JG9qsEHvB2IzMyR9QmY=
+		IKfMtX402ZMQ1yS2SOGyygWucdQ=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		6Tk8QzxcsMTCBcqvaHTeYpyxMbE=
+		NefK++PsK4P7XzV6vAOM13JuJ1Q=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		ez5ChEFgqVcjhqA+wrnWStM3x7g=
+		HfdAgQIuPjn7dIQDshPLEEgnE3U=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		LHNmH7nb0KYtMEyDKQ3RNxABIGM=
+		9m2U/jtGsRSMqgG39vFeT0xxrm4=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		YmgA0nc23Bc2iN034Sf5hP/dk2E=
+		1YXydn6b27xbeSznw14nQ+Gm0S8=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		B+LyFLRZPW5M2yAIbPl80VzK+FU=
+		01pLEN5owg325desooaebOBKlZs=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		QaSavxYt061PFbb6kOE1UhMOLRg=
+		hL0fkrknAwcjgSaEVsw0ot5jCI0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -63,7 +63,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			g29zs7siHSSj0XbcslicN8g7AYQZx11/PVqE95OgzD0=
+			VfgyHwxTX+gNvLcZ2c7zkQRQbxetqUDDen/BdrqdSKM=
 			</data>
 		</dict>
 		<key>Headers/SkyPathSDK.h</key>
@@ -84,42 +84,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hveCwmsveRN3OUYFc/W5zYT9SvuB3tCsbuDZUd7iP2w=
+			uAquZESnEM13f4GkwEf1k6ux5+K7dO8pxFOZErpEq2s=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3OUp3WYsVWMpSRlYdk/IV/WTqx7vWG9VA/cjOFt0/n0=
+			PgP59CP1N2kn2whV5zYVNLd4efAKVwul+LhT6YoX/Uw=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6C3BwSyX0mWQ079vrtHATdpY5z33Bim2voFZZuYPKb0=
+			bxttgO9aeKeU9E9xawqAwZPIKBdp7qGnUTpZXQ6nvq4=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NW6eC0l/UvuJIZnPwKNx4HF7a+ESkXr0sJmUvdW4dUI=
+			KnYuGk9BkU+nh+E7AySfB4UmoTqCcsMw0dbVBuz4ZqM=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Z24ZHJyRPEOrpYC9ZhpmiNd+nX09YEF3IUphHyocsI0=
+			1Wlx+KAHhcsCkJwVRbTy06GVgQaM5iSHHMGuEuf6O3U=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RJEiGxUvsN4/Cnit33eebdGsOInYAGOYDTvz/XPqB3U=
+			fAyxjRaQdBx4s0/zT1nGkmg5/Mdm+Q1U73gtCNncfKY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

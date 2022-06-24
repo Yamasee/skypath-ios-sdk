@@ -225,6 +225,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
+
 /// Helper for showing a local notifications. For example for a turbulence alert when the app is in the background.
 /// :nodoc:
 SWIFT_CLASS("_TtC10SkyPathSDK26SPLocalNotificationManager")
