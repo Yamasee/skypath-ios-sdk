@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/SkyPathSDK-Swift.h</key>
 		<data>
-		KAxivzN7+B+cZp2ehQCu2Q7MJNk=
+		hewoRrCQt8Tkv28tiBqHzaX2+6k=
 		</data>
 		<key>Headers/SkyPathSDK.h</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		CGJ7d3KD4floWPqkvx5d71taieM=
+		b6RjVY6YBP5+u2xZVyOKn/BaxQc=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		en/ZrWtl1f5Q3eQS8xp23ZBdnUc=
+		IKlXEvmiW+HofTeXbiQnEZAYhkI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,7 +51,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BEp/jwWIM0ZHG2qTwpUx0nzRSClMKAVtzY9m3ElvXt4=
+			ldIIDfSvL5kQUHj4NfkKMCV8TksPDTW1jPLeSHgKavA=
 			</data>
 		</dict>
 		<key>Headers/SkyPathSDK.h</key>
@@ -86,7 +86,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			n3YWVU7wXlYNxghYVKAiEvG9zhUWmSMaSlGWbW1t5JA=
+			k0w6nR+mpwijHjujAXCDvJ0x+O52w0aknyeD/zTJUzQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
