@@ -2,7 +2,7 @@
 ![Version](https://img.shields.io/github/v/release/Yamasee/skypath-ios-sdk)
 ![Cocoapods](https://img.shields.io/cocoapods/v/SkyPath)
 ![Cocoapods platforms](https://img.shields.io/cocoapods/p/SkyPath)
-![Swift 5.0+](https://img.shields.io/badge/Swift-5.0+-blue.svg)
+![Swift 5.0+](https://img.shields.io/badge/Swift-5.5+-blue.svg)
 
 ## SkyPath iOS SDK
 
@@ -28,7 +28,7 @@ SkyPath iOS SDK enables rapid and seamless integration of SkyPath technology int
 
 - iOS 13.0+
 - Xcode 13.0+
-- Swift 5.0+
+- Swift 5.5+
 
 #### Background Mode
 
@@ -48,7 +48,7 @@ Make sure the  `Privacy - Location When In Use Usage Description` description is
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate SkyPath into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'SkyPath', '2.0.0-beta.7'
+pod 'SkyPath', '2.0.0-beta.8'
 ```
 
 ### Swift Package Manager
@@ -59,7 +59,7 @@ Use the following to add SkyPath Apple Package Dependency:
 
 ```
 https://github.com/Yamasee/skypath-ios-sdk
-Dependency Rule: Branch, master // v2.0.0-beta.7
+Dependency Rule: Branch, master // v2.0.0-beta.8
 ``` 
 
 ### Manually
