@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Environment Enumeration Reference</title>
+    <title>TurbulenceTrend Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -13,8 +13,8 @@
     <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/Environment" class="dashAnchor"></a>
-    <a title="Environment Enumeration Reference"></a>
+    <a name="//apple_ref/swift/Enum/TurbulenceTrend" class="dashAnchor"></a>
+    <a title="TurbulenceTrend Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html"> Docs</a> (100% documented)</p>
@@ -29,7 +29,7 @@
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" alt=""/>
-        Environment Enumeration Reference
+        TurbulenceTrend Enumeration Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -155,15 +155,15 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Environment</h1>
+            <h1>TurbulenceTrend</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Environment</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">TurbulenceTrend</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
 
                 </div>
               </div>
-            <p>Server environment used by SDK internal API routing. <code>serverUrl</code> is a base URL to access SkyPath service, if you don&rsquo;t need a proxy server pass <code>nil</code> to use default.</p>
+            <p>Determined when a new data is received by comparing to the previous data.</p>
 
           </section>
           <section class="section task-group-section">
@@ -172,9 +172,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10SkyPathSDK11EnvironmentO3devyACSSSg_tcACmF"></a>
-                    <a name="//apple_ref/swift/Element/dev(serverUrl:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10SkyPathSDK11EnvironmentO3devyACSSSg_tcACmF">dev(serverUrl:<wbr>)</a>
+                    <a name="/s:10SkyPathSDK15TurbulenceTrendO6betteryA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/better" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK15TurbulenceTrendO6betteryA2CmF">better</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -182,13 +182,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>The new severity is lower.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">dev</span><span class="p">(</span><span class="nv">serverUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">better</span></code></pre>
 
                         </div>
                       </div>
@@ -198,9 +199,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10SkyPathSDK11EnvironmentO4prodyACSSSg_tcACmF"></a>
-                    <a name="//apple_ref/swift/Element/prod(serverUrl:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10SkyPathSDK11EnvironmentO4prodyACSSSg_tcACmF">prod(serverUrl:<wbr>)</a>
+                    <a name="/s:10SkyPathSDK15TurbulenceTrendO5worseyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/worse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK15TurbulenceTrendO5worseyA2CmF">worse</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -208,13 +209,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>The new severity is higher.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">prod</span><span class="p">(</span><span class="nv">serverUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">worse</span></code></pre>
 
                         </div>
                       </div>

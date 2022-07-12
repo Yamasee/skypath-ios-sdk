@@ -257,6 +257,15 @@ extension CoreLocation.CLLocationCoordinate2D {
 extension CoreLocation.CLLocationCoordinate2D {
   public func isBehindOf(coordinate: CoreLocation.CLLocationCoordinate2D, usingCource course: CoreLocation.CLLocationDirection) -> Swift.Bool
 }
+public enum TurbulenceTrend : Swift.String, Swift.Codable {
+  case better
+  case worse
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 public struct Tile : Swift.Codable, Swift.Equatable, Swift.Hashable {
   public var h3Hex: Swift.String
   public var alt: Swift.Int
@@ -467,7 +476,8 @@ public struct TurbulenceItem : Swift.Codable {
   public let ts: Swift.Int
   public let coordinate: CoreLocation.CLLocationCoordinate2D
   public var h3Hex: Swift.String
-  public init(sev: SkyPathSDK.TurbulenceSeverity, bbox: [CoreLocation.CLLocationCoordinate2D], tile: SkyPathSDK.Tile, alt: Swift.Double, ts: Swift.Int, coordinate: CoreLocation.CLLocationCoordinate2D, h3Hex: Swift.String)
+  public var trend: SkyPathSDK.TurbulenceTrend?
+  public init(sev: SkyPathSDK.TurbulenceSeverity, bbox: [CoreLocation.CLLocationCoordinate2D], tile: SkyPathSDK.Tile, alt: Swift.Double, ts: Swift.Int, coordinate: CoreLocation.CLLocationCoordinate2D, h3Hex: Swift.String, trend: SkyPathSDK.TurbulenceTrend? = nil)
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -1368,6 +1378,9 @@ extension SkyPathSDK.FileType : Swift.Hashable {}
 extension SkyPathSDK.FileType : Swift.RawRepresentable {}
 extension SkyPathSDK.TurbulenceSeverity : Swift.Hashable {}
 extension SkyPathSDK.TurbulenceSeverity : Swift.RawRepresentable {}
+extension SkyPathSDK.TurbulenceTrend : Swift.Equatable {}
+extension SkyPathSDK.TurbulenceTrend : Swift.Hashable {}
+extension SkyPathSDK.TurbulenceTrend : Swift.RawRepresentable {}
 @available(*, unavailable, message: "Use `DataUpdateFrequency` instead")
 extension SkyPathSDK.SkyPath.DataMode : Swift.Equatable {}
 @available(*, unavailable, message: "Use `DataUpdateFrequency` instead")
