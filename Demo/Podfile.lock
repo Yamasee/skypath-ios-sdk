@@ -1,16 +1,16 @@
 PODS:
-  - SkyPath (2.0.0-beta.8)
+  - SkyPath (2.0.0-beta.9)
 
 DEPENDENCIES:
-  - SkyPath (= 2.0.0-beta.8)
+  - SkyPath (= 2.0.0-beta.9)
 
 SPEC REPOS:
   trunk:
     - SkyPath
 
 SPEC CHECKSUMS:
-  SkyPath: 5249727136b78a515d23f14c3e9f966d9da674fe
+  SkyPath: e6259c966c64fd7a2a2ac600a5dc00faf65b7626
 
-PODFILE CHECKSUM: dfbb8a0433aa0a2a4079059e31921844be30d3fa
+PODFILE CHECKSUM: 448cfdecd509ec25b5b38c2a884e1a6684d833ac
 
 COCOAPODS: 1.11.3
