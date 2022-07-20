@@ -660,6 +660,7 @@ public struct ServerSettings : Swift.Codable {
   public var location: SkyPathSDK.SettingsLocation?
   public var filter: SkyPathSDK.SettingsFilter?
   public var noiseFilter: SkyPathSDK.SettingsNoiseFilter?
+  public var edr: SkyPathSDK.SettingsEDR?
   public var updatedAtDate: Foundation.Date? {
     get
   }
@@ -844,6 +845,11 @@ public struct SettingsNoiseFilter : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
+public struct SettingsEDR : Swift.Codable {
+  public var enabled: Swift.Bool?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
 extension Swift.Array where Element == CoreLocation.CLLocationCoordinate2D {
   public func subCoordinatesAhead(from coord: CoreLocation.CLLocationCoordinate2D, distance: Foundation.Measurement<Foundation.UnitLength>? = nil, maxAwayCoordDistance: CoreLocation.CLLocationDistance) -> [CoreLocation.CLLocationCoordinate2D]?
   public func nearest(to coordinate: CoreLocation.CLLocationCoordinate2D) -> (coordinate: CoreLocation.CLLocationCoordinate2D, index: Swift.Int)?
@@ -941,6 +947,7 @@ extension SkyPathSDK.DataHistoryTime {
 }
 public enum QueryError : SkyPathSDK.SPError {
   case altRangeNotRoundToThousandFeet
+  case polygonTooManyCoordinates
   case general(error: SkyPathSDK.GeneralError)
 }
 public protocol SPError : Swift.Error {
@@ -1271,7 +1278,7 @@ public enum WeatherType : Swift.String, Swift.Codable {
     get
   }
 }
-public struct Weather : Swift.Equatable, Swift.Codable {
+public struct Weather : Swift.Equatable, Swift.Codable, Swift.Hashable {
   public var id: Swift.String?
   public var alt: Swift.Int?
   public var altFeet: Swift.Double?
@@ -1283,7 +1290,11 @@ public struct Weather : Swift.Equatable, Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
   public init(type: SkyPathSDK.WeatherType, lat: Swift.Double, lng: Swift.Double, alt: Swift.Double, simulated: Swift.Bool?, repId: Swift.String, fNum: Swift.String?)
   public static func == (a: SkyPathSDK.Weather, b: SkyPathSDK.Weather) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public func encode(to encoder: Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 extension SkyPathSDK.Weather {
   public var coordinates: [CoreLocation.CLLocationCoordinate2D] {
@@ -1324,7 +1335,7 @@ public struct TilesBeamQuery {
   public let widthAround: Swift.Double?
   public init(coordinate: CoreLocation.CLLocationCoordinate2D, heading: Swift.Double, distance: Swift.Double, angleSpan: Swift.Double? = nil, widthAround: Swift.Double? = nil)
 }
-public struct Traffic : Swift.Codable {
+public struct Traffic : Swift.Codable, Swift.Hashable {
   public var lat: Swift.Double
   public var lng: Swift.Double
   public var alt: Swift.Double
@@ -1348,7 +1359,12 @@ public struct Traffic : Swift.Codable {
     get
   }
   public init(from decoder: Swift.Decoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: SkyPathSDK.Traffic, b: SkyPathSDK.Traffic) -> Swift.Bool
   public func encode(to encoder: Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 extension Swift.Array where Element == SkyPathSDK.Traffic {
   public func geoJSON() -> Swift.String
