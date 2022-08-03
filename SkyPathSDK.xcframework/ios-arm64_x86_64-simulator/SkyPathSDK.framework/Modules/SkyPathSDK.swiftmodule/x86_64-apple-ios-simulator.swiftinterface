@@ -819,6 +819,8 @@ public struct SettingsLocation : Swift.Codable {
   public var lowPowerModeWhenSpeedLessForTime: Swift.Int?
   public var lowPowerModeAfterLandedMaxTime: Swift.Int?
   public var lowPowerModeNotificationTime: Swift.Int?
+  public var showGPSAlt: Swift.Bool?
+  public var showPressureAlt: Swift.Bool?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
