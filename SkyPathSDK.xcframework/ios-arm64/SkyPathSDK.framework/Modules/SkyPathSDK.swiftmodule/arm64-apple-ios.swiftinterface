@@ -173,6 +173,7 @@ public enum FileType : Swift.String, Swift.CaseIterable {
   case ownPositions
   case flights
   case flightSummary
+  case flightTurbulence
   case noisyTiles
   public var url: Foundation.URL {
     get
@@ -478,8 +479,8 @@ public struct TurbulenceItem : Swift.Codable {
   public var h3Hex: Swift.String
   public var trend: SkyPathSDK.TurbulenceTrend?
   public init(sev: SkyPathSDK.TurbulenceSeverity, bbox: [CoreLocation.CLLocationCoordinate2D], tile: SkyPathSDK.Tile, alt: Swift.Double, ts: Swift.Int, coordinate: CoreLocation.CLLocationCoordinate2D, h3Hex: Swift.String, trend: SkyPathSDK.TurbulenceTrend? = nil)
-  public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
 }
 extension SkyPathSDK.TurbulenceItem {
   public var description: Swift.String {
@@ -504,6 +505,13 @@ public struct UserStats : Swift.Codable {
   public var turb5Total: Swift.Int
   public var pirepTotal: Swift.Int
   public var flightsTotal: Swift.Int
+  public var turbTileTotalC: Swift.Int
+  public var turbTile0C: Swift.Int
+  public var turbTile1C: Swift.Int
+  public var turbTile2C: Swift.Int
+  public var turbTile3C: Swift.Int
+  public var turbTile4C: Swift.Int
+  public var turbTile5C: Swift.Int
   public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
 }
@@ -537,10 +545,6 @@ public struct BrakingActionReport : Swift.Codable {
   public init(runway: Swift.String, level: SkyPathSDK.BrakingActionLevel, date: Foundation.Date, airport: SkyPathSDK.Airport)
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
-}
-extension CoreLocation.CLLocationCoordinate2D : Swift.Codable {
-  public init(from decoder: Swift.Decoder) throws
-  public func encode(to encoder: Swift.Encoder) throws
 }
 public struct RouteWaypointsTranslationResponse : Swift.Decodable {
   public var waypoints: [SkyPathSDK.FlightWaypoint]
@@ -967,7 +971,7 @@ public protocol SkyPathDelegate : AnyObject {
   func didReceiveNewWeatherData()
   func didReportWeather(_ weather: SkyPathSDK.Weather)
   func didReceiveNewAirportsData()
-  func didFailToFetchNewData(with error: SkyPathSDK.SPError)
+  func didFailToFetchNewData(with error: SkyPathSDK.GeneralError)
   func didReceiveAlert(_ alert: SkyPathSDK.AlertResult)
   func locationUpdated(to location: SkyPathSDK.SPLocation)
   func locationManagerDidChangeAuthorization(status: CoreLocation.CLAuthorizationStatus)
@@ -1107,7 +1111,7 @@ extension SkyPathSDK.SkyPathDelegate {
   public func didReceiveNewWeatherData()
   public func didReportWeather(_ weather: SkyPathSDK.Weather)
   public func didReceiveNewAirportsData()
-  public func didFailToFetchNewData(with error: SkyPathSDK.SPError)
+  public func didFailToFetchNewData(with error: SkyPathSDK.GeneralError)
   public func didReceiveAlert(_ alert: SkyPathSDK.AlertResult)
   public func airborneStatus(isAirborne: Swift.Bool)
   public func locationUpdated(to location: SkyPathSDK.SPLocation)
