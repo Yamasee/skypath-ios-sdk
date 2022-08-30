@@ -226,7 +226,7 @@ extension ViewController: SkyPathDelegate {
         getTurbulence()
     }
 
-    func didFailToFetchNewData(with error: SPError) {
+    func didFailToFetchNewData(with error: GeneralError) {
 
         print("SkyPath did fail to fetch new data with error: " + error.localizedDescription)
     }
