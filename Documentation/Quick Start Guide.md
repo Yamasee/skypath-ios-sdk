@@ -61,9 +61,11 @@ SkyPath uses [H3](https://h3geo.org) hexagonal hierarchical geospatial indexing 
 
 ![H3](./Images/h3.jpeg)
 	
+The SDK is offline first. All tracked turbulence data is storred offline until successfully sent to the server and the fetched data from the server is storred on the disk and accessible offline according to the description below. All configurations like `dataQuery`, `flight` etc are storred on the disk and stay across app launches until explicit change.
+	
 There are thousands of turbulence reports around the globe. To reduce network traffic usage and keep only data that is currently needed the data fetch is separated in the different types controlled by the `SkyPath.shared.dataQuery` object that is set initially to default values and can be updated at any time. All of the below are optional to set, but recommended due to your specific flow.
 
-- Global turbulence polygons. A planet wide aggregated turbulence area polygons as a GeoJSON string. Used to show turbulence area worldwide without fetching too much data. Can be turned off, enabled by default.
+- Global turbulence polygons. A planet wide aggregated turbulence area polygons as a GeoJSON string. Used to show turbulence area worldwide without fetching too much data. Can be turned off, enabled by default. Storred on disk, accessible offline.
 
 	```swift
 	SkyPath.shared.dataQuery.globalEnabled = false
@@ -82,7 +84,7 @@ There are thousands of turbulence reports around the globe. To reduce network tr
 	```
 	![Turbulence Polygons](./Images/turbulence_polygons.jpeg)
 
-- Polygon. Geo fence area to fetch data inside only. Route line coordinates can be used to create a polygon that includes the route with radius distance. It is fetched separately from other data types and as fast as possible, and also stored offline. It is not recommended to set a worldwide polygon, use global turbulence polygons for it instead.
+- Polygon. Geo fence area to fetch data inside only. Route line coordinates can be used to create a polygon that includes the route with radius distance. It is fetched separately from other data types and as fast as possible, and also stored offline. It is not recommended to set a worldwide polygon, use global turbulence polygons for it instead. Storred on disk, accessible offline.
 
 	```swift
 	let polygon: [CLLocationCoordinate2D] = []
@@ -90,7 +92,7 @@ There are thousands of turbulence reports around the globe. To reduce network tr
 	```
 	![Route Polygon](./Images/route_polygon.jpeg)
 	
-- Viewport. A polygon of a visible map area in the app to fetch the right data when it's needed. Please keep in mind, that the SDK will try to fetch the data for the viewport as soon as possible after updating `SkyPath.shared.dataQuery.viewport`. So to save network traffic consider updating `viewport` when it's actually needed. A good place could be when the pilot moved the map manually, released the finger and map stopped moving after animation, or when focused map area is moved by code far from previous focused area.
+- Viewport. A polygon of a visible map area in the app to fetch the right data when it's needed. Please keep in mind, that the SDK will try to fetch the data for the viewport as soon as possible after updating `SkyPath.shared.dataQuery.viewport`. So to save network traffic consider updating `viewport` when it's actually needed. A good place could be when the pilot moved the map manually, released the finger and map stopped moving after animation, or when focused map area is moved by code far from previous focused area. Storred in memory, accessible offline until app relaunch. The previous viewport data is replaced with a new viewport data.
 
 	```swift
 	let polygon: [CLLocationCoordinate2D] = []
@@ -218,6 +220,16 @@ Global turbulence polygons GeoJSON string can be used if available.
 ```swift
 let geoJSON = SkyPath.shared.turbulencePolygons
 ```
+
+#### 7. Location
+
+While data fetching from the server does not depend much on the location, it is important to have a good location to track turbulence data. Cellular devices have a built-in GPS and can have a stable location without an internet connection, but WiFi only devices do not and need an internet connection or an external GPS receiver. When device has a poor location data (outdated or invalid) SDK will not track data and show current position on the map. However, SDK tries to operate with a poor or shaky GPS signal as much as possible. SDK handles all location related stuff out of the box.
+
+`SkyPathDelegate.locationManagerDidFail(withError:)` could be called when SDK failed to get a location when, for examaple, GPS signal is not available, or location usage permission has not been granted for the app.
+
+Low power mode. SDK tracks best accuracy location when in flight to correctly track turbulence data. When the location is not needed anymore (when landed) and SDK was not stopped (when app left in the background or foreground), SDK can stop location tracking and switch to low power mode to save battery. Location tracking will start for the next flight.
+
+`SkyPathDelegate.didUpdateLowPowerMode(_:)` notifies that SDK updated low power mode state. Method is optional. You can use it to notify that location tracking stopped or just do nothing and ignore it.
 
 #### 7. Recording Simulation Testing (optional)
 

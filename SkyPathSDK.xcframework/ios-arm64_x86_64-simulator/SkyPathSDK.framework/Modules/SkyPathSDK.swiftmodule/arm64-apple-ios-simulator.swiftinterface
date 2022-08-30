@@ -825,6 +825,9 @@ public struct SettingsLocation : Swift.Codable {
   public var lowPowerModeNotificationTime: Swift.Int?
   public var showGPSAlt: Swift.Bool?
   public var showPressureAlt: Swift.Bool?
+  public var calculatedSpeedEnabled: Swift.Bool?
+  public var calculatedSpeedTimeS: Swift.Double?
+  public var inAirSpeedCheckBelowAltFt: Swift.Double?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -853,6 +856,12 @@ public struct SettingsNoiseFilter : Swift.Codable {
 }
 public struct SettingsEDR : Swift.Codable {
   public var enabled: Swift.Bool?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SettingsFlightPhases : Swift.Codable {
+  public var checkAltChangeFt: Swift.Int?
+  public var cruiseSameAltTimeS: Swift.Int?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -1093,6 +1102,9 @@ public protocol SkyPathDelegate : AnyObject {
     get
   }
   public var lowPowerMode: Swift.Bool {
+    get
+  }
+  public var speed: CoreLocation.CLLocationSpeed? {
     get
   }
   public func enableSimulation(_ enabled: Swift.Bool)
