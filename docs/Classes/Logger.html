@@ -286,6 +286,33 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK6LoggerC13logsDirectory10Foundation3URLVvp"></a>
+                    <a name="//apple_ref/swift/Property/logsDirectory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK6LoggerC13logsDirectory10Foundation3URLVvp">logsDirectory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The logs files directory.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">logsDirectory</span><span class="p">:</span> <span class="kt">URL</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
             <div class="task-group">
@@ -348,9 +375,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10SkyPathSDK6LoggerC10exportLogs10completionyy10Foundation3URLVSg_s5Error_pSgtc_tF"></a>
-                    <a name="//apple_ref/swift/Method/exportLogs(completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10SkyPathSDK6LoggerC10exportLogs10completionyy10Foundation3URLVSg_s5Error_pSgtc_tF">exportLogs(completion:<wbr>)</a>
+                    <a name="/s:10SkyPathSDK6LoggerC10exportLogs13notifyOnQueue10completionySo17OS_dispatch_queueC_y10Foundation3URLVSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/exportLogs(notifyOnQueue:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK6LoggerC10exportLogs13notifyOnQueue10completionySo17OS_dispatch_queueC_y10Foundation3URLVSg_s5Error_pSgtctF">exportLogs(notifyOnQueue:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -358,14 +385,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Export logs file to send for debugging. File is generated in a background thread and completion block is called on the main thread.</p>
+                        <p>Export logs file to send for debugging. File is generated in a background thread and completion block is called on <code>notifyOnQueue</code> thread.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">exportLogs</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">fileUrl</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">exportLogs</span><span class="p">(</span><span class="nv">notifyOnQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span> <span class="o">=</span> <span class="o">.</span><span class="n">main</span><span class="p">,</span>
+                       <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">fileUrl</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -376,12 +404,24 @@
                             <tr>
                               <td>
                                 <code>
+                                <em>notifyOnQueue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A queue to call a <code>completion</code> block on. Default is main thread.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
                                 <em>completion</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Block called with an exported logs file url or error if failed. It is stored in the default temporary directory and not removed by the SDK.</p>
+                                  <p>Block called with an exported file URL or an error. The file will be stored in the default temporary directory. You are responsible for removing that file when not needed anymore.</p>
                                 </div>
                               </td>
                             </tr>
@@ -391,13 +431,44 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK6LoggerC12exportedLogs10Foundation3URLVSg7fileUrl_s5Error_pSg5errortyF"></a>
+                    <a name="//apple_ref/swift/Method/exportedLogs()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK6LoggerC12exportedLogs10Foundation3URLVSg7fileUrl_s5Error_pSg5errortyF">exportedLogs()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Export logs file to send for debugging.  This method executes synchronously, blocking the current thread until finished generating logs file.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">exportedLogs</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="nv">fileUrl</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A tuple with an exported file URL or an error. The file will be stored in the default temporary directory. You are responsible for removing that file when not needed anymore.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="https://skypath.io" target="_blank" rel="external noopener">Yamasee LTD</a>. All rights reserved. (Last updated: 2022-08-30)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+          <p>&copy; 2022 <a class="link" href="https://skypath.io" target="_blank" rel="external noopener">Yamasee LTD</a>. All rights reserved. (Last updated: 2022-09-14)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
     </div>

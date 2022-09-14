@@ -48,7 +48,7 @@ Make sure the  `Privacy - Location When In Use Usage Description` description is
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate SkyPath into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'SkyPath', '2.0.0'
+pod 'SkyPath', '2.0.1'
 ```
 
 ### Swift Package Manager

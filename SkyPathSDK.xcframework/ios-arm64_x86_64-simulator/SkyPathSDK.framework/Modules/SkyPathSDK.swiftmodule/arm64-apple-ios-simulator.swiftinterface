@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SkyPathSDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import CFNetwork
 import SystemConfiguration.CaptiveNetwork
 import CommonCrypto
@@ -18,6 +19,7 @@ import UIKit
 import UserNotifications
 import WebKit
 import _Concurrency
+import _StringProcessing
 public class FlightPlan : Swift.Codable {
   final public let id: Swift.Int
   final public let flightPlanId: Swift.String
@@ -232,7 +234,7 @@ extension SkyPathSDK.TurbulenceSeverity {
   public var borderColor: UIKit.UIColor {
     get
   }
-  public var colorOpacity: CoreGraphics.CGFloat {
+  public var colorOpacity: CoreFoundation.CGFloat {
     get
   }
   public var colorWithOpacity: UIKit.UIColor {
@@ -456,9 +458,13 @@ public enum LoggingLevel {
     get
     set
   }
+  public var logsDirectory: Foundation.URL {
+    get
+  }
   @objc deinit
   public func log(_ text: Swift.String)
-  public func exportLogs(completion: @escaping (_ fileUrl: Foundation.URL?, _ error: Swift.Error?) -> Swift.Void)
+  public func exportLogs(notifyOnQueue: Dispatch.DispatchQueue = .main, completion: @escaping (_ fileUrl: Foundation.URL?, _ error: Swift.Error?) -> Swift.Void)
+  public func exportedLogs() -> (fileUrl: Foundation.URL?, error: Swift.Error?)
 }
 extension SkyPathSDK.Logger {
   public func logNetworkInterfaces()
@@ -537,12 +543,14 @@ public struct BrakingActionReport : Swift.Codable {
   public var ts: Swift.Int
   public var airportICAO: Swift.String
   public var aircraft: Swift.String?
-  public var flight_id: Swift.String?
+  public var flightId: Swift.String?
   public var id: Swift.String?
+  public var simulated: Swift.Bool?
+  public var flight: SkyPathSDK.Flight?
   public var date: Foundation.Date {
     get
   }
-  public init(runway: Swift.String, level: SkyPathSDK.BrakingActionLevel, date: Foundation.Date, airport: SkyPathSDK.Airport)
+  public init(runway: Swift.String, level: SkyPathSDK.BrakingActionLevel, date: Foundation.Date, airport: SkyPathSDK.Airport, flight: SkyPathSDK.Flight)
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
