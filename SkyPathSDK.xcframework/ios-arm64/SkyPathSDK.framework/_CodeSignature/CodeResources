@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/SkyPathSDK-Swift.h</key>
 		<data>
-		T6spCCA0JpnobpFPYzjnh7XSZs8=
+		vRipL4GPTE0/svZE3FagEiTEkpw=
 		</data>
 		<key>Headers/SkyPathSDK.h</key>
 		<data>
@@ -18,31 +18,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		24TeoEpSXs//mIMHParWoA43EcY=
-		</data>
-		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.abi.json</key>
-		<data>
-		zyQF4MUZcxHsB9nFSCzkEk5oq8U=
-		</data>
-		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
-		<data>
-		Gg5JRndw3Iynjwlt01uuVHshymo=
+		JKZahO48eHxl2zmw7iw8I+HSNyM=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		UjvORSxl8eZRVo2W8HEoyets4bU=
+		tYqcY/wpBdE1O9vhaQZG8cVEsr4=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		Gg5JRndw3Iynjwlt01uuVHshymo=
+		ehVMstiArZ1ByFWd01PrPgWwNls=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		fKdUVEXAL+ae41164WVVYzCU2fM=
+		bRiYdkdWkGGpubkaTqbUZ51HHXs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		Y4D0ys/gQzeB8v9zl35USILBERA=
+		QUIztpBg4Og8fwOwsIBh4AkAmi4=
 		</data>
 		<key>aircrafts.json</key>
 		<data>
@@ -59,7 +51,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xGsMtZwodAbfBrXeJlfWBhUMPVyke3fIP+BmZ/5YGGo=
+			iKQhSyr3Oar0yUeRXeh9SIgNQfsWYG7j1D2RgMSiayQ=
 			</data>
 		</dict>
 		<key>Headers/SkyPathSDK.h</key>
@@ -76,46 +68,32 @@
 			q1lxlpaUsEvy9/schHPtpTePCqgcbLQpnbogml1E290=
 			</data>
 		</dict>
-		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.abi.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			8WeevjLdxEM/ZPGPa16uC2tMskeCvPDAU6u3Gg5az3g=
-			</data>
-		</dict>
-		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			1sxLeQKQeJRfPLVKZ2w/WRE4gMKbi6hEUCGWsIZV4lo=
-			</data>
-		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JNye7jLvo64/FOe/mBzDG9QC5B4ZF7lQIzz9taVJdQo=
+			JG+LQlLsC8QZBNKhXMX1+YSqHWQKDXQy+l3BW8r5j1U=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1sxLeQKQeJRfPLVKZ2w/WRE4gMKbi6hEUCGWsIZV4lo=
+			Fe2nxIs2FKbA/HS9wKn4ZblxlHmK2DixcJLYALir9Ig=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ITgvFXLH9cAz5UPVKnGef/2TZ/WXywl0V41MeVd1i9c=
+			aY19iuwuZhxiQfPpgqqPfADhtKFFcCJbYDqACjuu4Nk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1xv4sb4tB+l0eVnkNiEKDOWymtxe32TrTCerVLICmDI=
+			g9l33sQZTfRH9rVxIvUJ9He2jRASeMZYdweiSK2RsU4=
 			</data>
 		</dict>
 		<key>aircrafts.json</key>

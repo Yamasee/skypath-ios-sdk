@@ -6,6 +6,6 @@ framework module SkyPathSDK {
 }
 
 module SkyPathSDK.Swift {
-  header "SkyPathSDK-Swift.h"
-  requires objc
+    header "SkyPathSDK-Swift.h"
+    requires objc
 }
