@@ -176,13 +176,14 @@ SkyPath.shared.stop()
 
 #### 5. Start Flight
 
-Provide a current flight information. This data is required.
+Provide a current flight information. Required. `Flight.fnumManual` is optional and `true` by default and determines if flight number is internal number and should not be visible to other, set `false` otherwise.
 
 ```swift
 let flight = Flight(
     dep: "ICAO",
     dest: "ICAO",
-    fnum: "FLIGHT_NUMBER")
+    fnum: "FLIGHT_NUMBER",
+    fnumManual: true)
 SkyPath.shared.startFlight(flight)
 ```
 And when flight is ended:
@@ -285,7 +286,14 @@ SDK has an internal logging system to help with debugging and solving issues. SD
 ```swift
 SkyPath.shared.logger.level = .error
 ```
-The SDK rolls out the logs files to keep only fresh ones and do not take lot of disk size. You can also disable logging completely and SDK will not write any logging information, however in this case it will be complex to debug any possible issues with the integration, so strongly discouraged.
+The SDK rolls out the logs files to keep only fresh ones and do not take lot of disk size. Configuration set to default values. `rollingFrequency` is checked on every log message, so a new file will be created immediately after time passed and old files will be deleted at the same time according to `maximumNumberOfLogFiles`.
+
+```swift
+SkyPath.shared.logger.rollingFrequency = 604_800
+SkyPath.shared.logger.maximumNumberOfLogFiles = 4
+```
+
+You can also disable logging completely and SDK will not write any logging information, however in this case it will be complex to debug any possible issues with the integration, so strongly discouraged.
 
 ```swift
 SkyPath.shared.logger.enabled = false
@@ -298,6 +306,35 @@ SkyPath.shared.logger.exportLogs { fileUrl, error in
 }
 ```
 
+#### 9. Turbulence Alerts (optional)
+
+There are 2 ways to get turbulence alerts:<br>
+
+- Manually when needed. For example, on every location update, or by time intervals or distance passed. This will have all currently found turbulence alerts despite if whether they were found in the previous query or not.
+
+```swift
+let query = AlertQuery(altRange: altRange,
+				route: route?.coordinates)
+let result = SkyPath.shared.alerts(with: query)
+```
+
+- Automatic monitoring. SDK will check for turbulence on every new location update. When found, alert will be reported via `SkyPathDelegate.didReceiveAlert(alert:)`. This will not report the same turbulence alert multiple times in a row, but it could report the same alert that was reported previously if there were other alerts in between. So it will report only once in case A1 A1 A1 A1, but will report 3 times in cases A1, A2, A1.
+
+```swift
+let query = AlertQuery(altRange: altRange,
+				route: route?.coordinates)
+SkyPath.shared.startMonitoringAlerts(with: query)
+```
+
+Based on the `AlertQuery` properties, SDK filters server reports. All `AlertQuery` properties have default values. Configure it per your needs.
+
+There are two modes: route and beam.
+
+- Route mode is used when route line coordinates or a polygon are set in the query. It can use polygon or route line coordinates and width around to make a corridor.
+
+- Beam mode is used when no route is provided. It is configured by angle span, and distance from the current location.
+
+When got a turbulence alert you can show it in the app with the local iOS notification if the app is in the background.
 
 #### Troubleshooting
 

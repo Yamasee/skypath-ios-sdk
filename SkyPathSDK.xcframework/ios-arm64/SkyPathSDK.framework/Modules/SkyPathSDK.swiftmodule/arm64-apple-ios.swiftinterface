@@ -450,8 +450,14 @@ public enum LoggingLevel {
     get
     set
   }
-  public var rollingFrequency: Swift.Double
-  public var maximumNumberOfLogFiles: Swift.Int
+  public var rollingFrequency: Swift.Double {
+    get
+    set
+  }
+  public var maximumNumberOfLogFiles: Swift.Int {
+    get
+    set
+  }
   public var symbol: Swift.Bool {
     get
     set
