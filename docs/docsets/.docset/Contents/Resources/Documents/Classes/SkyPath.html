@@ -140,6 +140,15 @@
                 <a href="../Structs/TurbulenceItem.html">TurbulenceItem</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/TurbulencePolygonsQuery.html">TurbulencePolygonsQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TurbulencePolygonsResult.html">TurbulencePolygonsResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TurbulencePolygonsResultOptions.html">TurbulencePolygonsResultOptions</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/TurbulenceQuery.html">TurbulenceQuery</a>
               </li>
               <li class="nav-group-task">
@@ -591,6 +600,52 @@ When started, SDK fetches initial data for time back in time and then receive on
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:10SkyPathSDK0aB0C18turbulencePolygons4withs6ResultOyAA010TurbulenceeG0VAA10QueryErrorOGAA0heI0V_tF"></a>
+                    <a name="//apple_ref/swift/Method/turbulencePolygons(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C18turbulencePolygons4withs6ResultOyAA010TurbulenceeG0VAA10QueryErrorOGAA0heI0V_tF">turbulencePolygons(with:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get turbulence polygons data using a query.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">turbulencePolygons</span><span class="p">(</span><span class="n">with</span> <span class="nv">query</span><span class="p">:</span> <span class="kt"><a href="../Structs/TurbulencePolygonsQuery.html">TurbulencePolygonsQuery</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/TurbulencePolygonsResult.html">TurbulencePolygonsResult</a></span><span class="p">,</span> <span class="kt"><a href="../Enums/QueryError.html">QueryError</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>query</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Specify query parameters per your needs. See <code><a href="../Structs/TurbulencePolygonsQuery.html">TurbulencePolygonsQuery</a></code> docs for details.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:10SkyPathSDK0aB0C18turbulencePolygonsSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/turbulencePolygons" class="dashAnchor"></a>
                     <a class="token" href="#/s:10SkyPathSDK0aB0C18turbulencePolygonsSSSgvp">turbulencePolygons</a>
@@ -608,7 +663,8 @@ When started, SDK fetches initial data for time back in time and then receive on
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">turbulencePolygons</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available(*, deprecated, message: "Use `turbulencePolygons(with:﹚` instead")</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">turbulencePolygons</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1032,6 +1088,33 @@ When started, SDK fetches initial data for time back in time and then receive on
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:10SkyPathSDK0aB0C31allowsBackgroundLocationUpdatesSbvp"></a>
+                    <a name="//apple_ref/swift/Property/allowsBackgroundLocationUpdates" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C31allowsBackgroundLocationUpdatesSbvp">allowsBackgroundLocationUpdates</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Background location access is required to track turbulence and show notifications.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">allowsBackgroundLocationUpdates</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:10SkyPathSDK0aB0C7versionSSvp"></a>
                     <a name="//apple_ref/swift/Property/version" class="dashAnchor"></a>
                     <a class="token" href="#/s:10SkyPathSDK0aB0C7versionSSvp">version</a>
@@ -1298,7 +1381,7 @@ When started, SDK fetches initial data for time back in time and then receive on
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="https://skypath.io" target="_blank" rel="external noopener">Yamasee LTD</a>. All rights reserved. (Last updated: 2022-09-28)</p>
+          <p>&copy; 2023 <a class="link" href="https://skypath.io" target="_blank" rel="external noopener">Yamasee LTD</a>. All rights reserved. (Last updated: 2023-02-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>

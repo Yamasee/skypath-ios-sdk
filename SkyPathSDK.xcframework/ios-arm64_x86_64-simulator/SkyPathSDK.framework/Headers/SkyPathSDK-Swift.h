@@ -243,6 +243,7 @@ SWIFT_CLASS("_TtC10SkyPathSDK26SPLocalNotificationManager")
 
 
 
+
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
 #endif
@@ -485,6 +486,7 @@ SWIFT_CLASS("_TtC10SkyPathSDK26SPLocalNotificationManager")
 @interface SPLocalNotificationManager : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 

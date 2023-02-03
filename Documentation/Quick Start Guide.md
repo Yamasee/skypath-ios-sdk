@@ -70,12 +70,11 @@ There are thousands of turbulence reports around the globe. To reduce network tr
 	```swift
 	SkyPath.shared.dataQuery.globalEnabled = false
 	```
-	By default polygons are generated for all altitude range. Set your specific altitude range Please note that it will need to make an API request first to provide you with updated data. Measured in thousands of feet.
+	Turbulence polygons are generated per time history separately and by default only selected time history is fetched for polygons. To enable fetching polygons for all time histories up to selected set a corresponding flag. For example if set to fetch 4h, then to have polygons available offline for 0.5h, 1h, 2h and 4h you need to set this flag to `true`.
 	
 	```swift
-	SkyPath.shared.dataQuery.altRange = 10...50
+	SkyPath.shared.dataQuery.globalTurbulencePolygonsUpToEnabled = false
 	```
-	
 	SDK periodically fetches global turbulence polygons and calls the delegate method when received a new data.
 	
 	```swift
@@ -216,10 +215,18 @@ case .failure(let error):
 }
 ```
 
-Global turbulence polygons GeoJSON string can be used if available.
+Use `TurbulencePolygonsQuery` to filter turbulence polygons.
 
 ```swift
-let geoJSON = SkyPath.shared.turbulencePolygons
+let query = TurbulencePolygonsQuery(altRange: 0...52_000)
+let result = SkyPath.shared.turbulencePolygons(with: query)
+switch result {
+case .success(let turbResult):
+    let geoJSON = turbResult.geoJSON
+    map.updateTurbulence(with: geoJSON)
+case .failure(let error):
+    print(error)
+}
 ```
 
 #### 7. Location

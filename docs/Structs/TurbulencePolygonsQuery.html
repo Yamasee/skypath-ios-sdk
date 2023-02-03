@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>DataUpdateFrequency Enumeration Reference</title>
+    <title>TurbulencePolygonsQuery Structure Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -13,8 +13,8 @@
     <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/DataUpdateFrequency" class="dashAnchor"></a>
-    <a title="DataUpdateFrequency Enumeration Reference"></a>
+    <a name="//apple_ref/swift/Struct/TurbulencePolygonsQuery" class="dashAnchor"></a>
+    <a title="TurbulencePolygonsQuery Structure Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html"> Docs</a> (100% documented)</p>
@@ -29,7 +29,7 @@
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" alt=""/>
-        DataUpdateFrequency Enumeration Reference
+        TurbulencePolygonsQuery Structure Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -164,15 +164,15 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>DataUpdateFrequency</h1>
+            <h1>TurbulencePolygonsQuery</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">DataUpdateFrequency</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TurbulencePolygonsQuery</span></code></pre>
 
                 </div>
               </div>
-            <p>Determines the time interval to fetch data from the server. If for example network traffic should be kept to minimal and it&rsquo;s ok to receive data more rarely set <code>minimal</code>. The <code>fast</code> will try to update data as soon as possible. When you would like to stop receiving data (for example when SkyPath layer is hidden in the app) set it to <code>none</code>.</p>
+            <p>Control how to query turbulence polygons data.</p>
 
           </section>
           <section class="section task-group-section">
@@ -181,9 +181,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10SkyPathSDK19DataUpdateFrequencyO4noneyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/none" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10SkyPathSDK19DataUpdateFrequencyO4noneyA2CmF">none</a>
+                    <a name="/s:10SkyPathSDK23TurbulencePolygonsQueryV8altRangeSNySdGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/altRange" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK23TurbulencePolygonsQueryV8altRangeSNySdGSgvp">altRange</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -191,13 +191,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Altitude lower and upper bounds of range. Should be round to thousand feet. Default is all. Measured in feet.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="k">none</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Double</span><span class="o">&gt;</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -207,9 +208,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10SkyPathSDK19DataUpdateFrequencyO7minimalyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/minimal" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10SkyPathSDK19DataUpdateFrequencyO7minimalyA2CmF">minimal</a>
+                    <a name="/s:10SkyPathSDK23TurbulencePolygonsQueryV13resultOptionsAA0de6ResultH0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/resultOptions" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK23TurbulencePolygonsQueryV13resultOptionsAA0de6ResultH0Vvp">resultOptions</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -217,13 +218,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>GeoJSON is supported only. Default is GeoJSON.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">minimal</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">resultOptions</span><span class="p">:</span> <span class="kt"><a href="../Structs/TurbulencePolygonsResultOptions.html">TurbulencePolygonsResultOptions</a></span></code></pre>
 
                         </div>
                       </div>
@@ -233,9 +235,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10SkyPathSDK19DataUpdateFrequencyO6mediumyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/medium" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10SkyPathSDK19DataUpdateFrequencyO6mediumyA2CmF">medium</a>
+                    <a name="/s:10SkyPathSDK23TurbulencePolygonsQueryV8altRange13resultOptionsACSNySdGSg_AA0de6ResultJ0Vtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(altRange:resultOptions:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK23TurbulencePolygonsQueryV8altRange13resultOptionsACSNySdGSg_AA0de6ResultJ0Vtcfc">init(altRange:<wbr>resultOptions:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -249,35 +251,29 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">medium</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Double</span><span class="o">&gt;</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+            <span class="nv">resultOptions</span><span class="p">:</span> <span class="kt"><a href="../Structs/TurbulencePolygonsResultOptions.html">TurbulencePolygonsResultOptions</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">geoJSON</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10SkyPathSDK19DataUpdateFrequencyO4fastyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/fast" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10SkyPathSDK19DataUpdateFrequencyO4fastyA2CmF">fast</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">fast</span></code></pre>
-
-                        </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>altRange</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optiona. Default is all. Measured in feet.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>

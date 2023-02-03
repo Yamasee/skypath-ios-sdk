@@ -590,3 +590,7 @@ int H3_EXPORT(experimentalLocalIjToH3)(H3Index origin, const CoordIJ *ij,
 #endif
 
 #endif
+
+int countLinkedPolygons(LinkedGeoPolygon* polygon);
+int countLinkedLoops(LinkedGeoPolygon* polygon);
+int countLinkedCoords(LinkedGeoLoop* loop);

@@ -18,6 +18,21 @@ import UIKit
 import UserNotifications
 import WebKit
 import _Concurrency
+public struct TurbulencePolygonsQuery {
+  public let altRange: Swift.ClosedRange<Swift.Double>?
+  public let resultOptions: SkyPathSDK.TurbulencePolygonsResultOptions
+  public var sevs: [SkyPathSDK.TurbulenceSeverity]?
+  public var dataHistoryTime: SkyPathSDK.DataHistoryTime?
+  public init(altRange: Swift.ClosedRange<Swift.Double>? = nil, resultOptions: SkyPathSDK.TurbulencePolygonsResultOptions = .geoJSON)
+}
+public struct TurbulencePolygonsResultOptions : Swift.OptionSet {
+  public let rawValue: Swift.Int
+  public static let geoJSON: SkyPathSDK.TurbulencePolygonsResultOptions
+  public init(rawValue: Swift.Int)
+  public typealias ArrayLiteralElement = SkyPathSDK.TurbulencePolygonsResultOptions
+  public typealias Element = SkyPathSDK.TurbulencePolygonsResultOptions
+  public typealias RawValue = Swift.Int
+}
 public class FlightPlan : Swift.Codable {
   final public let id: Swift.Int
   final public let flightPlanId: Swift.String
@@ -637,6 +652,7 @@ public struct DataQuery {
   public var polygon: [CoreLocation.CLLocationCoordinate2D]?
   public var viewport: [CoreLocation.CLLocationCoordinate2D]?
   public var globalEnabled: Swift.Bool
+  public var globalTurbulencePolygonsUpToEnabled: Swift.Bool
   public var altRange: Swift.ClosedRange<Swift.Double>?
   public init(types: SkyPathSDK.DataTypeOptions = .turbulence, sevs: [SkyPathSDK.TurbulenceSeverity] = TurbulenceSeverity.allCases, polygon: [CoreLocation.CLLocationCoordinate2D]? = nil)
 }
@@ -1042,7 +1058,9 @@ public protocol SkyPathDelegate : AnyObject {
   }
   public func fetchData(refresh: Swift.Bool = false)
   public func turbulence(with query: SkyPathSDK.TurbulenceQuery) -> Swift.Result<SkyPathSDK.TurbulenceResult, SkyPathSDK.QueryError>
+  public func turbulencePolygons(with query: SkyPathSDK.TurbulencePolygonsQuery) -> Swift.Result<SkyPathSDK.TurbulencePolygonsResult, SkyPathSDK.QueryError>
   public func tilesInBeam(with query: SkyPathSDK.TilesBeamQuery) -> [Swift.String]
+  @available(*, deprecated, message: "Use `turbulencePolygons(with:)` instead")
   public var turbulencePolygons: Swift.String? {
     get
   }
@@ -1104,6 +1122,10 @@ public protocol SkyPathDelegate : AnyObject {
     get
   }
   public func acknowledgeTerms()
+  public var allowsBackgroundLocationUpdates: Swift.Bool {
+    get
+    set
+  }
   public var askBeforeRequestingLocationAuthorizationBlock: ((_ completion: @escaping (_ allow: Swift.Bool) -> Swift.Void) -> Swift.Bool)?
   public var version: Swift.String {
     get
@@ -1345,6 +1367,9 @@ public struct FlightWaypointInput : Swift.Codable {
   public init(waypoint_id: Swift.String, name: Swift.String?, latitude: Swift.Double?, longitude: Swift.Double?, id: Swift.Int?, custom: Swift.Bool)
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
+}
+public struct TurbulencePolygonsResult {
+  public var geoJSON: Swift.String
 }
 public struct SessionTimeouts : Swift.Codable {
   public var session: Swift.Int

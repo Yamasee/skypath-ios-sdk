@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/SkyPathSDK-Swift.h</key>
 		<data>
-		vRipL4GPTE0/svZE3FagEiTEkpw=
+		wHYWRZmjSwp3MU4mswdbx//OG68=
 		</data>
 		<key>Headers/SkyPathSDK.h</key>
 		<data>
@@ -14,23 +14,23 @@
 		</data>
 		<key>Headers/h3api.h</key>
 		<data>
-		B/xM7015J/gzzCzw8Hediz4j9ZA=
+		T5X/ES/szfa6QFioOcgDTjmj3M0=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		SI39sWD6jW67zKa90lzBzc0ADaE=
+		g8sgdfhTFARC0rvC5EvPZFz2upc=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		hMNmMfq3f0v+08uOgkLpZSN17xE=
+		fdQ37gE1ieoSFIYm5BiwrQYUei8=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		dYs/IbZE9ltdINeKkvHxjfPhC00=
+		1B1qGELn9d3AygIDHJ5Ya7xCUms=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		Hw1zRIDJCT6GENTsN67CXrwuIkY=
+		j0j9hRxrfeiJ+JZKzGssRrsvfH0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,7 +51,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			iKQhSyr3Oar0yUeRXeh9SIgNQfsWYG7j1D2RgMSiayQ=
+			//WSwaGsUHRGVgtWysZCX/YcZsFcMI0KeXYD7R/juAg=
 			</data>
 		</dict>
 		<key>Headers/SkyPathSDK.h</key>
@@ -65,28 +65,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			q1lxlpaUsEvy9/schHPtpTePCqgcbLQpnbogml1E290=
+			Z4Iv4srkMtui+QUrZt4W6JVoBlNeg/ApOw7Jr2FoISI=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UfPDAsp4tbW5fm1IeWzmYyLT2nKqX1Ww8N9w+UCbdtQ=
+			XP2v4h5zkKwaIeVYttFHl0D2nNaBMSND/oG94pUarns=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			u9C0IRe+kMW4p19VtIj6HyRv1PmUVzimCAQF/lLGZPk=
+			WG4mh/HHYrykHaM7Za5blYzCz7o6dKsLhYrZiAebKwg=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			J5c82X6vi48mWCrVZVUQr1cNI/RjyzFtp9gD5fRaLyM=
+			WXYLNPYwVkLSkkn6bl3XJgjjG7CdlJdaT6S6Bh9JJ08=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
