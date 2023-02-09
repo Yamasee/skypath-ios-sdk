@@ -693,6 +693,7 @@ public struct ServerSettings : Swift.Codable {
   public var filter: SkyPathSDK.SettingsFilter?
   public var noiseFilter: SkyPathSDK.SettingsNoiseFilter?
   public var edr: SkyPathSDK.SettingsEDR?
+  public var staticContent: SkyPathSDK.SettingsStaticContent?
   public var updatedAtDate: Foundation.Date? {
     get
   }
@@ -890,6 +891,12 @@ public struct SettingsEDR : Swift.Codable {
 public struct SettingsFlightPhases : Swift.Codable {
   public var checkAltChangeFt: Swift.Int?
   public var cruiseSameAltTimeS: Swift.Int?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SettingsStaticContent : Swift.Codable {
+  public var checkTimeIntervalH: Swift.Int?
+  public var aircraftsCheckTimeIntervalH: Swift.Int?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
