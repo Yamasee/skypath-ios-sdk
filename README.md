@@ -2,7 +2,7 @@
 ![Version](https://img.shields.io/github/v/release/Yamasee/skypath-ios-sdk)
 ![Cocoapods](https://img.shields.io/cocoapods/v/SkyPath)
 ![Cocoapods platforms](https://img.shields.io/cocoapods/p/SkyPath)
-![Swift 5.5+](https://img.shields.io/badge/Swift-5.5+-blue.svg)
+![Swift 5.6.1+](https://img.shields.io/badge/Swift-5.6.1+-blue.svg)
 
 ## SkyPath iOS SDK
 
@@ -27,8 +27,8 @@ SkyPath iOS SDK enables rapid and seamless integration of SkyPath technology int
 ## Requirements
 
 - iOS 13.0+
-- Xcode 13.0+
-- Swift 5.5+
+- Xcode 13.4.1+
+- Swift 5.6.1+
 
 #### Background Mode
 
@@ -77,5 +77,5 @@ Try out the `Demo` project inside the repo. You will need just a valid SkyPath A
 
 ## License
 
-Copyright © Yamasee LTD 2022. All rights reserved. 
+Copyright © SkyPath LTD 2023. All rights reserved. 
 See [Terms & Conditions](https://skypath.io/terms/).

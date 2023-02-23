@@ -19,11 +19,11 @@ import UserNotifications
 import WebKit
 import _Concurrency
 public struct TurbulencePolygonsQuery {
-  public let altRange: Swift.ClosedRange<Swift.Double>?
+  public let altRange: Swift.ClosedRange<Swift.Double>
   public let resultOptions: SkyPathSDK.TurbulencePolygonsResultOptions
   public var sevs: [SkyPathSDK.TurbulenceSeverity]?
   public var dataHistoryTime: SkyPathSDK.DataHistoryTime?
-  public init(altRange: Swift.ClosedRange<Swift.Double>? = nil, resultOptions: SkyPathSDK.TurbulencePolygonsResultOptions = .geoJSON)
+  public init(altRange: Swift.ClosedRange<Swift.Double> = 0...52000, resultOptions: SkyPathSDK.TurbulencePolygonsResultOptions = .geoJSON)
 }
 public struct TurbulencePolygonsResultOptions : Swift.OptionSet {
   public let rawValue: Swift.Int
@@ -908,6 +908,8 @@ extension Foundation.InputStream {
   public func readfully() -> Foundation.Data
 }
 @_hasMissingDesignatedInitializers public class H3 {
+  public static let h3Resolution: Swift.Int32
+  public static var reverseCoordinates: Swift.Bool
   public static func h3HexToCoord(_ h3Hex: Swift.String) -> CoreLocation.CLLocationCoordinate2D
   public static func verts(forH3Hex h3Hex: Swift.String) -> [CoreLocation.CLLocationCoordinate2D]
   public static func circleCenterAndRadius(fromH3Hex h3Hex: Swift.String) -> (center: CoreLocation.CLLocationCoordinate2D, radius: CoreLocation.CLLocationDistance)
