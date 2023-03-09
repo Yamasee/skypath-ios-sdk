@@ -235,9 +235,36 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10SkyPathSDK23TurbulencePolygonsQueryV8altRange13resultOptionsACSNySdG_AA0de6ResultJ0Vtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(altRange:resultOptions:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10SkyPathSDK23TurbulencePolygonsQueryV8altRange13resultOptionsACSNySdG_AA0de6ResultJ0Vtcfc">init(altRange:<wbr>resultOptions:<wbr>)</a>
+                    <a name="/s:10SkyPathSDK23TurbulencePolygonsQueryV15dataHistoryTimeAA04DatahI0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dataHistoryTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK23TurbulencePolygonsQueryV15dataHistoryTimeAA04DatahI0OSgvp">dataHistoryTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>History time of queried data. When it&rsquo;s <code>nil</code> the <code><a href="../Classes/SkyPath.html#/s:10SkyPathSDK0aB0C15dataHistoryTimeAA04DataeF0Ovp">SkyPath.dataHistoryTime</a></code> value is used. Optional. Default is <code>nil</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">dataHistoryTime</span><span class="p">:</span> <span class="kt"><a href="../Enums/DataHistoryTime.html">DataHistoryTime</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK23TurbulencePolygonsQueryV8altRange13resultOptions15dataHistoryTimeACSNySdG_AA0de6ResultJ0VAA04DatalM0OSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(altRange:resultOptions:dataHistoryTime:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK23TurbulencePolygonsQueryV8altRange13resultOptions15dataHistoryTimeACSNySdG_AA0de6ResultJ0VAA04DatalM0OSgtcfc">init(altRange:<wbr>resultOptions:<wbr>dataHistoryTime:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -252,7 +279,8 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Double</span><span class="o">&gt;</span> <span class="o">=</span> <span class="mi">0</span><span class="o">...</span><span class="mi">52000</span><span class="p">,</span>
-            <span class="nv">resultOptions</span><span class="p">:</span> <span class="kt"><a href="../Structs/TurbulencePolygonsResultOptions.html">TurbulencePolygonsResultOptions</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">geoJSON</span><span class="p">)</span></code></pre>
+            <span class="nv">resultOptions</span><span class="p">:</span> <span class="kt"><a href="../Structs/TurbulencePolygonsResultOptions.html">TurbulencePolygonsResultOptions</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">geoJSON</span><span class="p">,</span>
+            <span class="nv">dataHistoryTime</span><span class="p">:</span> <span class="kt"><a href="../Enums/DataHistoryTime.html">DataHistoryTime</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -272,6 +300,30 @@
                                 </div>
                               </td>
                             </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>resultOptions</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>See <code><a href="../Structs/TurbulencePolygonsResultOptions.html">TurbulencePolygonsResultOptions</a></code> for available options.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>dataHistoryTime</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>History time of queried data. When it&rsquo;s <code>nil</code> the <code><a href="../Classes/SkyPath.html#/s:10SkyPathSDK0aB0C15dataHistoryTimeAA04DataeF0Ovp">SkyPath.dataHistoryTime</a></code> value is used. Optional. Default is <code>nil</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
                           </tbody>
                         </table>
                       </div>
@@ -283,7 +335,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="https://skypath.io" target="_blank" rel="external noopener">Yamasee LTD</a>. All rights reserved. (Last updated: 2023-02-23)</p>
+          <p>&copy; 2023 <a class="link" href="https://skypath.io" target="_blank" rel="external noopener">Yamasee LTD</a>. All rights reserved. (Last updated: 2023-03-09)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>

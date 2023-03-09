@@ -183,6 +183,60 @@ By default, the current location altitude will be used to make a range with +/- 
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:10SkyPathSDK10AlertQueryV6minSevAA18TurbulenceSeverityOvp"></a>
+                    <a name="//apple_ref/swift/Property/minSev" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK10AlertQueryV6minSevAA18TurbulenceSeverityOvp">minSev</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Min severity level of turbulence to alert. Default is <code>light</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">minSev</span><span class="p">:</span> <span class="kt"><a href="../Enums/TurbulenceSeverity.html">TurbulenceSeverity</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK10AlertQueryV4sevsSayAA18TurbulenceSeverityOGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/sevs" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK10AlertQueryV4sevsSayAA18TurbulenceSeverityOGSgvp">sevs</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Severity levels of turbulence. Will use only turbulence with these severities if set. Optional. Default is <code>nil</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">sevs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/TurbulenceSeverity.html">TurbulenceSeverity</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:10SkyPathSDK10AlertQueryV8distanceSdvp"></a>
                     <a name="//apple_ref/swift/Property/distance" class="dashAnchor"></a>
                     <a class="token" href="#/s:10SkyPathSDK10AlertQueryV8distanceSdvp">distance</a>
@@ -193,7 +247,7 @@ By default, the current location altitude will be used to make a range with +/- 
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Distance of &ldquo;beam&rdquo; when no <code><a href="../Structs/AlertQuery.html#/s:10SkyPathSDK10AlertQueryV5routeSaySo22CLLocationCoordinate2DVGSgvp">route</a></code> set. Measured in nautical miles (NM). Default  is 100 NM.</p>
+                        <p>Distance of &ldquo;beam&rdquo; or <code><a href="../Structs/AlertQuery.html#/s:10SkyPathSDK10AlertQueryV5routeSaySo22CLLocationCoordinate2DVGSgvp">route</a></code> if set. Measured in nautical miles (NM). Default  is 100 NM.</p>
 
                       </div>
                       <div class="declaration">
@@ -201,6 +255,33 @@ By default, the current location altitude will be used to make a range with +/- 
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">distance</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK10AlertQueryV9timeFrameSdSgvp"></a>
+                    <a name="//apple_ref/swift/Property/timeFrame" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK10AlertQueryV9timeFrameSdSgvp">timeFrame</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Time frame from now in which search for turbulence. <code><a href="../Structs/AlertQuery.html#/s:10SkyPathSDK10AlertQueryV8distanceSdvp">distance</a></code> will be ignored. Distance will be dynamically calculated from current speed and this <code>time</code> set. If speed is not currently available, the <code><a href="../Structs/AlertQuery.html#/s:10SkyPathSDK10AlertQueryV8distanceSdvp">distance</a></code> will be used. Measured in seconds. Optional. Default is <code>nil</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">timeFrame</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -399,9 +480,36 @@ By default, the current location altitude will be used to make a range with +/- 
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10SkyPathSDK10AlertQueryV8distance9angleSpan8altRange5route11widthAround31switchToBeamOnDistanceFromRoute014excludeOwnTimeH0ACSd_SdSNySdGSgSaySo22CLLocationCoordinate2DVGSgSdSgSdSitcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(distance:angleSpan:altRange:route:widthAround:switchToBeamOnDistanceFromRoute:excludeOwnTimeSpan:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10SkyPathSDK10AlertQueryV8distance9angleSpan8altRange5route11widthAround31switchToBeamOnDistanceFromRoute014excludeOwnTimeH0ACSd_SdSNySdGSgSaySo22CLLocationCoordinate2DVGSgSdSgSdSitcfc">init(distance:<wbr>angleSpan:<wbr>altRange:<wbr>route:<wbr>widthAround:<wbr>switchToBeamOnDistanceFromRoute:<wbr>excludeOwnTimeSpan:<wbr>)</a>
+                    <a name="/s:10SkyPathSDK10AlertQueryV15dataHistoryTimeAA04DatagH0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dataHistoryTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK10AlertQueryV15dataHistoryTimeAA04DatagH0OSgvp">dataHistoryTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>History time of queried data. When it&rsquo;s <code>nil</code> the <code><a href="../Classes/SkyPath.html#/s:10SkyPathSDK0aB0C15dataHistoryTimeAA04DataeF0Ovp">SkyPath.dataHistoryTime</a></code> value is used. Optional. Default is <code>nil</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">dataHistoryTime</span><span class="p">:</span> <span class="kt"><a href="../Enums/DataHistoryTime.html">DataHistoryTime</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK10AlertQueryV6minSev4sevs8distance9timeFrame9angleSpan8altRange5route11widthAround31switchToBeamOnDistanceFromRoute014excludeOwnTimeM015dataHistoryTimeAcA18TurbulenceSeverityO_SayAPGSgS2dSgSdSNySdGSgSaySo22CLLocationCoordinate2DVGSgASSdSiAA15DataHistoryTimeOSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(minSev:sevs:distance:timeFrame:angleSpan:altRange:route:widthAround:switchToBeamOnDistanceFromRoute:excludeOwnTimeSpan:dataHistoryTime:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK10AlertQueryV6minSev4sevs8distance9timeFrame9angleSpan8altRange5route11widthAround31switchToBeamOnDistanceFromRoute014excludeOwnTimeM015dataHistoryTimeAcA18TurbulenceSeverityO_SayAPGSgS2dSgSdSNySdGSgSaySo22CLLocationCoordinate2DVGSgASSdSiAA15DataHistoryTimeOSgtcfc">init(minSev:<wbr>sevs:<wbr>distance:<wbr>timeFrame:<wbr>angleSpan:<wbr>altRange:<wbr>route:<wbr>widthAround:<wbr>switchToBeamOnDistanceFromRoute:<wbr>excludeOwnTimeSpan:<wbr>dataHistoryTime:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -415,13 +523,17 @@ By default, the current location altitude will be used to make a range with +/- 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">distance</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">minSev</span><span class="p">:</span> <span class="kt"><a href="../Enums/TurbulenceSeverity.html">TurbulenceSeverity</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">light</span><span class="p">,</span>
+            <span class="nv">sevs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/TurbulenceSeverity.html">TurbulenceSeverity</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+            <span class="nv">distance</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
+            <span class="nv">timeFrame</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
             <span class="nv">angleSpan</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">15</span><span class="p">,</span>
             <span class="nv">altRange</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Double</span><span class="o">&gt;</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
             <span class="nv">route</span><span class="p">:</span> <span class="p">[</span><span class="kt">CLLocationCoordinate2D</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
             <span class="nv">widthAround</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
             <span class="nv">switchToBeamOnDistanceFromRoute</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
-            <span class="nv">excludeOwnTimeSpan</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">60</span><span class="p">)</span></code></pre>
+            <span class="nv">excludeOwnTimeSpan</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">60</span><span class="p">,</span>
+            <span class="nv">dataHistoryTime</span><span class="p">:</span> <span class="kt"><a href="../Enums/DataHistoryTime.html">DataHistoryTime</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -429,6 +541,30 @@ By default, the current location altitude will be used to make a range with +/- 
                         <h4>Parameters</h4>
                         <table class="graybox">
                           <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>minSev</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Min severity level of turbulence to alert. Default is <code>light</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sevs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Severity levels of turbulence. Will use only turbulence with these severities if set. Optional. Default is <code>nil</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
                             <tr>
                               <td>
                                 <code>
@@ -468,12 +604,60 @@ By default, the current location altitude will be used to make a range with +/- 
                             <tr>
                               <td>
                                 <code>
+                                <em>route</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Route line coordinates to search for alerts.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>widthAround</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Distance from the route line coordinates to search for alerts. Measured in NM. Default is 20 NM.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
                                 <em>switchToBeamOnDistanceFromRoute</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>When to switch to beam mode. Optional. Measured in nautical miles (NM).</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>excludeOwnTimeSpan</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not alert on own recorded turbulence for last time span. Measured in minutes. Default is 60.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>dataHistoryTime</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>History time of queried data. When it&rsquo;s <code>nil</code> the <code><a href="../Classes/SkyPath.html#/s:10SkyPathSDK0aB0C15dataHistoryTimeAA04DataeF0Ovp">SkyPath.dataHistoryTime</a></code> value is used. Optional. Default is <code>nil</code>.</p>
                                 </div>
                               </td>
                             </tr>
@@ -488,7 +672,7 @@ By default, the current location altitude will be used to make a range with +/- 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="https://skypath.io" target="_blank" rel="external noopener">Yamasee LTD</a>. All rights reserved. (Last updated: 2023-02-23)</p>
+          <p>&copy; 2023 <a class="link" href="https://skypath.io" target="_blank" rel="external noopener">Yamasee LTD</a>. All rights reserved. (Last updated: 2023-03-09)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>

@@ -21,9 +21,9 @@ import _Concurrency
 public struct TurbulencePolygonsQuery {
   public let altRange: Swift.ClosedRange<Swift.Double>
   public let resultOptions: SkyPathSDK.TurbulencePolygonsResultOptions
-  public var sevs: [SkyPathSDK.TurbulenceSeverity]?
   public var dataHistoryTime: SkyPathSDK.DataHistoryTime?
-  public init(altRange: Swift.ClosedRange<Swift.Double> = 0...52000, resultOptions: SkyPathSDK.TurbulencePolygonsResultOptions = .geoJSON)
+  public var sevs: [SkyPathSDK.TurbulenceSeverity]?
+  public init(altRange: Swift.ClosedRange<Swift.Double> = 0...52000, resultOptions: SkyPathSDK.TurbulencePolygonsResultOptions = .geoJSON, dataHistoryTime: SkyPathSDK.DataHistoryTime? = nil)
 }
 public struct TurbulencePolygonsResultOptions : Swift.OptionSet {
   public let rawValue: Swift.Int
@@ -635,7 +635,10 @@ public struct AviationWeatherTaf : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
 }
 public struct AlertQuery {
+  public var minSev: SkyPathSDK.TurbulenceSeverity
+  public var sevs: [SkyPathSDK.TurbulenceSeverity]?
   public let distance: Swift.Double
+  public var timeFrame: Foundation.TimeInterval?
   public let angleSpan: Swift.Double
   public let altRange: Swift.ClosedRange<Swift.Double>?
   public let switchToBeamOnDistanceFromRoute: Swift.Double
@@ -644,7 +647,7 @@ public struct AlertQuery {
   public var widthAround: Swift.Double?
   public var polygon: [CoreLocation.CLLocationCoordinate2D]?
   public var dataHistoryTime: SkyPathSDK.DataHistoryTime?
-  public init(distance: Swift.Double = 100, angleSpan: Swift.Double = 15, altRange: Swift.ClosedRange<Swift.Double>? = nil, route: [CoreLocation.CLLocationCoordinate2D]? = nil, widthAround: Swift.Double? = 20, switchToBeamOnDistanceFromRoute: Swift.Double = 20, excludeOwnTimeSpan: Swift.Int = 60)
+  public init(minSev: SkyPathSDK.TurbulenceSeverity = .light, sevs: [SkyPathSDK.TurbulenceSeverity]? = nil, distance: Swift.Double = 100, timeFrame: Foundation.TimeInterval? = nil, angleSpan: Swift.Double = 15, altRange: Swift.ClosedRange<Swift.Double>? = nil, route: [CoreLocation.CLLocationCoordinate2D]? = nil, widthAround: Swift.Double? = 20, switchToBeamOnDistanceFromRoute: Swift.Double = 20, excludeOwnTimeSpan: Swift.Int = 60, dataHistoryTime: SkyPathSDK.DataHistoryTime? = nil)
 }
 public struct DataQuery {
   public var types: SkyPathSDK.DataTypeOptions
@@ -1202,11 +1205,11 @@ public struct TurbulenceQuery {
   public let resultOptions: SkyPathSDK.TurbulenceResultOptions
   public var aggregate: Swift.Bool
   public var tiles: [Swift.String]?
-  public var sevs: [SkyPathSDK.TurbulenceSeverity]?
   public var dataHistoryTime: SkyPathSDK.DataHistoryTime?
+  public var sevs: [SkyPathSDK.TurbulenceSeverity]?
   public var route: [CoreLocation.CLLocationCoordinate2D]?
   public var widthAround: Swift.Double?
-  public init(type: SkyPathSDK.TurbulenceResultType = .server, altRange: Swift.ClosedRange<Swift.Double>? = nil, resultOptions: SkyPathSDK.TurbulenceResultOptions = .geoJSON, aggregate: Swift.Bool = true, tiles: [Swift.String]? = nil)
+  public init(type: SkyPathSDK.TurbulenceResultType = .server, altRange: Swift.ClosedRange<Swift.Double>? = nil, resultOptions: SkyPathSDK.TurbulenceResultOptions = .geoJSON, aggregate: Swift.Bool = true, tiles: [Swift.String]? = nil, dataHistoryTime: SkyPathSDK.DataHistoryTime? = nil)
 }
 public struct TurbulenceResultOptions : Swift.OptionSet {
   public let rawValue: Swift.Int
