@@ -1,13 +1,11 @@
 ![SkyPath.io | The world’s leading turbulence and auto-PIREPS data source](./docs-logo.png)
 ![Version](https://img.shields.io/github/v/release/Yamasee/skypath-ios-sdk)
-![Cocoapods](https://img.shields.io/cocoapods/v/SkyPath)
-![Cocoapods platforms](https://img.shields.io/cocoapods/p/SkyPath)
 ![Swift 5.6.1+](https://img.shields.io/badge/Swift-5.6.1+-blue.svg)
 
 ## SkyPath iOS SDK
 
 The world’s leading turbulence and auto-PIREPS data source.<br>
-Improve safety and operational efficiency with real-time turbulence information by automatically sensing and sharing accurate, aircraft behaviour via the iPad.
+Improve safety and operational efficiency with real-time turbulence information by automatically sensing and sharing accurate, aircraft behavior via the iPad.
 
 ## Contents
 
@@ -32,7 +30,7 @@ SkyPath iOS SDK enables rapid and seamless integration of SkyPath technology int
 
 #### Background Mode
 
-The location can be used while the app is in the background to keep tracking and alert turbulence. <br>
+The location can be used while the app is in the background to keep track of and alert to turbulence. <br>
 Add `Background Modes` capability in `Signing & Capabilities` and enable `Location updates` mode. <br>
 Make sure the  `Privacy - Location When In Use Usage Description` description is provided in the Info.plist of the project. 
 
@@ -67,7 +65,7 @@ If you prefer not to use either of the aforementioned dependency managers, you c
 
 - Download `SkyPathSDK.xcframework`
 - Copy `SkyPathSDK.xcframework` to a project directory
-- In Xcode project target in `General` tab, in `Frameworks, Libraries, and Embedded Content` tap "Add items", choose a `SkyPathSDK.xcframework` file. Make sure the added framework "Embed" value is set to `Embed & Sign`
+- In the Xcode project target in the `General` tab, in `Frameworks, Libraries, and Embedded Content` tap "Add items", and choose a `SkyPathSDK.xcframework` file. Make sure the added framework "Embed" value is set to `Embed & Sign`
 
 ## Demo
 
