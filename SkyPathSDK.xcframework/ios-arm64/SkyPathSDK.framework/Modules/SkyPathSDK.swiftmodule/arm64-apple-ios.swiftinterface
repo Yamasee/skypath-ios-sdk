@@ -215,7 +215,7 @@ public enum TurbulenceSeverity : Swift.Int, Swift.Equatable, Swift.Comparable, S
   case lightModerate
   case moderate
   case moderateSevere
-  case severe
+  public init?(rawValue: Swift.Int)
   @available(*, unavailable, renamed: "none")
   case None
   @available(*, unavailable, renamed: "light")
@@ -228,7 +228,8 @@ public enum TurbulenceSeverity : Swift.Int, Swift.Equatable, Swift.Comparable, S
   case ModerateSevere
   @available(*, unavailable, renamed: "severe")
   case Severe
-  public init?(rawValue: Swift.Int)
+  @available(*, unavailable, message: "`moderateSevere` is moderate-occasionally-severe")
+  case severe
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -923,7 +924,6 @@ public struct Flight : Swift.Codable {
   public let dep: Swift.String
   public let dest: Swift.String
   public let fnum: Swift.String
-  public var id: Swift.String
   public var fnumManual: Swift.Bool?
   public init(dep: Swift.String = "", dest: Swift.String = "", fnum: Swift.String, fnumManual: Swift.Bool? = true)
   public func encode(to encoder: Swift.Encoder) throws
@@ -1152,6 +1152,15 @@ public protocol SkyPathDelegate : AnyObject {
     get
   }
   public var speed: CoreLocation.CLLocationSpeed? {
+    get
+  }
+  public var inPosition: Swift.Bool {
+    get
+  }
+  public var isHorizontal: Swift.Bool {
+    get
+  }
+  public var inNoise: Swift.Bool {
     get
   }
   public func enableSimulation(_ enabled: Swift.Bool)

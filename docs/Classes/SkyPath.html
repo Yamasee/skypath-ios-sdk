@@ -505,7 +505,9 @@ When started, SDK fetches initial data for time back in time and then receive on
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>In case you need to get new data immediately (for example when opened the app) call this method and the result will be notified in corresponding delegate methods.</p>
+                        <p>In case you need to get new data immediately (for example when opened the app) call this method and the result will be notified in corresponding delegate methods.
+Data is automatically fetched from the server by SDK out of the box, as well on changing data in <code><a href="../Classes/SkyPath.html#/s:10SkyPathSDK0aB0C9dataQueryAA04DataE0Vvp">dataQuery</a></code> or <code><a href="../Classes/SkyPath.html#/s:10SkyPathSDK0aB0C19dataUpdateFrequencyAA04DataeF0Ovp">dataUpdateFrequency</a></code>.
+Use this function to let SDK fetch new data from the server immediately. Do not call it frequently. A recommended usage is to call it when the pilot taps a refresh button if it is such. The fetched data result will be notified in corresponding delegate methods.</p>
 
                       </div>
                       <div class="declaration">
@@ -564,7 +566,8 @@ When started, SDK fetches initial data for time back in time and then receive on
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get turbulence data using a query.</p>
+                        <p>Get turbulence data using a query in local cached data without a making a server request.
+It blocks the current thread, so using a separate background thread is recommended.</p>
 
                       </div>
                       <div class="declaration">
@@ -610,7 +613,8 @@ When started, SDK fetches initial data for time back in time and then receive on
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get turbulence polygons data using a query.</p>
+                        <p>Get turbulence polygons data using a query in local cached data without a making a server request.
+It blocks the current thread, so using a separate background thread is recommended.</p>
 
                       </div>
                       <div class="declaration">
@@ -697,7 +701,8 @@ When started, SDK fetches initial data for time back in time and then receive on
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get turbulence alerts with a query.</p>
+                        <p>Get turbulence alerts with a query in local cached data without a making a server request.
+It blocks the current thread, so using a separate background thread is recommended.</p>
 
                       </div>
                       <div class="declaration">
@@ -1139,6 +1144,87 @@ When started, SDK fetches initial data for time back in time and then receive on
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C10inPositionSbvp"></a>
+                    <a name="//apple_ref/swift/Property/inPosition" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C10inPositionSbvp">inPosition</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If device is in position.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">inPosition</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C12isHorizontalSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isHorizontal" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C12isHorizontalSbvp">isHorizontal</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If device is horizontal. Data is not tracked when device is horizontal.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isHorizontal</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C7inNoiseSbvp"></a>
+                    <a name="//apple_ref/swift/Property/inNoise" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C7inNoiseSbvp">inNoise</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If there is a noise currently like moving device out of the position.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">inNoise</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
             <div class="task-group">
@@ -1381,7 +1467,7 @@ When started, SDK fetches initial data for time back in time and then receive on
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="https://skypath.io" target="_blank" rel="external noopener">Yamasee LTD</a>. All rights reserved. (Last updated: 2023-03-09)</p>
+          <p>&copy; 2023 <a class="link" href="https://skypath.io" target="_blank" rel="external noopener">Yamasee LTD</a>. All rights reserved. (Last updated: 2023-03-24)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
