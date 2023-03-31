@@ -1,5 +1,5 @@
 PODS:
-  - SkyPath (2.0.15)
+  - SkyPath (2.0.16)
 
 DEPENDENCIES:
   - SkyPath
@@ -9,7 +9,7 @@ SPEC REPOS:
     - SkyPath
 
 SPEC CHECKSUMS:
-  SkyPath: 4da24ee2f7b1f4f694ee518025c2f887ae784fae
+  SkyPath: 20ce220cceede0dc0b62936c38c7c893437322fe
 
 PODFILE CHECKSUM: 4455524a23918b3de1134dfee3260364a46d6063
 
