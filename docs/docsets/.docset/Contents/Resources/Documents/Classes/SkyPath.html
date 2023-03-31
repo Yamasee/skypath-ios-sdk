@@ -47,6 +47,15 @@
               <li class="nav-group-task">
                 <a href="../Classes/SkyPath.html">SkyPath</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TurbulenceCluster.html">TurbulenceCluster</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TurbulenceClusterer.html">TurbulenceClusterer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TurbulenceClusterer/Options.html">– Options</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -256,7 +265,7 @@ See <code>Quick Start Guide</code> and API reference for usage details.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Let the SDK start working. Some params should be set before calling <code>start</code>, see docs for details.</p>
+                        <p>Start SDK. It will not track and provide data until started. Should be called when SkyPath service needs to start (for example on app start) only once until app is relaunched or after it was explicitly stopped by <code><a href="../Classes/SkyPath.html#/s:10SkyPathSDK0aB0C4stopyyF">SkyPath.stop()</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -283,7 +292,7 @@ See <code>Quick Start Guide</code> and API reference for usage details.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The API key to use SkyPath service.</p>
+                                  <p>The API key provided to you by SkyPath.</p>
                                 </div>
                               </td>
                             </tr>
@@ -295,7 +304,7 @@ See <code>Quick Start Guide</code> and API reference for usage details.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The ICAO code of the airline.</p>
+                                  <p>The company ICAO code registered in SkyPath system.</p>
                                 </div>
                               </td>
                             </tr>
@@ -307,7 +316,7 @@ See <code>Quick Start Guide</code> and API reference for usage details.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The airline user id.</p>
+                                  <p>Any user identifier unique per company. Does not need to be registered in the SkyPath system.</p>
                                 </div>
                               </td>
                             </tr>
@@ -319,7 +328,7 @@ See <code>Quick Start Guide</code> and API reference for usage details.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>Optional. Set it when SkyPath server is not whitelisted and a proxy server should be used. Production environment is used by default.</p>
+                                  <p>Set it when SkyPath server is not whitelisted and a proxy server should be used, or when need dev env. Optional. Default is production.</p>
                                 </div>
                               </td>
                             </tr>
@@ -331,7 +340,7 @@ See <code>Quick Start Guide</code> and API reference for usage details.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>Check if there is there is any error on starting. This will call an API request so might take some time to get back. If <code>error</code> is nill then it should be good to go.</p>
+                                  <p>Will be called asynchronously on the main thread. <code>error</code> will have details in case SDK can&rsquo;t start. If all is good <code><a href="../Protocols/SkyPathDelegate.html#/s:10SkyPathSDK0aB8DelegateP24didUpdateRecordingStatus2toySb_tF">SkyPathDelegate.didUpdateRecordingStatus(to:)</a></code> will be called with <code>recording: true</code>.</p>
                                 </div>
                               </td>
                             </tr>
@@ -869,7 +878,7 @@ It blocks the current thread, so using a separate background thread is recommend
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Current aircraft. Set it to receive data adjusted for specific aircraft. Should not be <code>nil</code>.</p>
+                        <p>Current aircraft. Set it to receive data adjusted for specific aircraft. Should not be <code>nil</code>. When it is not set the turbulence data will not be fetched from the server. This is because the severity level can be different for different a/c types (sizes).</p>
 
                       </div>
                       <div class="declaration">
@@ -990,7 +999,7 @@ It blocks the current thread, so using a separate background thread is recommend
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Start a new flight. Does the same as <code>setFlight(_:)</code>, so use one of them. <code>startFlight(_:)</code> and <code><a href="../Classes/SkyPath.html#/s:10SkyPathSDK0aB0C9endFlightyyF">endFlight()</a></code> are preferred.</p>
+                        <p>Starts a new flight. Flight is saved even across app launches, so <code>startFlight</code> can be called only on a new flight start and <code>stopFlight</code> can be called when flight is ended / removed.</p>
 
                       </div>
                       <div class="declaration">
@@ -1036,7 +1045,7 @@ It blocks the current thread, so using a separate background thread is recommend
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Stop current flight if any was set by <code><a href="../Classes/SkyPath.html#/s:10SkyPathSDK0aB0C11startFlightyyAA0E0VF">startFlight(_:)</a></code> or <code>setFlight(_:)</code>. Does the same as <code>setFlight(_:)</code> with <code>nil</code>, so use one of them. <code><a href="../Classes/SkyPath.html#/s:10SkyPathSDK0aB0C11startFlightyyAA0E0VF">startFlight(_:)</a></code> and <code>endFlight()</code> are preferred.</p>
+                        <p>Stops the current flight if any was started by <code><a href="../Classes/SkyPath.html#/s:10SkyPathSDK0aB0C11startFlightyyAA0E0VF">startFlight(_:)</a></code> or <code>setFlight(_:)</code>. Flight is saved even across app launches, so <code>startFlight</code> can be called only on a new flight start and <code>stopFlight</code> can be called when flight is ended / removed.</p>
 
                       </div>
                       <div class="declaration">
@@ -1467,7 +1476,7 @@ It blocks the current thread, so using a separate background thread is recommend
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="https://skypath.io" target="_blank" rel="external noopener">Yamasee LTD</a>. All rights reserved. (Last updated: 2023-03-24)</p>
+          <p>&copy; 2023 <a class="link" href="https://skypath.io" target="_blank" rel="external noopener">Yamasee LTD</a>. All rights reserved. (Last updated: 2023-03-31)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>

@@ -47,6 +47,15 @@
               <li class="nav-group-task">
                 <a href="../Classes/SkyPath.html">SkyPath</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TurbulenceCluster.html">TurbulenceCluster</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TurbulenceClusterer.html">TurbulenceClusterer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TurbulenceClusterer/Options.html">– Options</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -395,12 +404,93 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK14TurbulenceItemV10distanceToSdSgvp"></a>
+                    <a name="//apple_ref/swift/Property/distanceTo" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK14TurbulenceItemV10distanceToSdSgvp">distanceTo</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Distance from current location to a nearest coordinate of <code><a href="../Structs/TurbulenceItem.html#/s:10SkyPathSDK14TurbulenceItemV4bboxSaySo22CLLocationCoordinate2DVGvp">bbox</a></code>. The system provided location is used. When location is not available it will return <code>nil</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">distanceTo</span><span class="p">:</span> <span class="kt">CLLocationDistance</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK14TurbulenceItemV6timeToSdSgvp"></a>
+                    <a name="//apple_ref/swift/Property/timeTo" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK14TurbulenceItemV6timeToSdSgvp">timeTo</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Time to pass <code><a href="../Structs/TurbulenceItem.html#/s:10SkyPathSDK14TurbulenceItemV10distanceToSdSgvp">distanceTo</a></code> based on the current speed. The system provided speed is used. If system speed is invalid or not available the calculated speed based on coordinates change over time will be used.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">timeTo</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK14TurbulenceItemV10timeToPassSdSgvp"></a>
+                    <a name="//apple_ref/swift/Property/timeToPass" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK14TurbulenceItemV10timeToPassSdSgvp">timeToPass</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Time to pass the diameter of the <code><a href="../Structs/TurbulenceItem.html#/s:10SkyPathSDK14TurbulenceItemV4bboxSaySo22CLLocationCoordinate2DVGvp">bbox</a></code> based on the current speed. The system provided speed is used. If system speed is invalid or not available the calculated speed based on coordinates change over time will be used.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">timeToPass</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="https://skypath.io" target="_blank" rel="external noopener">Yamasee LTD</a>. All rights reserved. (Last updated: 2023-03-24)</p>
+          <p>&copy; 2023 <a class="link" href="https://skypath.io" target="_blank" rel="external noopener">Yamasee LTD</a>. All rights reserved. (Last updated: 2023-03-31)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>

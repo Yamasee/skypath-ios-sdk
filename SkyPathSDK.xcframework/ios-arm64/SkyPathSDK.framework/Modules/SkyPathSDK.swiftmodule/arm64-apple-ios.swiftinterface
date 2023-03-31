@@ -504,6 +504,15 @@ public struct TurbulenceItem : Swift.Codable {
   public let coordinate: CoreLocation.CLLocationCoordinate2D
   public var h3Hex: Swift.String
   public var trend: SkyPathSDK.TurbulenceTrend?
+  public var distanceTo: CoreLocation.CLLocationDistance? {
+    get
+  }
+  public var timeTo: Foundation.TimeInterval? {
+    get
+  }
+  public var timeToPass: Foundation.TimeInterval? {
+    get
+  }
   public init(sev: SkyPathSDK.TurbulenceSeverity, bbox: [CoreLocation.CLLocationCoordinate2D], tile: SkyPathSDK.Tile, alt: Swift.Double, ts: Swift.Int, coordinate: CoreLocation.CLLocationCoordinate2D, h3Hex: Swift.String, trend: SkyPathSDK.TurbulenceTrend? = nil)
   public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
@@ -677,6 +686,61 @@ public struct AlertResult {
 }
 extension SkyPathSDK.AlertResult : Swift.Equatable {
   public static func == (lhs: SkyPathSDK.AlertResult, rhs: SkyPathSDK.AlertResult) -> Swift.Bool
+}
+public class TurbulenceClusterer {
+  public struct Options {
+    public let maxDistanceNM: Swift.Double
+    public let maxDistanceToNearestNM: Swift.Double
+    public init(maxDistanceNM: Swift.Double = 60, maxDistanceToNearestNM: Swift.Double = 30)
+  }
+  public var clusters: [SkyPathSDK.TurbulenceCluster] {
+    get
+  }
+  public init(options: SkyPathSDK.TurbulenceClusterer.Options = .init())
+  public func process(turbulence: [SkyPathSDK.TurbulenceItem])
+  public func isAlerted(cluster: SkyPathSDK.TurbulenceCluster) -> Swift.Bool
+  public func alerted(cluster: SkyPathSDK.TurbulenceCluster)
+  public func reset()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class TurbulenceCluster : Swift.Equatable, Swift.Hashable {
+  public var id: Swift.String
+  public var turbulence: [SkyPathSDK.TurbulenceItem] {
+    get
+  }
+  public var center: CoreLocation.CLLocationCoordinate2D {
+    get
+  }
+  public var severity: SkyPathSDK.TurbulenceSeverity {
+    get
+  }
+  public var diameterDistance: Swift.Double {
+    get
+  }
+  public var distanceTo: CoreLocation.CLLocationDistance? {
+    get
+  }
+  public var timeTo: Foundation.TimeInterval? {
+    get
+  }
+  public var timeToPass: Foundation.TimeInterval? {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+  public var nearestMaxSevTurbulence: SkyPathSDK.TurbulenceItem? {
+    get
+  }
+  public var nearestMaxSevCenter: CoreLocation.CLLocationCoordinate2D {
+    get
+  }
+  public static func == (lhs: SkyPathSDK.TurbulenceCluster, rhs: SkyPathSDK.TurbulenceCluster) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  @objc deinit
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 public struct SettingsValue<T> : Swift.Codable where T : Swift.Decodable, T : Swift.Encodable {
   public var value: T?
@@ -1004,6 +1068,7 @@ extension SkyPathSDK.DataHistoryTime {
 public enum QueryError : SkyPathSDK.SPError {
   case altRangeNotRoundToThousandFeet
   case polygonTooManyCoordinates
+  case dataQueryInvalid(message: Swift.String?)
   case general(error: SkyPathSDK.GeneralError)
 }
 public protocol SPError : Swift.Error {
@@ -1111,6 +1176,7 @@ public protocol SkyPathDelegate : AnyObject {
   public func getDataForAirport(withICAO icao: Swift.String, completion: @escaping (_ data: SkyPathSDK.AirportData?, _ error: Swift.Error?) -> Swift.Void)
   public func startFlight(_ flight: SkyPathSDK.Flight)
   public func endFlight()
+  @available(*, deprecated, message: "Use `startFlight(_:)` and `endFlight(_:)` instead")
   public func setFlight(_ flight: SkyPathSDK.Flight?)
   public var flight: SkyPathSDK.Flight? {
     get

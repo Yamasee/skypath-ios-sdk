@@ -47,6 +47,15 @@
               <li class="nav-group-task">
                 <a href="Classes/SkyPath.html">SkyPath</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Classes/TurbulenceCluster.html">TurbulenceCluster</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TurbulenceClusterer.html">TurbulenceClusterer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TurbulenceClusterer/Options.html">– Options</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -230,6 +239,68 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:10SkyPathSDK17TurbulenceClusterC"></a>
+                    <a name="//apple_ref/swift/Class/TurbulenceCluster" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK17TurbulenceClusterC">TurbulenceCluster</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Turbulence cluster. Generated cluster exists until no turbulence that can be added to this cluster. Cluster is dynamically updated.</p>
+
+                        <a href="Classes/TurbulenceCluster.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">TurbulenceCluster</span> <span class="p">:</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt">Hashable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK19TurbulenceClustererC"></a>
+                    <a name="//apple_ref/swift/Class/TurbulenceClusterer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK19TurbulenceClustererC">TurbulenceClusterer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Group <code><a href="Structs/TurbulenceItem.html">TurbulenceItem</a></code> based on distance. New turbulence will be added to existing clusters or to new clusters.
+Clusters will be removed when become empty or <code>reset()</code> called.
+Usage example:</p>
+<pre class="highlight swift"><code><span class="kd">private</span> <span class="k">let</span> <span class="nv">alertClusterer</span> <span class="o">=</span> <span class="kt">TurbulenceClusterer</span><span class="p">()</span>
+<span class="o">...</span>
+<span class="n">alertClusterer</span><span class="o">.</span><span class="nf">process</span><span class="p">(</span><span class="nv">turbulence</span><span class="p">:</span> <span class="n">alertResult</span><span class="o">.</span><span class="n">turbulence</span><span class="p">)</span> 
+</code></pre>
+
+                        <a href="Classes/TurbulenceClusterer.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">TurbulenceClusterer</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:10SkyPathSDK0aB0C"></a>
                     <a name="//apple_ref/swift/Class/SkyPath" class="dashAnchor"></a>
                     <a class="token" href="#/s:10SkyPathSDK0aB0C">SkyPath</a>
@@ -262,7 +333,7 @@ See <code>Quick Start Guide</code> and API reference for usage details.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="https://skypath.io" target="_blank" rel="external noopener">Yamasee LTD</a>. All rights reserved. (Last updated: 2023-03-24)</p>
+          <p>&copy; 2023 <a class="link" href="https://skypath.io" target="_blank" rel="external noopener">Yamasee LTD</a>. All rights reserved. (Last updated: 2023-03-31)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
