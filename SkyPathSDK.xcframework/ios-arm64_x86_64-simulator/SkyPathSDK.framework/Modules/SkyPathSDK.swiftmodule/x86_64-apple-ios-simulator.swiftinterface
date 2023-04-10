@@ -209,13 +209,16 @@ public enum FileType : Swift.String, Swift.CaseIterable {
   public static func remove(fileUrl url: Foundation.URL)
   @objc deinit
 }
-public enum TurbulenceSeverity : Swift.Int, Swift.Equatable, Swift.Comparable, Swift.Codable {
+public enum TurbulenceSeverity : Swift.Int, Swift.Equatable, Swift.Comparable, Swift.Codable, Swift.CaseIterable {
   case none
   case light
   case lightModerate
   case moderate
   case moderateSevere
   public init?(rawValue: Swift.Int)
+  public static var allCases: [SkyPathSDK.TurbulenceSeverity] {
+    get
+  }
   @available(*, unavailable, renamed: "none")
   case None
   @available(*, unavailable, renamed: "light")
@@ -230,16 +233,11 @@ public enum TurbulenceSeverity : Swift.Int, Swift.Equatable, Swift.Comparable, S
   case Severe
   @available(*, unavailable, message: "`moderateSevere` is moderate-occasionally-severe")
   case severe
+  public typealias AllCases = [SkyPathSDK.TurbulenceSeverity]
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
-}
-extension SkyPathSDK.TurbulenceSeverity : Swift.CaseIterable {
-  public static var allCases: [SkyPathSDK.TurbulenceSeverity] {
-    get
-  }
-  public typealias AllCases = [SkyPathSDK.TurbulenceSeverity]
 }
 extension SkyPathSDK.TurbulenceSeverity {
   public var color: UIKit.UIColor {
@@ -497,7 +495,11 @@ public struct BrakingAction : Swift.Codable {
 }
 public struct TurbulenceItem : Swift.Codable {
   public let sev: SkyPathSDK.TurbulenceSeverity
-  public let bbox: [CoreLocation.CLLocationCoordinate2D]
+  @available(*, deprecated, renamed: "vertices")
+  public var bbox: [CoreLocation.CLLocationCoordinate2D] {
+    get
+  }
+  public let vertices: [CoreLocation.CLLocationCoordinate2D]
   public let tile: SkyPathSDK.Tile
   public let alt: Swift.Double
   public let ts: Swift.Int
@@ -513,7 +515,7 @@ public struct TurbulenceItem : Swift.Codable {
   public var timeToPass: Foundation.TimeInterval? {
     get
   }
-  public init(sev: SkyPathSDK.TurbulenceSeverity, bbox: [CoreLocation.CLLocationCoordinate2D], tile: SkyPathSDK.Tile, alt: Swift.Double, ts: Swift.Int, coordinate: CoreLocation.CLLocationCoordinate2D, h3Hex: Swift.String, trend: SkyPathSDK.TurbulenceTrend? = nil)
+  public init(sev: SkyPathSDK.TurbulenceSeverity, vertices: [CoreLocation.CLLocationCoordinate2D], tile: SkyPathSDK.Tile, alt: Swift.Double, ts: Swift.Int, coordinate: CoreLocation.CLLocationCoordinate2D, h3Hex: Swift.String, trend: SkyPathSDK.TurbulenceTrend? = nil)
   public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
 }
@@ -1086,7 +1088,7 @@ public protocol SkyPathDelegate : AnyObject {
   func didReceiveNewWeatherData()
   func didReportWeather(_ weather: SkyPathSDK.Weather)
   func didReceiveNewAirportsData()
-  func didFailToFetchNewData(with error: SkyPathSDK.GeneralError)
+  func didFailToFetchNewData(with error: SkyPathSDK.SPError)
   func didReceiveAlert(_ alert: SkyPathSDK.AlertResult)
   func locationUpdated(to location: SkyPathSDK.SPLocation)
   func locationManagerDidChangeAuthorization(status: CoreLocation.CLAuthorizationStatus)
@@ -1245,7 +1247,7 @@ extension SkyPathSDK.SkyPathDelegate {
   public func didReceiveNewWeatherData()
   public func didReportWeather(_ weather: SkyPathSDK.Weather)
   public func didReceiveNewAirportsData()
-  public func didFailToFetchNewData(with error: SkyPathSDK.GeneralError)
+  public func didFailToFetchNewData(with error: SkyPathSDK.SPError)
   public func didReceiveAlert(_ alert: SkyPathSDK.AlertResult)
   public func airborneStatus(isAirborne: Swift.Bool)
   public func locationUpdated(to location: SkyPathSDK.SPLocation)
