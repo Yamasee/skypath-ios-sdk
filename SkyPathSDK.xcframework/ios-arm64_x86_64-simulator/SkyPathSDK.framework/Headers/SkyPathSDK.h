@@ -3,7 +3,7 @@
 //  SkyPathSDK
 //
 //  Created by Alex Kovalov on 23.03.2022.
-//  Copyright © 2022 Yamasee. All rights reserved.
+//  Copyright © 2022 SkyPath Ltd. All rights reserved.
 //
 
 #ifndef SkyPathSDK_h

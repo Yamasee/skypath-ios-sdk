@@ -6,43 +6,55 @@
 	<dict>
 		<key>Headers/SkyPathSDK-Swift.h</key>
 		<data>
-		wHYWRZmjSwp3MU4mswdbx//OG68=
+		OtJDfk3912uaA8BOpT6nNIdwcNE=
 		</data>
 		<key>Headers/SkyPathSDK.h</key>
 		<data>
-		srNSXPmvbxLz2dB++kihtg9uwNM=
+		LDcWDHNr7/du5Ctc312rxJswMsM=
 		</data>
 		<key>Headers/h3api.h</key>
 		<data>
-		T5X/ES/szfa6QFioOcgDTjmj3M0=
+		HAcBGFcg6YJAu5Y0797akpybDZ8=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		VGEPv7b/eaDy6iQke6/86TFN/i0=
+		l+htf74iQ2j5CVS/pm8EupaLh4c=
+		</data>
+		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.abi.json</key>
+		<data>
+		2wLpRuw05BgAKoeOlQ9zKCdpWJU=
+		</data>
+		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
+		<data>
+		6wlF4rRSBGEnNyreuGBMJ3ptqt4=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		5OLteis/uPOaYrkvL3bsaRcQlgU=
+		x13W9dCj6EHMWfBco3g9RZfr7xM=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		a2Si3v2nMC9iyhRQqvMt8Xi/C0Y=
+		6wlF4rRSBGEnNyreuGBMJ3ptqt4=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		9kpY7SYShlYS+v2xBWYl2dUJ8Ps=
+		EK1TZt1Qoqjy1YULro1qpLLbZY0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		QUIztpBg4Og8fwOwsIBh4AkAmi4=
+		Y4D0ys/gQzeB8v9zl35USILBERA=
 		</data>
 		<key>aircrafts.json</key>
 		<data>
-		hP4K1H1u7Tv9t9HrYrW0QBT9NEM=
+		vd9Jn54Dv8dcsxgc9kicTuNTy+8=
 		</data>
 		<key>airports.json</key>
 		<data>
-		mT5KTb0qMUCt8RJ0SrMuja08Hts=
+		U0JBTod7ga3Q/uOaz/uyI0RBetE=
+		</data>
+		<key>usa_canada.geojson</key>
+		<data>
+		B1Xm5sh23gfLnKQ+Lfn/ccXrpFk=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -51,63 +63,84 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			//WSwaGsUHRGVgtWysZCX/YcZsFcMI0KeXYD7R/juAg=
+			SNMTs0rtkOg+2EzQt1to+zL8HjBtI4eQdqopqqYynJI=
 			</data>
 		</dict>
 		<key>Headers/SkyPathSDK.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nKO5RyHyjgHEs4KocmMtyIwvaSVd4bYsLYQSz7o4Zdg=
+			+o3tm1pPgdoTjepHD9HynQREeyKTj6y5fhg9dju30uQ=
 			</data>
 		</dict>
 		<key>Headers/h3api.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Z4Iv4srkMtui+QUrZt4W6JVoBlNeg/ApOw7Jr2FoISI=
+			RYVHNAMloxw6eJAhUHseeFjkpBJkVuzkx5etpOuW2u0=
+			</data>
+		</dict>
+		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			aoOASey/tIc3TwSuwfQQ3TVHYTbaaEXdOKGunpaOMP8=
+			</data>
+		</dict>
+		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qcVIAPOkeCwSfQuCpDbGSDlbo6CMsBuPCDnkAarbHEo=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gEmHoYJ18gZYKEuycVkhUl7ERBJJSWSwXfeQZY/gLRQ=
+			ifLatXO+YahZ8lg3vTKJR3VLophlhx2EpfGjmhMhCg4=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AZLjT45scpAzyfFlXMkJO0rv/BGjrDB/KhI74hHtpvU=
+			qcVIAPOkeCwSfQuCpDbGSDlbo6CMsBuPCDnkAarbHEo=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CFTuLgoI7btuB6HQRSeSIYHkkhEJI/MLaHlG30Q4fZA=
+			+VCze8mGK/KU2IIrNPJRRtUbRSfTYwSRn9uc9vJimls=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			g9l33sQZTfRH9rVxIvUJ9He2jRASeMZYdweiSK2RsU4=
+			1xv4sb4tB+l0eVnkNiEKDOWymtxe32TrTCerVLICmDI=
 			</data>
 		</dict>
 		<key>aircrafts.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6MXdGOOlMzohwRBsIMIRdwqQF9ntnMUi9/U3tQmK3rc=
+			uF13PrVwvT7nB7u+CccsRtQXGZD8j6rSmwNEEG+hP/E=
 			</data>
 		</dict>
 		<key>airports.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iHoXknd1syZ7UExuYSksj4uYi7dNHFQrR+oa2I6jHXI=
+			PEU8N3GCOxpKUuJteiM6XiqvNtD93aBa7pB7ka1jgbw=
+			</data>
+		</dict>
+		<key>usa_canada.geojson</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			u0xnsz3R5LBhHekPypXZi9AkZCVuaImhNl78QTVL95E=
 			</data>
 		</dict>
 	</dict>

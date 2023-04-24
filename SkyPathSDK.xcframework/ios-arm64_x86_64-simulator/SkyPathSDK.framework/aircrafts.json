@@ -1,1249 +1,2675 @@
 [
-  {
-    "family" : "318",
-    "icao" : "A318",
-    "id" : "A318",
-    "title" : "Airbus A318",
-    "size" : "medium",
-    "iata" : "318",
-    "group" : "C60"
-  },
-  {
-    "family" : "319",
-    "icao" : "A319",
-    "id" : "A319",
-    "title" : "Airbus A319",
-    "size" : "medium",
-    "iata" : "319",
-    "group" : "C60"
-  },
-  {
-    "family" : "330",
-    "icao" : "A332",
-    "id" : "A332",
-    "title" : "Airbus A330-200",
-    "size" : "large",
-    "iata" : "332",
-    "group" : "C80"
-  },
-  {
-    "family" : "A300",
-    "icao" : "A30B",
-    "id" : "A30B",
-    "title" : "Airbus A300",
-    "size" : "large",
-    "iata" : "AB3",
-    "group" : "C70"
-  },
-  {
-    "family" : "",
-    "icao" : "AT45",
-    "id" : "AT45",
-    "title" : "Aerospatiale/Alenia ATR 42-500",
-    "size" : "small",
-    "iata" : "AT5",
-    "group" : "C30"
-  },
-  {
-    "family" : "320",
-    "icao" : "A20N",
-    "id" : "A20N",
-    "title" : "Airbus A320neo",
-    "size" : "medium",
-    "iata" : "32N",
-    "group" : "C60"
-  },
-  {
-    "family" : "737",
-    "icao" : "B38M",
-    "id" : "B38M",
-    "title" : "Boeing 737 MAX 8",
-    "size" : "medium",
-    "iata" : "7M8",
-    "group" : "C60"
-  },
-  {
-    "family" : "330",
-    "icao" : "A333",
-    "id" : "A333",
-    "title" : "Airbus A330-300",
-    "size" : "large",
-    "iata" : "333",
-    "group" : "C80"
-  },
-  {
-    "family" : "330",
-    "icao" : "A338",
-    "id" : "A338",
-    "title" : "Airbus A330-800neo",
-    "size" : "large",
-    "iata" : "338",
-    "group" : "C80"
-  },
-  {
-    "family" : "340",
-    "icao" : "A343",
-    "id" : "A343",
-    "title" : "Airbus A340-300",
-    "size" : "large",
-    "iata" : "343",
-    "group" : "C90"
-  },
-  {
-    "family" : "340",
-    "icao" : "A342",
-    "id" : "A342",
-    "title" : "Airbus A340-200",
-    "size" : "large",
-    "iata" : "342",
-    "group" : "C90"
-  },
-  {
-    "family" : "340",
-    "icao" : "A346",
-    "id" : "A346",
-    "title" : "Airbus A340-600",
-    "size" : "large",
-    "iata" : "346",
-    "group" : "C90"
-  },
-  {
-    "family" : "",
-    "icao" : "AT43",
-    "id" : "AT43",
-    "title" : "Aerospatiale/Alenia ATR 42-300",
-    "size" : "small",
-    "iata" : "AT4",
-    "group" : "C30"
-  },
-  {
-    "family" : "",
-    "icao" : "A19N",
-    "id" : "A19N",
-    "title" : "Airbus A319neo",
-    "size" : "medium",
-    "iata" : "31N",
-    "group" : "C60"
-  },
-  {
-    "family" : "320",
-    "icao" : "A320",
-    "id" : "A320",
-    "title" : "Airbus A320",
-    "size" : "medium",
-    "iata" : "320",
-    "group" : "C60"
-  },
-  {
-    "family" : "350",
-    "icao" : "A35K",
-    "id" : "A35K",
-    "title" : "Airbus A350-1000",
-    "size" : "large",
-    "iata" : "351",
-    "group" : "C90"
-  },
-  {
-    "family" : "350",
-    "icao" : "A359",
-    "id" : "A359",
-    "title" : "Airbus A350-900",
-    "size" : "large",
-    "iata" : "359",
-    "group" : "C90"
-  },
-  {
-    "family" : "",
-    "icao" : "B462",
-    "id" : "B462",
-    "title" : "BAe 146-200",
-    "size" : "small",
-    "iata" : "142",
-    "group" : "C40"
-  },
-  {
-    "family" : "A310",
-    "icao" : "A310",
-    "id" : "A310",
-    "title" : "Airbus A310",
-    "size" : "large",
-    "iata" : "310",
-    "group" : "C70"
-  },
-  {
-    "family" : "",
-    "icao" : "RJ85",
-    "id" : "RJ85",
-    "title" : "Avro RJ85",
-    "size" : "small",
-    "iata" : "AR8",
-    "group" : "C40"
-  },
-  {
-    "family" : "737",
-    "icao" : "B732",
-    "id" : "B732",
-    "title" : "Boeing 737-200",
-    "size" : "medium",
-    "iata" : "732",
-    "group" : "C60"
-  },
-  {
-    "family" : "737",
-    "icao" : "B734",
-    "id" : "B734",
-    "title" : "Boeing 737-400",
-    "size" : "medium",
-    "iata" : "734",
-    "group" : "C60"
-  },
-  {
-    "family" : "737",
-    "icao" : "B735",
-    "id" : "B735",
-    "title" : "Boeing 737-500",
-    "size" : "medium",
-    "iata" : "735",
-    "group" : "C60"
-  },
-  {
-    "family" : "",
-    "icao" : "A21N",
-    "id" : "A21N",
-    "title" : "Airbus A321neo",
-    "size" : "medium",
-    "iata" : "32Q",
-    "group" : "C60"
-  },
-  {
-    "family" : "",
-    "icao" : "B463",
-    "id" : "B463",
-    "title" : "BAe 146-300",
-    "size" : "small",
-    "iata" : "143",
-    "group" : "C40"
-  },
-  {
-    "family" : "380",
-    "icao" : "A388",
-    "id" : "A388",
-    "title" : "Airbus A380-800",
-    "size" : "large",
-    "iata" : "388",
-    "group" : "C110"
-  },
-  {
-    "family" : "",
-    "icao" : "B461",
-    "id" : "B461",
-    "title" : "BAe 146-100",
-    "size" : "small",
-    "iata" : "141",
-    "group" : "C40"
-  },
-  {
-    "family" : "",
-    "icao" : "AT46",
-    "id" : "AT46",
-    "title" : "Aerospatiale/Alenia ATR 42-600",
-    "size" : "small",
-    "iata" : "ATR",
-    "group" : "C30"
-  },
-  {
-    "family" : "",
-    "icao" : "AT72",
-    "id" : "AT72",
-    "title" : "Aerospatiale/Alenia ATR 72",
-    "size" : "small",
-    "iata" : "AT7",
-    "group" : "C30"
-  },
-  {
-    "family" : "340",
-    "icao" : "A345",
-    "id" : "A345",
-    "title" : "Airbus A340-500",
-    "size" : "large",
-    "iata" : "345",
-    "group" : "C90"
-  },
-  {
-    "family" : "A300",
-    "icao" : "A306",
-    "id" : "A306",
-    "title" : "Airbus A300-600",
-    "size" : "large",
-    "iata" : "AB6",
-    "group" : "C70"
-  },
-  {
-    "family" : "330",
-    "icao" : "A339",
-    "id" : "A339",
-    "title" : "Airbus A330-900neo",
-    "size" : "large",
-    "iata" : "339",
-    "group" : "C80"
-  },
-  {
-    "family" : "737",
-    "icao" : "B39M",
-    "id" : "B39M",
-    "title" : "Boeing 737 MAX 9",
-    "size" : "medium",
-    "iata" : "7M9",
-    "group" : "C60"
-  },
-  {
-    "family" : "",
-    "icao" : "A321",
-    "id" : "A321",
-    "title" : "Airbus A321",
-    "size" : "medium",
-    "iata" : "321",
-    "group" : "C60"
-  },
-  {
-    "family" : "717",
-    "icao" : "B712",
-    "id" : "B712",
-    "title" : "Boeing 717",
-    "size" : "medium",
-    "iata" : "717",
-    "group" : "C60"
-  },
-  {
-    "family" : "737",
-    "icao" : "B37M",
-    "id" : "B37M",
-    "title" : "Boeing 737 MAX 7",
-    "size" : "medium",
-    "iata" : "7M7",
-    "group" : "C60"
-  },
-  {
-    "family" : "",
-    "icao" : "RJ1H",
-    "id" : "RJ1H",
-    "title" : "Avro RJ100",
-    "size" : "small",
-    "iata" : "AR1",
-    "group" : "C40"
-  },
-  {
-    "family" : "",
-    "icao" : "RJ70",
-    "id" : "RJ70",
-    "title" : "Avro RJ70",
-    "size" : "small",
-    "iata" : "AR7",
-    "group" : "C40"
-  },
-  {
-    "family" : "737",
-    "icao" : "B733",
-    "id" : "B733",
-    "title" : "Boeing 737-300",
-    "size" : "medium",
-    "iata" : "733",
-    "group" : "C60"
-  },
-  {
-    "family" : "",
-    "icao" : "JS41",
-    "id" : "JS41",
-    "title" : "British Aerospace Jetstream 41",
-    "size" : "small",
-    "iata" : "J41",
-    "group" : "C30"
-  },
-  {
-    "family" : "747",
-    "icao" : "B74S",
-    "id" : "B74S",
-    "title" : "Boeing 747SP",
-    "size" : "large",
-    "iata" : "74L",
-    "group" : "C100"
-  },
-  {
-    "family" : "",
-    "icao" : "CRJ1",
-    "id" : "CRJ1",
-    "title" : "Canadair Regional Jet 100",
-    "size" : "small",
-    "iata" : "CR1",
-    "group" : "C40"
-  },
-  {
-    "family" : "",
-    "icao" : "DH8C",
-    "id" : "DH8C",
-    "title" : "De Havilland Canada DHC-8-300 Dash 8",
-    "size" : "small",
-    "iata" : "DH3",
-    "group" : "C30"
-  },
-  {
-    "family" : "",
-    "icao" : "GLF6",
-    "id" : "GLF6",
-    "title" : "Gulfstream G650",
-    "size" : "small",
-    "iata" : "GJ6",
-    "group" : "C30"
-  },
-  {
-    "family" : "787",
-    "icao" : "B78X",
-    "id" : "B78X",
-    "title" : "Boeing 787-10",
-    "size" : "large",
-    "iata" : "78J",
-    "group" : "C80"
-  },
-  {
-    "family" : "",
-    "icao" : "H25B",
-    "id" : "H25B",
-    "title" : "British Aerospace 125 series / Hawker/Raytheon 700/800/800XP/850/900",
-    "size" : "small",
-    "iata" : "H25",
-    "group" : "C20"
-  },
-  {
-    "family" : "",
-    "icao" : "H25C",
-    "id" : "H25C",
-    "title" : "British Aerospace 125-1000 series / Hawker/Raytheon 1000",
-    "size" : "small",
-    "iata" : "H25",
-    "group" : "C20"
-  },
-  {
-    "family" : "DC-9",
-    "icao" : "DC92",
-    "id" : "DC92",
-    "title" : "Douglas DC-9-20",
-    "size" : "medium",
-    "iata" : "D92",
-    "group" : "C60"
-  },
-  {
-    "family" : "175",
-    "icao" : "E75S",
-    "id" : "E75S",
-    "title" : "Embraer 175 (short wing)",
-    "size" : "small",
-    "iata" : "E7W",
-    "group" : "C50"
-  },
-  {
-    "family" : "",
-    "icao" : "E50P",
-    "id" : "E50P",
-    "title" : "Embraer Phenom 100",
-    "size" : "small",
-    "iata" : "EP1",
-    "group" : "C20"
-  },
-  {
-    "family" : "MD-9",
-    "icao" : "MD90",
-    "id" : "MD90",
-    "title" : "McDonnell Douglas MD-90",
-    "size" : "medium",
-    "iata" : "M90",
-    "group" : "C60"
-  },
-  {
-    "family" : "",
-    "icao" : "CL60",
-    "id" : "CL60",
-    "title" : "Canadair Challenger",
-    "size" : "small",
-    "iata" : "CCJ",
-    "group" : "C20"
-  },
-  {
-    "family" : "747",
-    "icao" : "BLCF",
-    "id" : "BLCF",
-    "title" : "Boeing 747 LCF Dreamlifter",
-    "size" : "large",
-    "iata" : "74B",
-    "group" : "C100"
-  },
-  {
-    "family" : "",
-    "icao" : "CRJ2",
-    "id" : "CRJ2",
-    "title" : "Canadair Regional Jet 200",
-    "size" : "small",
-    "iata" : "CR2",
-    "group" : "C40"
-  },
-  {
-    "family" : "290",
-    "icao" : "E290",
-    "id" : "E290",
-    "title" : "Embraer E190-E2",
-    "size" : "small",
-    "iata" : "290",
-    "group" : "C50"
-  },
-  {
-    "family" : "",
-    "icao" : "E135",
-    "id" : "E135",
-    "title" : "Embraer RJ135",
-    "size" : "small",
-    "iata" : "ER3",
-    "group" : "C30"
-  },
-  {
-    "family" : "",
-    "icao" : "JS31",
-    "id" : "JS31",
-    "title" : "British Aerospace Jetstream 31",
-    "size" : "small",
-    "iata" : "J31",
-    "group" : "C30"
-  },
-  {
-    "family" : "",
-    "icao" : "G280",
-    "id" : "G280",
-    "title" : "Gulfstream G280",
-    "size" : "small",
-    "iata" : "GR3",
-    "group" : "C20"
-  },
-  {
-    "iata" : "SU9",
-    "id" : "SU95",
-    "title" : "Sukhoi Superjet 100-95",
-    "size" : "small",
-    "icao" : "SU95"
-  },
-  {
-    "family" : "757",
-    "icao" : "B752",
-    "id" : "B752",
-    "title" : "Boeing 757-200",
-    "size" : "large",
-    "iata" : "752",
-    "group" : "C70"
-  },
-  {
-    "family" : "777",
-    "icao" : "B779",
-    "id" : "B779",
-    "title" : "Boeing 777-9",
-    "size" : "large",
-    "iata" : "779",
-    "group" : "C90"
-  },
-  {
-    "family" : "787",
-    "icao" : "B788",
-    "id" : "B788",
-    "title" : "Boeing 787-8",
-    "size" : "large",
-    "iata" : "788",
-    "group" : "C80"
-  },
-  {
-    "family" : "",
-    "icao" : "C25B",
-    "id" : "C25B",
-    "title" : "Cessna Citation CJ3",
-    "size" : "small",
-    "iata" : "CNJ",
-    "group" : "C20"
-  },
-  {
-    "family" : "",
-    "icao" : "C550",
-    "id" : "C550",
-    "title" : "Cessna Citation II",
-    "size" : "small",
-    "iata" : "CNJ",
-    "group" : "C20"
-  },
-  {
-    "family" : "",
-    "icao" : "C750",
-    "id" : "C750",
-    "title" : "Cessna Citation X",
-    "size" : "small",
-    "iata" : "CNJ",
-    "group" : "C20"
-  },
-  {
-    "family" : "",
-    "icao" : "DH8A",
-    "id" : "DH8A",
-    "title" : "De Havilland Canada DHC-8-100 Dash 8 / 8Q",
-    "size" : "small",
-    "iata" : "DH1",
-    "group" : "C30"
-  },
-  {
-    "family" : "",
-    "icao" : "DOVE",
-    "id" : "DOVE",
-    "title" : "De Havilland DH.104 Dove",
-    "size" : "small",
-    "iata" : "DHD",
-    "group" : "C30"
-  },
-  {
-    "family" : "295",
-    "icao" : "E295",
-    "id" : "E295",
-    "title" : "Embraer E195-E2",
-    "size" : "small",
-    "iata" : "295",
-    "group" : "C50"
-  },
-  {
-    "family" : "",
-    "icao" : "E135",
-    "id" : "E135",
-    "title" : "Embraer RJ140",
-    "size" : "small",
-    "iata" : "ERD",
-    "group" : "C30"
-  },
-  {
-    "family" : "",
-    "icao" : "E55P",
-    "id" : "E55P",
-    "title" : "Embraer Phenom 300",
-    "size" : "small",
-    "iata" : "EP3",
-    "group" : "C20"
-  },
-  {
-    "family" : "MD-8",
-    "icao" : "MD83",
-    "id" : "MD83",
-    "title" : "McDonnell Douglas MD-83",
-    "size" : "medium",
-    "iata" : "M83",
-    "group" : "C60"
-  },
-  {
-    "family" : "747",
-    "icao" : "B741",
-    "id" : "B741",
-    "title" : "Boeing 747-100",
-    "size" : "large",
-    "iata" : "741",
-    "group" : "C100"
-  },
-  {
-    "family" : "",
-    "icao" : "GLEX",
-    "id" : "GLEX",
-    "title" : "Bombardier Global Express",
-    "size" : "small",
-    "iata" : "CCX",
-    "group" : "C20"
-  },
-  {
-    "family" : "",
-    "icao" : "C25C",
-    "id" : "C25C",
-    "title" : "Cessna Citation CJ4",
-    "size" : "small",
-    "iata" : "CNJ",
-    "group" : "C20"
-  },
-  {
-    "family" : "",
-    "icao" : "F2TH",
-    "id" : "F2TH",
-    "title" : "Dassault Falcon 2000",
-    "size" : "small",
-    "iata" : "D20",
-    "group" : "C20"
-  },
-  {
-    "family" : "DC-9",
-    "icao" : "DC91",
-    "id" : "DC91",
-    "title" : "Douglas DC-9-10",
-    "size" : "medium",
-    "iata" : "D91",
-    "group" : "C60"
-  },
-  {
-    "family" : "737",
-    "icao" : "B739",
-    "id" : "B739",
-    "title" : "Boeing 737-900",
-    "size" : "medium",
-    "iata" : "739",
-    "group" : "C60"
-  },
-  {
-    "family" : "DC-9",
-    "icao" : "DC93",
-    "id" : "DC93",
-    "title" : "Douglas DC-9-30",
-    "size" : "medium",
-    "iata" : "D93",
-    "group" : "C60"
-  },
-  {
-    "family" : "170",
-    "icao" : "E170",
-    "id" : "E170",
-    "title" : "Embraer 170",
-    "size" : "small",
-    "iata" : "E70",
-    "group" : "C50"
-  },
-  {
-    "family" : "",
-    "icao" : "E35L",
-    "id" : "E35L",
-    "title" : "Embraer Legacy 600",
-    "size" : "small",
-    "iata" : "ER3",
-    "group" : "C20"
-  },
-  {
-    "family" : "",
-    "icao" : "SB20",
-    "id" : "SB20",
-    "title" : "Saab 2000",
-    "size" : "small",
-    "iata" : "S20",
-    "group" : "C30"
-  },
-  {
-    "family" : "737",
-    "icao" : "B736",
-    "id" : "B736",
-    "title" : "Boeing 737-600",
-    "size" : "medium",
-    "iata" : "736",
-    "group" : "C60"
-  },
-  {
-    "family" : "CS300",
-    "icao" : "BCS3",
-    "id" : "BCS3",
-    "title" : "Bombardier CS300",
-    "size" : "medium",
-    "iata" : "CS3",
-    "group" : "C60"
-  },
-  {
-    "family" : "",
-    "icao" : "C56X",
-    "id" : "C56X",
-    "title" : "Cessna Citation Excel",
-    "size" : "small",
-    "iata" : "CNJ",
-    "group" : "C20"
-  },
-  {
-    "family" : "",
-    "icao" : "C500",
-    "id" : "C500",
-    "title" : "Cessna Citation I",
-    "size" : "small",
-    "iata" : "CNJ",
-    "group" : "C20"
-  },
-  {
-    "family" : "",
-    "icao" : "FA50",
-    "id" : "FA50",
-    "title" : "Dassault Falcon 50",
-    "size" : "small",
-    "iata" : "DF3",
-    "group" : "C20"
-  },
-  {
-    "family" : "",
-    "icao" : "FA7X",
-    "id" : "FA7X",
-    "title" : "Dassault Falcon 7X",
-    "size" : "small",
-    "iata" : "DF7",
-    "group" : "C20"
-  },
-  {
-    "family" : "",
-    "icao" : "DH8B",
-    "id" : "DH8B",
-    "title" : "De Havilland Canada DHC-8-200 Dash 8 / 8Q",
-    "size" : "small",
-    "iata" : "DH2",
-    "group" : "C30"
-  },
-  {
-    "family" : "",
-    "icao" : "E145",
-    "id" : "E145",
-    "title" : "Embraer RJ145",
-    "size" : "small",
-    "iata" : "ER4",
-    "group" : "C30"
-  },
-  {
-    "family" : "",
-    "icao" : "LJ35",
-    "id" : "LJ35",
-    "title" : "Learjet 35",
-    "size" : "small",
-    "iata" : "LRJ",
-    "group" : "C20"
-  },
-  {
-    "family" : "MD-8",
-    "icao" : "MD82",
-    "id" : "MD82",
-    "title" : "McDonnell Douglas MD-82",
-    "size" : "medium",
-    "iata" : "M82",
-    "group" : "C60"
-  },
-  {
-    "family" : "MD-8",
-    "icao" : "MD88",
-    "id" : "MD88",
-    "title" : "McDonnell Douglas MD-88",
-    "size" : "medium",
-    "iata" : "M88",
-    "group" : "C60"
-  },
-  {
-    "family" : "767",
-    "icao" : "B764",
-    "id" : "B764",
-    "title" : "Boeing 767-400",
-    "size" : "large",
-    "iata" : "764",
-    "group" : "C70"
-  },
-  {
-    "family" : "",
-    "icao" : "CRJX",
-    "id" : "CRJX",
-    "title" : "Canadair Regional Jet 1000",
-    "size" : "small",
-    "iata" : "CRK",
-    "group" : "C50"
-  },
-  {
-    "family" : "195",
-    "icao" : "E195",
-    "id" : "E195",
-    "title" : "Embraer 195",
-    "size" : "small",
-    "iata" : "E95",
-    "group" : "C50"
-  },
-  {
-    "family" : "747",
-    "icao" : "B743",
-    "id" : "B743",
-    "title" : "Boeing 747-300",
-    "size" : "large",
-    "iata" : "743",
-    "group" : "C100"
-  },
-  {
-    "family" : "",
-    "icao" : "CRJ9",
-    "id" : "CRJ9",
-    "title" : "Canadair Regional Jet 900",
-    "size" : "small",
-    "iata" : "CR9",
-    "group" : "C50"
-  },
-  {
-    "family" : "",
-    "icao" : "LJ60",
-    "id" : "LJ60",
-    "title" : "Learjet 60",
-    "size" : "small",
-    "iata" : "LRJ",
-    "group" : "C20"
-  },
-  {
-    "family" : "737",
-    "icao" : "B737",
-    "id" : "B737",
-    "title" : "Boeing 737-700",
-    "size" : "medium",
-    "iata" : "73G",
-    "group" : "C60"
-  },
-  {
-    "family" : "747",
-    "icao" : "B744",
-    "id" : "B744",
-    "title" : "Boeing 747-400",
-    "size" : "large",
-    "iata" : "744",
-    "group" : "C100"
-  },
-  {
-    "family" : "747",
-    "icao" : "B74R",
-    "id" : "B74R",
-    "title" : "Boeing 747SR",
-    "size" : "large",
-    "iata" : "74R",
-    "group" : "C100"
-  },
-  {
-    "family" : "767",
-    "icao" : "B762",
-    "id" : "B762",
-    "title" : "Boeing 767-200",
-    "size" : "large",
-    "iata" : "762",
-    "group" : "C70"
-  },
-  {
-    "family" : "",
-    "icao" : "CRJ7",
-    "id" : "CRJ7",
-    "title" : "Canadair Regional Jet 700",
-    "size" : "small",
-    "iata" : "CR7",
-    "group" : "C50"
-  },
-  {
-    "iata" : "",
-    "id" : "C919",
-    "title" : "COMAC C-919",
-    "size" : "small",
-    "icao" : "C919"
-  },
-  {
-    "family" : "",
-    "icao" : "SF34",
-    "id" : "SF34",
-    "title" : "Saab SF340A/B",
-    "size" : "small",
-    "iata" : "SF3",
-    "group" : "C30"
-  },
-  {
-    "family" : "757",
-    "icao" : "B753",
-    "id" : "B753",
-    "title" : "Boeing 757-300",
-    "size" : "large",
-    "iata" : "753",
-    "group" : "C70"
-  },
-  {
-    "family" : "",
-    "icao" : "JS32",
-    "id" : "JS32",
-    "title" : "British Aerospace Jetstream 32",
-    "size" : "small",
-    "iata" : "J32",
-    "group" : "C30"
-  },
-  {
-    "family" : "",
-    "icao" : "DHC7",
-    "id" : "DHC7",
-    "title" : "De Havilland Canada DHC-7 Dash 7",
-    "size" : "small",
-    "iata" : "DH7",
-    "group" : "C30"
-  },
-  {
-    "family" : "MD-11",
-    "icao" : "MD11",
-    "id" : "MD11",
-    "title" : "McDonnell Douglas MD-11",
-    "size" : "large",
-    "iata" : "M11",
-    "group" : "C90"
-  },
-  {
-    "family" : "747",
-    "icao" : "B74D",
-    "id" : "B74D",
-    "title" : "Boeing 747-400D",
-    "size" : "large",
-    "iata" : "74J",
-    "group" : "C100"
-  },
-  {
-    "family" : "747",
-    "icao" : "B742",
-    "id" : "B742",
-    "title" : "Boeing 747-200",
-    "size" : "large",
-    "iata" : "742",
-    "group" : "C100"
-  },
-  {
-    "family" : "",
-    "icao" : "ATP",
-    "id" : "ATP",
-    "title" : "British Aerospace ATP",
-    "size" : "small",
-    "iata" : "ATP",
-    "group" : "C30"
-  },
-  {
-    "family" : "",
-    "icao" : "F900",
-    "id" : "F900",
-    "title" : "Dassault Falcon 900",
-    "size" : "small",
-    "iata" : "DF9",
-    "group" : "C20"
-  },
-  {
-    "family" : "175",
-    "icao" : "E75L",
-    "id" : "E75L",
-    "title" : "Embraer 175 (long wing)",
-    "size" : "small",
-    "iata" : "E7W",
-    "group" : "C50"
-  },
-  {
-    "family" : "",
-    "icao" : "E110",
-    "id" : "E110",
-    "title" : "Embraer EMB 110 Bandeirante",
-    "size" : "small",
-    "iata" : "EMB",
-    "group" : "C10"
-  },
-  {
-    "family" : "",
-    "icao" : "E120",
-    "id" : "E120",
-    "title" : "Embraer EMB 120 Brasilia",
-    "size" : "small",
-    "iata" : "EM2",
-    "group" : "C10"
-  },
-  {
-    "family" : "767",
-    "icao" : "B763",
-    "id" : "B763",
-    "title" : "Boeing 767-300",
-    "size" : "large",
-    "iata" : "763",
-    "group" : "C70"
-  },
-  {
-    "family" : "777",
-    "icao" : "B778",
-    "id" : "B778",
-    "title" : "Boeing 777-8",
-    "size" : "large",
-    "iata" : "778",
-    "group" : "C90"
-  },
-  {
-    "family" : "",
-    "icao" : "C680",
-    "id" : "C680",
-    "title" : "Cessna Citation Sovereign",
-    "size" : "small",
-    "iata" : "CNJ",
-    "group" : "C20"
-  },
-  {
-    "family" : "DC-9",
-    "icao" : "DC94",
-    "id" : "DC94",
-    "title" : "Douglas DC-9-40",
-    "size" : "medium",
-    "iata" : "D94",
-    "group" : "C60"
-  },
-  {
-    "family" : "747",
-    "icao" : "B748",
-    "id" : "B748",
-    "title" : "Boeing 747-8",
-    "size" : "large",
-    "iata" : "748",
-    "group" : "C100"
-  },
-  {
-    "family" : "737",
-    "icao" : "B738",
-    "id" : "B738",
-    "title" : "Boeing 737-800",
-    "size" : "medium",
-    "iata" : "738",
-    "group" : "C60"
-  },
-  {
-    "family" : "777",
-    "icao" : "B773",
-    "id" : "B773",
-    "title" : "Boeing 777-300",
-    "size" : "large",
-    "iata" : "773",
-    "group" : "C90"
-  },
-  {
-    "family" : "787",
-    "icao" : "B789",
-    "id" : "B789",
-    "title" : "Boeing 787-9",
-    "size" : "large",
-    "iata" : "789",
-    "group" : "C80"
-  },
-  {
-    "family" : "CS100",
-    "icao" : "BCS1",
-    "id" : "BCS1",
-    "title" : "Bombardier CS100",
-    "size" : "small",
-    "iata" : "CS1",
-    "group" : "C50"
-  },
-  {
-    "family" : "",
-    "icao" : "C510",
-    "id" : "C510",
-    "title" : "Cessna Citation Mustang",
-    "size" : "small",
-    "iata" : "CNJ",
-    "group" : "C20"
-  },
-  {
-    "family" : "",
-    "icao" : "DH8D",
-    "id" : "DH8D",
-    "title" : "De Havilland Canada DHC-8-400 Dash 8Q",
-    "size" : "small",
-    "iata" : "DH4",
-    "group" : "C30"
-  },
-  {
-    "family" : "",
-    "icao" : "F50",
-    "id" : "F50",
-    "title" : "Fokker 50",
-    "size" : "small",
-    "iata" : "F50",
-    "group" : "C40"
-  },
-  {
-    "family" : "MD-8",
-    "icao" : "MD81",
-    "id" : "MD81",
-    "title" : "McDonnell Douglas MD-81",
-    "size" : "medium",
-    "iata" : "M81",
-    "group" : "C60"
-  },
-  {
-    "family" : "777",
-    "icao" : "B77L",
-    "id" : "B77L",
-    "title" : "Boeing 777-200LR",
-    "size" : "large",
-    "iata" : "77L",
-    "group" : "C90"
-  },
-  {
-    "family" : "777",
-    "icao" : "B772",
-    "id" : "B772",
-    "title" : "Boeing 777-200",
-    "size" : "large",
-    "iata" : "772",
-    "group" : "C90"
-  },
-  {
-    "family" : "777",
-    "icao" : "B77W",
-    "id" : "B77W",
-    "title" : "Boeing 777-300ER",
-    "size" : "large",
-    "iata" : "77W",
-    "group" : "C90"
-  },
-  {
-    "family" : "DC-9",
-    "icao" : "DC95",
-    "id" : "DC95",
-    "title" : "Douglas DC-9-50",
-    "size" : "medium",
-    "iata" : "D95",
-    "group" : "C60"
-  },
-  {
-    "family" : "190",
-    "icao" : "E190",
-    "id" : "E190",
-    "title" : "Embraer 190",
-    "size" : "small",
-    "iata" : "E90",
-    "group" : "C50"
-  },
-  {
-    "family" : "",
-    "icao" : "G159",
-    "id" : "G159",
-    "title" : "Gulfstream Aerospace G-159 Gulfstream I",
-    "size" : "small",
-    "iata" : "GRS",
-    "group" : "C20"
-  },
-  {
-    "family" : "",
-    "icao" : "GLF5",
-    "id" : "GLF5",
-    "title" : "Gulfstream V",
-    "size" : "small",
-    "iata" : "GJ5",
-    "group" : "C20"
-  },
-  {
-    "family" : "",
-    "icao" : "GLF4",
-    "id" : "GLF4",
-    "title" : "Gulfstream IV",
-    "size" : "small",
-    "iata" : "GJ4",
-    "group" : "C20"
-  },
-  {
-    "family" : "MD-8",
-    "icao" : "MD87",
-    "id" : "MD87",
-    "title" : "McDonnell Douglas MD-87",
-    "size" : "medium",
-    "iata" : "M87",
-    "group" : "C60"
-  },
-  {
-    "family" : "220",
-    "icao" : "A220",
-    "id" : "A220",
-    "title" : "Airbus 220-300",
-    "size" : "medium",
-    "iata" : "223",
-    "group" : "C60"
-  }
+    {
+        "id": "A346",
+        "icao": "A346",
+        "iata": "",
+        "group": "C90",
+        "title": "Airbus A340 600",
+        "size": "large",
+        "family": "A340"
+    },
+    {
+        "id": "A388",
+        "icao": "A388",
+        "iata": "",
+        "group": "C110",
+        "title": "Airbus A380 800",
+        "size": "large",
+        "family": "A380"
+    },
+    {
+        "id": "A332",
+        "icao": "A332",
+        "iata": "",
+        "group": "C80",
+        "title": "Airbus A330 200",
+        "size": "large",
+        "family": "A330"
+    },
+    {
+        "id": "A332",
+        "icao": "A332",
+        "iata": "",
+        "group": "C80",
+        "title": "Airbus A330 200F",
+        "size": "large",
+        "family": "A330"
+    },
+    {
+        "id": "A333",
+        "icao": "A333",
+        "iata": "",
+        "group": "C80",
+        "title": "Airbus A330 300",
+        "size": "large",
+        "family": "A330"
+    },
+    {
+        "id": "A342",
+        "icao": "A342",
+        "iata": "",
+        "group": "C90",
+        "title": "Airbus A340 200",
+        "size": "large",
+        "family": "A340"
+    },
+    {
+        "id": "A343",
+        "icao": "A343",
+        "iata": "",
+        "group": "C90",
+        "title": "Airbus A340 300",
+        "size": "large",
+        "family": "A340"
+    },
+    {
+        "id": "A345",
+        "icao": "A345",
+        "iata": "",
+        "group": "C90",
+        "title": "Airbus A340 500",
+        "size": "large",
+        "family": "A340"
+    },
+    {
+        "id": "A310",
+        "icao": "A310",
+        "iata": "",
+        "group": "C70",
+        "title": "Airbus A310 300",
+        "size": "large",
+        "family": "A310"
+    },
+    {
+        "id": "A310",
+        "icao": "A310",
+        "iata": "",
+        "group": "C70",
+        "title": "Airbus A310 200",
+        "size": "large",
+        "family": "A310"
+    },
+    {
+        "id": "A320",
+        "icao": "A320",
+        "iata": "",
+        "group": "C60",
+        "title": "Airbus A320 200",
+        "size": "medium",
+        "family": "A320"
+    },
+    {
+        "id": "A318",
+        "icao": "A318",
+        "iata": "",
+        "group": "C60",
+        "title": "Airbus A318 100",
+        "size": "medium",
+        "family": "A318"
+    },
+    {
+        "id": "A319",
+        "icao": "A319",
+        "iata": "",
+        "group": "C60",
+        "title": "Airbus A319 100",
+        "size": "medium",
+        "family": "A319"
+    },
+    {
+        "id": "A320",
+        "icao": "A320",
+        "iata": "",
+        "group": "C60",
+        "title": "Airbus A320 200 (Sharklets)",
+        "size": "medium",
+        "family": "A320"
+    },
+    {
+        "id": "A321",
+        "icao": "A321",
+        "iata": "",
+        "group": "C60",
+        "title": "Airbus A321 100",
+        "size": "medium",
+        "family": "A321"
+    },
+    {
+        "id": "A321",
+        "icao": "A321",
+        "iata": "",
+        "group": "C60",
+        "title": "Airbus A321 200",
+        "size": "medium",
+        "family": "A321"
+    },
+    {
+        "id": "A321",
+        "icao": "A321",
+        "iata": "",
+        "group": "C60",
+        "title": "Airbus A321 100 (Sharklets)",
+        "size": "medium",
+        "family": "A321"
+    },
+    {
+        "id": "A321",
+        "icao": "A321",
+        "iata": "",
+        "group": "C60",
+        "title": "Airbus A321 200 (Sharklets)",
+        "size": "medium",
+        "family": "A321"
+    },
+    {
+        "id": "A319",
+        "icao": "A319",
+        "iata": "",
+        "group": "C60",
+        "title": "Airbus A319 100 (Sharklets)",
+        "size": "medium",
+        "family": "A319"
+    },
+    {
+        "id": "A359",
+        "icao": "A359",
+        "iata": "",
+        "group": "C90",
+        "title": "Airbus A350 900",
+        "size": "large",
+        "family": "A350"
+    },
+    {
+        "id": "A306",
+        "icao": "A306",
+        "iata": "",
+        "group": "C70",
+        "title": "Airbus A300 600",
+        "size": "large",
+        "family": "A300"
+    },
+    {
+        "id": "A30B",
+        "icao": "A30B",
+        "iata": "",
+        "group": "C70",
+        "title": "Airbus A300 100",
+        "size": "large",
+        "family": "A300"
+    },
+    {
+        "id": "A35K",
+        "icao": "A35K",
+        "iata": "",
+        "group": "C90",
+        "title": "Airbus A350 1000",
+        "size": "large",
+        "family": "A350"
+    },
+    {
+        "id": "A318",
+        "icao": "A318",
+        "iata": "",
+        "group": "C60",
+        "title": "Airbus A318 (Sharklets)",
+        "size": "medium",
+        "family": "A318"
+    },
+    {
+        "id": "A320",
+        "icao": "A320",
+        "iata": "",
+        "group": "C60",
+        "title": "Airbus A320 200 Wingtip fences",
+        "size": "medium",
+        "family": "A320"
+    },
+    {
+        "id": "A320",
+        "icao": "A320",
+        "iata": "",
+        "group": "C60",
+        "title": "Airbus A320 100",
+        "size": "medium",
+        "family": "A320"
+    },
+    {
+        "id": "A319",
+        "icao": "A319",
+        "iata": "",
+        "group": "C60",
+        "title": "Airbus A319 Neo (Sharklets)",
+        "size": "medium",
+        "family": "A319"
+    },
+    {
+        "id": "A320",
+        "icao": "A320",
+        "iata": "",
+        "group": "C60",
+        "title": "Airbus A320 200 Neo (Sharklets)",
+        "size": "medium",
+        "family": "A320"
+    },
+    {
+        "id": "A321",
+        "icao": "A321",
+        "iata": "",
+        "group": "C60",
+        "title": "Airbus A321 Neo (Sharklets)",
+        "size": "medium",
+        "family": "A321"
+    },
+    {
+        "id": "A339",
+        "icao": "A339",
+        "iata": "",
+        "group": "C80",
+        "title": "Airbus A330 900",
+        "size": "large",
+        "family": "A330"
+    },
+    {
+        "id": "BCS1",
+        "icao": "BCS1",
+        "iata": "",
+        "group": "C50",
+        "title": "Airbus A220 100",
+        "size": "small",
+        "family": "A220"
+    },
+    {
+        "id": "BCS3",
+        "icao": "BCS3",
+        "iata": "",
+        "group": "C60",
+        "title": "Airbus A220 300",
+        "size": "medium",
+        "family": "A220"
+    },
+    {
+        "id": "AT45",
+        "icao": "AT45",
+        "iata": "",
+        "group": "C30",
+        "title": "ATR ATR 42 500",
+        "size": "small",
+        "family": "ATR 42"
+    },
+    {
+        "id": "AT76",
+        "icao": "AT76",
+        "iata": "",
+        "group": "C30",
+        "title": "ATR ATR 72 600",
+        "size": "small",
+        "family": "ATR 72"
+    },
+    {
+        "id": "AT43",
+        "icao": "AT43",
+        "iata": "",
+        "group": "C30",
+        "title": "ATR ATR 42 300/320",
+        "size": "small",
+        "family": "ATR 42"
+    },
+    {
+        "id": "B461",
+        "icao": "B461",
+        "iata": "",
+        "group": "C40",
+        "title": "BAe 146 100",
+        "size": "small",
+        "family": "146"
+    },
+    {
+        "id": "B462",
+        "icao": "B462",
+        "iata": "",
+        "group": "C40",
+        "title": "BAe 146 200",
+        "size": "small",
+        "family": "146"
+    },
+    {
+        "id": "B463",
+        "icao": "B463",
+        "iata": "",
+        "group": "C40",
+        "title": "BAe 146 300",
+        "size": "small",
+        "family": "146"
+    },
+    {
+        "id": "B461",
+        "icao": "B461",
+        "iata": "",
+        "group": "C40",
+        "title": "BAe 146 100QT & QC",
+        "size": "small",
+        "family": "146"
+    },
+    {
+        "id": "B462",
+        "icao": "B462",
+        "iata": "",
+        "group": "C40",
+        "title": "BAe 146 200QT & QC",
+        "size": "small",
+        "family": "146"
+    },
+    {
+        "id": "B463",
+        "icao": "B463",
+        "iata": "",
+        "group": "C40",
+        "title": "BAe 146 300QT & QC",
+        "size": "small",
+        "family": "146"
+    },
+    {
+        "id": "H25C",
+        "icao": "H25C",
+        "iata": "",
+        "group": "C20",
+        "title": "BAe 125 1000",
+        "size": "small",
+        "family": "125"
+    },
+    {
+        "id": "RJ1H",
+        "icao": "RJ1H",
+        "iata": "",
+        "group": "C40",
+        "title": "BAe RJ100 Avro RJ100",
+        "size": "small",
+        "family": "RJ100"
+    },
+    {
+        "id": "RJ70",
+        "icao": "RJ70",
+        "iata": "",
+        "group": "C40",
+        "title": "BAe RJ70 Avro RJ70",
+        "size": "small",
+        "family": "RJ70"
+    },
+    {
+        "id": "RJ85",
+        "icao": "RJ85",
+        "iata": "",
+        "group": "C40",
+        "title": "BAe RJ85 Avro RJ85",
+        "size": "small",
+        "family": "RJ85"
+    },
+    {
+        "id": "JS41",
+        "icao": "JS41",
+        "iata": "",
+        "group": "C30",
+        "title": "BAe JS41 Jetstream 41",
+        "size": "small",
+        "family": "JS41"
+    },
+    {
+        "id": "JS31",
+        "icao": "JS31",
+        "iata": "",
+        "group": "C20",
+        "title": "BAe JS31 Jetstream 31",
+        "size": "small",
+        "family": "JS31"
+    },
+    {
+        "id": "BE20",
+        "icao": "BE20",
+        "iata": "",
+        "group": "C10",
+        "title": "Beechcraft Super King Air 200",
+        "size": "small",
+        "family": "Super King Air"
+    },
+    {
+        "id": "B60",
+        "icao": "B60",
+        "iata": "",
+        "group": "C10",
+        "title": "Beechcraft Duke 60",
+        "size": "small",
+        "family": "Duke"
+    },
+    {
+        "id": "B60T",
+        "icao": "B60T",
+        "iata": "",
+        "group": "C10",
+        "title": "Beechcraft Royal Duke 60 Turbine",
+        "size": "small",
+        "family": "Royal Duke"
+    },
+    {
+        "id": "STAR",
+        "icao": "STAR",
+        "iata": "",
+        "group": "C10",
+        "title": "Beechcraft Starship 2000",
+        "size": "small",
+        "family": "Starship"
+    },
+    {
+        "id": "BER2",
+        "icao": "BER2",
+        "iata": "",
+        "group": "C40",
+        "title": "Beriev Be 200 Altair",
+        "size": "small",
+        "family": "Be"
+    },
+    {
+        "id": "B788",
+        "icao": "B788",
+        "iata": "",
+        "group": "C80",
+        "title": "Boeing 787 8",
+        "size": "large",
+        "family": "787"
+    },
+    {
+        "id": "B748",
+        "icao": "B748",
+        "iata": "",
+        "group": "C80",
+        "title": "Boeing 747 8",
+        "size": "large",
+        "family": "747"
+    },
+    {
+        "id": "B773",
+        "icao": "B773",
+        "iata": "",
+        "group": "C90",
+        "title": "Boeing 777 300",
+        "size": "large",
+        "family": "777"
+    },
+    {
+        "id": "B712",
+        "icao": "B712",
+        "iata": "",
+        "group": "C60",
+        "title": "Boeing 717 200",
+        "size": "medium",
+        "family": "717"
+    },
+    {
+        "id": "B752",
+        "icao": "B752",
+        "iata": "",
+        "group": "C70",
+        "title": "Boeing 757 200W",
+        "size": "large",
+        "family": "757"
+    },
+    {
+        "id": "B752",
+        "icao": "B752",
+        "iata": "",
+        "group": "C70",
+        "title": "Boeing 757 200",
+        "size": "large",
+        "family": "757"
+    },
+    {
+        "id": "B753",
+        "icao": "B753",
+        "iata": "",
+        "group": "C70",
+        "title": "Boeing 757 300",
+        "size": "large",
+        "family": "757"
+    },
+    {
+        "id": "B753",
+        "icao": "B753",
+        "iata": "",
+        "group": "C70",
+        "title": "Boeing 757 300W",
+        "size": "large",
+        "family": "757"
+    },
+    {
+        "id": "B744",
+        "icao": "B744",
+        "iata": "",
+        "group": "C100",
+        "title": "Boeing 747 400",
+        "size": "large",
+        "family": "747"
+    },
+    {
+        "id": "B744",
+        "icao": "B744",
+        "iata": "",
+        "group": "C100",
+        "title": "Boeing 747 400ER",
+        "size": "large",
+        "family": "747"
+    },
+    {
+        "id": "B789",
+        "icao": "B789",
+        "iata": "",
+        "group": "C80",
+        "title": "Boeing 787 9",
+        "size": "large",
+        "family": "787"
+    },
+    {
+        "id": "B739",
+        "icao": "B739",
+        "iata": "",
+        "group": "C60",
+        "title": "Boeing 737 900",
+        "size": "medium",
+        "family": "737"
+    },
+    {
+        "id": "B739",
+        "icao": "B739",
+        "iata": "",
+        "group": "C60",
+        "title": "Boeing 737 Scimitar up+low (Winglets)",
+        "size": "medium",
+        "family": "737"
+    },
+    {
+        "id": "B739",
+        "icao": "B739",
+        "iata": "",
+        "group": "C60",
+        "title": "Boeing 737 900 (Winglets)",
+        "size": "medium",
+        "family": "737"
+    },
+    {
+        "id": "B739",
+        "icao": "B739",
+        "iata": "",
+        "group": "C60",
+        "title": "Boeing 737 900ER",
+        "size": "medium",
+        "family": "737"
+    },
+    {
+        "id": "B739",
+        "icao": "B739",
+        "iata": "",
+        "group": "C60",
+        "title": "Boeing 737 900ER (Winglets)",
+        "size": "medium",
+        "family": "737"
+    },
+    {
+        "id": "B763",
+        "icao": "B763",
+        "iata": "",
+        "group": "C70",
+        "title": "Boeing 767 300",
+        "size": "large",
+        "family": "767"
+    },
+    {
+        "id": "B763",
+        "icao": "B763",
+        "iata": "",
+        "group": "C70",
+        "title": "Boeing 767 300 Freighter",
+        "size": "large",
+        "family": "767"
+    },
+    {
+        "id": "B763",
+        "icao": "B763",
+        "iata": "",
+        "group": "C70",
+        "title": "Boeing 767 300ER",
+        "size": "large",
+        "family": "767"
+    },
+    {
+        "id": "B763",
+        "icao": "B763",
+        "iata": "",
+        "group": "C70",
+        "title": "Boeing 767 300ER (Winglets)",
+        "size": "large",
+        "family": "767"
+    },
+    {
+        "id": "B772",
+        "icao": "B772",
+        "iata": "",
+        "group": "C90",
+        "title": "Boeing 777 200",
+        "size": "large",
+        "family": "777"
+    },
+    {
+        "id": "B772",
+        "icao": "B772",
+        "iata": "",
+        "group": "C90",
+        "title": "Boeing 777 200 HGW Option",
+        "size": "large",
+        "family": "777"
+    },
+    {
+        "id": "B772",
+        "icao": "B772",
+        "iata": "",
+        "group": "C90",
+        "title": "Boeing 777 200ER",
+        "size": "large",
+        "family": "777"
+    },
+    {
+        "id": "B77L",
+        "icao": "B77L",
+        "iata": "",
+        "group": "C90",
+        "title": "Boeing 777 200LR",
+        "size": "large",
+        "family": "777"
+    },
+    {
+        "id": "B77W",
+        "icao": "B77W",
+        "iata": "",
+        "group": "C90",
+        "title": "Boeing 777 300ER",
+        "size": "large",
+        "family": "777"
+    },
+    {
+        "id": "B773",
+        "icao": "B773",
+        "iata": "",
+        "group": "C90",
+        "title": "Boeing 777 300F",
+        "size": "large",
+        "family": "777"
+    },
+    {
+        "id": "B737",
+        "icao": "B737",
+        "iata": "",
+        "group": "C60",
+        "title": "Boeing 737 700 (Winglets)",
+        "size": "medium",
+        "family": "737"
+    },
+    {
+        "id": "B737",
+        "icao": "B737",
+        "iata": "",
+        "group": "C60",
+        "title": "Boeing 737 700, 700C",
+        "size": "medium",
+        "family": "737"
+    },
+    {
+        "id": "B733",
+        "icao": "B733",
+        "iata": "",
+        "group": "C60",
+        "title": "Boeing 737 300",
+        "size": "medium",
+        "family": "737"
+    },
+    {
+        "id": "B733",
+        "icao": "B733",
+        "iata": "",
+        "group": "C60",
+        "title": "Boeing 737 300 (Winglets)",
+        "size": "medium",
+        "family": "737"
+    },
+    {
+        "id": "B734",
+        "icao": "B734",
+        "iata": "",
+        "group": "C60",
+        "title": "Boeing 737 400",
+        "size": "medium",
+        "family": "737"
+    },
+    {
+        "id": "B735",
+        "icao": "B735",
+        "iata": "",
+        "group": "C60",
+        "title": "Boeing 737 500",
+        "size": "medium",
+        "family": "737"
+    },
+    {
+        "id": "B735",
+        "icao": "B735",
+        "iata": "",
+        "group": "C60",
+        "title": "Boeing 737 500 (Winglets)",
+        "size": "medium",
+        "family": "737"
+    },
+    {
+        "id": "B736",
+        "icao": "B736",
+        "iata": "",
+        "group": "C60",
+        "title": "Boeing 737 600",
+        "size": "medium",
+        "family": "737"
+    },
+    {
+        "id": "B738",
+        "icao": "B738",
+        "iata": "",
+        "group": "C60",
+        "title": "Boeing 737 800",
+        "size": "medium",
+        "family": "737"
+    },
+    {
+        "id": "B738",
+        "icao": "B738",
+        "iata": "",
+        "group": "C60",
+        "title": "Boeing 737 800 (Winglets)",
+        "size": "medium",
+        "family": "737"
+    },
+    {
+        "id": "B741",
+        "icao": "B741",
+        "iata": "",
+        "group": "C100",
+        "title": "Boeing 747 100",
+        "size": "large",
+        "family": "747"
+    },
+    {
+        "id": "B742",
+        "icao": "B742",
+        "iata": "",
+        "group": "C100",
+        "title": "Boeing 747 200B, 200B COMBI",
+        "size": "large",
+        "family": "747"
+    },
+    {
+        "id": "B743",
+        "icao": "B743",
+        "iata": "",
+        "group": "C100",
+        "title": "Boeing 747 300SR",
+        "size": "large",
+        "family": "747"
+    },
+    {
+        "id": "B74R",
+        "icao": "B74R",
+        "iata": "",
+        "group": "C100",
+        "title": "Boeing 747 100SR",
+        "size": "large",
+        "family": "747"
+    },
+    {
+        "id": "B74S",
+        "icao": "B74S",
+        "iata": "",
+        "group": "C100",
+        "title": "Boeing 747 SP",
+        "size": "large",
+        "family": "747"
+    },
+    {
+        "id": "B748",
+        "icao": "B748",
+        "iata": "",
+        "group": "C100",
+        "title": "Boeing 747 8i",
+        "size": "large",
+        "family": "747"
+    },
+    {
+        "id": "B748",
+        "icao": "B748",
+        "iata": "",
+        "group": "C100",
+        "title": "Boeing 747 8F",
+        "size": "large",
+        "family": "747"
+    },
+    {
+        "id": "B762",
+        "icao": "B762",
+        "iata": "",
+        "group": "C70",
+        "title": "Boeing 767 200",
+        "size": "large",
+        "family": "767"
+    },
+    {
+        "id": "B764",
+        "icao": "B764",
+        "iata": "",
+        "group": "C70",
+        "title": "Boeing 767 400ER",
+        "size": "large",
+        "family": "767"
+    },
+    {
+        "id": "B763",
+        "icao": "B763",
+        "iata": "",
+        "group": "C70",
+        "title": "Boeing 767 300 (Winglets)",
+        "size": "large",
+        "family": "767"
+    },
+    {
+        "id": "B78X",
+        "icao": "B78X",
+        "iata": "",
+        "group": "C80",
+        "title": "Boeing 787 10",
+        "size": "large",
+        "family": "787"
+    },
+    {
+        "id": "B762",
+        "icao": "B762",
+        "iata": "",
+        "group": "C70",
+        "title": "Boeing 767 200ER",
+        "size": "large",
+        "family": "767"
+    },
+    {
+        "id": "B37M",
+        "icao": "B37M",
+        "iata": "",
+        "group": "C60",
+        "title": "Boeing 737 Max 7",
+        "size": "medium",
+        "family": "737"
+    },
+    {
+        "id": "B38M",
+        "icao": "B38M",
+        "iata": "",
+        "group": "C60",
+        "title": "Boeing 737 Max 8",
+        "size": "medium",
+        "family": "737"
+    },
+    {
+        "id": "B39M",
+        "icao": "B39M",
+        "iata": "",
+        "group": "C60",
+        "title": "Boeing 737 Max 9",
+        "size": "medium",
+        "family": "737"
+    },
+    {
+        "id": "B738",
+        "icao": "B738",
+        "iata": "",
+        "group": "C60",
+        "title": "Boeing 737 800 up+low (Winglets)",
+        "size": "medium",
+        "family": "737"
+    },
+    {
+        "id": "B752",
+        "icao": "B752",
+        "iata": "",
+        "group": "C70",
+        "title": "Boeing 757 200 Mixed Configuration",
+        "size": "large",
+        "family": "757"
+    },
+    {
+        "id": "B783",
+        "icao": "B783",
+        "iata": "",
+        "group": "C80",
+        "title": "Boeing 787 3",
+        "size": "large",
+        "family": "787"
+    },
+    {
+        "id": "B732",
+        "icao": "B732",
+        "iata": "",
+        "group": "C60",
+        "title": "Boeing 737 200",
+        "size": "medium",
+        "family": "737"
+    },
+    {
+        "id": "B74D",
+        "icao": "B74D",
+        "iata": "",
+        "group": "C100",
+        "title": "Boeing 747 400 Domestic",
+        "size": "large",
+        "family": "747"
+    },
+    {
+        "id": "B779",
+        "icao": "B779",
+        "iata": "",
+        "group": "C90",
+        "title": "Boeing 777 9 (Folding Wingtips)",
+        "size": "large",
+        "family": "777"
+    },
+    {
+        "id": "B736",
+        "icao": "B736",
+        "iata": "",
+        "group": "C60",
+        "title": "Boeing 737 600 (Winglets)",
+        "size": "medium",
+        "family": "737"
+    },
+    {
+        "id": "B743",
+        "icao": "B743",
+        "iata": "",
+        "group": "C100",
+        "title": "Boeing 747 300, 300 COMBI",
+        "size": "large",
+        "family": "747"
+    },
+    {
+        "id": "B779",
+        "icao": "B779",
+        "iata": "",
+        "group": "C90",
+        "title": "Boeing 777 9",
+        "size": "large",
+        "family": "777"
+    },
+    {
+        "id": "B778",
+        "icao": "B778",
+        "iata": "",
+        "group": "C90",
+        "title": "Boeing 777 8",
+        "size": "large",
+        "family": "777"
+    },
+    {
+        "id": "B74R",
+        "icao": "B74R",
+        "iata": "",
+        "group": "C100",
+        "title": "Boeing 747 100B SR",
+        "size": "large",
+        "family": "747"
+    },
+    {
+        "id": "B744",
+        "icao": "B744",
+        "iata": "",
+        "group": "C100",
+        "title": "Boeing 747 400F",
+        "size": "large",
+        "family": "747"
+    },
+    {
+        "id": "BLCF",
+        "icao": "BLCF",
+        "iata": "",
+        "group": "C100",
+        "title": "Boeing 747 400LCF Dreamlifter",
+        "size": "large",
+        "family": "747"
+    },
+    {
+        "id": "B744",
+        "icao": "B744",
+        "iata": "",
+        "group": "C100",
+        "title": "Boeing 747 400ERF",
+        "size": "large",
+        "family": "747"
+    },
+    {
+        "id": "B3XM",
+        "icao": "B3XM",
+        "iata": "",
+        "group": "C60",
+        "title": "Boeing 737 Max 10",
+        "size": "medium",
+        "family": "737"
+    },
+    {
+        "id": "B742",
+        "icao": "B742",
+        "iata": "",
+        "group": "C100",
+        "title": "Boeing 747 200C, 200F",
+        "size": "large",
+        "family": "747"
+    },
+    {
+        "id": "E737",
+        "icao": "E737",
+        "iata": "",
+        "group": "C60",
+        "title": "Boeing 737 AEW&C E-7 Wedgetail",
+        "size": "medium",
+        "family": "737"
+    },
+    {
+        "id": "B77L",
+        "icao": "B77L",
+        "iata": "",
+        "group": "C90",
+        "title": "Boeing 777 F",
+        "size": "large",
+        "family": "777"
+    },
+    {
+        "id": "CRJ7",
+        "icao": "CRJ7",
+        "iata": "",
+        "group": "C50",
+        "title": "Bombardier CRJ 700/701/702 LR",
+        "size": "small",
+        "family": "CRJ"
+    },
+    {
+        "id": "CRJ2",
+        "icao": "CRJ2",
+        "iata": "",
+        "group": "C40",
+        "title": "Bombardier CRJ 100/200 LR",
+        "size": "small",
+        "family": "CRJ"
+    },
+    {
+        "id": "CRJ9",
+        "icao": "CRJ9",
+        "iata": "",
+        "group": "C50",
+        "title": "Bombardier CRJ 900",
+        "size": "small",
+        "family": "CRJ"
+    },
+    {
+        "id": "GLEX",
+        "icao": "GLEX",
+        "iata": "",
+        "group": "C40",
+        "title": "Bombardier BD-700 Global Express",
+        "size": "small",
+        "family": "BD-700"
+    },
+    {
+        "id": "CRJ2",
+        "icao": "CRJ2",
+        "iata": "",
+        "group": "C40",
+        "title": "Bombardier CRJ 100/200 ER",
+        "size": "small",
+        "family": "CRJ"
+    },
+    {
+        "id": "BCS1",
+        "icao": "BCS1",
+        "iata": "",
+        "group": "C50",
+        "title": "Bombardier BCS1 BD-500 CSeries CS100",
+        "size": "small",
+        "family": "BCS1"
+    },
+    {
+        "id": "CRJ1",
+        "icao": "CRJ1",
+        "iata": "",
+        "group": "C40",
+        "title": "Bombardier CRJ 100/200 Standard",
+        "size": "small",
+        "family": "CRJ"
+    },
+    {
+        "id": "BCS3",
+        "icao": "BCS3",
+        "iata": "",
+        "group": "C60",
+        "title": "Bombardier BCS3 BD-500 CSeries CS300",
+        "size": "medium",
+        "family": "BCS3"
+    },
+    {
+        "id": "DH8D",
+        "icao": "DH8D",
+        "iata": "",
+        "group": "C30",
+        "title": "Bombardier DHC-8 Dash 8 Q400",
+        "size": "small",
+        "family": "DHC-8"
+    },
+    {
+        "id": "DH8B",
+        "icao": "DH8B",
+        "iata": "",
+        "group": "C30",
+        "title": "Bombardier DHC-8 Dash 8 Q200",
+        "size": "small",
+        "family": "DHC-8"
+    },
+    {
+        "id": "DH8A",
+        "icao": "DH8A",
+        "iata": "",
+        "group": "C30",
+        "title": "Bombardier DHC-8 Dash 8 Q100",
+        "size": "small",
+        "family": "DHC-8"
+    },
+    {
+        "id": "DH8C",
+        "icao": "DH8C",
+        "iata": "",
+        "group": "C30",
+        "title": "Bombardier DHC-8 Dash 8 Q300",
+        "size": "small",
+        "family": "DHC-8"
+    },
+    {
+        "id": "CL30",
+        "icao": "CL30",
+        "iata": "",
+        "group": "C50",
+        "title": "Bombardier Challenger 300",
+        "size": "small",
+        "family": "Challenger"
+    },
+    {
+        "id": "CL35",
+        "icao": "CL35",
+        "iata": "",
+        "group": "C50",
+        "title": "Bombardier Challenger 350",
+        "size": "small",
+        "family": "Challenger"
+    },
+    {
+        "id": "CL60",
+        "icao": "CL60",
+        "iata": "",
+        "group": "C50",
+        "title": "Bombardier Challenger 600 CL-600-1A11",
+        "size": "small",
+        "family": "Challenger"
+    },
+    {
+        "id": "CL60",
+        "icao": "CL60",
+        "iata": "",
+        "group": "C50",
+        "title": "Bombardier Challenger 601 CL-600-2A-12",
+        "size": "small",
+        "family": "Challenger"
+    },
+    {
+        "id": "CL60",
+        "icao": "CL60",
+        "iata": "",
+        "group": "C50",
+        "title": "Bombardier Challenger 601-3A & -3R CL-600-2B16",
+        "size": "small",
+        "family": "Challenger"
+    },
+    {
+        "id": "CL60",
+        "icao": "CL60",
+        "iata": "",
+        "group": "C50",
+        "title": "Bombardier Challenger 604 CL-600-2B16",
+        "size": "small",
+        "family": "Challenger"
+    },
+    {
+        "id": "CL60",
+        "icao": "CL60",
+        "iata": "",
+        "group": "C50",
+        "title": "Bombardier Challenger 600 Serie 650",
+        "size": "small",
+        "family": "Challenger 600 Serie"
+    },
+    {
+        "id": "CL60",
+        "icao": "CL60",
+        "iata": "",
+        "group": "C50",
+        "title": "Bombardier Challenger 600 Serie 605",
+        "size": "small",
+        "family": "Challenger 600 Serie"
+    },
+    {
+        "id": "CRJ7",
+        "icao": "CRJ7",
+        "iata": "",
+        "group": "C60",
+        "title": "Bombardier CRJ 700/701/702 ER",
+        "size": "medium",
+        "family": "CRJ"
+    },
+    {
+        "id": "CRJ7",
+        "icao": "CRJ7",
+        "iata": "",
+        "group": "C60",
+        "title": "Bombardier CRJ 700/701/702 Standard",
+        "size": "medium",
+        "family": "CRJ"
+    },
+    {
+        "id": "GL5T",
+        "icao": "GL5T",
+        "iata": "",
+        "group": "C60",
+        "title": "Bombardier Global 5000",
+        "size": "medium",
+        "family": "Global 5000"
+    },
+    {
+        "id": "GLEX",
+        "icao": "GLEX",
+        "iata": "",
+        "group": "C60",
+        "title": "Bombardier Global 6500",
+        "size": "medium",
+        "family": "Global 6500"
+    },
+    {
+        "id": "GL7T",
+        "icao": "GL7T",
+        "iata": "",
+        "group": "C60",
+        "title": "Bombardier Global 7500",
+        "size": "medium",
+        "family": "Global 7500"
+    },
+    {
+        "id": "GLEX",
+        "icao": "GLEX",
+        "iata": "",
+        "group": "C60",
+        "title": "Bombardier Global 6000",
+        "size": "medium",
+        "family": "Global 6000"
+    },
+    {
+        "id": "CRJ7",
+        "icao": "CRJ7",
+        "iata": "",
+        "group": "C60",
+        "title": "Bombardier CRJ 700",
+        "size": "medium",
+        "family": "CRJ"
+    },
+    {
+        "id": "CRJX",
+        "icao": "CRJX",
+        "iata": "",
+        "group": "C60",
+        "title": "Bombardier CRJ 1000",
+        "size": "medium",
+        "family": "CRJ"
+    },
+    {
+        "id": "H25C",
+        "icao": "H25C",
+        "iata": "",
+        "group": "C20",
+        "title": "British Aerospace BAe-125 1000",
+        "size": "small",
+        "family": "BAe-125"
+    },
+    {
+        "id": "CL60",
+        "icao": "CL60",
+        "iata": "",
+        "group": "C50",
+        "title": "Canadair CL600 Challenger 605",
+        "size": "small",
+        "family": "CL600"
+    },
+    {
+        "id": "C550",
+        "icao": "C550",
+        "iata": "",
+        "group": "C20",
+        "title": "Cessna Citation II/SP 550 Bravo",
+        "size": "small",
+        "family": "Citation II/SP"
+    },
+    {
+        "id": "C14T",
+        "icao": "C14T",
+        "iata": "",
+        "group": "C10",
+        "title": "Cessna 414 414",
+        "size": "small",
+        "family": "414"
+    },
+    {
+        "id": "C550",
+        "icao": "C550",
+        "iata": "",
+        "group": "C20",
+        "title": "Cessna Citation 550",
+        "size": "small",
+        "family": "Citation"
+    },
+    {
+        "id": "C56X",
+        "icao": "C56X",
+        "iata": "",
+        "group": "C30",
+        "title": "Cessna Citation 560XL Encore",
+        "size": "small",
+        "family": "Citation"
+    },
+    {
+        "id": "C500",
+        "icao": "C500",
+        "iata": "",
+        "group": "C20",
+        "title": "Cessna Citation I 500",
+        "size": "small",
+        "family": "Citation I"
+    },
+    {
+        "id": "C501",
+        "icao": "C501",
+        "iata": "",
+        "group": "C20",
+        "title": "Cessna Citation I 501",
+        "size": "small",
+        "family": "Citation I"
+    },
+    {
+        "id": "C550",
+        "icao": "C550",
+        "iata": "",
+        "group": "C20",
+        "title": "Cessna Citation II 550",
+        "size": "small",
+        "family": "Citation II"
+    },
+    {
+        "id": "C550",
+        "icao": "C550",
+        "iata": "",
+        "group": "C20",
+        "title": "Cessna Citation II 551",
+        "size": "small",
+        "family": "Citation II"
+    },
+    {
+        "id": "C68A",
+        "icao": "C68A",
+        "iata": "",
+        "group": "C40",
+        "title": "Cessna Citation 680A Latitude",
+        "size": "small",
+        "family": "Citation"
+    },
+    {
+        "id": "C700",
+        "icao": "C700",
+        "iata": "",
+        "group": "C50",
+        "title": "Cessna Citation 700 Longitude",
+        "size": "small",
+        "family": "Citation"
+    },
+    {
+        "id": "C510",
+        "icao": "C510",
+        "iata": "",
+        "group": "C20",
+        "title": "Cessna Citation 510 Mustang",
+        "size": "small",
+        "family": "Citation"
+    },
+    {
+        "id": "C680",
+        "icao": "C680",
+        "iata": "",
+        "group": "C40",
+        "title": "Cessna Citation 680 Sovereign",
+        "size": "small",
+        "family": "Citation"
+    },
+    {
+        "id": "C750",
+        "icao": "C750",
+        "iata": "",
+        "group": "C50",
+        "title": "Cessna Citation X 750",
+        "size": "small",
+        "family": "Citation X"
+    },
+    {
+        "id": "C56X",
+        "icao": "C56X",
+        "iata": "",
+        "group": "C40",
+        "title": "Cessna Citation XLS 560 Excel",
+        "size": "small",
+        "family": "Citation XLS"
+    },
+    {
+        "id": "C25B",
+        "icao": "C25B",
+        "iata": "",
+        "group": "C20",
+        "title": "Cessna CitationJet CJ3 525B",
+        "size": "small",
+        "family": "CitationJet CJ3"
+    },
+    {
+        "id": "C25C",
+        "icao": "C25C",
+        "iata": "",
+        "group": "C20",
+        "title": "Cessna CitationJet CJ4 525C",
+        "size": "small",
+        "family": "CitationJet CJ4"
+    },
+    {
+        "id": "C21T",
+        "icao": "C21T",
+        "iata": "",
+        "group": "C10",
+        "title": "Cessna 421C 421C Turbine",
+        "size": "small",
+        "family": "421C"
+    },
+    {
+        "id": "FA7X",
+        "icao": "FA7X",
+        "iata": "",
+        "group": "C20",
+        "title": "Dassault Aviation Falcon 7X",
+        "size": "small",
+        "family": "Falcon"
+    },
+    {
+        "id": "F2TH",
+        "icao": "F2TH",
+        "iata": "",
+        "group": "C50",
+        "title": "Dassault Aviation Falcon 2000",
+        "size": "small",
+        "family": "Falcon"
+    },
+    {
+        "id": "FA8X",
+        "icao": "FA8X",
+        "iata": "",
+        "group": "C20",
+        "title": "Dassault Aviation Falcon 8X",
+        "size": "small",
+        "family": "Falcon"
+    },
+    {
+        "id": "F900",
+        "icao": "F900",
+        "iata": "",
+        "group": "C20",
+        "title": "Dassault Aviation Falcon 900LX",
+        "size": "small",
+        "family": "Falcon"
+    },
+    {
+        "id": "FA10",
+        "icao": "FA10",
+        "iata": "",
+        "group": "C20",
+        "title": "Dassault Aviation Falcon 10",
+        "size": "small",
+        "family": "Falcon"
+    },
+    {
+        "id": "FA20",
+        "icao": "FA20",
+        "iata": "",
+        "group": "C20",
+        "title": "Dassault Aviation Falcon 20",
+        "size": "small",
+        "family": "Falcon"
+    },
+    {
+        "id": "FA50",
+        "icao": "FA50",
+        "iata": "",
+        "group": "C20",
+        "title": "Dassault Aviation Falcon 50",
+        "size": "small",
+        "family": "Falcon"
+    },
+    {
+        "id": "FA10",
+        "icao": "FA10",
+        "iata": "",
+        "group": "C20",
+        "title": "Dassault Aviation Falcon 100",
+        "size": "small",
+        "family": "Falcon"
+    },
+    {
+        "id": "FA20",
+        "icao": "FA20",
+        "iata": "",
+        "group": "C20",
+        "title": "Dassault Aviation Falcon 200",
+        "size": "small",
+        "family": "Falcon"
+    },
+    {
+        "id": "DHC7",
+        "icao": "DHC7",
+        "iata": "",
+        "group": "C30",
+        "title": "De Havilland Canada DHC-7 Dash 7",
+        "size": "small",
+        "family": "DHC-7"
+    },
+    {
+        "id": "DH8A",
+        "icao": "DH8A",
+        "iata": "",
+        "group": "C30",
+        "title": "De Havilland Canada DHC-8 Dash 8 100",
+        "size": "small",
+        "family": "DHC-8"
+    },
+    {
+        "id": "DH8B",
+        "icao": "DH8B",
+        "iata": "",
+        "group": "C30",
+        "title": "De Havilland Canada DHC-8 Dash 8 200",
+        "size": "small",
+        "family": "DHC-8"
+    },
+    {
+        "id": "DH8C",
+        "icao": "DH8C",
+        "iata": "",
+        "group": "C30",
+        "title": "De Havilland Canada DHC-8 Dash 8 300",
+        "size": "small",
+        "family": "DHC-8"
+    },
+    {
+        "id": "DH8D",
+        "icao": "DH8D",
+        "iata": "",
+        "group": "C30",
+        "title": "De Havilland Canada DHC-8 Dash 8 400",
+        "size": "small",
+        "family": "DHC-8"
+    },
+    {
+        "id": "DJET",
+        "icao": "DJET",
+        "iata": "",
+        "group": "C10",
+        "title": "Diamond DJET DJ-1-D-Jet",
+        "size": "small",
+        "family": "DJET"
+    },
+    {
+        "id": "DC91",
+        "icao": "DC91",
+        "iata": "",
+        "group": "C60",
+        "title": "Douglas DC-9 10",
+        "size": "medium",
+        "family": "DC-9"
+    },
+    {
+        "id": "E170",
+        "icao": "E170",
+        "iata": "",
+        "group": "C50",
+        "title": "Embraer EMB 170 LR, SU, or SE",
+        "size": "small",
+        "family": "EMB 170"
+    },
+    {
+        "id": "E190",
+        "icao": "E190",
+        "iata": "",
+        "group": "C50",
+        "title": "Embraer EMB 190 AR",
+        "size": "small",
+        "family": "EMB 190"
+    },
+    {
+        "id": "E190",
+        "icao": "E190",
+        "iata": "",
+        "group": "C50",
+        "title": "Embraer EMB 190 LR",
+        "size": "small",
+        "family": "EMB 190"
+    },
+    {
+        "id": "E190",
+        "icao": "E190",
+        "iata": "",
+        "group": "C50",
+        "title": "Embraer EMB 190 Standard",
+        "size": "small",
+        "family": "EMB 190"
+    },
+    {
+        "id": "E120",
+        "icao": "E120",
+        "iata": "",
+        "group": "C20",
+        "title": "Embraer EMB 120 Brasilia ER Model",
+        "size": "small",
+        "family": "EMB 120"
+    },
+    {
+        "id": "E135",
+        "icao": "E135",
+        "iata": "",
+        "group": "C30",
+        "title": "Embraer 135 EMB-135/ERJ-135",
+        "size": "small",
+        "family": "135"
+    },
+    {
+        "id": "E145",
+        "icao": "E145",
+        "iata": "",
+        "group": "C30",
+        "title": "Embraer 145 EMB-145/ERJ-145",
+        "size": "small",
+        "family": "145"
+    },
+    {
+        "id": "E170",
+        "icao": "E170",
+        "iata": "",
+        "group": "C50",
+        "title": "Embraer EMB 170",
+        "size": "small",
+        "family": "EMB"
+    },
+    {
+        "id": "E195",
+        "icao": "E195",
+        "iata": "",
+        "group": "C50",
+        "title": "Embraer EMB 195",
+        "size": "small",
+        "family": "EMB"
+    },
+    {
+        "id": "E170",
+        "icao": "E170",
+        "iata": "",
+        "group": "C50",
+        "title": "Embraer EMB 175 AR (Winglets)",
+        "size": "small",
+        "family": "EMB 175"
+    },
+    {
+        "id": "E170",
+        "icao": "E170",
+        "iata": "",
+        "group": "C50",
+        "title": "Embraer EMB 175 AR Extended Wingtips",
+        "size": "small",
+        "family": "EMB 175"
+    },
+    {
+        "id": "E170",
+        "icao": "E170",
+        "iata": "",
+        "group": "C50",
+        "title": "Embraer EMB 175 LR (Winglets)",
+        "size": "small",
+        "family": "EMB 175"
+    },
+    {
+        "id": "E170",
+        "icao": "E170",
+        "iata": "",
+        "group": "C50",
+        "title": "Embraer EMB 175 LR Extended Wingtips",
+        "size": "small",
+        "family": "EMB 175"
+    },
+    {
+        "id": "E170",
+        "icao": "E170",
+        "iata": "",
+        "group": "C50",
+        "title": "Embraer EMB 175 Standard (Winglets)",
+        "size": "small",
+        "family": "EMB 175"
+    },
+    {
+        "id": "E170",
+        "icao": "E170",
+        "iata": "",
+        "group": "C50",
+        "title": "Embraer EMB 175 Standard Extended Wingtips",
+        "size": "small",
+        "family": "EMB 175"
+    },
+    {
+        "id": "E170",
+        "icao": "E170",
+        "iata": "",
+        "group": "C50",
+        "title": "Embraer EMB 175 E2 no winglets",
+        "size": "small",
+        "family": "EMB 175"
+    },
+    {
+        "id": "E290",
+        "icao": "E290",
+        "iata": "",
+        "group": "C50",
+        "title": "Embraer EMB 190 E2",
+        "size": "small",
+        "family": "EMB 190"
+    },
+    {
+        "id": "E110",
+        "icao": "E110",
+        "iata": "",
+        "group": "C10",
+        "title": "Embraer EMB 110 Bandeirante",
+        "size": "small",
+        "family": "EMB 110"
+    },
+    {
+        "id": "E545",
+        "icao": "E545",
+        "iata": "",
+        "group": "C20",
+        "title": "Embraer Legacy 450",
+        "size": "small",
+        "family": "Legacy"
+    },
+    {
+        "id": "E35L",
+        "icao": "E35L",
+        "iata": "",
+        "group": "C20",
+        "title": "Embraer Legacy 650",
+        "size": "small",
+        "family": "Legacy"
+    },
+    {
+        "id": "E550",
+        "icao": "E550",
+        "iata": "",
+        "group": "C20",
+        "title": "Embraer Legacy 500",
+        "size": "small",
+        "family": "Legacy"
+    },
+    {
+        "id": "E50P",
+        "icao": "E50P",
+        "iata": "",
+        "group": "C20",
+        "title": "Embraer Phenom 100EV",
+        "size": "small",
+        "family": "Phenom"
+    },
+    {
+        "id": "E55P",
+        "icao": "E55P",
+        "iata": "",
+        "group": "C40",
+        "title": "Embraer Phenom 300E",
+        "size": "small",
+        "family": "Phenom"
+    },
+    {
+        "id": "E545",
+        "icao": "E545",
+        "iata": "",
+        "group": "C20",
+        "title": "Embraer Praetor 500",
+        "size": "small",
+        "family": "Praetor"
+    },
+    {
+        "id": "E550",
+        "icao": "E550",
+        "iata": "",
+        "group": "C20",
+        "title": "Embraer Praetor 600",
+        "size": "small",
+        "family": "Praetor"
+    },
+    {
+        "id": "EPIC",
+        "icao": "EPIC",
+        "iata": "",
+        "group": "C10",
+        "title": "Epic Aircraft E1000 E1000",
+        "size": "small",
+        "family": "E1000"
+    },
+    {
+        "id": "EPIC",
+        "icao": "EPIC",
+        "iata": "",
+        "group": "C10",
+        "title": "Epic Aircraft LT Dynasty",
+        "size": "small",
+        "family": "LT"
+    },
+    {
+        "id": "EPIC",
+        "icao": "EPIC",
+        "iata": "",
+        "group": "C10",
+        "title": "Epic Aircraft LT LT",
+        "size": "small",
+        "family": "LT"
+    },
+    {
+        "id": "EVIC",
+        "icao": "EVIC",
+        "iata": "",
+        "group": "C10",
+        "title": "Epic Aircraft Victory Victory",
+        "size": "small",
+        "family": "Victory"
+    },
+    {
+        "id": "E500",
+        "icao": "E500",
+        "iata": "",
+        "group": "C10",
+        "title": "Extra Aircraft EA-500 EA-500",
+        "size": "small",
+        "family": "EA-500"
+    },
+    {
+        "id": "F50",
+        "icao": "F50",
+        "iata": "",
+        "group": "C40",
+        "title": "Fokker 50 100",
+        "size": "small",
+        "family": "50"
+    },
+    {
+        "id": "H25A",
+        "icao": "H25A",
+        "iata": "",
+        "group": "C10",
+        "title": "Fokker H25A DH-125",
+        "size": "small",
+        "family": "H25A"
+    },
+    {
+        "id": "F50",
+        "icao": "F50",
+        "iata": "",
+        "group": "C40",
+        "title": "Fokker 50 Freighter/Enforcer",
+        "size": "small",
+        "family": "50"
+    },
+    {
+        "id": "GLF6",
+        "icao": "GLF6",
+        "iata": "",
+        "group": "C30",
+        "title": "Gulfstream Gulfstream G650 G650",
+        "size": "small",
+        "family": "Gulfstream G650"
+    },
+    {
+        "id": "GLF5",
+        "icao": "GLF5",
+        "iata": "",
+        "group": "C20",
+        "title": "Gulfstream Gulfstream G-V G-V G-FIVE",
+        "size": "small",
+        "family": "Gulfstream G-V"
+    },
+    {
+        "id": "GLF2",
+        "icao": "GLF2",
+        "iata": "",
+        "group": "C20",
+        "title": "Gulfstream Gulfstream II II",
+        "size": "small",
+        "family": "Gulfstream II"
+    },
+    {
+        "id": "GLF5",
+        "icao": "GLF5",
+        "iata": "",
+        "group": "C20",
+        "title": "Gulfstream Gulfstream G150 G150",
+        "size": "small",
+        "family": "Gulfstream G150"
+    },
+    {
+        "id": "G280",
+        "icao": "G280",
+        "iata": "",
+        "group": "C20",
+        "title": "Gulfstream Gulfstream G280 G280",
+        "size": "small",
+        "family": "Gulfstream G280"
+    },
+    {
+        "id": "GLF4",
+        "icao": "GLF4",
+        "iata": "",
+        "group": "C20",
+        "title": "Gulfstream Gulfstream G300 G300",
+        "size": "small",
+        "family": "Gulfstream G300"
+    },
+    {
+        "id": "GLF4",
+        "icao": "GLF4",
+        "iata": "",
+        "group": "C20",
+        "title": "Gulfstream Gulfstream G350 G350",
+        "size": "small",
+        "family": "Gulfstream G350"
+    },
+    {
+        "id": "GLF4",
+        "icao": "GLF4",
+        "iata": "",
+        "group": "C20",
+        "title": "Gulfstream Gulfstream G400 G400",
+        "size": "small",
+        "family": "Gulfstream G400"
+    },
+    {
+        "id": "GLF4",
+        "icao": "GLF4",
+        "iata": "",
+        "group": "C20",
+        "title": "Gulfstream Gulfstream G450 G450",
+        "size": "small",
+        "family": "Gulfstream G450"
+    },
+    {
+        "id": "GLF5",
+        "icao": "GLF5",
+        "iata": "",
+        "group": "C20",
+        "title": "Gulfstream Gulfstream G500 G500",
+        "size": "small",
+        "family": "Gulfstream G500"
+    },
+    {
+        "id": "GLF5",
+        "icao": "GLF5",
+        "iata": "",
+        "group": "C20",
+        "title": "Gulfstream Gulfstream G550 G550",
+        "size": "small",
+        "family": "Gulfstream G550"
+    },
+    {
+        "id": "GLF6",
+        "icao": "GLF6",
+        "iata": "",
+        "group": "C30",
+        "title": "Gulfstream Gulfstream G600 G600",
+        "size": "small",
+        "family": "Gulfstream G600"
+    },
+    {
+        "id": "GA7C",
+        "icao": "GA7C",
+        "iata": "",
+        "group": "C40",
+        "title": "Gulfstream Gulfstream G700 G700",
+        "size": "small",
+        "family": "Gulfstream G700"
+    },
+    {
+        "id": "GLF4",
+        "icao": "GLF4",
+        "iata": "",
+        "group": "C20",
+        "title": "Gulfstream Gulfstream G-IV G-IV",
+        "size": "small",
+        "family": "Gulfstream G-IV"
+    },
+    {
+        "id": "BE4W",
+        "icao": "BE4W",
+        "iata": "",
+        "group": "C10",
+        "title": "Hawker 400XPR 400XPR",
+        "size": "small",
+        "family": "400XPR"
+    },
+    {
+        "id": "HDJT",
+        "icao": "HDJT",
+        "iata": "",
+        "group": "C10",
+        "title": "Honda Honda Jet Elite HA-420",
+        "size": "small",
+        "family": "Honda Jet Elite"
+    },
+    {
+        "id": "HDJT",
+        "icao": "HDJT",
+        "iata": "",
+        "group": "C10",
+        "title": "Honda Honda Jet HA-420",
+        "size": "small",
+        "family": "Honda Jet"
+    },
+    {
+        "id": "KEST",
+        "icao": "KEST",
+        "iata": "",
+        "group": "C10",
+        "title": "Kestrel JP10 JP10",
+        "size": "small",
+        "family": "JP10"
+    },
+    {
+        "id": "KODI",
+        "icao": "KODI",
+        "iata": "",
+        "group": "C10",
+        "title": "Kodiak 100 100",
+        "size": "small",
+        "family": "100"
+    },
+    {
+        "id": "LJ60",
+        "icao": "LJ60",
+        "iata": "",
+        "group": "C20",
+        "title": "Learjet Learjet 60 60",
+        "size": "small",
+        "family": "Learjet 60"
+    },
+    {
+        "id": "LJ70",
+        "icao": "LJ70",
+        "iata": "",
+        "group": "C20",
+        "title": "Learjet Learjet 70 70",
+        "size": "small",
+        "family": "Learjet 70"
+    },
+    {
+        "id": "LJ23",
+        "icao": "LJ23",
+        "iata": "",
+        "group": "C20",
+        "title": "Learjet Learjet 23 23",
+        "size": "small",
+        "family": "Learjet 23"
+    },
+    {
+        "id": "LJ28",
+        "icao": "LJ28",
+        "iata": "",
+        "group": "C20",
+        "title": "Learjet Learjet 28 28",
+        "size": "small",
+        "family": "Learjet 28"
+    },
+    {
+        "id": "LJ29",
+        "icao": "LJ29",
+        "iata": "",
+        "group": "C20",
+        "title": "Learjet Learjet 29 29",
+        "size": "small",
+        "family": "Learjet 29"
+    },
+    {
+        "id": "LJ35",
+        "icao": "LJ35",
+        "iata": "",
+        "group": "C20",
+        "title": "Learjet Learjet 35 35",
+        "size": "small",
+        "family": "Learjet 35"
+    },
+    {
+        "id": "LJ35",
+        "icao": "LJ35",
+        "iata": "",
+        "group": "C20",
+        "title": "Learjet Learjet 35 35A",
+        "size": "small",
+        "family": "Learjet 35"
+    },
+    {
+        "id": "LJ36",
+        "icao": "LJ36",
+        "iata": "",
+        "group": "C20",
+        "title": "Learjet Learjet 36 36",
+        "size": "small",
+        "family": "Learjet 36"
+    },
+    {
+        "id": "LJ36",
+        "icao": "LJ36",
+        "iata": "",
+        "group": "C20",
+        "title": "Learjet Learjet 36 36A",
+        "size": "small",
+        "family": "Learjet 36"
+    },
+    {
+        "id": "H25B",
+        "icao": "H25B",
+        "iata": "",
+        "group": "C20",
+        "title": "Learjet HS-125 HS-125",
+        "size": "small",
+        "family": "HS-125"
+    },
+    {
+        "id": "L410",
+        "icao": "L410",
+        "iata": "",
+        "group": "C20",
+        "title": "Let Kunovice L-410 UVP-E",
+        "size": "small",
+        "family": "L-410"
+    },
+    {
+        "id": "L410",
+        "icao": "L410",
+        "iata": "",
+        "group": "C20",
+        "title": "Let Kunovice L-410 UVP-E20",
+        "size": "small",
+        "family": "L-410"
+    },
+    {
+        "id": "L410",
+        "icao": "L410",
+        "iata": "",
+        "group": "C20",
+        "title": "Let Kunovice L-410 NG",
+        "size": "small",
+        "family": "L-410"
+    },
+    {
+        "id": "MD81",
+        "icao": "MD81",
+        "iata": "",
+        "group": "C60",
+        "title": "McDonnell Douglas MD-80 81",
+        "size": "medium",
+        "family": "MD-80"
+    },
+    {
+        "id": "MD11",
+        "icao": "MD11",
+        "iata": "",
+        "group": "C90",
+        "title": "McDonnell Douglas MD-11 pax",
+        "size": "large",
+        "family": "MD-11"
+    },
+    {
+        "id": "MD90",
+        "icao": "MD90",
+        "iata": "",
+        "group": "C60",
+        "title": "McDonnell Douglas MD-90 30",
+        "size": "medium",
+        "family": "MD-90"
+    },
+    {
+        "id": "MD88",
+        "icao": "MD88",
+        "iata": "",
+        "group": "C60",
+        "title": "McDonnell Douglas MD-80 88",
+        "size": "medium",
+        "family": "MD-80"
+    },
+    {
+        "id": "MD82",
+        "icao": "MD82",
+        "iata": "",
+        "group": "C60",
+        "title": "McDonnell Douglas MD-80 82",
+        "size": "medium",
+        "family": "MD-80"
+    },
+    {
+        "id": "MD83",
+        "icao": "MD83",
+        "iata": "",
+        "group": "C60",
+        "title": "McDonnell Douglas MD-80 83",
+        "size": "medium",
+        "family": "MD-80"
+    },
+    {
+        "id": "MD87",
+        "icao": "MD87",
+        "iata": "",
+        "group": "C60",
+        "title": "McDonnell Douglas MD-80 87",
+        "size": "medium",
+        "family": "MD-80"
+    },
+    {
+        "id": "MU2",
+        "icao": "MU2",
+        "iata": "",
+        "group": "C10",
+        "title": "Mitsubishi MU-2 MU-2B-10",
+        "size": "small",
+        "family": "MU-2"
+    },
+    {
+        "id": "MU2",
+        "icao": "MU2",
+        "iata": "",
+        "group": "C10",
+        "title": "Mitsubishi MU-2 MU-2B-25",
+        "size": "small",
+        "family": "MU-2"
+    },
+    {
+        "id": "MU2",
+        "icao": "MU2",
+        "iata": "",
+        "group": "C10",
+        "title": "Mitsubishi MU-2 MU-2B-26",
+        "size": "small",
+        "family": "MU-2"
+    },
+    {
+        "id": "MU2",
+        "icao": "MU2",
+        "iata": "",
+        "group": "C10",
+        "title": "Mitsubishi MU-2 MU-2B-26A",
+        "size": "small",
+        "family": "MU-2"
+    },
+    {
+        "id": "MU2",
+        "icao": "MU2",
+        "iata": "",
+        "group": "C10",
+        "title": "Mitsubishi MU-2 MU-2B-40 Solitare",
+        "size": "small",
+        "family": "MU-2"
+    },
+    {
+        "id": "MU2",
+        "icao": "MU2",
+        "iata": "",
+        "group": "C10",
+        "title": "Mitsubishi MU-2 MU-2B-30",
+        "size": "small",
+        "family": "MU-2"
+    },
+    {
+        "id": "MU2",
+        "icao": "MU2",
+        "iata": "",
+        "group": "C10",
+        "title": "Mitsubishi MU-2 MU-2B-35",
+        "size": "small",
+        "family": "MU-2"
+    },
+    {
+        "id": "MU2",
+        "icao": "MU2",
+        "iata": "",
+        "group": "C10",
+        "title": "Mitsubishi MU-2 MU-2B-36",
+        "size": "small",
+        "family": "MU-2"
+    },
+    {
+        "id": "MU2",
+        "icao": "MU2",
+        "iata": "",
+        "group": "C10",
+        "title": "Mitsubishi MU-2 MU-2B-36A",
+        "size": "small",
+        "family": "MU-2"
+    },
+    {
+        "id": "MU2",
+        "icao": "MU2",
+        "iata": "",
+        "group": "C10",
+        "title": "Mitsubishi MU-2 MU-2B-60 Marquise",
+        "size": "small",
+        "family": "MU-2"
+    },
+    {
+        "id": "SBR1",
+        "icao": "SBR1",
+        "iata": "",
+        "group": "C20",
+        "title": "North American SBR1 Sabreliner",
+        "size": "small",
+        "family": "SBR1"
+    },
+    {
+        "id": "PC24",
+        "icao": "PC24",
+        "iata": "",
+        "group": "C20",
+        "title": "Pilatus PC-24 PC-24",
+        "size": "small",
+        "family": "PC-24"
+    },
+    {
+        "id": "F406",
+        "icao": "F406",
+        "iata": "",
+        "group": "C10",
+        "title": "Reims-Cessna C406 F406 Caravan II",
+        "size": "small",
+        "family": "C406"
+    },
+    {
+        "id": "SBR1",
+        "icao": "SBR1",
+        "iata": "",
+        "group": "C10",
+        "title": "Rockwell Saberliner 40",
+        "size": "small",
+        "family": "Saberliner"
+    },
+    {
+        "id": "SBR1",
+        "icao": "SBR1",
+        "iata": "",
+        "group": "C20",
+        "title": "Rockwell Saberliner 65",
+        "size": "small",
+        "family": "Saberliner"
+    },
+    {
+        "id": "SBR2",
+        "icao": "SBR2",
+        "iata": "",
+        "group": "C20",
+        "title": "Rockwell Saberliner 80",
+        "size": "small",
+        "family": "Saberliner"
+    },
+    {
+        "id": "SBR1",
+        "icao": "SBR1",
+        "iata": "",
+        "group": "C20",
+        "title": "Rockwell Saberliner 60",
+        "size": "small",
+        "family": "Saberliner"
+    },
+    {
+        "id": "SF34",
+        "icao": "SF34",
+        "iata": "",
+        "group": "C30",
+        "title": "Saab 340 340B",
+        "size": "small",
+        "family": "340"
+    },
+    {
+        "id": "SW4",
+        "icao": "SW4",
+        "iata": "",
+        "group": "C20",
+        "title": "Swearingen SA227 Merlin III",
+        "size": "small",
+        "family": "SA227"
+    },
+    {
+        "id": "SJ30",
+        "icao": "SJ30",
+        "iata": "",
+        "group": "C20",
+        "title": "SyberJet SJ30 SJ30",
+        "size": "small",
+        "family": "SJ30"
+    },
+    {
+        "id": "G159",
+        "icao": "G159",
+        "iata": "",
+        "group": "C20",
+        "title": "Gulfstream Aerospace G-159 Gulfstream I",
+        "size": "small",
+        "family": "Gulfstream Aerospace G-159 Gulfstream I"
+    },
+    {
+        "id": "AT46",
+        "icao": "AT46",
+        "iata": "",
+        "group": "C30",
+        "title": "Aerospatiale/Alenia ATR 42-600",
+        "size": "small",
+        "family": "Aerospatiale/Alenia ATR 42-600"
+    },
+    {
+        "id": "AT72",
+        "icao": "AT72",
+        "iata": "",
+        "group": "C30",
+        "title": "Aerospatiale/Alenia ATR 72",
+        "size": "small",
+        "family": "Aerospatiale/Alenia ATR 72"
+    },
+    {
+        "id": "ATP",
+        "icao": "ATP",
+        "iata": "",
+        "group": "C30",
+        "title": "British Aerospace ATP",
+        "size": "small",
+        "family": "British Aerospace ATP"
+    },
+    {
+        "id": "JS32",
+        "icao": "JS32",
+        "iata": "",
+        "group": "C20",
+        "title": "British Aerospace Jetstream 32",
+        "size": "small",
+        "family": "British Aerospace Jetstream 32"
+    },
+    {
+        "id": "DOVE",
+        "icao": "DOVE",
+        "iata": "",
+        "group": "C30",
+        "title": "De Havilland DH.104 Dove",
+        "size": "small",
+        "family": "De Havilland DH.104 Dove"
+    },
+    {
+        "id": "SB20",
+        "icao": "SB20",
+        "iata": "",
+        "group": "C30",
+        "title": "Saab 2000",
+        "size": "small",
+        "family": "Saab 2000"
+    },
+    {
+        "id": "E75",
+        "icao": "E75",
+        "iata": "",
+        "group": "C50",
+        "title": "Embraer 175",
+        "size": "small",
+        "family": "Embraer 175"
+    },
+    {
+        "id": "E75L",
+        "icao": "E75L",
+        "iata": "",
+        "group": "C50",
+        "title": "Embraer 175 (long wing)",
+        "size": "small",
+        "family": "Embraer 175 (long wing)"
+    },
+    {
+        "id": "E75S",
+        "icao": "E75S",
+        "iata": "",
+        "group": "C50",
+        "title": "Embraer 175 (short wing)",
+        "size": "small",
+        "family": "Embraer 175 (short wing)"
+    },
+    {
+        "id": "E295",
+        "icao": "E295",
+        "iata": "",
+        "group": "C50",
+        "title": "Embraer E195-E2",
+        "size": "small",
+        "family": "Embraer E195-E2"
+    },
+    {
+        "id": "A19N",
+        "icao": "A19N",
+        "iata": "",
+        "group": "C60",
+        "title": "Airbus A319neo",
+        "size": "medium",
+        "family": "Airbus A319neo"
+    },
+    {
+        "id": "A20N",
+        "icao": "A20N",
+        "iata": "",
+        "group": "C60",
+        "title": "Airbus A320neo",
+        "size": "medium",
+        "family": "Airbus A320neo"
+    },
+    {
+        "id": "A21N",
+        "icao": "A21N",
+        "iata": "",
+        "group": "C60",
+        "title": "Airbus A321neo",
+        "size": "medium",
+        "family": "Airbus A321neo"
+    },
+    {
+        "id": "B3XM",
+        "icao": "B3XM",
+        "iata": "",
+        "group": "C60",
+        "title": "Boeing 737 MAX 10",
+        "size": "medium",
+        "family": "Boeing 737 MAX 10"
+    },
+    {
+        "id": "A220",
+        "icao": "A220",
+        "iata": "",
+        "group": "C60",
+        "title": "Airbus 220-300",
+        "size": "medium",
+        "family": "Airbus 220-300"
+    },
+    {
+        "id": "DC92",
+        "icao": "DC92",
+        "iata": "",
+        "group": "C60",
+        "title": "Douglas DC-9-20",
+        "size": "medium",
+        "family": "Douglas DC-9-20"
+    },
+    {
+        "id": "DC93",
+        "icao": "DC93",
+        "iata": "",
+        "group": "C60",
+        "title": "Douglas DC-9-30",
+        "size": "medium",
+        "family": "Douglas DC-9-30"
+    },
+    {
+        "id": "DC94",
+        "icao": "DC94",
+        "iata": "",
+        "group": "C60",
+        "title": "Douglas DC-9-40",
+        "size": "medium",
+        "family": "Douglas DC-9-40"
+    },
+    {
+        "id": "DC95",
+        "icao": "DC95",
+        "iata": "",
+        "group": "C60",
+        "title": "Douglas DC-9-50",
+        "size": "medium",
+        "family": "Douglas DC-9-50"
+    },
+    {
+        "id": "A338",
+        "icao": "A338",
+        "iata": "",
+        "group": "C80",
+        "title": "Airbus A330-800neo",
+        "size": "large",
+        "family": "Airbus A330-800neo"
+    }
 ]
