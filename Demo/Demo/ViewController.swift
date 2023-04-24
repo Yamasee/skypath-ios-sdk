@@ -333,7 +333,7 @@ extension ViewController: SkyPathDelegate {
         }
     }
 
-    func didFailToFetchNewData(with error: GeneralError) {
+    func didFailToFetchNewData(with error: SPError) {
 
         print("SkyPath did fail to fetch new data with error: " + error.localizedDescription)
     }
