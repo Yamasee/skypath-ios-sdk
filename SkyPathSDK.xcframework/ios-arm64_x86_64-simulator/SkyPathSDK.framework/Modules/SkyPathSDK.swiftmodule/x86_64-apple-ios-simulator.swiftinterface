@@ -1400,6 +1400,11 @@ public struct CodableLocation : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
+extension Swift.Array where Element == CoreLocation.CLLocationCoordinate2D {
+  public var withNormalizedTransmeridian: [CoreLocation.CLLocationCoordinate2D] {
+    get
+  }
+}
 public enum GeneralError : SkyPathSDK.SPError {
   case internetConnectionAppearsOffline
   case tooManyRequests
