@@ -315,7 +315,7 @@ extension ViewController: SkyPathDelegate {
         }
     }
 
-    func didReceiveNewTurbulenceData() {
+    func didReceiveNewTurbulenceData(areaType: DataAreaType) {
 
         print("SkyPath did receive new turbulence data")
 
