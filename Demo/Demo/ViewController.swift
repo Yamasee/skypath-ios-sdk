@@ -51,9 +51,9 @@ class ViewController: UIViewController {
     private func setupMap() {
 
         mapView.delegate = self
-        mapView.cameraZoomRange = MKMapView.CameraZoomRange(minCenterCoordinateDistance: 300_000)
         mapView.mapType = .mutedStandard
         mapView.pointOfInterestFilter = MKPointOfInterestFilter.excludingAll
+        mapView.region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 40, longitude: -90), span: MKCoordinateSpan(latitudeDelta: 30, longitudeDelta: 30))
     }
 
     // MARK: - IBActions
@@ -254,16 +254,13 @@ extension ViewController {
 
     private func startFlight() {
 
-        let flight = Flight(
-            dep: "KJFK",
-            dest: "KMIA",
-            fnum: "TEST")
-        SkyPath.shared.startFlight(flight)
+        let flight = Flight(dep: "KJFK", dest: "KMIA", fnum: "TEST")
+        SkyPath.shared.setFlight(flight)
     }
 
     private func endFlight() {
 
-        SkyPath.shared.endFlight()
+        SkyPath.shared.setFlight(nil)
     }
 
     private func getTurbulence() {
@@ -335,7 +332,7 @@ extension ViewController: SkyPathDelegate {
 
     func didFailToFetchNewData(with error: SPError) {
 
-        print("SkyPath did fail to fetch new data with error: " + error.localizedDescription)
+        print("SkyPath did fail to fetch new data with error: \(error)")
     }
 
     func didChangeDevicePosition(_ inPosition: Bool, horizontal: Bool) {

@@ -214,6 +214,10 @@ extension SkyPathSDK.SkyPath {
   public var turbulencePolygons: Swift.String? {
     get
   }
+  @available(*, unavailable, message: "Use `setFlight(_:)` instead")
+  public func startFlight(_ flight: SkyPathSDK.Flight)
+  @available(*, unavailable, message: "Use `setFlight(_:)` instead")
+  public func endFlight()
 }
 @available(*, unavailable, renamed: "Aircraft")
 public struct YamaseeAircraftType {
@@ -572,8 +576,7 @@ public struct TurbulenceResult {
   }
   public func aircrafts() -> [SkyPathSDK.Aircraft]
   public func aircraft(byId id: Swift.String) -> SkyPathSDK.Aircraft?
-  public func startFlight(_ flight: SkyPathSDK.Flight)
-  public func endFlight()
+  public func setFlight(_ flight: SkyPathSDK.Flight?)
   public var flight: SkyPathSDK.Flight? {
     get
   }

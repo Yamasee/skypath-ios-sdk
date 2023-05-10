@@ -18,27 +18,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		l+htf74iQ2j5CVS/pm8EupaLh4c=
+		8D+rEAVnD/YhwSdPqjsXvLdkPg0=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		2wLpRuw05BgAKoeOlQ9zKCdpWJU=
+		ozJFjPFC5+HaSQ7hAdbBO+S3Wrg=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		6wlF4rRSBGEnNyreuGBMJ3ptqt4=
+		xdNBbpmCdDzFnVNj8Fd62AD86as=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		x13W9dCj6EHMWfBco3g9RZfr7xM=
+		XrygEL3lv0F0Cq3/PLsUUKS56I4=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		6wlF4rRSBGEnNyreuGBMJ3ptqt4=
+		xdNBbpmCdDzFnVNj8Fd62AD86as=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		EK1TZt1Qoqjy1YULro1qpLLbZY0=
+		vbFGoCwG544g7WiK+/bs08XQXDY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -84,35 +84,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aoOASey/tIc3TwSuwfQQ3TVHYTbaaEXdOKGunpaOMP8=
+			r707fvI2UZhAYJrni6epVq+GimKi484WLuueTa3g2Fw=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qcVIAPOkeCwSfQuCpDbGSDlbo6CMsBuPCDnkAarbHEo=
+			e6eB1oZK/fQx0GX4fU4vmUm15t5yWqxVAmz5YYY/GqI=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ifLatXO+YahZ8lg3vTKJR3VLophlhx2EpfGjmhMhCg4=
+			bieODBWA0RfOAPNKbEWWB6aLht7dBJkWc0TyAusrtKc=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qcVIAPOkeCwSfQuCpDbGSDlbo6CMsBuPCDnkAarbHEo=
+			e6eB1oZK/fQx0GX4fU4vmUm15t5yWqxVAmz5YYY/GqI=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+VCze8mGK/KU2IIrNPJRRtUbRSfTYwSRn9uc9vJimls=
+			IH/vi6n20tXkwb62ygr3LU7twjVIszoinGZDMQODg3c=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
