@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -64,14 +64,19 @@
                                     <constraint firstItem="hXr-OA-ext" firstAttribute="leading" secondItem="Lbq-yp-koV" secondAttribute="leading" id="uO3-eH-AFd"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sevs" translatesAutoresizingMaskIntoConstraints="NO" id="lhy-wW-4io">
+                                <rect key="frame" x="0.0" y="1303" width="200" height="43"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vMd-IG-rpl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6zQ-rO-xbV"/>
                             <constraint firstItem="vMd-IG-rpl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="AML-9N-1ho"/>
+                            <constraint firstItem="lhy-wW-4io" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KIU-aC-4gT"/>
                             <constraint firstItem="vMd-IG-rpl" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="Qlx-FH-aqu"/>
                             <constraint firstItem="Lbq-yp-koV" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="RZg-BM-sri"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lhy-wW-4io" secondAttribute="bottom" id="XGo-M0-wea"/>
                             <constraint firstItem="vMd-IG-rpl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="heX-xF-caG"/>
                             <constraint firstItem="Lbq-yp-koV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nUD-NV-E5K"/>
                         </constraints>
@@ -88,6 +93,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="sevs" width="200" height="43"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
