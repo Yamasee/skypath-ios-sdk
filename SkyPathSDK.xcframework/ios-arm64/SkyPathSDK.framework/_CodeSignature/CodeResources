@@ -18,27 +18,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		8D+rEAVnD/YhwSdPqjsXvLdkPg0=
+		CHqak2UqfpYJ5pYsmJfeHiUKWw0=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		ozJFjPFC5+HaSQ7hAdbBO+S3Wrg=
+		/exFE3Aia0rqapxc7l/KdBELaPY=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		xdNBbpmCdDzFnVNj8Fd62AD86as=
+		WLN9nnZLZLivxaZ/bhDBPG7M85M=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		XrygEL3lv0F0Cq3/PLsUUKS56I4=
+		CHTAhiiI5zPiXYWDsTKbnY7Wa2Q=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		xdNBbpmCdDzFnVNj8Fd62AD86as=
+		WLN9nnZLZLivxaZ/bhDBPG7M85M=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		vbFGoCwG544g7WiK+/bs08XQXDY=
+		Dr1gUTe2XP0mdkyV63x3hU/Fe0I=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -84,35 +84,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			r707fvI2UZhAYJrni6epVq+GimKi484WLuueTa3g2Fw=
+			3bprgygcXG/dzNYfcbh+kcpUJ70nZ+xA+KV3oQ/mDLc=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			e6eB1oZK/fQx0GX4fU4vmUm15t5yWqxVAmz5YYY/GqI=
+			3/JrLUL0lxst6KaBXVqZ3c+j4ycklM/+2C18KVhuAco=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bieODBWA0RfOAPNKbEWWB6aLht7dBJkWc0TyAusrtKc=
+			+4WBPkxD4GFlf8Ywo+NdRUHytRKtPQu0NSUbOQmpPac=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			e6eB1oZK/fQx0GX4fU4vmUm15t5yWqxVAmz5YYY/GqI=
+			3/JrLUL0lxst6KaBXVqZ3c+j4ycklM/+2C18KVhuAco=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IH/vi6n20tXkwb62ygr3LU7twjVIszoinGZDMQODg3c=
+			o0Iwvqf2YQOmfDf4TjRkM3y6wLsqDeCGeylCuV1mOro=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

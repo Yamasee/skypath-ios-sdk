@@ -357,7 +357,9 @@ public enum StartError : SkyPathSDK.SPError {
   case apiKeyInvalid
   case envInvalid
   case userIdOrAirlineInvalid
+  @available(*, deprecated, renamed: "unathorized")
   case userIdOrPasswordInvalid
+  case unathorized(message: Swift.String)
   case userLocked(message: Swift.String)
   case ssoInvalid
   case ssoDisabledInPublic
@@ -371,6 +373,7 @@ public struct DataTypeOptions : Swift.OptionSet, Swift.Hashable {
   public let rawValue: Swift.Int
   public static let turbulence: SkyPathSDK.DataTypeOptions
   public static let turbulencePolygons: SkyPathSDK.DataTypeOptions
+  public static let traffic: SkyPathSDK.DataTypeOptions
   public init(rawValue: Swift.Int)
   public typealias ArrayLiteralElement = SkyPathSDK.DataTypeOptions
   public typealias Element = SkyPathSDK.DataTypeOptions
@@ -544,6 +547,9 @@ public struct TurbulenceResult {
   public static let shared: SkyPathSDK.SkyPath
   weak public var delegate: SkyPathSDK.SkyPathDelegate?
   public func start(apiKey: Swift.String, airline: Swift.String, userId: Swift.String, env: SkyPathSDK.Environment? = nil, completion: @escaping (_ error: SkyPathSDK.StartError?) -> Swift.Void)
+  public var isStarted: Swift.Bool {
+    get
+  }
   public func stop()
   public var dataQuery: SkyPathSDK.DataQuery {
     get
@@ -564,6 +570,8 @@ public struct TurbulenceResult {
   public func fetchingStatus(for areaType: SkyPathSDK.DataAreaType) -> Swift.Bool
   public func turbulence(with query: SkyPathSDK.TurbulenceQuery) -> Swift.Result<SkyPathSDK.TurbulenceResult, SkyPathSDK.QueryError>
   public func turbulencePolygons(with query: SkyPathSDK.TurbulencePolygonsQuery) -> Swift.Result<SkyPathSDK.TurbulencePolygonsResult, SkyPathSDK.QueryError>
+  public func getTrafficJson(altRange: Swift.ClosedRange<Swift.Double>, predict: Swift.Bool = false) -> Swift.String
+  public func getTraffic(altRange: Swift.ClosedRange<Swift.Double>, predict: Swift.Bool = false) -> [SkyPathSDK.Traffic]
   public func alerts(with query: SkyPathSDK.AlertQuery = AlertQuery()) -> Swift.Result<SkyPathSDK.AlertResult, SkyPathSDK.AlertError>
   public func startMonitoringAlerts(with query: SkyPathSDK.AlertQuery = AlertQuery())
   public func stopMonitoringAlerts()
@@ -722,6 +730,42 @@ public struct TurbulenceResultOptions : Swift.OptionSet {
 }
 public struct TurbulencePolygonsResult {
   public var geoJSON: Swift.String
+}
+public struct Traffic : Swift.Codable, Swift.Hashable {
+  public var lat: Swift.Double
+  public var lng: Swift.Double
+  public var alt: Swift.Double
+  public var baroAlt: Swift.Double?
+  public var spAlt: Swift.Int
+  public var spBaroAlt: Swift.Int?
+  public var hdg: Swift.Double
+  public var spdNmH: Swift.Double
+  public var ts: Swift.Int
+  public var user: Swift.String
+  public var companyId: Swift.String
+  public var aircraftCat: Swift.String
+  public var airplane: Swift.String
+  public var aircraftSize: SkyPathSDK.AircraftSize
+  public var fNum: Swift.String
+  public var fNumInsertedManually: Swift.Bool?
+  public var dest: Swift.String
+  public var dep: Swift.String
+  public var spFlightId: Swift.String
+  public var tile: SkyPathSDK.Tile
+  public var speed: Swift.Double
+  public var coordinate: CoreLocation.CLLocationCoordinate2D {
+    get
+  }
+  public var altFtUsingCurType: Swift.Double {
+    get
+  }
+  public init(from decoder: Swift.Decoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: SkyPathSDK.Traffic, b: SkyPathSDK.Traffic) -> Swift.Bool
+  public func encode(to encoder: Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 public enum Environment : Swift.Codable {
   case dev(serverUrl: Swift.String?)
