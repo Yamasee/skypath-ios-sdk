@@ -22,23 +22,23 @@
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		/exFE3Aia0rqapxc7l/KdBELaPY=
+		W2dG8Arxd6lb7s2QRxByE2HM0i0=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		WLN9nnZLZLivxaZ/bhDBPG7M85M=
+		jsfA+Ro51k7jKDaLuRSMzZHzQtU=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		CHTAhiiI5zPiXYWDsTKbnY7Wa2Q=
+		v1GDrn91BOf53FmUsV3qeZmgwik=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		WLN9nnZLZLivxaZ/bhDBPG7M85M=
+		jsfA+Ro51k7jKDaLuRSMzZHzQtU=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		Dr1gUTe2XP0mdkyV63x3hU/Fe0I=
+		CmFh/AXEhxp26HvRHBMyOnOziAE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -84,35 +84,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3bprgygcXG/dzNYfcbh+kcpUJ70nZ+xA+KV3oQ/mDLc=
+			3oKL+bHJ8LaWGG4cAwZy6g0xksXlZfHLmpSFEBaRccA=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3/JrLUL0lxst6KaBXVqZ3c+j4ycklM/+2C18KVhuAco=
+			lnyqS3gjyTZe9a1sQAtv/vUS3FY6kPsTvwK17aIlzOk=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+4WBPkxD4GFlf8Ywo+NdRUHytRKtPQu0NSUbOQmpPac=
+			7xQXyuHOKruj/HGdZOtmjm57e/wpMpnk/sb8qtz024o=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3/JrLUL0lxst6KaBXVqZ3c+j4ycklM/+2C18KVhuAco=
+			lnyqS3gjyTZe9a1sQAtv/vUS3FY6kPsTvwK17aIlzOk=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			o0Iwvqf2YQOmfDf4TjRkM3y6wLsqDeCGeylCuV1mOro=
+			SPbetmT4fEKtrqHQrUSOPxSXqp2WaOc3JPvWtmBtFco=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

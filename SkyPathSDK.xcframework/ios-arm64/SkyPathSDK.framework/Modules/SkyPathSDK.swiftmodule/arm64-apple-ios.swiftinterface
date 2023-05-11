@@ -359,7 +359,7 @@ public enum StartError : SkyPathSDK.SPError {
   case userIdOrAirlineInvalid
   @available(*, deprecated, renamed: "unathorized")
   case userIdOrPasswordInvalid
-  case unathorized(message: Swift.String)
+  case unauthorized(message: Swift.String)
   case userLocked(message: Swift.String)
   case ssoInvalid
   case ssoDisabledInPublic
