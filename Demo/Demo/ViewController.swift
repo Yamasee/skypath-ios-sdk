@@ -232,7 +232,9 @@ extension ViewController {
     }
 
     private func startSkyPath() {
-
+        guard !SkyPath.shared.isStarted else {
+            return
+        }
         SkyPath.shared.start(
             apiKey: SKYPATH_API_KEY, // provided by SkyPath
             airline: AIRLINE_ICAO, // ICAO code of the airline
