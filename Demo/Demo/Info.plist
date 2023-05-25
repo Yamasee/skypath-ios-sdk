@@ -25,7 +25,5 @@
 	<array>
 		<string>location</string>
 	</array>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>App uses location to track turbulence</string>
 </dict>
 </plist>

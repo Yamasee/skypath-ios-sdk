@@ -266,6 +266,7 @@ public protocol SkyPathDelegate : AnyObject {
   func didReceiveNewTurbulenceData(areaType: SkyPathSDK.DataAreaType)
   func detectedTurbulence(_ turbulence: SkyPathSDK.TurbulenceItem)
   func didReceiveNewTurbulencePolygons()
+  func didReceiveNewTrafficData()
   func didFailToFetchNewData(with error: SkyPathSDK.SPError)
   func didReceiveAlert(_ alert: SkyPathSDK.AlertResult)
   func locationManagerDidFail(withError error: Swift.Error)
@@ -277,6 +278,7 @@ public protocol SkyPathDelegate : AnyObject {
 extension SkyPathSDK.SkyPathDelegate {
   public func detectedTurbulence(_ turbulence: SkyPathSDK.TurbulenceItem)
   public func didReceiveNewTurbulencePolygons()
+  public func didReceiveNewTrafficData()
   public func didFailToFetchNewData(with error: SkyPathSDK.SPError)
   public func didReceiveAlert(_ alert: SkyPathSDK.AlertResult)
   public func locationManagerDidFail(withError error: Swift.Error)

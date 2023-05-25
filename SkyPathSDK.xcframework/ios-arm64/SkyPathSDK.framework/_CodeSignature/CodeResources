@@ -18,27 +18,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		CHqak2UqfpYJ5pYsmJfeHiUKWw0=
+		CtC4MFscaRkyiDd9ntixq1iAxYE=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		W2dG8Arxd6lb7s2QRxByE2HM0i0=
+		knIAWqKgfwrBw3E148R8+a2hsUo=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		jsfA+Ro51k7jKDaLuRSMzZHzQtU=
+		chogL8remAw27dLvAN40Saza9s8=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		v1GDrn91BOf53FmUsV3qeZmgwik=
+		r2zpXiSId8lqQnNK2glu0bNncBc=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		jsfA+Ro51k7jKDaLuRSMzZHzQtU=
+		chogL8remAw27dLvAN40Saza9s8=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		CmFh/AXEhxp26HvRHBMyOnOziAE=
+		lP7LGKhhtOlkoLExjHJnUKCBE64=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -84,35 +84,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3oKL+bHJ8LaWGG4cAwZy6g0xksXlZfHLmpSFEBaRccA=
+			bW8RW3OUNdGEc5Ctize5W4bgrEfj9O/QHyX+cDe5ai0=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lnyqS3gjyTZe9a1sQAtv/vUS3FY6kPsTvwK17aIlzOk=
+			iLhWveBya0aAkbQyor31Qr3m7wp2gsWDUzdNde9s2NM=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7xQXyuHOKruj/HGdZOtmjm57e/wpMpnk/sb8qtz024o=
+			C0rnPkwyCjrE8tKAODV7er9N5rIzSV2SoMLT/TnZaH8=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lnyqS3gjyTZe9a1sQAtv/vUS3FY6kPsTvwK17aIlzOk=
+			iLhWveBya0aAkbQyor31Qr3m7wp2gsWDUzdNde9s2NM=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SPbetmT4fEKtrqHQrUSOPxSXqp2WaOc3JPvWtmBtFco=
+			SE+AR0KSh6MqQa43WGETb6Jimo4KKYm4eblT+olQs04=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

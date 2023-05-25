@@ -25,6 +25,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var turbTypeButton: UIButton!
     @IBOutlet weak var themeTypeButton: UIButton!
+    @IBOutlet weak var sdkVersionLabel: UILabel!
 
     // MARK: - Properties
 
@@ -44,6 +45,8 @@ class ViewController: UIViewController {
         assert(!SKYPATH_API_KEY.isEmpty)
         assert(!AIRLINE_ICAO.isEmpty)
         assert(!USER_ID.isEmpty)
+
+        sdkVersionLabel.text = "SDK v\(SkyPath.shared.version)"
 
         setupSkyPath()
     }
@@ -195,13 +198,13 @@ extension ViewController: MKMapViewDelegate {
 
         return MKOverlayRenderer()
     }
-    
+
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
 
         let region = MKCoordinateRegion(mapView.visibleMapRect)
         var polygon = region.boundingBoxCoordinates
         polygon.append(polygon[0])
-        
+
         // to make data fetch smaller
         if mapView.currentZoomLevel >= 8 {
             SkyPath.shared.dataQuery.viewport = polygon
@@ -217,7 +220,7 @@ extension ViewController {
     private func setupSkyPath() {
 
         SkyPath.shared.delegate = self
-        SkyPath.shared.logger.level = .info
+        SkyPath.shared.logger.level = .verbose
 
         SkyPath.shared.dataHistoryTime = .twoHours
         SkyPath.shared.dataUpdateFrequency = .fast
@@ -232,9 +235,7 @@ extension ViewController {
     }
 
     private func startSkyPath() {
-        guard !SkyPath.shared.isStarted else {
-            return
-        }
+
         SkyPath.shared.start(
             apiKey: SKYPATH_API_KEY, // provided by SkyPath
             airline: AIRLINE_ICAO, // ICAO code of the airline
