@@ -5,6 +5,6 @@ use_frameworks!
 
 target 'Demo' do
 
-pod 'SkyPath'
+pod 'SkyPath', '~> 2.0.19'
 
 end
