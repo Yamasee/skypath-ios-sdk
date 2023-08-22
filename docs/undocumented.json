@@ -1,0 +1,250 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Logger/Logger.swift",
+      "line": 16,
+      "symbol": "LoggingLevel.verbose",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Logger/Logger.swift",
+      "line": 17,
+      "symbol": "LoggingLevel.debug",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Logger/Logger.swift",
+      "line": 18,
+      "symbol": "LoggingLevel.info",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Logger/Logger.swift",
+      "line": 19,
+      "symbol": "LoggingLevel.warn",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Logger/Logger.swift",
+      "line": 20,
+      "symbol": "LoggingLevel.error",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Aircraft.swift",
+      "line": 14,
+      "symbol": "AircraftSize.small",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Aircraft.swift",
+      "line": 15,
+      "symbol": "AircraftSize.medium",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Aircraft.swift",
+      "line": 16,
+      "symbol": "AircraftSize.large",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Alert/AlertResult.swift",
+      "line": 14,
+      "symbol": "AlertResultType.none",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Alert/AlertResult.swift",
+      "line": 15,
+      "symbol": "AlertResultType.coordinates",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Alert/AlertResult.swift",
+      "line": 16,
+      "symbol": "AlertResultType.polygon",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Alert/AlertResult.swift",
+      "line": 17,
+      "symbol": "AlertResultType.beam",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Data/DataHistoryTime.swift",
+      "line": 16,
+      "symbol": "DataHistoryTime.halfHour",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Data/DataHistoryTime.swift",
+      "line": 17,
+      "symbol": "DataHistoryTime.hour",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Data/DataHistoryTime.swift",
+      "line": 18,
+      "symbol": "DataHistoryTime.twoHours",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Data/DataHistoryTime.swift",
+      "line": 19,
+      "symbol": "DataHistoryTime.fourHours",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Data/DataHistoryTime.swift",
+      "line": 20,
+      "symbol": "DataHistoryTime.sixHours",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Data/DataQuery.swift",
+      "line": 42,
+      "symbol": "DataQuery.init(types:sevs:polygon:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Data/DataTypeOptions.swift",
+      "line": 17,
+      "symbol": "DataTypeOptions.turbulence",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Data/DataTypeOptions.swift",
+      "line": 18,
+      "symbol": "DataTypeOptions.turbulencePolygons",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Data/DataTypeOptions.swift",
+      "line": 19,
+      "symbol": "DataTypeOptions.traffic",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Data/DataTypeOptions.swift",
+      "line": 20,
+      "symbol": "DataTypeOptions.pireps",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Data/DataUpdateFrequency.swift",
+      "line": 14,
+      "symbol": "DataUpdateFrequency.none",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Data/DataUpdateFrequency.swift",
+      "line": 15,
+      "symbol": "DataUpdateFrequency.minimal",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Data/DataUpdateFrequency.swift",
+      "line": 16,
+      "symbol": "DataUpdateFrequency.medium",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Data/DataUpdateFrequency.swift",
+      "line": 17,
+      "symbol": "DataUpdateFrequency.fast",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Environment.swift",
+      "line": 14,
+      "symbol": "Environment.dev(serverUrl:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Environment.swift",
+      "line": 15,
+      "symbol": "Environment.prod(serverUrl:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Error/GeneralError.swift",
+      "line": 15,
+      "symbol": "GeneralError.internetConnectionAppearsOffline",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Flight/Flight.swift",
+      "line": 27,
+      "symbol": "Flight.init(dep:dest:fnum:fnumManual:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Turbulence/TurbulenceSeverity.swift",
+      "line": 14,
+      "symbol": "TurbulenceSeverity.none",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Turbulence/TurbulenceSeverity.swift",
+      "line": 15,
+      "symbol": "TurbulenceSeverity.light",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Turbulence/TurbulenceSeverity.swift",
+      "line": 16,
+      "symbol": "TurbulenceSeverity.lightModerate",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Turbulence/TurbulenceSeverity.swift",
+      "line": 17,
+      "symbol": "TurbulenceSeverity.moderate",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexkovalov/Dev/skypath-sdk-ios/SkyPathSDK/Model/Turbulence/TurbulenceSeverity.swift",
+      "line": 18,
+      "symbol": "TurbulenceSeverity.moderateSevere",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/alexkovalov/Dev/skypath-sdk-ios"
+}

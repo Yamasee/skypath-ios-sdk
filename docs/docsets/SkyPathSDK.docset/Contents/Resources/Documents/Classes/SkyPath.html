@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SkyPath Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/SkyPath" class="dashAnchor"></a>
+    <a title="SkyPath Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">SkyPathSDK 2.0.18 Docs</a> (86% documented)</p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">SkyPathSDK Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        SkyPath Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/H3.html">H3</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Logger.html">Logger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SkyPath.html">SkyPath</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TurbulenceCluster.html">TurbulenceCluster</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TurbulenceClusterer.html">TurbulenceClusterer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TurbulenceClusterer/Options.html">– Options</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AircraftSize.html">AircraftSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AlertError.html">AlertError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AlertResultType.html">AlertResultType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DataHistoryTime.html">DataHistoryTime</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DataUpdateFrequency.html">DataUpdateFrequency</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Environment.html">Environment</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/GeneralError.html">GeneralError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LoggingLevel.html">LoggingLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/QueryError.html">QueryError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/StartError.html">StartError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TurbulenceResultType.html">TurbulenceResultType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TurbulenceSeverity.html">TurbulenceSeverity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TurbulenceTrend.html">TurbulenceTrend</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Array.html">Array</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:10SkyPathSDK7SPErrorP">SPError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SkyPathDelegate.html">SkyPathDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Aircraft.html">Aircraft</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AlertQuery.html">AlertQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AlertResult.html">AlertResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataQuery.html">DataQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataTypeOptions.html">DataTypeOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Flight.html">Flight</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Tile.html">Tile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TurbulenceItem.html">TurbulenceItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TurbulencePolygonsQuery.html">TurbulencePolygonsQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TurbulencePolygonsResult.html">TurbulencePolygonsResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TurbulencePolygonsResultOptions.html">TurbulencePolygonsResultOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TurbulenceQuery.html">TurbulenceQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TurbulenceResult.html">TurbulenceResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TurbulenceResultOptions.html">TurbulenceResultOptions</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>SkyPath</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">SkyPath</span></code></pre>
+
+                </div>
+              </div>
+            <p>Get the shared instance by <code><a href="../Classes/SkyPath.html#/s:10SkyPathSDK0aB0C6sharedACvpZ">SkyPath.shared</a></code>.
+Assign a custom delegate object to <code>SkyPath.shared.delegate</code>.
+See <code>Quick Start Guide</code> and API reference for usage details.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/START"></a>
+                <a name="//apple_ref/swift/Section/START" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/START"></a>
+                  <h3 class="section-name"><span>START</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C6sharedACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/shared" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C6sharedACvpZ">shared</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The shared singleton object that should be used for all operations.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">shared</span><span class="p">:</span> <span class="kt">SkyPath</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C8delegateAA0aB8Delegate_pSgvp"></a>
+                    <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C8delegateAA0aB8Delegate_pSgvp">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Delegate object to receive events form the SDK.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SkyPathDelegate.html">SkyPathDelegate</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C5start6apiKey7airline6userId3env10completionySS_S2SAA11EnvironmentOSgyAA10StartErrorOSgctF"></a>
+                    <a name="//apple_ref/swift/Method/start(apiKey:airline:userId:env:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C5start6apiKey7airline6userId3env10completionySS_S2SAA11EnvironmentOSgyAA10StartErrorOSgctF">start(apiKey:<wbr>airline:<wbr>userId:<wbr>env:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Start SDK. It will not track and provide data until started. Should be called when SkyPath service needs to start (for example on app start) only once until app is relaunched or after it was explicitly stopped by <code><a href="../Classes/SkyPath.html#/s:10SkyPathSDK0aB0C4stopyyF">SkyPath.stop()</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">start</span><span class="p">(</span><span class="nv">apiKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                  <span class="nv">airline</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                  <span class="nv">userId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                  <span class="nv">env</span><span class="p">:</span> <span class="kt"><a href="../Enums/Environment.html">Environment</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                  <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Enums/StartError.html">StartError</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>apiKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The API key provided to you by SkyPath.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>airline</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The company ICAO code registered in SkyPath system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>userId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Any user identifier unique per company. Does not need to be registered in the SkyPath system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>env</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Set it when SkyPath server is not whitelisted and a proxy server should be used, or when need dev env. Optional. Default is production.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Will be called asynchronously on the main thread. <code>error</code> will have details in case SDK can&rsquo;t start. If all is good <code><a href="../Protocols/SkyPathDelegate.html#/s:10SkyPathSDK0aB8DelegateP24didUpdateRecordingStatus2toySb_tF">SkyPathDelegate.didUpdateRecordingStatus(to:)</a></code> will be called with <code>recording: true</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C4stopyyF"></a>
+                    <a name="//apple_ref/swift/Method/stop()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C4stopyyF">stop()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stops all SDK activities including communication with the server and turbulence detection. Cached data is deleted.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stop</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/DATA"></a>
+                <a name="//apple_ref/swift/Section/DATA" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/DATA"></a>
+                  <h3 class="section-name"><span>DATA</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C9dataQueryAA04DataE0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/dataQuery" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C9dataQueryAA04DataE0Vvp">dataQuery</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set fetch data query. See <code><a href="../Structs/DataQuery.html">DataQuery</a></code> for more details. All parameters have default values, so by default it&rsquo;s <code>DataQuery()</code>. You can set a new <code><a href="../Structs/DataQuery.html">DataQuery</a></code> or change any of properties at any time.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">dataQuery</span><span class="p">:</span> <span class="kt"><a href="../Structs/DataQuery.html">DataQuery</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C19dataUpdateFrequencyAA04DataeF0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/dataUpdateFrequency" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C19dataUpdateFrequencyAA04DataeF0Ovp">dataUpdateFrequency</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Configure the frequency of data update from the server. For example, to save network traffic, you can set it to <code>none</code> to disable periodic new data fetch from the server at all, or set to <code>minimal</code> to update with bigger time intervals.
+Can be updated at any time in the project. Value is stored across app launches until changed.
+Default is <code>fast</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">dataUpdateFrequency</span><span class="p">:</span> <span class="kt"><a href="../Enums/DataUpdateFrequency.html">DataUpdateFrequency</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C15dataHistoryTimeAA04DataeF0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/dataHistoryTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C15dataHistoryTimeAA04DataeF0Ovp">dataHistoryTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set history time to receive data for in an initial data request made on start.
+When started, SDK fetches initial data for time back in time and then receive only updates since last update. So if you don&rsquo;t need for example 6 hours of data history, set this variable to number of hours that best suites your needs and save network traffic. Default is <code>twoHours</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">dataHistoryTime</span><span class="p">:</span> <span class="kt"><a href="../Enums/DataHistoryTime.html">DataHistoryTime</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C13dataUpdatedAt10Foundation4DateVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dataUpdatedAt" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C13dataUpdatedAt10Foundation4DateVSgvp">dataUpdatedAt</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Last date when successfully received new data from the server.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">dataUpdatedAt</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C9fetchData7refreshySb_tF"></a>
+                    <a name="//apple_ref/swift/Method/fetchData(refresh:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C9fetchData7refreshySb_tF">fetchData(refresh:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>In case you need to get new data immediately (for example when opened the app) call this method and the result will be notified in corresponding delegate methods.
+Data is automatically fetched from the server by SDK out of the box, as well on changing data in <code><a href="../Classes/SkyPath.html#/s:10SkyPathSDK0aB0C9dataQueryAA04DataE0Vvp">dataQuery</a></code> or <code><a href="../Classes/SkyPath.html#/s:10SkyPathSDK0aB0C19dataUpdateFrequencyAA04DataeF0Ovp">dataUpdateFrequency</a></code>.
+Use this function to let SDK fetch new data from the server immediately. Do not call it frequently. A recommended usage is to call it when the pilot taps a refresh button if it is such. The fetched data result will be notified in corresponding delegate methods.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetchData</span><span class="p">(</span><span class="nv">refresh</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>refresh</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If true, all data per query will be fetched.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/TURBULENCE"></a>
+                <a name="//apple_ref/swift/Section/TURBULENCE" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/TURBULENCE"></a>
+                  <h3 class="section-name"><span>TURBULENCE</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C10turbulence4withs6ResultOyAA010TurbulenceF0VAA10QueryErrorOGAA0gH0V_tF"></a>
+                    <a name="//apple_ref/swift/Method/turbulence(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C10turbulence4withs6ResultOyAA010TurbulenceF0VAA10QueryErrorOGAA0gH0V_tF">turbulence(with:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get turbulence data using a query in local cached data without a making a server request.
+It blocks the current thread, so using a separate background thread is recommended.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">turbulence</span><span class="p">(</span><span class="n">with</span> <span class="nv">query</span><span class="p">:</span> <span class="kt"><a href="../Structs/TurbulenceQuery.html">TurbulenceQuery</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/TurbulenceResult.html">TurbulenceResult</a></span><span class="p">,</span> <span class="kt"><a href="../Enums/QueryError.html">QueryError</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>query</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Specify query parameters per your needs. See <code><a href="../Structs/TurbulenceQuery.html">TurbulenceQuery</a></code> docs for details.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C18turbulencePolygons4withs6ResultOyAA010TurbulenceeG0VAA10QueryErrorOGAA0heI0V_tF"></a>
+                    <a name="//apple_ref/swift/Method/turbulencePolygons(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C18turbulencePolygons4withs6ResultOyAA010TurbulenceeG0VAA10QueryErrorOGAA0heI0V_tF">turbulencePolygons(with:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get turbulence polygons data using a query in local cached data without a making a server request.
+It blocks the current thread, so using a separate background thread is recommended.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">turbulencePolygons</span><span class="p">(</span><span class="n">with</span> <span class="nv">query</span><span class="p">:</span> <span class="kt"><a href="../Structs/TurbulencePolygonsQuery.html">TurbulencePolygonsQuery</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/TurbulencePolygonsResult.html">TurbulencePolygonsResult</a></span><span class="p">,</span> <span class="kt"><a href="../Enums/QueryError.html">QueryError</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>query</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Specify query parameters per your needs. See <code><a href="../Structs/TurbulencePolygonsQuery.html">TurbulencePolygonsQuery</a></code> docs for details.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C18turbulencePolygonsSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/turbulencePolygons" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C18turbulencePolygonsSSSgvp">turbulencePolygons</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Turbulence polygons GeoJSON string if available.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available(*, deprecated, message: "Use `turbulencePolygons(with:﹚` instead")</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">turbulencePolygons</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/ALERT"></a>
+                <a name="//apple_ref/swift/Section/ALERT" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/ALERT"></a>
+                  <h3 class="section-name"><span>ALERT</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C6alerts4withs6ResultOyAA05AlertF0VAA0G5ErrorOGAA0G5QueryV_tF"></a>
+                    <a name="//apple_ref/swift/Method/alerts(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C6alerts4withs6ResultOyAA05AlertF0VAA0G5ErrorOGAA0G5QueryV_tF">alerts(with:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get turbulence alerts with a query in local cached data without a making a server request.
+It blocks the current thread, so using a separate background thread is recommended.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">alerts</span><span class="p">(</span><span class="n">with</span> <span class="nv">query</span><span class="p">:</span> <span class="kt"><a href="../Structs/AlertQuery.html">AlertQuery</a></span> <span class="o">=</span> <span class="kt"><a href="../Structs/AlertQuery.html">AlertQuery</a></span><span class="p">())</span> <span class="o">-&gt;</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/AlertResult.html">AlertResult</a></span><span class="p">,</span> <span class="kt"><a href="../Enums/AlertError.html">AlertError</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>query</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Control how to search for a turbulence alert. See <code><a href="../Structs/AlertQuery.html">AlertQuery</a></code> for more details.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Alerts found result. See <code><a href="../Structs/AlertResult.html">AlertResult</a></code> for more details.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C21startMonitoringAlerts4withyAA10AlertQueryV_tF"></a>
+                    <a name="//apple_ref/swift/Method/startMonitoringAlerts(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C21startMonitoringAlerts4withyAA10AlertQueryV_tF">startMonitoringAlerts(with:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Start monitoring alerts with a query in an automatic mode. Alerts will be searched on location updates. Alerts will be notified via a delegate method <code>newAlert(_:)</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">startMonitoringAlerts</span><span class="p">(</span><span class="n">with</span> <span class="nv">query</span><span class="p">:</span> <span class="kt"><a href="../Structs/AlertQuery.html">AlertQuery</a></span> <span class="o">=</span> <span class="kt"><a href="../Structs/AlertQuery.html">AlertQuery</a></span><span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>query</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Control how to search for a turbulence alert. See <code>AlertQuery(forMonitoringTime:)</code> for more details. Current location details like lat, long, altitude, heading will be taken dynamically. Optional.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Alerts found result. See <code><a href="../Structs/AlertResult.html">AlertResult</a></code> for more details.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C20stopMonitoringAlertsyyF"></a>
+                    <a name="//apple_ref/swift/Method/stopMonitoringAlerts()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C20stopMonitoringAlertsyyF">stopMonitoringAlerts()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stop monitoring alerts in an automatic mode.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stopMonitoringAlerts</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C18isMonitoringAlertsSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isMonitoringAlerts" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C18isMonitoringAlertsSbvp">isMonitoringAlerts</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Check if auto monitoring has been started or wheather it&rsquo;s stopped or not started at all.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isMonitoringAlerts</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/AIRCRAFT"></a>
+                <a name="//apple_ref/swift/Section/AIRCRAFT" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/AIRCRAFT"></a>
+                  <h3 class="section-name"><span>AIRCRAFT</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C8aircraftAA8AircraftVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/aircraft" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C8aircraftAA8AircraftVSgvp">aircraft</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Current aircraft. Set it to receive data adjusted for specific aircraft. Should not be <code>nil</code>. When it is not set the turbulence data will not be fetched from the server. This is because the severity level can be different for different a/c types (sizes).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">aircraft</span><span class="p">:</span> <span class="kt"><a href="../Structs/Aircraft.html">Aircraft</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C9aircraftsSayAA8AircraftVGyF"></a>
+                    <a name="//apple_ref/swift/Method/aircrafts()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C9aircraftsSayAA8AircraftVGyF">aircrafts()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get all supported by SkyPath aircrafts.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">aircrafts</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/Aircraft.html">Aircraft</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code><a href="../Structs/Aircraft.html">Aircraft</a></code> objects supported by SkyPath.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C8aircraft4byIdAA8AircraftVSgSS_tF"></a>
+                    <a name="//apple_ref/swift/Method/aircraft(byId:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C8aircraft4byIdAA8AircraftVSgSS_tF">aircraft(byId:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get an Aircraft by ID.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">aircraft</span><span class="p">(</span><span class="n">byId</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Aircraft.html">Aircraft</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>id</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An ICAO id of aircraft type.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Found aircraft matched id or default if no found by ID.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/FLIGHT"></a>
+                <a name="//apple_ref/swift/Section/FLIGHT" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/FLIGHT"></a>
+                  <h3 class="section-name"><span>FLIGHT</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C11startFlightyyAA0E0VF"></a>
+                    <a name="//apple_ref/swift/Method/startFlight(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C11startFlightyyAA0E0VF">startFlight(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Starts a new flight. Flight is saved even across app launches, so <code>startFlight</code> can be called only on a new flight start and <code>stopFlight</code> can be called when flight is ended / removed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">startFlight</span><span class="p">(</span><span class="n">_</span> <span class="nv">flight</span><span class="p">:</span> <span class="kt"><a href="../Structs/Flight.html">Flight</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>flight</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Flight details object. Pass <code>nil</code> when flight is finished. See <code><a href="../Structs/Flight.html">Flight</a></code> for more details.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C9endFlightyyF"></a>
+                    <a name="//apple_ref/swift/Method/endFlight()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C9endFlightyyF">endFlight()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stops the current flight if any was started by <code><a href="../Classes/SkyPath.html#/s:10SkyPathSDK0aB0C11startFlightyyAA0E0VF">startFlight(_:)</a></code> or <code>setFlight(_:)</code>. Flight is saved even across app launches, so <code>startFlight</code> can be called only on a new flight start and <code>stopFlight</code> can be called when flight is ended / removed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">endFlight</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C6flightAA6FlightVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/flight" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C6flightAA6FlightVSgvp">flight</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Current flight if any set by <code><a href="../Classes/SkyPath.html#/s:10SkyPathSDK0aB0C11startFlightyyAA0E0VF">startFlight(_:)</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">flight</span><span class="p">:</span> <span class="kt"><a href="../Structs/Flight.html">Flight</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/SETTINGS"></a>
+                <a name="//apple_ref/swift/Section/SETTINGS" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/SETTINGS"></a>
+                  <h3 class="section-name"><span>SETTINGS</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C31allowsBackgroundLocationUpdatesSbvp"></a>
+                    <a name="//apple_ref/swift/Property/allowsBackgroundLocationUpdates" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C31allowsBackgroundLocationUpdatesSbvp">allowsBackgroundLocationUpdates</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Background location access is required to track turbulence and show notifications.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">allowsBackgroundLocationUpdates</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C7versionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/version" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C7versionSSvp">version</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>SDK version.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">version</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C10inPositionSbvp"></a>
+                    <a name="//apple_ref/swift/Property/inPosition" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C10inPositionSbvp">inPosition</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If device is in position.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">inPosition</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C12isHorizontalSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isHorizontal" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C12isHorizontalSbvp">isHorizontal</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If device is horizontal. Data is not tracked when device is horizontal.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isHorizontal</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C7inNoiseSbvp"></a>
+                    <a name="//apple_ref/swift/Property/inNoise" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C7inNoiseSbvp">inNoise</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If there is a noise currently like moving device out of the position.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">inNoise</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/SIMULATOR"></a>
+                <a name="//apple_ref/swift/Section/SIMULATOR" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/SIMULATOR"></a>
+                  <h3 class="section-name"><span>SIMULATOR</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C16enableSimulationyySbF"></a>
+                    <a name="//apple_ref/swift/Method/enableSimulation(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C16enableSimulationyySbF">enableSimulation(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>In simulation mode you can pass simulated location to the SDK via <code>simulateLocation(:)</code> for testing purposes only.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">enableSimulation</span><span class="p">(</span><span class="n">_</span> <span class="nv">enabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>enabled</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If simulation mode is enabled.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C17simulatedLocationyySo10CLLocationCF"></a>
+                    <a name="//apple_ref/swift/Method/simulatedLocation(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C17simulatedLocationyySo10CLLocationCF">simulatedLocation(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Provide a simulated location for testing only. Should be set to simulation mode by <code>enableSimulation(:)</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">simulatedLocation</span><span class="p">(</span><span class="n">_</span> <span class="nv">location</span><span class="p">:</span> <span class="kt">CLLocation</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>location</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A simulated location for testing.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C19enablePushSimulatedyySbF"></a>
+                    <a name="//apple_ref/swift/Method/enablePushSimulated(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C19enablePushSimulatedyySbF">enablePushSimulated(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The data tracked in simulation mode will not be sent to the server. You can use it during simulation testing.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">enablePushSimulated</span><span class="p">(</span><span class="n">_</span> <span class="nv">enabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>enabled</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Wheather to send data tracked in simulation mode to the server.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C18simulateTurbulence3sevyAA0E8SeverityO_tF"></a>
+                    <a name="//apple_ref/swift/Method/simulateTurbulence(sev:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C18simulateTurbulence3sevyAA0E8SeverityO_tF">simulateTurbulence(sev:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Simulate a turbulence event for testing.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">simulateTurbulence</span><span class="p">(</span><span class="nv">sev</span><span class="p">:</span> <span class="kt"><a href="../Enums/TurbulenceSeverity.html">TurbulenceSeverity</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sev</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Turbulence severity level to simulate an event for.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/LOGGER"></a>
+                <a name="//apple_ref/swift/Section/LOGGER" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/LOGGER"></a>
+                  <h3 class="section-name"><span>LOGGER</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SkyPathSDK0aB0C6loggerAA6LoggerCvp"></a>
+                    <a name="//apple_ref/swift/Property/logger" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SkyPathSDK0aB0C6loggerAA6LoggerCvp">logger</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Logger that logs network, errors, warnings and other info that can be used to debug.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">logger</span><span class="p">:</span> <span class="kt"><a href="../Classes/Logger.html">Logger</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2023 <a class="link" href="https://skypath.io" target="_blank" rel="external noopener">SkyPath LTD</a>. All rights reserved. (Last updated: 2023-08-22)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>
