@@ -18,27 +18,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		joOE4PU54tMm3Q7bFausQKHYuSI=
+		mryEMJzaNqqFACKGuHJJT2tcLGg=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		/GzOleGIbKEq0IA6PKBl/Ml6Feo=
+		RfhFFYkdayO+NT+vwvFaTZXpFgM=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		chogL8remAw27dLvAN40Saza9s8=
+		hko+l5ieV/T7iMlI1uQBfqQs8r0=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		iNdvjOjohyHq83h5zd2orOjMN04=
+		0pguqLC6K60uEkbknjLN3ULzn1g=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		chogL8remAw27dLvAN40Saza9s8=
+		hko+l5ieV/T7iMlI1uQBfqQs8r0=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		8PlkOR4feUu2eSr4AQSRJ+Jn4Jo=
+		oCzsBR15JHFz8VygLSOa1CmsV14=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -84,35 +84,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			g79YRdWsQTUAYHU2sbdkCzldpC4R2Hzu5lwasJ2qDoQ=
+			3HH5GzFLIKH71hE6rYq6G0kjkK9pq3fphOrce0QQCZI=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iLhWveBya0aAkbQyor31Qr3m7wp2gsWDUzdNde9s2NM=
+			jjEso+0E1mRV/YroPFv2Ly3hPaabMoX5W8iAqrATm8g=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JxRaja7J6+auBCoK57HVYp6Er3wpLQJ9/ydFvgdR07Y=
+			A17sAaClfCwfFxBrstE1e+1xKVxN3KjSK2pKQTvwOh0=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iLhWveBya0aAkbQyor31Qr3m7wp2gsWDUzdNde9s2NM=
+			jjEso+0E1mRV/YroPFv2Ly3hPaabMoX5W8iAqrATm8g=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YfPXoSFZSPPdIM0+6iLDbsnz/EIEVOLyHUMrRNeOmk8=
+			DV73nyin3gifCSaAaK0MV/SeXq2B7TAAGZ7wv7T85/w=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

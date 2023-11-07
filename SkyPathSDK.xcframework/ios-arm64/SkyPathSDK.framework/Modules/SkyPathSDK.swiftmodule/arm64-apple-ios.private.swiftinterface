@@ -590,6 +590,7 @@ public struct TurbulenceResult {
   public var flight: SkyPathSDK.Flight? {
     get
   }
+  public func setMapLayer(enabled: Swift.Bool)
   public var allowsBackgroundLocationUpdates: Swift.Bool {
     get
     set
