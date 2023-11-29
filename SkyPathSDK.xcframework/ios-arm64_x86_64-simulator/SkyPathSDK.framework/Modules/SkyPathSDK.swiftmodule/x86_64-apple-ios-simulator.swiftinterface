@@ -580,6 +580,7 @@ public struct TurbulenceResult {
   public var isMonitoringAlerts: Swift.Bool {
     get
   }
+  public func alertedTurbulenceSeverity(_ sev: SkyPathSDK.TurbulenceSeverity)
   public var aircraft: SkyPathSDK.Aircraft? {
     get
     set
@@ -668,12 +669,18 @@ public struct Aircraft : Swift.Codable, Swift.Equatable {
   public var iata: Swift.String?
   public var family: Swift.String?
   public init(from decoder: Swift.Decoder) throws
-  @available(*, unavailable, renamed: "id")
-  public var aircraft: Swift.String?
-  @available(*, unavailable, renamed: "title")
-  public var description: Swift.String?
   public static func == (a: SkyPathSDK.Aircraft, b: SkyPathSDK.Aircraft) -> Swift.Bool
   public func encode(to encoder: Swift.Encoder) throws
+}
+extension SkyPathSDK.Aircraft {
+  @available(*, unavailable, renamed: "id")
+  public var aircraft: Swift.String? {
+    get
+  }
+  @available(*, unavailable, renamed: "title")
+  public var description: Swift.String? {
+    get
+  }
 }
 public enum TurbulenceResultType {
   case server

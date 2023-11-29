@@ -18,27 +18,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		mryEMJzaNqqFACKGuHJJT2tcLGg=
+		UkOOyOiDB518DMyDFs8R/bpNDdw=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		RfhFFYkdayO+NT+vwvFaTZXpFgM=
+		IeKB/3Fxnc17H6WcOh7PGxPk3y0=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		hko+l5ieV/T7iMlI1uQBfqQs8r0=
+		gGVHnB6iWbmncx/AOB9wdVtW5/0=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		0pguqLC6K60uEkbknjLN3ULzn1g=
+		6hh2ppIbbXrk+FjLYIp5nGyQquk=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		hko+l5ieV/T7iMlI1uQBfqQs8r0=
+		gGVHnB6iWbmncx/AOB9wdVtW5/0=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		oCzsBR15JHFz8VygLSOa1CmsV14=
+		vRMvF36QY0+qGJE4t6mFBEiucXU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -84,35 +84,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3HH5GzFLIKH71hE6rYq6G0kjkK9pq3fphOrce0QQCZI=
+			d9bNeXswA7e1VYIS9ze/hYaIXwfS5UNsMlAA2/PstQo=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jjEso+0E1mRV/YroPFv2Ly3hPaabMoX5W8iAqrATm8g=
+			gCdII9JLjUJOz3sdNrpyDykstNASE71fqOpsEc+jutQ=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			A17sAaClfCwfFxBrstE1e+1xKVxN3KjSK2pKQTvwOh0=
+			2m3Ex+obSW4KEaUHLTAQZ+y73jDxDn4Pib/AKB8wHfw=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jjEso+0E1mRV/YroPFv2Ly3hPaabMoX5W8iAqrATm8g=
+			gCdII9JLjUJOz3sdNrpyDykstNASE71fqOpsEc+jutQ=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DV73nyin3gifCSaAaK0MV/SeXq2B7TAAGZ7wv7T85/w=
+			dJPCtQkpyH4O6WPYN/NYs8adMpEmrXXZk4pagsq0iGo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

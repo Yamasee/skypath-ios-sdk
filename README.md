@@ -2,7 +2,7 @@
 
 ## SkyPath iOS SDK
 
-The world’s leading turbulence and auto-PIREPS data source.<br />
+The world’s leading turbulence and auto-PIREPs data source.<br />
 Improve safety and operational efficiency with real-time turbulence information by automatically sensing and sharing accurate, aircraft behavior via the iPad.
 
 ## Description
@@ -13,13 +13,13 @@ Check out the [SkyPath iOS SDK Documentation](https://yamasee.github.io/skypath-
 
 ## Requirements
 
-- iOS 13.0+
-- Xcode 13.4.1+
-- Swift 5.6.1+
+- iOS 14.0+
+- Xcode 14.2+
+- Swift 5.7+
 
 ## Demo
 
-Try out the `Demo` project inside the repo. You will need just a valid SkyPath API key and enter an airline ICAO and user id in the `ViewController`.
+Try out the Demo project inside the repo. You will need just a valid SkyPath API key and enter an airline ICAO and user id in the ViewController. It shows the dev env which has partial and degraded data.
 
 ![Demo App](./demo_app.jpeg)
 
