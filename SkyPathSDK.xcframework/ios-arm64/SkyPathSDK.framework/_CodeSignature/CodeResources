@@ -18,11 +18,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		UkOOyOiDB518DMyDFs8R/bpNDdw=
+		3Q9FyZmxyjZfnENnSVRwDnSfXtQ=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		IeKB/3Fxnc17H6WcOh7PGxPk3y0=
+		U28dc7A/u8v5Q3vscpMIVLR2RCQ=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		6hh2ppIbbXrk+FjLYIp5nGyQquk=
+		l1yq8RPplKgrDf6patEhhGudPlg=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		vRMvF36QY0+qGJE4t6mFBEiucXU=
+		lKrjQjmo4tFUTH+lGyY5/2KNM5o=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -84,7 +84,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			d9bNeXswA7e1VYIS9ze/hYaIXwfS5UNsMlAA2/PstQo=
+			caVGDypQq3S38LlmCwpYAojsfr7gn1jCbWkGi/ML48w=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -98,7 +98,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2m3Ex+obSW4KEaUHLTAQZ+y73jDxDn4Pib/AKB8wHfw=
+			KMkelbIF2QAIx81w8AazqROZl0A7d+KSm1zQA6ZVwgQ=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
@@ -112,7 +112,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dJPCtQkpyH4O6WPYN/NYs8adMpEmrXXZk4pagsq0iGo=
+			ih3imzwBiTnMbgxQE38c2VucaJo0f6nGS7mx3VV0b5o=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
