@@ -614,6 +614,10 @@ public struct TurbulenceResult {
   public var logger: SkyPathSDK.Logger {
     get
   }
+  public var useCalculatedPressureAltitudeForSelf: Swift.Bool {
+    get
+    set
+  }
   public func enableSimulation(_ enabled: Swift.Bool)
   public func simulatedLocation(_ location: CoreLocation.CLLocation)
   public func enablePushSimulated(_ enabled: Swift.Bool)
