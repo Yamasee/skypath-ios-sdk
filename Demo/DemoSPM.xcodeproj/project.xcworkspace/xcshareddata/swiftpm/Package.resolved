@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Yamasee/skypath-ios-sdk",
       "state" : {
-        "revision" : "df60549fed47c15b5b2e2062464163c809a3e37c",
-        "version" : "2.1.6"
+        "revision" : "7e1ed32160bb6406eade06b78269ae8c16b84545",
+        "version" : "2.1.7"
       }
     }
   ],
