@@ -18,11 +18,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		kLJXN/Sczvxm46Xrv84/3cTQIjY=
+		4th/qcteNOPySDpikOzGE/Y6hqU=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		d3+LpnVlXbcErVypXompa+7xxbg=
+		32bC1qJFd3Lua3aOKCvL6gDUIK0=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		d3+LpnVlXbcErVypXompa+7xxbg=
+		32bC1qJFd3Lua3aOKCvL6gDUIK0=
 		</data>
 		<key>Modules/SkyPathSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -104,7 +104,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nAC3w5hCUYXxs6MGBSJgm6EiIfHA8+zPxCXc26jCLZc=
+			GFZBWIX17jAM6IPn18qlFoyuxbMCXgxWYZ2eOGdO6HM=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -139,7 +139,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nAC3w5hCUYXxs6MGBSJgm6EiIfHA8+zPxCXc26jCLZc=
+			GFZBWIX17jAM6IPn18qlFoyuxbMCXgxWYZ2eOGdO6HM=
 			</data>
 		</dict>
 		<key>Modules/SkyPathSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
