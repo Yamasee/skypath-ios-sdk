@@ -1,4 +1,4 @@
-![SkyPath.io | The world’s leading turbulence and auto-PIREPS data source](./docs-logo.png)
+![SkyPath.io | The world’s leading turbulence and auto-PIREPs data source](./docs-logo.png)
 
 ## SkyPath iOS SDK
 
@@ -14,16 +14,16 @@ Check out the [SkyPath iOS SDK Documentation](https://yamasee.github.io/skypath-
 ## Requirements
 
 - iOS 14.0+
-- Xcode 14.2+
-- Swift 5.7+
+- Xcode 15.3+
+- Swift 5.10+
 
 ## Demo
 
-Try out the Demo project inside the repo. You will need just a valid SkyPath API key and enter an airline ICAO and user id in the ViewController. It shows the dev env which has partial and degraded data.
+Try out the Demo project inside the repo. You will need just a valid SkyPath API key and enter an airline ICAO and user id in the `ViewController`.
 
 ![Demo App](./demo_app.jpeg)
 
 ## License
 
-Copyright © SkyPath LTD 2023. All rights reserved. 
+Copyright © SkyPath LTD 2024. All rights reserved. 
 See [Terms & Conditions](https://skypath.io/terms/).
