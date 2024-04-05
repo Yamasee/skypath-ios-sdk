@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
     s.platform = :ios
     s.source = { :http => "#{s.homepage}/releases/download/v#{sdk_version}/SkyPathSDK.xcframework.zip" } 
     s.ios.deployment_target = '14.0'
-    s.swift_version = '5.8'
+    s.swift_version = '5.10'
     s.ios.vendored_frameworks = 'SkyPathSDK.xcframework'
     s.dependency 'geos', '~> 8.1'
 
