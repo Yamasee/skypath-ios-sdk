@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     
-    sdk_version = '2.2.0'
+    sdk_version = '2.2.1'
 
     s.name = 'SkyPath'
     s.version = sdk_version
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
     s.license = { :type => 'Commercial', :text => <<-LICENSE
         SkyPath iOS SDK
 
-        Copyright © 2023 SkyPath LTD
+        Copyright © 2024 SkyPath LTD
 
         All rights reserved.
 
