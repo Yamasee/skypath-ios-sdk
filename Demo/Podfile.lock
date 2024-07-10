@@ -1,15 +1,19 @@
 PODS:
-  - SkyPath (2.1.8)
+  - geos (8.1.0)
+  - SkyPath (2.2.1):
+    - geos (~> 8.1)
 
 DEPENDENCIES:
   - SkyPath
 
 SPEC REPOS:
   trunk:
+    - geos
     - SkyPath
 
 SPEC CHECKSUMS:
-  SkyPath: ee7ce5d346d317e57d74f5895217a689b9b8caf2
+  geos: 77bd6e234c85158da818363640369f68f5f61898
+  SkyPath: bcd4dbcf556526d553c0ff1ca5ec6125c681b5fc
 
 PODFILE CHECKSUM: 06f06e969a942d128e5a41ad56ff11783b1831cc
 

@@ -15,7 +15,6 @@
 		9D374E2527BE517D000DE836 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D374E2327BE517D000DE836 /* LaunchScreen.storyboard */; };
 		9DA6977A281471170045ECF5 /* MKCoordinateRegion+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA69778281471170045ECF5 /* MKCoordinateRegion+Ext.swift */; };
 		9DA6977B281471170045ECF5 /* MKMapView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA69779281471170045ECF5 /* MKMapView+Ext.swift */; };
-		9DA6977E281472F50045ECF5 /* SkyPathSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 9DA6977D281472F50045ECF5 /* SkyPathSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,7 +48,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DA6977E281472F50045ECF5 /* SkyPathSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,10 +109,10 @@
 			buildRules = (
 			);
 			dependencies = (
+				9D17D1992C3EC956001FC4CD /* PBXTargetDependency */,
 			);
 			name = Demo;
 			packageProductDependencies = (
-				9DA6977D281472F50045ECF5 /* SkyPathSDK */,
 			);
 			productName = Demo;
 			productReference = 9D374E1527BE517B000DE836 /* Demo.app */;
@@ -145,7 +143,7 @@
 			);
 			mainGroup = 9D374E0C27BE517B000DE836;
 			packageReferences = (
-				9DA6977C281472F50045ECF5 /* XCRemoteSwiftPackageReference "skypath-ios-sdk" */,
+				9DE15A992C3EC22F00D50678 /* XCRemoteSwiftPackageReference "skypath-ios-sdk" */,
 			);
 			productRefGroup = 9D374E1627BE517B000DE836 /* Products */;
 			projectDirPath = "";
@@ -183,6 +181,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9D17D1992C3EC956001FC4CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 9D17D1982C3EC956001FC4CD /* SkyPathSDK */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9D374E1E27BE517B000DE836 /* Main.storyboard */ = {
@@ -404,20 +409,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9DA6977C281472F50045ECF5 /* XCRemoteSwiftPackageReference "skypath-ios-sdk" */ = {
+		9DE15A992C3EC22F00D50678 /* XCRemoteSwiftPackageReference "skypath-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Yamasee/skypath-ios-sdk";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.2.0;
+				minimumVersion = 2.2.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9DA6977D281472F50045ECF5 /* SkyPathSDK */ = {
+		9D17D1982C3EC956001FC4CD /* SkyPathSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9DA6977C281472F50045ECF5 /* XCRemoteSwiftPackageReference "skypath-ios-sdk" */;
+			package = 9DE15A992C3EC22F00D50678 /* XCRemoteSwiftPackageReference "skypath-ios-sdk" */;
 			productName = SkyPathSDK;
 		};
 /* End XCSwiftPackageProductDependency section */
