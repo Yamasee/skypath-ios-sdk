@@ -11,12 +11,21 @@
       }
     },
     {
+      "identity" : "geoswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Yamasee/GEOSwift",
+      "state" : {
+        "revision" : "e8c72ceb920d2760ae71cd163b5c479042dcc60f",
+        "version" : "10.2.0"
+      }
+    },
+    {
       "identity" : "skypath-ios-sdk",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Yamasee/skypath-ios-sdk",
       "state" : {
-        "revision" : "a246c4856414f99b78b1b213ce42f56bb4efb45e",
-        "version" : "2.2.1"
+        "revision" : "4882c4a1fcf27e93367ef3bc64882c28656b0d04",
+        "version" : "2.2.2"
       }
     }
   ],
