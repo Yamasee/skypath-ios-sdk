@@ -1,20 +1,24 @@
 PODS:
   - geos (8.1.0)
-  - SkyPath (2.2.1):
+  - GEOSwift (10.1.0):
     - geos (~> 8.1)
+  - SkyPath (2.2.4):
+    - GEOSwift (~> 10.1.0)
 
 DEPENDENCIES:
   - SkyPath
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
     - geos
+    - GEOSwift
     - SkyPath
 
 SPEC CHECKSUMS:
   geos: 77bd6e234c85158da818363640369f68f5f61898
-  SkyPath: bcd4dbcf556526d553c0ff1ca5ec6125c681b5fc
+  GEOSwift: 43c3ffcde693cc77a8f698c4328cc63b47a8ff12
+  SkyPath: 58e66967a947c74b8d6f0267c1c5bbd56fb6305e
 
-PODFILE CHECKSUM: 69cf9eec375968f2abdf1acc5da41b7847145681
+PODFILE CHECKSUM: df6b470cb432537553cb68d9b0a13bb2d5459275
 
 COCOAPODS: 1.15.2
