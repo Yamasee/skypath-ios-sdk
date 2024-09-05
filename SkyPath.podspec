@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     
-    sdk_version = '2.2.4'
+    sdk_version = '2.2.5'
 
     s.name = 'SkyPath'
     s.version = sdk_version
