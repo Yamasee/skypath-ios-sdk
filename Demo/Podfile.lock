@@ -2,7 +2,7 @@ PODS:
   - geos (8.1.0)
   - GEOSwift (10.1.0):
     - geos (~> 8.1)
-  - SkyPath (2.2.6):
+  - SkyPath (2.2.7):
     - GEOSwift (~> 10.1.0)
 
 DEPENDENCIES:
@@ -17,8 +17,8 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   geos: 77bd6e234c85158da818363640369f68f5f61898
   GEOSwift: 43c3ffcde693cc77a8f698c4328cc63b47a8ff12
-  SkyPath: a37307957a1504cbef3124db0b9de58dee674652
+  SkyPath: 8cb00b1066510423097e5b994faa10fb65b86782
 
 PODFILE CHECKSUM: df6b470cb432537553cb68d9b0a13bb2d5459275
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2
