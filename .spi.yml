@@ -1,0 +1,7 @@
+version: 1
+external_links:
+  documentation: "https://docs.skypath.io"
+builder:
+  configs:
+    - platform: ios
+    - swift_version: 5.10
