@@ -1,5 +1,9 @@
 ![SkyPath.io | SkyPath, Your Ride Quality Partner](./docs-logo.png)
 
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FYamasee%2Fskypath-ios-sdk%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/Yamasee/skypath-ios-sdk)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FYamasee%2Fskypath-ios-sdk%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/Yamasee/skypath-ios-sdk)
+![GitHub Release](https://img.shields.io/github/v/release/Yamasee/skypath-ios-sdk)
+
 ## SkyPath iOS SDK
 
 SkyPath iOS SDK enables rapid and seamless integration of SkyPath technology into existing iOS apps. The SDK doesn’t assume anything regarding the app UI, and supplies needed abstraction for SkyPath push and pull server REST API communication, turbulence measurements, and turbulence alerts.
