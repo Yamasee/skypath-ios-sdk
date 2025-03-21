@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,26 +21,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lbq-yp-koV">
-                                <rect key="frame" x="349.5" y="1302" width="325" height="44"/>
+                                <rect key="frame" x="452" y="1302" width="120" height="44"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hXr-OA-ext">
-                                        <rect key="frame" x="0.0" y="0.0" width="325" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="44"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zs-Co-lJq">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="44"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="200" id="UaX-J5-prn"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Polygons / Hexagons">
-                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="turbTypeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VYM-ol-rwj"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzI-if-ghf">
-                                                <rect key="frame" x="205" y="0.0" width="120" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="ACB-wc-vuI"/>
                                                 </constraints>
@@ -105,7 +92,6 @@
                         <outlet property="mapView" destination="vMd-IG-rpl" id="TjU-3m-uT6"/>
                         <outlet property="sdkVersionLabel" destination="ajN-Vf-rkR" id="i2E-bd-e7t"/>
                         <outlet property="themeTypeButton" destination="rzI-if-ghf" id="Mym-gr-cz4"/>
-                        <outlet property="turbTypeButton" destination="6zs-Co-lJq" id="XJ0-kG-SIh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
