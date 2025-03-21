@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9D0CCD252C5B895700915FA3 /* GEOSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9D0CCD242C5B895700915FA3 /* GEOSwift */; };
-		9D0CCD262C5B895C00915FA3 /* GEOSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 9D0CCD242C5B895700915FA3 /* GEOSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9D1C4E0F2D8D7D5D00D8EA0B /* GEOSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9D1C4E0E2D8D7D5D00D8EA0B /* GEOSwift */; };
 		9D30F3ED28145BEC00DCE7FC /* MKCoordinateRegion+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D30F3EC28145BEC00DCE7FC /* MKCoordinateRegion+Ext.swift */; };
 		9D30F3EF28145D4F00DCE7FC /* MKMapView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D30F3EE28145D4F00DCE7FC /* MKMapView+Ext.swift */; };
 		9D374E1927BE517B000DE836 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D374E1827BE517B000DE836 /* AppDelegate.swift */; };
@@ -28,7 +27,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9D0CCD262C5B895C00915FA3 /* GEOSwift in Embed Frameworks */,
 				9D5983A229A7647500F0244B /* SkyPathSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -55,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D0CCD252C5B895700915FA3 /* GEOSwift in Frameworks */,
+				9D1C4E0F2D8D7D5D00D8EA0B /* GEOSwift in Frameworks */,
 				9D5983A129A7647500F0244B /* SkyPathSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,7 +120,7 @@
 			);
 			name = Demo;
 			packageProductDependencies = (
-				9D0CCD242C5B895700915FA3 /* GEOSwift */,
+				9D1C4E0E2D8D7D5D00D8EA0B /* GEOSwift */,
 			);
 			productName = Demo;
 			productReference = 9D374E1527BE517B000DE836 /* Demo.app */;
@@ -153,7 +151,7 @@
 			);
 			mainGroup = 9D374E0C27BE517B000DE836;
 			packageReferences = (
-				9D0CCD232C5B895700915FA3 /* XCRemoteSwiftPackageReference "GEOSwift" */,
+				9D1C4E0D2D8D7D5D00D8EA0B /* XCRemoteSwiftPackageReference "GEOSwift" */,
 			);
 			productRefGroup = 9D374E1627BE517B000DE836 /* Products */;
 			projectDirPath = "";
@@ -414,20 +412,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9D0CCD232C5B895700915FA3 /* XCRemoteSwiftPackageReference "GEOSwift" */ = {
+		9D1C4E0D2D8D7D5D00D8EA0B /* XCRemoteSwiftPackageReference "GEOSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Yamasee/GEOSwift";
+			repositoryURL = "https://github.com/GEOSwift/GEOSwift.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 10.2.0;
+				minimumVersion = 11.1.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9D0CCD242C5B895700915FA3 /* GEOSwift */ = {
+		9D1C4E0E2D8D7D5D00D8EA0B /* GEOSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9D0CCD232C5B895700915FA3 /* XCRemoteSwiftPackageReference "GEOSwift" */;
+			package = 9D1C4E0D2D8D7D5D00D8EA0B /* XCRemoteSwiftPackageReference "GEOSwift" */;
 			productName = GEOSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
