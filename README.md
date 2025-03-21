@@ -12,8 +12,8 @@ Check out the [SkyPath Docs](https://docs.skypath.io).
 
 ## Requirements
 
-- iOS 14.0+
-- Xcode 15.3+
+- iOS 16.0+
+- Xcode 16.2+
 - Swift 5.10+
 
 ## Demo
