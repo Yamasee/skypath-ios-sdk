@@ -25,7 +25,9 @@
 	<array>
 		<string>location</string>
 	</array>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>App uses location to track turbulence</string>
+	<string>Show your location on the map to accurately report and get notified on turbulence ahead</string>
 </dict>
 </plist>
