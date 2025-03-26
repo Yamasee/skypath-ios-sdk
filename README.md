@@ -20,7 +20,7 @@ Check out the [SkyPath Docs](https://docs.skypath.io).
 
 Try out the Demo project inside the repo. 
 
-You will need a valid SkyPath API key and enter an airline ICAO and user id in the `ViewController`.
+You will need a valid SkyPath API key and set an airline ICAO with a user ID.
 
 ![Demo App](./demo_app.jpeg)
 
