@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/GEOSwift/GEOSwift",
       "state" : {
-        "revision" : "26882c036e9b68d684ace212bff7f7212a6d1c1f",
-        "version" : "11.1.0"
+        "revision" : "9ddf733b9f72799eb7651d1e0d322f2426b36a06",
+        "version" : "11.2.0"
       }
     },
     {
