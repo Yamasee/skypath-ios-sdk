@@ -6,6 +6,8 @@
 build/
 DerivedData
 
+SkyPathSDK.xcframework
+
 ## Various settings
 *.pbxuser
 !default.pbxuser
