@@ -2,30 +2,21 @@
   "originHash" : "14d12ccdd63ad8e0ace28a1853ad72af8562a1614098a6f6085ed5bee153ffc5",
   "pins" : [
     {
-      "identity" : "geos",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/GEOSwift/geos.git",
-      "state" : {
-        "revision" : "4d8af495e7507f48f1ae9104102debdd2043917b",
-        "version" : "9.0.0"
-      }
-    },
-    {
-      "identity" : "geoswift",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/GEOSwift/GEOSwift",
-      "state" : {
-        "revision" : "9ddf733b9f72799eb7651d1e0d322f2426b36a06",
-        "version" : "11.2.0"
-      }
-    },
-    {
       "identity" : "skypath-ios-sdk",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Yamasee/skypath-ios-sdk",
       "state" : {
-        "revision" : "a5bde4d0b77aee2ddf49d352e5bec482cbb99dcf",
-        "version" : "3.0.0"
+        "revision" : "0e40625e9b4a750fa56bf969d977a8695767c577",
+        "version" : "3.0.1"
+      }
+    },
+    {
+      "identity" : "turf-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mapbox/turf-swift",
+      "state" : {
+        "revision" : "bf840e6b9529d105687840fe2c9dcd74197d46d1",
+        "version" : "4.0.0"
       }
     }
   ],
