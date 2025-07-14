@@ -10,18 +10,18 @@ let package = Package(
         .library(name: "SkyPathSDK", targets: ["SkyPathSDKTarget"])
     ],
     dependencies: [
-        .package(url: "https://github.com/GEOSwift/GEOSwift", from: "11.1.0")
+        .package(url: "https://github.com/mapbox/turf-swift", from: "4.0.0")
     ],
     targets: [
         .binaryTarget(
             name: "SkyPathSDK",
-            url: "https://github.com/Yamasee/skypath-ios-sdk/releases/download/v3.0.0/SkyPathSDK.xcframework.zip",
-            checksum: "3d6feac74691b7e0b4ac96467076be88d89ba47ae72c57f84c35792323e405e7"),
+            url: "https://github.com/Yamasee/skypath-ios-sdk/releases/download/v3.0.1/SkyPathSDK.xcframework.zip",
+            checksum: "84d85a319dcc4ed3c490536bb298cc454edaba0d7c50f2a093806baa89c7b1d7"),
         .target(
             name: "SkyPathSDKTarget",
             dependencies: [
                 .target(name: "SkyPathSDK"),
-                .product(name: "GEOSwift", package: "GEOSwift")
+                .product(name: "Turf", package: "turf-swift")
             ])
     ]
 )

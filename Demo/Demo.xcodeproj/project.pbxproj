@@ -7,18 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9D1C4E0F2D8D7D5D00D8EA0B /* GEOSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9D1C4E0E2D8D7D5D00D8EA0B /* GEOSwift */; };
 		9D5983A129A7647500F0244B /* SkyPathSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D59839F29A7646700F0244B /* SkyPathSDK.xcframework */; };
 		9D5983A229A7647500F0244B /* SkyPathSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D59839F29A7646700F0244B /* SkyPathSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9DEC19532D94522A0071AD6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEC19422D94522A0071AD6F /* SceneDelegate.swift */; };
-		9DEC19542D94522A0071AD6F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEC194F2D94522A0071AD6F /* MapViewController.swift */; };
-		9DEC19552D94522A0071AD6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEC19412D94522A0071AD6F /* AppDelegate.swift */; };
-		9DEC19562D94522A0071AD6F /* MKMapView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEC19452D94522A0071AD6F /* MKMapView+Ext.swift */; };
-		9DEC19572D94522A0071AD6F /* MKCoordinateRegion+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEC19442D94522A0071AD6F /* MKCoordinateRegion+Ext.swift */; };
-		9DEC19582D94522A0071AD6F /* SkyPathWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEC194D2D94522A0071AD6F /* SkyPathWrapper.swift */; };
-		9DEC19592D94522A0071AD6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DEC19492D94522A0071AD6F /* LaunchScreen.storyboard */; };
-		9DEC195A2D94522A0071AD6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DEC194B2D94522A0071AD6F /* Main.storyboard */; };
-		9DEC195B2D94522A0071AD6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DEC19472D94522A0071AD6F /* Assets.xcassets */; };
+		9D5AA4022E24FFA100EFD8BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D5AA3F02E24FFA100EFD8BB /* LaunchScreen.storyboard */; };
+		9D5AA4032E24FFA100EFD8BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D5AA3F22E24FFA100EFD8BB /* Main.storyboard */; };
+		9D5AA4042E24FFA100EFD8BB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D5AA3EE2E24FFA100EFD8BB /* Colors.xcassets */; };
+		9D5AA4072E24FFA100EFD8BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D5AA3ED2E24FFA100EFD8BB /* Assets.xcassets */; };
+		9D5AA4082E24FFA100EFD8BB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA3FA2E24FFA100EFD8BB /* MapViewController.swift */; };
+		9D5AA4092E24FFA100EFD8BB /* DomainSelectorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA3F62E24FFA100EFD8BB /* DomainSelectorAlert.swift */; };
+		9D5AA40A2E24FFA100EFD8BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA3E42E24FFA100EFD8BB /* SceneDelegate.swift */; };
+		9D5AA40B2E24FFA100EFD8BB /* MKCoordinateRegion+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA3E82E24FFA100EFD8BB /* MKCoordinateRegion+Ext.swift */; };
+		9D5AA40C2E24FFA100EFD8BB /* SkyPathWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA3F42E24FFA100EFD8BB /* SkyPathWrapper.swift */; };
+		9D5AA40D2E24FFA100EFD8BB /* LayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA3F82E24FFA100EFD8BB /* LayersTableViewCell.swift */; };
+		9D5AA40E2E24FFA100EFD8BB /* Environment+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA3E72E24FFA100EFD8BB /* Environment+Ext.swift */; };
+		9D5AA40F2E24FFA100EFD8BB /* CLLocationCoordinate2D+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA3E62E24FFA100EFD8BB /* CLLocationCoordinate2D+Ext.swift */; };
+		9D5AA4102E24FFA100EFD8BB /* TurbulenceSevImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA3FD2E24FFA100EFD8BB /* TurbulenceSevImage.swift */; };
+		9D5AA4112E24FFA100EFD8BB /* MKMapView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA3E92E24FFA100EFD8BB /* MKMapView+Ext.swift */; };
+		9D5AA4122E24FFA100EFD8BB /* SimulationLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA3EB2E24FFA100EFD8BB /* SimulationLocationManager.swift */; };
+		9D5AA4132E24FFA100EFD8BB /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA3FC2E24FFA100EFD8BB /* NotificationView.swift */; };
+		9D5AA4142E24FFA100EFD8BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA3E32E24FFA100EFD8BB /* AppDelegate.swift */; };
+		9DAEDA2A2E25016A00F014D4 /* Turf in Frameworks */ = {isa = PBXBuildFile; productRef = 9DAEDA292E25016A00F014D4 /* Turf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,16 +46,24 @@
 /* Begin PBXFileReference section */
 		9D374E1527BE517B000DE836 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D59839F29A7646700F0244B /* SkyPathSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SkyPathSDK.xcframework; path = ../SkyPathSDK.xcframework; sourceTree = "<group>"; };
-		9DEC19412D94522A0071AD6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9DEC19422D94522A0071AD6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9DEC19442D94522A0071AD6F /* MKCoordinateRegion+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Ext.swift"; sourceTree = "<group>"; };
-		9DEC19452D94522A0071AD6F /* MKMapView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Ext.swift"; sourceTree = "<group>"; };
-		9DEC19472D94522A0071AD6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9DEC19482D94522A0071AD6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9DEC194A2D94522A0071AD6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9DEC194D2D94522A0071AD6F /* SkyPathWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyPathWrapper.swift; sourceTree = "<group>"; };
-		9DEC194F2D94522A0071AD6F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		9DEC19512D94522A0071AD6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D5AA3E32E24FFA100EFD8BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9D5AA3E42E24FFA100EFD8BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9D5AA3E62E24FFA100EFD8BB /* CLLocationCoordinate2D+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Ext.swift"; sourceTree = "<group>"; };
+		9D5AA3E72E24FFA100EFD8BB /* Environment+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Environment+Ext.swift"; sourceTree = "<group>"; };
+		9D5AA3E82E24FFA100EFD8BB /* MKCoordinateRegion+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Ext.swift"; sourceTree = "<group>"; };
+		9D5AA3E92E24FFA100EFD8BB /* MKMapView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Ext.swift"; sourceTree = "<group>"; };
+		9D5AA3EB2E24FFA100EFD8BB /* SimulationLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationLocationManager.swift; sourceTree = "<group>"; };
+		9D5AA3ED2E24FFA100EFD8BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9D5AA3EE2E24FFA100EFD8BB /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		9D5AA3EF2E24FFA100EFD8BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9D5AA3F12E24FFA100EFD8BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9D5AA3F42E24FFA100EFD8BB /* SkyPathWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyPathWrapper.swift; sourceTree = "<group>"; };
+		9D5AA3F62E24FFA100EFD8BB /* DomainSelectorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainSelectorAlert.swift; sourceTree = "<group>"; };
+		9D5AA3F82E24FFA100EFD8BB /* LayersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayersTableViewCell.swift; sourceTree = "<group>"; };
+		9D5AA3FA2E24FFA100EFD8BB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		9D5AA3FC2E24FFA100EFD8BB /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		9D5AA3FD2E24FFA100EFD8BB /* TurbulenceSevImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurbulenceSevImage.swift; sourceTree = "<group>"; };
+		9D5AA4002E24FFA100EFD8BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D1C4E0F2D8D7D5D00D8EA0B /* GEOSwift in Frameworks */,
 				9D5983A129A7647500F0244B /* SkyPathSDK.xcframework in Frameworks */,
+				9DAEDA2A2E25016A00F014D4 /* Turf in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,7 +82,7 @@
 		9D374E0C27BE517B000DE836 = {
 			isa = PBXGroup;
 			children = (
-				9DEC19522D94522A0071AD6F /* Demo */,
+				9D5AA4012E24FFA100EFD8BB /* Demo */,
 				9D374E1627BE517B000DE836 /* Products */,
 				9D59839F29A7646700F0244B /* SkyPathSDK.xcframework */,
 			);
@@ -80,59 +96,99 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9DEC19432D94522A0071AD6F /* App */ = {
+		9D5AA3E52E24FFA100EFD8BB /* App */ = {
 			isa = PBXGroup;
 			children = (
-				9DEC19412D94522A0071AD6F /* AppDelegate.swift */,
-				9DEC19422D94522A0071AD6F /* SceneDelegate.swift */,
+				9D5AA3E32E24FFA100EFD8BB /* AppDelegate.swift */,
+				9D5AA3E42E24FFA100EFD8BB /* SceneDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
 		};
-		9DEC19462D94522A0071AD6F /* Extensions */ = {
+		9D5AA3EA2E24FFA100EFD8BB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				9DEC19442D94522A0071AD6F /* MKCoordinateRegion+Ext.swift */,
-				9DEC19452D94522A0071AD6F /* MKMapView+Ext.swift */,
+				9D5AA3E62E24FFA100EFD8BB /* CLLocationCoordinate2D+Ext.swift */,
+				9D5AA3E72E24FFA100EFD8BB /* Environment+Ext.swift */,
+				9D5AA3E82E24FFA100EFD8BB /* MKCoordinateRegion+Ext.swift */,
+				9D5AA3E92E24FFA100EFD8BB /* MKMapView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		9DEC194C2D94522A0071AD6F /* Resources */ = {
+		9D5AA3EC2E24FFA100EFD8BB /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				9DEC19472D94522A0071AD6F /* Assets.xcassets */,
-				9DEC19492D94522A0071AD6F /* LaunchScreen.storyboard */,
-				9DEC194B2D94522A0071AD6F /* Main.storyboard */,
+				9D5AA3EB2E24FFA100EFD8BB /* SimulationLocationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		9D5AA3F32E24FFA100EFD8BB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9D5AA3ED2E24FFA100EFD8BB /* Assets.xcassets */,
+				9D5AA3EE2E24FFA100EFD8BB /* Colors.xcassets */,
+				9D5AA3F02E24FFA100EFD8BB /* LaunchScreen.storyboard */,
+				9D5AA3F22E24FFA100EFD8BB /* Main.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		9DEC194E2D94522A0071AD6F /* SkyPath */ = {
+		9D5AA3F52E24FFA100EFD8BB /* SkyPath */ = {
 			isa = PBXGroup;
 			children = (
-				9DEC194D2D94522A0071AD6F /* SkyPathWrapper.swift */,
+				9D5AA3F42E24FFA100EFD8BB /* SkyPathWrapper.swift */,
 			);
 			path = SkyPath;
 			sourceTree = "<group>";
 		};
-		9DEC19502D94522A0071AD6F /* ViewControllers */ = {
+		9D5AA3F72E24FFA100EFD8BB /* Alerts */ = {
 			isa = PBXGroup;
 			children = (
-				9DEC194F2D94522A0071AD6F /* MapViewController.swift */,
+				9D5AA3F62E24FFA100EFD8BB /* DomainSelectorAlert.swift */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
+		9D5AA3F92E24FFA100EFD8BB /* LayersTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9D5AA3F82E24FFA100EFD8BB /* LayersTableViewCell.swift */,
+			);
+			path = LayersTableViewCell;
+			sourceTree = "<group>";
+		};
+		9D5AA3FB2E24FFA100EFD8BB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9D5AA3F72E24FFA100EFD8BB /* Alerts */,
+				9D5AA3F92E24FFA100EFD8BB /* LayersTableViewCell */,
+				9D5AA3FA2E24FFA100EFD8BB /* MapViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		9DEC19522D94522A0071AD6F /* Demo */ = {
+		9D5AA3FE2E24FFA100EFD8BB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9DEC19432D94522A0071AD6F /* App */,
-				9DEC19462D94522A0071AD6F /* Extensions */,
-				9DEC194C2D94522A0071AD6F /* Resources */,
-				9DEC194E2D94522A0071AD6F /* SkyPath */,
-				9DEC19502D94522A0071AD6F /* ViewControllers */,
-				9DEC19512D94522A0071AD6F /* Info.plist */,
+				9D5AA3FC2E24FFA100EFD8BB /* NotificationView.swift */,
+				9D5AA3FD2E24FFA100EFD8BB /* TurbulenceSevImage.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9D5AA4012E24FFA100EFD8BB /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				9D5AA3E52E24FFA100EFD8BB /* App */,
+				9D5AA3EA2E24FFA100EFD8BB /* Extensions */,
+				9D5AA3EC2E24FFA100EFD8BB /* Managers */,
+				9D5AA3F32E24FFA100EFD8BB /* Resources */,
+				9D5AA3F52E24FFA100EFD8BB /* SkyPath */,
+				9D5AA3FB2E24FFA100EFD8BB /* ViewControllers */,
+				9D5AA3FE2E24FFA100EFD8BB /* Views */,
+				9D5AA4002E24FFA100EFD8BB /* Info.plist */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -155,7 +211,7 @@
 			);
 			name = Demo;
 			packageProductDependencies = (
-				9D1C4E0E2D8D7D5D00D8EA0B /* GEOSwift */,
+				9DAEDA292E25016A00F014D4 /* Turf */,
 			);
 			productName = Demo;
 			productReference = 9D374E1527BE517B000DE836 /* Demo.app */;
@@ -186,7 +242,7 @@
 			);
 			mainGroup = 9D374E0C27BE517B000DE836;
 			packageReferences = (
-				9D1C4E0D2D8D7D5D00D8EA0B /* XCRemoteSwiftPackageReference "GEOSwift" */,
+				9DAEDA282E25016A00F014D4 /* XCRemoteSwiftPackageReference "turf-swift" */,
 			);
 			productRefGroup = 9D374E1627BE517B000DE836 /* Products */;
 			projectDirPath = "";
@@ -202,9 +258,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DEC19592D94522A0071AD6F /* LaunchScreen.storyboard in Resources */,
-				9DEC195A2D94522A0071AD6F /* Main.storyboard in Resources */,
-				9DEC195B2D94522A0071AD6F /* Assets.xcassets in Resources */,
+				9D5AA4022E24FFA100EFD8BB /* LaunchScreen.storyboard in Resources */,
+				9D5AA4032E24FFA100EFD8BB /* Main.storyboard in Resources */,
+				9D5AA4042E24FFA100EFD8BB /* Colors.xcassets in Resources */,
+				9D5AA4072E24FFA100EFD8BB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,30 +272,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DEC19532D94522A0071AD6F /* SceneDelegate.swift in Sources */,
-				9DEC19542D94522A0071AD6F /* MapViewController.swift in Sources */,
-				9DEC19552D94522A0071AD6F /* AppDelegate.swift in Sources */,
-				9DEC19562D94522A0071AD6F /* MKMapView+Ext.swift in Sources */,
-				9DEC19572D94522A0071AD6F /* MKCoordinateRegion+Ext.swift in Sources */,
-				9DEC19582D94522A0071AD6F /* SkyPathWrapper.swift in Sources */,
+				9D5AA4082E24FFA100EFD8BB /* MapViewController.swift in Sources */,
+				9D5AA4092E24FFA100EFD8BB /* DomainSelectorAlert.swift in Sources */,
+				9D5AA40A2E24FFA100EFD8BB /* SceneDelegate.swift in Sources */,
+				9D5AA40B2E24FFA100EFD8BB /* MKCoordinateRegion+Ext.swift in Sources */,
+				9D5AA40C2E24FFA100EFD8BB /* SkyPathWrapper.swift in Sources */,
+				9D5AA40D2E24FFA100EFD8BB /* LayersTableViewCell.swift in Sources */,
+				9D5AA40E2E24FFA100EFD8BB /* Environment+Ext.swift in Sources */,
+				9D5AA40F2E24FFA100EFD8BB /* CLLocationCoordinate2D+Ext.swift in Sources */,
+				9D5AA4102E24FFA100EFD8BB /* TurbulenceSevImage.swift in Sources */,
+				9D5AA4112E24FFA100EFD8BB /* MKMapView+Ext.swift in Sources */,
+				9D5AA4122E24FFA100EFD8BB /* SimulationLocationManager.swift in Sources */,
+				9D5AA4132E24FFA100EFD8BB /* NotificationView.swift in Sources */,
+				9D5AA4142E24FFA100EFD8BB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9DEC19492D94522A0071AD6F /* LaunchScreen.storyboard */ = {
+		9D5AA3F02E24FFA100EFD8BB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9DEC19482D94522A0071AD6F /* Base */,
+				9D5AA3EF2E24FFA100EFD8BB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		9DEC194B2D94522A0071AD6F /* Main.storyboard */ = {
+		9D5AA3F22E24FFA100EFD8BB /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9DEC194A2D94522A0071AD6F /* Base */,
+				9D5AA3F12E24FFA100EFD8BB /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -448,21 +512,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9D1C4E0D2D8D7D5D00D8EA0B /* XCRemoteSwiftPackageReference "GEOSwift" */ = {
+		9DAEDA282E25016A00F014D4 /* XCRemoteSwiftPackageReference "turf-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/GEOSwift/GEOSwift.git";
+			repositoryURL = "https://github.com/mapbox/turf-swift.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 11.1.0;
+				minimumVersion = 4.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9D1C4E0E2D8D7D5D00D8EA0B /* GEOSwift */ = {
+		9DAEDA292E25016A00F014D4 /* Turf */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9D1C4E0D2D8D7D5D00D8EA0B /* XCRemoteSwiftPackageReference "GEOSwift" */;
-			productName = GEOSwift;
+			package = 9DAEDA282E25016A00F014D4 /* XCRemoteSwiftPackageReference "turf-swift" */;
+			productName = Turf;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

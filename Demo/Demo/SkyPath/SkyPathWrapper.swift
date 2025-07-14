@@ -16,18 +16,45 @@ let USER_ID = ""
 class SkyPathWrapper {
 
     static let shared = SkyPathWrapper()
+    private let simulationManager = SimulationLocationManager()
 
     var version: String {
         SkyPath.shared.version
     }
-    var onTurbulenceUpdate: (() -> Void)?
-
+    
+    var onUpdate: ((UpdatesType) -> Void)?
+    
+    enum UpdatesType {
+        
+        case turbulenceUpdate,
+             oneLayerUpdate,
+             notificationUpdate(NotificationResult)
+    }
+    
+    var currentServerEnv: Environment {
+        
+        get {
+            guard let data = UserDefaults.standard.data(forKey: "LastUsedEnvironment"),
+                  let env = try? JSONDecoder().decode(Environment.self, from: data) else {
+                return .dev(serverUrl: nil)
+            }
+            return env
+        }
+        set {
+            guard let data = try? JSONEncoder().encode(newValue) else { return }
+            UserDefaults.standard.set(data, forKey: "LastUsedEnvironment")
+            let isStarted = SkyPath.shared.isStarted
+            if isStarted { stop() }
+            start()
+        }
+    }
+    
     func setup() {
 
         precondition(SKYPATH_API_KEY.isEmpty == false, "Please provide your SkyPath API key")
         precondition(AIRLINE_ICAO.isEmpty == false, "Please provide your airline ICAO code")
         precondition(USER_ID.isEmpty == false, "Please provide your user ID")
-
+        
         SkyPath.shared.delegate = self
         SkyPath.shared.logger.level = .verbose
 
@@ -40,10 +67,16 @@ class SkyPathWrapper {
 
         start()
     }
+    
+    func setDataQueryTypes(_ types: SkyPathSDK.DataTypeOptions) {
+        
+        SkyPath.shared.dataQuery.types = types
+        SkyPath.shared.dataQuery.viewportTypes = types
+    }
 
     private func start() {
 
-        SkyPath.shared.start(apiKey: SKYPATH_API_KEY, airline: AIRLINE_ICAO, userId: USER_ID, env: .dev(serverUrl: nil)) { [weak self] error in
+        SkyPath.shared.start(apiKey: SKYPATH_API_KEY, airline: AIRLINE_ICAO, userId: USER_ID, env: currentServerEnv) { [weak self] error in
 
             if let error {
                 print(error)
@@ -58,12 +91,11 @@ class SkyPathWrapper {
 
         SkyPath.shared.stop()
     }
-
+    
     func startFlight() {
 
         let flight = Flight(dep: "KJFK", dest: "KMIA", fnum: "TEST")
         SkyPath.shared.setFlight(flight)
-
         setCorridor()
     }
 
@@ -72,13 +104,12 @@ class SkyPathWrapper {
         SkyPath.shared.setFlight(nil)
     }
 
+    var corridor:[CLLocationCoordinate2D] { [.kjfkAirport, .kiadAirport] }
+    
     func setCorridor() {
 
-        // KJFK-KIAD
-        let corridor = [(-76.76, 37.43), (-72.55,39.50), (-72.21,40.06), (-72.26,41.33), (-72.64,41.86), (-73.51,42.28), (-74.16,42.26), (-78.15,40.46), (-79.10,39.20), (-78.80,37.96), (-77.72,37.30), (-76.76,37.43)]
-            .map {
-                CLLocationCoordinate2D(latitude: $0.1, longitude: $0.0) // corridor is [lng, lat]
-            }
+        let corridor = corridor.geodesic.buffer(widthNM: 100)
+        
         SkyPath.shared.dataQuery.polygon = corridor
     }
 
@@ -100,9 +131,29 @@ class SkyPathWrapper {
             return nil
         }
     }
+    
+    func getOneLayer(showSmooth: Bool = true) -> String? {
+        
+        var query = OneLayerQuery(
+            altRange: 0...52_000,
+            resultOptions: .geoJSON,
+            dataHistoryTime: .twoHours)
+
+        if !showSmooth {
+            query.minSev = .light
+        }
+        do {
+            let result = try SkyPath.shared.oneLayer(with: query).get()
+            let geoJSON = result.geoJSON
+            return geoJSON
+        } catch {
+            print(error)
+            return nil
+        }
+    }
 
     func setViewport(_ viewport: [CLLocationCoordinate2D]) {
-
+        
         SkyPath.shared.dataQuery.viewport = viewport
     }
 
@@ -131,7 +182,14 @@ extension SkyPathWrapper: SkyPathDelegate {
 
         print("SkyPath did receive new turbulence data")
 
-        onTurbulenceUpdate?()
+        onUpdate?(.turbulenceUpdate)
+    }
+    
+    func didReceiveNewOneLayer(areaType: DataAreaType) {
+        
+        print("SkyPath did receive new oneLayer data")
+        
+        onUpdate?(.oneLayerUpdate)
     }
 
     func didFailToFetchNewData(with error: any SkyPathSDK.SPError, type: SkyPathSDK.DataTypeOptions) {
@@ -151,7 +209,7 @@ extension SkyPathWrapper: SkyPathDelegate {
 
         print("SkyPath did find a turbulence notification")
 
-        processNotification(notification)
+        onUpdate?(.notificationUpdate(notification))
     }
 }
 
@@ -159,16 +217,55 @@ extension SkyPathWrapper: SkyPathDelegate {
 
 extension SkyPathWrapper {
 
-    func getNotifications() {
+    func startMonitoringNotifications(altRange:ClosedRange<Double>, route:[CLLocationCoordinate2D]? = nil) {
 
         guard !SkyPath.shared.isMonitoringNotifications else { return }
 
-        let query = NotificationQuery(altRange: 25000...52000, route: nil)
+        let query = NotificationQuery(altRange: altRange, route: route)
         SkyPath.shared.startMonitoringNotifications(with: query)
     }
+}
 
-    func processNotification(_ result: NotificationResult) {
+// MARK: - Environment
 
-        // TODO:
+extension SkyPathWrapper {
+
+    var currentServerEnvStr: String {
+        
+        switch currentServerEnv {
+        case .dev(serverUrl: let url):
+            return url ?? currentServerEnv.baseUrl
+        case .staging(serverUrl: let url):
+            return url ?? currentServerEnv.baseUrl
+        default: return ""
+        }
+    }
+}
+
+// MARK: - SimulationLocationManager
+
+extension SkyPathWrapper {
+    
+    var isSimulationRunning: Bool {
+        
+        simulationManager.isRunning
+    }
+    
+    func startFlightSimulation(with coordinates: [CLLocationCoordinate2D],
+                               delegate: SimulationLocationManagerDelegate) {
+        
+        SkyPath.shared.enableSimulation(true)
+        SkyPath.shared.enablePushSimulated(false)
+        let altRange: ClosedRange<Double> = 30000...35000
+        let altitude: Double = 32000
+        simulationManager.start(with: coordinates, altitude: altitude, delegate: delegate)
+        startMonitoringNotifications(altRange: altRange, route: simulationManager.route)
+    }
+    
+    func stopFlightSimulation() {
+        
+        SkyPath.shared.enableSimulation(false)
+        SkyPath.shared.stopMonitoringNotifications()
+        simulationManager.stop()
     }
 }
