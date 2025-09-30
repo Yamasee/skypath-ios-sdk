@@ -28,4 +28,7 @@ extension CLLocationCoordinate2D {
     
     static var kjfkAirport = CLLocationCoordinate2D(latitude: 40.641766, longitude: -73.780968)
     static var kiadAirport = CLLocationCoordinate2D(latitude: 38.9519444444, longitude: -77.4480555556)
+    static var omdbAirport = CLLocationCoordinate2D(latitude: 25.2528, longitude: 55.3644)
+    static var northPole = CLLocationCoordinate2D(latitude: 90, longitude: 0)
+    static var ksmfAirport = CLLocationCoordinate2D(latitude: 38.69556, longitude: -121.59083)
 }

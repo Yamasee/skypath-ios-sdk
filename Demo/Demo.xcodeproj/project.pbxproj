@@ -26,6 +26,7 @@
 		9D5AA4122E24FFA100EFD8BB /* SimulationLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA3EB2E24FFA100EFD8BB /* SimulationLocationManager.swift */; };
 		9D5AA4132E24FFA100EFD8BB /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA3FC2E24FFA100EFD8BB /* NotificationView.swift */; };
 		9D5AA4142E24FFA100EFD8BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA3E32E24FFA100EFD8BB /* AppDelegate.swift */; };
+		9D7006892E8BC74800C6E196 /* GEOSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9D7006882E8BC74800C6E196 /* GEOSwift */; };
 		9DAEDA2A2E25016A00F014D4 /* Turf in Frameworks */ = {isa = PBXBuildFile; productRef = 9DAEDA292E25016A00F014D4 /* Turf */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 			files = (
 				9D5983A129A7647500F0244B /* SkyPathSDK.xcframework in Frameworks */,
 				9DAEDA2A2E25016A00F014D4 /* Turf in Frameworks */,
+				9D7006892E8BC74800C6E196 /* GEOSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +214,7 @@
 			name = Demo;
 			packageProductDependencies = (
 				9DAEDA292E25016A00F014D4 /* Turf */,
+				9D7006882E8BC74800C6E196 /* GEOSwift */,
 			);
 			productName = Demo;
 			productReference = 9D374E1527BE517B000DE836 /* Demo.app */;
@@ -243,6 +246,7 @@
 			mainGroup = 9D374E0C27BE517B000DE836;
 			packageReferences = (
 				9DAEDA282E25016A00F014D4 /* XCRemoteSwiftPackageReference "turf-swift" */,
+				9D7006872E8BC74800C6E196 /* XCRemoteSwiftPackageReference "GEOSwift" */,
 			);
 			productRefGroup = 9D374E1627BE517B000DE836 /* Products */;
 			projectDirPath = "";
@@ -512,6 +516,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9D7006872E8BC74800C6E196 /* XCRemoteSwiftPackageReference "GEOSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Yamasee/GEOSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.2.0;
+			};
+		};
 		9DAEDA282E25016A00F014D4 /* XCRemoteSwiftPackageReference "turf-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mapbox/turf-swift.git";
@@ -523,6 +535,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9D7006882E8BC74800C6E196 /* GEOSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D7006872E8BC74800C6E196 /* XCRemoteSwiftPackageReference "GEOSwift" */;
+			productName = GEOSwift;
+		};
 		9DAEDA292E25016A00F014D4 /* Turf */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9DAEDA282E25016A00F014D4 /* XCRemoteSwiftPackageReference "turf-swift" */;

@@ -1,6 +1,24 @@
 {
-  "originHash" : "d57182a84e25d80164fe9ed203a2269068d73f75a2a7a486f443e8db6cecc624",
+  "originHash" : "2029339e0cba5b011e3170b9cde12c0d1cee2c2b2355da4620076e96d4cd5aef",
   "pins" : [
+    {
+      "identity" : "geos",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/GEOSwift/geos.git",
+      "state" : {
+        "revision" : "4d8af495e7507f48f1ae9104102debdd2043917b",
+        "version" : "9.0.0"
+      }
+    },
+    {
+      "identity" : "geoswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Yamasee/GEOSwift",
+      "state" : {
+        "revision" : "1448d60e2e6abc2d8cc3dcf9bd1288c0c0e684d6",
+        "version" : "11.2.0"
+      }
+    },
     {
       "identity" : "turf-swift",
       "kind" : "remoteSourceControl",
