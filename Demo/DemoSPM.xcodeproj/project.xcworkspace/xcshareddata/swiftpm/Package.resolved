@@ -2,12 +2,30 @@
   "originHash" : "14d12ccdd63ad8e0ace28a1853ad72af8562a1614098a6f6085ed5bee153ffc5",
   "pins" : [
     {
+      "identity" : "geos",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/GEOSwift/geos.git",
+      "state" : {
+        "revision" : "4d8af495e7507f48f1ae9104102debdd2043917b",
+        "version" : "9.0.0"
+      }
+    },
+    {
+      "identity" : "geoswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Yamasee/GEOSwift.git",
+      "state" : {
+        "revision" : "1448d60e2e6abc2d8cc3dcf9bd1288c0c0e684d6",
+        "version" : "11.2.0"
+      }
+    },
+    {
       "identity" : "skypath-ios-sdk",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Yamasee/skypath-ios-sdk",
       "state" : {
-        "revision" : "bd336a2bb108a20b3cf02eed640194f7a00fdf77",
-        "version" : "3.0.7"
+        "revision" : "8ca045a2a1e9853cb9ffe02671b0e357cb5fa6a3",
+        "version" : "3.0.9"
       }
     },
     {
