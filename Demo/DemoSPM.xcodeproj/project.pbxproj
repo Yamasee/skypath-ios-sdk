@@ -517,7 +517,7 @@
 			repositoryURL = "https://github.com/Yamasee/skypath-ios-sdk";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.9;
+				minimumVersion = 3.0.10;
 			};
 		};
 		9DE15A992C3EC22F00D50678 /* XCRemoteSwiftPackageReference "skypath-ios-sdk" */ = {
