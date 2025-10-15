@@ -1,5 +1,5 @@
 {
-  "originHash" : "2029339e0cba5b011e3170b9cde12c0d1cee2c2b2355da4620076e96d4cd5aef",
+  "originHash" : "938eea7e46ad757b5d7ee26dd4663a8b1101748ee26aa0a47846be40934cdc36",
   "pins" : [
     {
       "identity" : "geos",
@@ -8,15 +8,6 @@
       "state" : {
         "revision" : "4d8af495e7507f48f1ae9104102debdd2043917b",
         "version" : "9.0.0"
-      }
-    },
-    {
-      "identity" : "geoswift",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Yamasee/GEOSwift",
-      "state" : {
-        "revision" : "1448d60e2e6abc2d8cc3dcf9bd1288c0c0e684d6",
-        "version" : "11.2.0"
       }
     },
     {
