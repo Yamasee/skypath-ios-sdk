@@ -211,6 +211,11 @@ extension SkyPathWrapper: SkyPathDelegate {
 
         onUpdate?(.notificationUpdate(notification))
     }
+
+    func didUpdateConfig() {
+        
+        print("SkyPath did update config")
+    }
 }
 
 // MARK: - Notifications
@@ -256,10 +261,10 @@ extension SkyPathWrapper {
         
         SkyPath.shared.enableSimulation(true)
         SkyPath.shared.enablePushSimulated(false)
-        let altRange: ClosedRange<Double> = 30000...35000
-        let altitude: Double = 32000
-        simulationManager.start(with: coordinates, altitude: altitude, delegate: delegate)
-        startMonitoringNotifications(altRange: altRange, route: simulationManager.route)
+        let altFtRange: ClosedRange<Double> = 30000...35000
+        let altitudeFt: Double = 39000
+        simulationManager.start(with: coordinates, altitudeFt: altitudeFt, delegate: delegate)
+        startMonitoringNotifications(altRange: altFtRange, route: simulationManager.route)
     }
     
     func stopFlightSimulation() {
