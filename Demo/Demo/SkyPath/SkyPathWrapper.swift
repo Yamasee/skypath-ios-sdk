@@ -58,7 +58,7 @@ class SkyPathWrapper {
         SkyPath.shared.delegate = self
         SkyPath.shared.logger.level = .verbose
 
-        SkyPath.shared.dataHistoryTime = .twoHours
+        SkyPath.shared.dataHistoryTime = .fourHours
         SkyPath.shared.dataQuery.types = [.turbulence]
 
         if let aircraft = SkyPath.shared.aircraft(byId: "B737") {
