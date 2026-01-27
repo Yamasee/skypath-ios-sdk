@@ -256,8 +256,8 @@ extension SkyPathWrapper {
         
         SkyPath.shared.enableSimulation(true)
         SkyPath.shared.enablePushSimulated(false)
-        let altFtRange: ClosedRange<Double> = 30000...35000
-        let altitudeFt: Double = 39000
+        let altFtRange: ClosedRange<Double> = 36000...40000
+        let altitudeFt: Double = 38000
         simulationManager.start(with: coordinates, altitudeFt: altitudeFt, delegate: delegate)
         startMonitoringNotifications(altRange: altFtRange, route: simulationManager.route)
     }
