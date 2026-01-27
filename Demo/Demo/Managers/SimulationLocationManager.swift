@@ -38,7 +38,7 @@ class SimulationLocationManager {
     // MARK: - Actions
     
     func start(with coordinates: [CLLocationCoordinate2D],
-               altitude: Double,
+               altitudeFt: CLLocationDistance,
                delegate: SimulationLocationManagerDelegate) {
         
         if coordinates.isEmpty || isRunning { return }
@@ -62,11 +62,11 @@ class SimulationLocationManager {
                 let nextCoord = self.route[nextCoordIdx]
                 direction = currentCoord.direction(to: nextCoord)
             }
-            
-            let location = CLLocation(coordinate:
-                                        CLLocationCoordinate2D(latitude: currentCoord.latitude,
-                                                               longitude: currentCoord.longitude),
-                                      altitude: 30000,
+
+            let altitudeM = Measurement<UnitLength>(value: altitudeFt, unit: .feet).converted(to: .meters).value
+
+            let location = CLLocation(coordinate: currentCoord,
+                                      altitude: altitudeM,
                                       horizontalAccuracy: 1000,
                                       verticalAccuracy: 304.8,
                                       course: direction,

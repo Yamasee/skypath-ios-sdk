@@ -58,7 +58,7 @@ class SkyPathWrapper {
         SkyPath.shared.delegate = self
         SkyPath.shared.logger.level = .verbose
 
-        SkyPath.shared.dataHistoryTime = .twoHours
+        SkyPath.shared.dataHistoryTime = .fourHours
         SkyPath.shared.dataQuery.types = [.turbulence]
 
         if let aircraft = SkyPath.shared.aircraft(byId: "B737") {
@@ -256,10 +256,10 @@ extension SkyPathWrapper {
         
         SkyPath.shared.enableSimulation(true)
         SkyPath.shared.enablePushSimulated(false)
-        let altRange: ClosedRange<Double> = 30000...35000
-        let altitude: Double = 32000
-        simulationManager.start(with: coordinates, altitude: altitude, delegate: delegate)
-        startMonitoringNotifications(altRange: altRange, route: simulationManager.route)
+        let altFtRange: ClosedRange<Double> = 36000...40000
+        let altitudeFt: Double = 38000
+        simulationManager.start(with: coordinates, altitudeFt: altitudeFt, delegate: delegate)
+        startMonitoringNotifications(altRange: altFtRange, route: simulationManager.route)
     }
     
     func stopFlightSimulation() {
