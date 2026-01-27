@@ -211,11 +211,6 @@ extension SkyPathWrapper: SkyPathDelegate {
 
         onUpdate?(.notificationUpdate(notification))
     }
-
-    func didUpdateConfig() {
-        
-        print("SkyPath did update config")
-    }
 }
 
 // MARK: - Notifications
