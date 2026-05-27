@@ -28,6 +28,7 @@
 		9D5AA4142E24FFA100EFD8BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA3E32E24FFA100EFD8BB /* AppDelegate.swift */; };
 		9D86B8482E9E8CD6009B0C71 /* geos in Frameworks */ = {isa = PBXBuildFile; productRef = 9D86B8472E9E8CD6009B0C71 /* geos */; };
 		9D86B8492E9E8D5B009B0C71 /* geos in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 9D86B8472E9E8CD6009B0C71 /* geos */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9DAAEA922FC748F100E63688 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 9DAAEA912FC748F100E63688 /* SwiftProtobuf */; };
 		9DAEDA2A2E25016A00F014D4 /* Turf in Frameworks */ = {isa = PBXBuildFile; productRef = 9DAEDA292E25016A00F014D4 /* Turf */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 				9D5983A129A7647500F0244B /* SkyPathSDK.xcframework in Frameworks */,
 				9D86B8482E9E8CD6009B0C71 /* geos in Frameworks */,
 				9DAEDA2A2E25016A00F014D4 /* Turf in Frameworks */,
+				9DAAEA922FC748F100E63688 /* SwiftProtobuf in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +219,7 @@
 			packageProductDependencies = (
 				9DAEDA292E25016A00F014D4 /* Turf */,
 				9D86B8472E9E8CD6009B0C71 /* geos */,
+				9DAAEA912FC748F100E63688 /* SwiftProtobuf */,
 			);
 			productName = Demo;
 			productReference = 9D374E1527BE517B000DE836 /* Demo.app */;
@@ -249,6 +252,7 @@
 			packageReferences = (
 				9DAEDA282E25016A00F014D4 /* XCRemoteSwiftPackageReference "turf-swift" */,
 				9D86B8462E9E8CD6009B0C71 /* XCRemoteSwiftPackageReference "geos" */,
+				9DAAEA902FC748F100E63688 /* XCRemoteSwiftPackageReference "swift-protobuf" */,
 			);
 			productRefGroup = 9D374E1627BE517B000DE836 /* Products */;
 			projectDirPath = "";
@@ -449,7 +453,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,7 +484,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -526,6 +530,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		9DAAEA902FC748F100E63688 /* XCRemoteSwiftPackageReference "swift-protobuf" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Yamasee/swift-protobuf";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.32.0;
+			};
+		};
 		9DAEDA282E25016A00F014D4 /* XCRemoteSwiftPackageReference "turf-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mapbox/turf-swift.git";
@@ -541,6 +553,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9D86B8462E9E8CD6009B0C71 /* XCRemoteSwiftPackageReference "geos" */;
 			productName = geos;
+		};
+		9DAAEA912FC748F100E63688 /* SwiftProtobuf */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DAAEA902FC748F100E63688 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobuf;
 		};
 		9DAEDA292E25016A00F014D4 /* Turf */ = {
 			isa = XCSwiftPackageProductDependency;

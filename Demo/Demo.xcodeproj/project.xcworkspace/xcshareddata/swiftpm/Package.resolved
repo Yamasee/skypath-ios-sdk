@@ -1,5 +1,5 @@
 {
-  "originHash" : "938eea7e46ad757b5d7ee26dd4663a8b1101748ee26aa0a47846be40934cdc36",
+  "originHash" : "1f4ee03dd5293a46b1af8fd25c262bde19e016fd443c3c9ea9108e9d6c108b0d",
   "pins" : [
     {
       "identity" : "geos",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "4d8af495e7507f48f1ae9104102debdd2043917b",
         "version" : "9.0.0"
+      }
+    },
+    {
+      "identity" : "swift-protobuf",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Yamasee/swift-protobuf",
+      "state" : {
+        "revision" : "a786e3aed096f2bec745522ef21382073728e6e5",
+        "version" : "1.32.0"
       }
     },
     {
