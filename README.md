@@ -13,8 +13,7 @@ Check out the [SkyPath Docs](https://docs.skypath.io).
 ## Requirements
 
 - iOS 16.0+
-- Xcode 16.2+
-- Swift 5.10+
+- Xcode 26.2+
 
 ## Demo
 
@@ -26,5 +25,5 @@ You will need a valid SkyPath API key and set an airline ICAO with a user ID.
 
 ## License
 
-Copyright © SkyPath LTD 2024. All rights reserved. 
+Copyright © SkyPath LTD 2026. All rights reserved. 
 See [Terms & Conditions](https://skypath.io/terms/).
