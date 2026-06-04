@@ -30,7 +30,7 @@ class LayersTableViewCell: UITableViewCell {
     
     private func icon(for type: DataTypeOptions) -> UIImage? {
         switch type {
-        case .oneLayer: return UIImage(named: "onelayer")
+        case .oneLayer: return UIImage(named: "sp_one_layer")
         case .turbulence: return UIImage(named: "spobservations")
         default: return nil
         }
