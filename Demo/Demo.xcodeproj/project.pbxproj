@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9D5983A129A7647500F0244B /* SkyPathSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D59839F29A7646700F0244B /* SkyPathSDK.xcframework */; };
-		9D5983A229A7647500F0244B /* SkyPathSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D59839F29A7646700F0244B /* SkyPathSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5B9BB6272FD1B05B0082DB52 /* SkyPathSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9BB6252FD1ADDF0082DB52 /* SkyPathSDK.xcframework */; };
+		5B9BB6282FD1B05B0082DB52 /* SkyPathSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9BB6252FD1ADDF0082DB52 /* SkyPathSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9D5AA4022E24FFA100EFD8BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D5AA3F02E24FFA100EFD8BB /* LaunchScreen.storyboard */; };
 		9D5AA4032E24FFA100EFD8BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D5AA3F22E24FFA100EFD8BB /* Main.storyboard */; };
 		9D5AA4042E24FFA100EFD8BB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D5AA3EE2E24FFA100EFD8BB /* Colors.xcassets */; };
@@ -40,7 +40,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				9D86B8492E9E8D5B009B0C71 /* geos in Embed Frameworks */,
-				9D5983A229A7647500F0244B /* SkyPathSDK.xcframework in Embed Frameworks */,
+				5B9BB6282FD1B05B0082DB52 /* SkyPathSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -48,8 +48,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5B9BB6252FD1ADDF0082DB52 /* SkyPathSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SkyPathSDK.xcframework; sourceTree = "<group>"; };
 		9D374E1527BE517B000DE836 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D59839F29A7646700F0244B /* SkyPathSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SkyPathSDK.xcframework; path = ../SkyPathSDK.xcframework; sourceTree = "<group>"; };
 		9D5AA3E32E24FFA100EFD8BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D5AA3E42E24FFA100EFD8BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9D5AA3E62E24FFA100EFD8BB /* CLLocationCoordinate2D+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Ext.swift"; sourceTree = "<group>"; };
@@ -75,10 +75,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D5983A129A7647500F0244B /* SkyPathSDK.xcframework in Frameworks */,
 				9D86B8482E9E8CD6009B0C71 /* geos in Frameworks */,
 				9DAEDA2A2E25016A00F014D4 /* Turf in Frameworks */,
 				9DAAEA922FC748F100E63688 /* SwiftProtobuf in Frameworks */,
+				5B9BB6272FD1B05B0082DB52 /* SkyPathSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 			children = (
 				9D5AA4012E24FFA100EFD8BB /* Demo */,
 				9D374E1627BE517B000DE836 /* Products */,
-				9D59839F29A7646700F0244B /* SkyPathSDK.xcframework */,
+				5B9BB6252FD1ADDF0082DB52 /* SkyPathSDK.xcframework */,
 			);
 			sourceTree = "<group>";
 		};
