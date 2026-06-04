@@ -30,7 +30,7 @@ class DomainSelectorAlert: UIAlertController {
             popoverController.permittedArrowDirections = .any
         }
 
-        let devEnv = SkyPathSDK.Environment.dev(serverUrl: nil)
+        let devEnv = SkyPathSDK.Environment.staging(serverUrl: nil)
         addAction(UIAlertAction(title: devEnv.baseUrl, style: .default) { _ in
             wrapper.currentServerEnv = devEnv
         })
@@ -48,7 +48,7 @@ class DomainSelectorAlert: UIAlertController {
 
             inputAlert.addAction(UIAlertAction(title: "OK", style: .default) { _ in
                 if let urlText = inputAlert.textFields?.first?.text, !urlText.isEmpty {
-                    wrapper.currentServerEnv = .dev(serverUrl: urlText)
+                    wrapper.currentServerEnv = .staging(serverUrl: urlText)
                 }
             })
 
