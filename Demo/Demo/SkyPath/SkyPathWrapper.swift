@@ -36,7 +36,7 @@ class SkyPathWrapper {
         get {
             guard let data = UserDefaults.standard.data(forKey: "LastUsedEnvironment"),
                   let env = try? JSONDecoder().decode(Environment.self, from: data) else {
-                return .staging(serverUrl: nil)
+                return .dev(serverUrl: nil)
             }
             return env
         }
@@ -56,7 +56,7 @@ class SkyPathWrapper {
         precondition(USER_ID.isEmpty == false, "Please provide your user ID")
         
         SkyPath.shared.delegate = self
-        SkyPath.shared.logger.printLevel = .verbose
+        SkyPath.shared.logger.level = .verbose
 
         SkyPath.shared.dataHistoryTime = .fourHours
         SkyPath.shared.dataQuery.types = [.turbulence]
@@ -69,24 +69,9 @@ class SkyPathWrapper {
     }
     
     func setDataQueryTypes(_ types: SkyPathSDK.DataTypeOptions) {
-
-        var types = types
-        // Forecast is a separately entitled feature on top of OneLayer.
-        // Opt in only when the user is entitled.
-        if types.contains(.oneLayer), DataTypeOptions.forecast.enabled {
-            types.insert(.forecast)
-        }
+        
         SkyPath.shared.dataQuery.types = types
         SkyPath.shared.dataQuery.viewportTypes = types
-    }
-
-    /// Toggle Forecast on top of OneLayer.
-    /// Forecast is a separately entitled feature. Check entitlement with
-    /// `DataTypeOptions.forecast.enabled` before opting in.
-    func setForecastEnabled(_ enabled: Bool) {
-
-        guard DataTypeOptions.forecast.enabled else { return }
-        SkyPath.shared.dataQuery.types.set(type: .forecast, enabled: enabled)
     }
 
     private func start() {
@@ -97,8 +82,6 @@ class SkyPathWrapper {
                 print(error)
                 return
             }
-            
-            assert(SkyPath.shared.isStarted, "SkyPath.shared.isStarted is false")
 
             self?.startFlight()
         }
