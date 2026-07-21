@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D3A9A16300F6C1300BC0502 /* SwiftProtobuf in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 9DAAEA912FC748F100E63688 /* SwiftProtobuf */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9D5983A129A7647500F0244B /* SkyPathSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D59839F29A7646700F0244B /* SkyPathSDK.xcframework */; };
 		9D5983A229A7647500F0244B /* SkyPathSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D59839F29A7646700F0244B /* SkyPathSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9D5AA4022E24FFA100EFD8BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D5AA3F02E24FFA100EFD8BB /* LaunchScreen.storyboard */; };
@@ -41,6 +42,7 @@
 			files = (
 				9D86B8492E9E8D5B009B0C71 /* geos in Embed Frameworks */,
 				9D5983A229A7647500F0244B /* SkyPathSDK.xcframework in Embed Frameworks */,
+				9D3A9A16300F6C1300BC0502 /* SwiftProtobuf in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
