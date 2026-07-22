@@ -15,17 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Yamasee/skypath-ios-sdk",
       "state" : {
-        "revision" : "78aac2e04f07accdc417a267abb837586b6e0157",
-        "version" : "3.1.2"
-      }
-    },
-    {
-      "identity" : "swift-protobuf",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Yamasee/swift-protobuf",
-      "state" : {
-        "revision" : "a786e3aed096f2bec745522ef21382073728e6e5",
-        "version" : "1.32.0"
+        "revision" : "ef5163ab7e5c1a97297aea66c1652d7036887a35",
+        "version" : "3.1.3"
       }
     },
     {
