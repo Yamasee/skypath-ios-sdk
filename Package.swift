@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "SkyPath",
     platforms: [
-        .iOS(.v16)
+        .iOS(.v17)
     ],
     products: [
         .library(name: "SkyPathSDK", targets: ["SkyPathSDKTarget"])
@@ -16,8 +16,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "SkyPathSDK",
-            url: "https://github.com/Yamasee/skypath-ios-sdk/releases/download/v3.1.3/SkyPathSDK.xcframework.zip",
-            checksum: "85e9e06ffe4a0cdc1035ea0f39ca8fbee9b3e02f8e0b8bc77763e5c75dabb0c2"),
+            url: "https://github.com/Yamasee/skypath-ios-sdk/releases/download/v4.0.0/SkyPathSDK.xcframework.zip",
+            checksum: "501232a992bdfa92fe7fd6a896287c47cebd5751572f092a94e4797732ecdcdc"),
         .target(
             name: "SkyPathSDKTarget",
             dependencies: [

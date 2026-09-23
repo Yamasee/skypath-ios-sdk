@@ -73,7 +73,7 @@ class SimulationLocationManager {
                                       speed: 1500,
                                       timestamp: Date())
             
-            SkyPath.shared.simulatedLocation(location)
+            SkyPath.shared.testing.simulatedLocation(location)
             
             self.delegate?.simulationManager(self, didUpdateLocation: currentCoord, direction: direction)
             self.coordinateIndex += 1

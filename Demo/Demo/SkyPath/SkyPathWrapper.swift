@@ -36,16 +36,14 @@ class SkyPathWrapper {
         get {
             guard let data = UserDefaults.standard.data(forKey: "LastUsedEnvironment"),
                   let env = try? JSONDecoder().decode(Environment.self, from: data) else {
-                return .dev(serverUrl: nil)
+                return .staging(serverUrl: nil)
             }
             return env
         }
         set {
             guard let data = try? JSONEncoder().encode(newValue) else { return }
+            // Switching the environment at runtime is not supported, it's applied on the next app launch.
             UserDefaults.standard.set(data, forKey: "LastUsedEnvironment")
-            let isStarted = SkyPath.shared.isStarted
-            if isStarted { stop() }
-            start()
         }
     }
     
@@ -56,27 +54,38 @@ class SkyPathWrapper {
         precondition(USER_ID.isEmpty == false, "Please provide your user ID")
         
         SkyPath.shared.delegate = self
-        SkyPath.shared.logger.level = .verbose
+        SkyPath.shared.loggerLevel = .verbose
 
         SkyPath.shared.dataHistoryTime = .fourHours
-        SkyPath.shared.dataQuery.types = [.turbulence]
 
-        if let aircraft = SkyPath.shared.aircraft(byId: "B737") {
-            SkyPath.shared.aircraft = aircraft
+        do {
+            try SkyPath.shared.updateFetchConfig {
+                $0.types = [.observations]
+                $0.aircraftICAO = "B737"
+            }
+        } catch {
+            print(error)
         }
 
         start()
     }
     
-    func setDataQueryTypes(_ types: SkyPathSDK.DataTypeOptions) {
+    func setDataQueryTypes(_ types: Set<SkyPathSDK.DataType>) {
         
-        SkyPath.shared.dataQuery.types = types
-        SkyPath.shared.dataQuery.viewportTypes = types
+        do {
+            try SkyPath.shared.updateFetchConfig {
+                $0.types = types
+                $0.viewportTypes = types
+            }
+        } catch {
+            print(error)
+        }
     }
 
     private func start() {
 
-        SkyPath.shared.start(apiKey: SKYPATH_API_KEY, airline: AIRLINE_ICAO, userId: USER_ID, env: currentServerEnv) { [weak self] error in
+        let config = AuthConfig(apiKey: SKYPATH_API_KEY, companyId: AIRLINE_ICAO, userId: USER_ID, env: currentServerEnv)
+        SkyPath.shared.initialize(with: config) { [weak self] error in
 
             if let error {
                 print(error)
@@ -87,14 +96,9 @@ class SkyPathWrapper {
         }
     }
 
-    func stop() {
-
-        SkyPath.shared.stop()
-    }
-    
     func startFlight() {
 
-        let flight = Flight(dep: "KJFK", dest: "KMIA", fnum: "TEST")
+        let flight = Flight(dep: "KJFK", dest: "KMIA", num: "TEST")
         SkyPath.shared.setFlight(flight)
         setCorridor()
     }
@@ -110,20 +114,26 @@ class SkyPathWrapper {
 
         let corridor = corridor.geodesic.buffer(widthNM: 100)
         
-        SkyPath.shared.dataQuery.polygon = corridor
+        do {
+            try SkyPath.shared.updateFetchConfig { $0.polygon = corridor }
+        } catch {
+            print(error)
+        }
     }
 
     func getTurbulence(showSmooth: Bool = true) -> String? {
 
-        var query = TurbulenceQuery(
+        var query = ObservationsQuery(
             type: .server,
             altRange: 0...52_000,
             resultOptions: .geoJSON)
+        query.route = corridor
+        query.routeWidth = 100
         if !showSmooth {
             query.minSev = .light
         }
         do {
-            let result = try SkyPath.shared.turbulence(with: query).get()
+            let result = try SkyPath.shared.observations(with: query).get()
             let geoJSON = result.geoJSON
             return geoJSON
         } catch {
@@ -154,12 +164,16 @@ class SkyPathWrapper {
 
     func setViewport(_ viewport: [CLLocationCoordinate2D]) {
         
-        SkyPath.shared.dataQuery.viewport = viewport
+        do {
+            try SkyPath.shared.updateFetchConfig { $0.viewport = viewport }
+        } catch {
+            print(error)
+        }
     }
 
     func color(ofSev sev: Int) -> UIColor? {
 
-        return TurbulenceSeverity(rawValue: sev)?.colorWithOpacity
+        return TurbulenceSeverity(rawValue: sev)?.demoColorWithOpacity
     }
 }
 
@@ -167,8 +181,9 @@ class SkyPathWrapper {
 
 extension SkyPathWrapper: SkyPathDelegate {
 
-    func didUpdateRecordingStatus(to recording: Bool) {
+    func didUpdateRecordingState(to state: RecordingState) {
 
+        let recording = state == .recording
         if recording {
             print("SkyPath did start recording")
         } else {
@@ -176,9 +191,16 @@ extension SkyPathWrapper: SkyPathDelegate {
 
             // Call `start()` again to continue recording if needed.
         }
+
+        let inPosition = state == .recording
+        let horizontal = state == .horizontal
+        print("SkyPath device is \(inPosition ? "" : "not ")in position and \(horizontal ? "" : "not ")horizontal")
+
+        // Turbulence data is not tracked when device in not in position or is horizontal.
+        // Consider to show a notice here to properly position device in the cradle.
     }
 
-    func didReceiveNewTurbulenceData(areaType: DataAreaType) {
+    func didReceiveNewObservationsData(areaType: DataAreaType) {
 
         print("SkyPath did receive new turbulence data")
 
@@ -192,17 +214,9 @@ extension SkyPathWrapper: SkyPathDelegate {
         onUpdate?(.oneLayerUpdate)
     }
 
-    func didFailToFetchNewData(with error: any SkyPathSDK.SPError, type: SkyPathSDK.DataTypeOptions) {
+    func didFail(with error: any SkyPathSDK.SPError, dataType: SkyPathSDK.DataType?) {
 
         print("SkyPath did fail to fetch new data with error: \(error)")
-    }
-
-    func didChangeDevicePosition(_ inPosition: Bool, horizontal: Bool) {
-
-        print("SkyPath device is \(inPosition ? "" : "not ")in position and \(horizontal ? "" : "not ")horizontal")
-
-        // Turbulence data is not tracked when device in not in position or is horizontal.
-        // Consider to show a notice here to properly position device in the cradle.
     }
 
     func didReceiveNotification(_ notification: NotificationResult) {
@@ -233,8 +247,6 @@ extension SkyPathWrapper {
     var currentServerEnvStr: String {
         
         switch currentServerEnv {
-        case .dev(serverUrl: let url):
-            return url ?? currentServerEnv.baseUrl
         case .staging(serverUrl: let url):
             return url ?? currentServerEnv.baseUrl
         default: return ""
@@ -254,8 +266,8 @@ extension SkyPathWrapper {
     func startFlightSimulation(with coordinates: [CLLocationCoordinate2D],
                                delegate: SimulationLocationManagerDelegate) {
         
-        SkyPath.shared.enableSimulation(true)
-        SkyPath.shared.enablePushSimulated(false)
+        SkyPath.shared.testing.enableSimulation(true)
+        SkyPath.shared.testing.enablePushSimulated(false)
         let altFtRange: ClosedRange<Double> = 36000...40000
         let altitudeFt: Double = 38000
         simulationManager.start(with: coordinates, altitudeFt: altitudeFt, delegate: delegate)
@@ -264,7 +276,7 @@ extension SkyPathWrapper {
     
     func stopFlightSimulation() {
         
-        SkyPath.shared.enableSimulation(false)
+        SkyPath.shared.testing.enableSimulation(false)
         SkyPath.shared.stopMonitoringNotifications()
         simulationManager.stop()
     }

@@ -14,24 +14,24 @@ class LayersTableViewCell: UITableViewCell {
     @IBOutlet weak private var checkbox: UIImageView!
     @IBOutlet weak private var icon: UIImageView!
     
-    func setup(withType type: DataTypeOptions, _ isSelected: Bool) {
+    func setup(withType type: DataType, _ isSelected: Bool) {
         layerName.text = title(for: type)
         checkbox.image = UIImage(named: "checkbox_\(isSelected ? "selected" : "empty")")
         icon.image = icon(for: type)
     }
     
-    private func title(for type: DataTypeOptions) -> String {
+    private func title(for type: DataType) -> String {
         switch type {
         case .oneLayer: return "SkyPath OneLayer"
-        case .turbulence: return "SkyPath Observations"
+        case .observations: return "SkyPath Observations"
         default: return ""
         }
     }
     
-    private func icon(for type: DataTypeOptions) -> UIImage? {
+    private func icon(for type: DataType) -> UIImage? {
         switch type {
         case .oneLayer: return UIImage(named: "onelayer")
-        case .turbulence: return UIImage(named: "spobservations")
+        case .observations: return UIImage(named: "spobservations")
         default: return nil
         }
     }

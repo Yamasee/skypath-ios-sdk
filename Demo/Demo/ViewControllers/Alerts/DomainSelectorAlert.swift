@@ -30,14 +30,10 @@ class DomainSelectorAlert: UIAlertController {
             popoverController.permittedArrowDirections = .any
         }
 
-        let devEnv = SkyPathSDK.Environment.dev(serverUrl: nil)
-        addAction(UIAlertAction(title: devEnv.baseUrl, style: .default) { _ in
-            wrapper.currentServerEnv = devEnv
-        })
-        
         let stagEnv = SkyPathSDK.Environment.staging(serverUrl: nil)
-        addAction(UIAlertAction(title: stagEnv.baseUrl, style: .default) { _ in
+        addAction(UIAlertAction(title: stagEnv.baseUrl, style: .default) { [weak parentVC] _ in
             wrapper.currentServerEnv = stagEnv
+            Self.showRestartNotice(on: parentVC)
         })
 
         addAction(UIAlertAction(title: "Custom", style: .default) { [weak parentVC] _ in
@@ -46,9 +42,10 @@ class DomainSelectorAlert: UIAlertController {
                 textField.keyboardType = .URL
             }
 
-            inputAlert.addAction(UIAlertAction(title: "OK", style: .default) { _ in
+            inputAlert.addAction(UIAlertAction(title: "OK", style: .default) { [weak parentVC] _ in
                 if let urlText = inputAlert.textFields?.first?.text, !urlText.isEmpty {
-                    wrapper.currentServerEnv = .dev(serverUrl: urlText)
+                    wrapper.currentServerEnv = .staging(serverUrl: urlText)
+                    Self.showRestartNotice(on: parentVC)
                 }
             })
 
@@ -70,5 +67,12 @@ class DomainSelectorAlert: UIAlertController {
         
         guard let parentVC else { return }
         parentVC.present(self, animated: true)
+    }
+    
+    private static func showRestartNotice(on parentVC: UIViewController?) {
+        
+        let alert = UIAlertController(title: "Restart Required", message: "The new domain will be used after the app is restarted.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        parentVC?.present(alert, animated: true)
     }
 }

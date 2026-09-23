@@ -42,8 +42,8 @@ class MapViewController: UIViewController {
     }
     
     private let minSmoothZoomLevel = 9
-    var skyPathLayers: [DataTypeOptions] = [.turbulence, .oneLayer]
-    var selectedLayer: DataTypeOptions { skyPathLayers[selectedLayerIdx] }
+    var skyPathLayers: [DataType] = [.observations, .oneLayer]
+    var selectedLayer: DataType { skyPathLayers[selectedLayerIdx] }
     private let turbulenceClusterer = SkyPathSDK.TurbulenceClusterer(options: .init())
 
     private let dataQueue = DispatchQueue(label: "skypath.demo.data")
@@ -93,15 +93,15 @@ class MapViewController: UIViewController {
                 
                 var items = [any SkyPathSDK.TurbulenceItemable]()
                 switch selectedLayer {
-                case .turbulence:
-                    items = notificationResult.turbulence
+                case .observations:
+                    items = notificationResult.observations
                 case .oneLayer:
                     items = notificationResult.oneLayer
                 default:
                     return
                 }
                 
-                items = items.filter { $0.sev != .none }
+                items = items.filter { $0.sev != .smooth }
                 
                 guard !items.isEmpty,
                       let selectedItem = processNotificationResult(items: items) else { return }
@@ -115,7 +115,7 @@ class MapViewController: UIViewController {
     /// Marks the selected cluster as notified to prevent reprocessing in the future.
     /// - Parameter items: A list of turbulence items to cluster and evaluate.
     /// - Returns: The nearest maximum severity item from the first unnotified cluster, or nil if none found.
-    private func processNotificationResult(items: [any SkyPathSDK.TurbulenceItemable]) -> TurbulenceItem? {
+    private func processNotificationResult(items: [any SkyPathSDK.TurbulenceItemable]) -> ObservationsItem? {
         
         turbulenceClusterer.process(turbulence: items)
         
@@ -183,7 +183,7 @@ class MapViewController: UIViewController {
     private func showCurrentLayerData() {
         
         switch selectedLayer {
-        case .turbulence:
+        case .observations:
             showTurbulence()
         case .oneLayer:
             showOneLayer()
@@ -199,7 +199,7 @@ class MapViewController: UIViewController {
     
     private func reloadLayersData() {
         
-        SkyPathWrapper.shared.setDataQueryTypes(selectedLayer)
+        SkyPathWrapper.shared.setDataQueryTypes([selectedLayer])
         refreshMap()
         layersTableView.reloadData()
     }
@@ -387,10 +387,10 @@ extension MapViewController {
         
         let wrapper = SkyPathWrapper.shared
         switch wrapper.currentServerEnv {
-        case .dev(serverUrl: _):
+        case .staging(serverUrl: _):
             break
         default:
-            let alert = UIAlertController(title: "Flight Simulation Unavailable", message: "Flight simulation is allowed only in dev environment.", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Flight Simulation Unavailable", message: "Flight simulation is allowed only in staging environment.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default))
             present(alert, animated: true)
             return
