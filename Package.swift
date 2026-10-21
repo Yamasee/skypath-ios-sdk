@@ -16,8 +16,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "SkyPathSDK",
-            url: "https://github.com/Yamasee/skypath-ios-sdk/releases/download/v3.1.3/SkyPathSDK.xcframework.zip",
-            checksum: "85e9e06ffe4a0cdc1035ea0f39ca8fbee9b3e02f8e0b8bc77763e5c75dabb0c2"),
+            url: "https://github.com/Yamasee/skypath-ios-sdk/releases/download/v3.1.4/SkyPathSDK.xcframework.zip",
+            checksum: "87ea88814dac6ab9156246e59c293d3e476a8addfa80f01ad5773499e05e62de"),
         .target(
             name: "SkyPathSDKTarget",
             dependencies: [
